@@ -28,4 +28,5 @@ df = df.dropna(subset=['Field Type'])
 
 print df.head(10)
 
+
 df.to_csv("./data/LDM OBJ Report Output.csv")
