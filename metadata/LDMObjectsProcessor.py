@@ -18,7 +18,9 @@ def generateLDMObjectReport():
     print "Please ensure you have deleted the first column from the Avaloq report\n"
 
     print "Confirm if you have deleted the first column in the Avaloq report ? [Yes/No]:"
-    answer = raw_input()
+    # answer = raw_input()
+    answer = "Yes"
+    
     if(answer == 'Yes'):
         print "Generating CSV file, please wait.....\n"
 
@@ -90,7 +92,8 @@ def generateLDMInterfaceReport():
     print "Please ensure you have deleted the first column from the Avaloq report\n"
 
     print "Confirm if you have deleted the first column in the Avaloq report ? [Yes/No]:"
-    answer = raw_input()
+    #answer = raw_input()
+    answer = "Yes"
     if(answer.upper() == 'Yes'.upper()):
         print "Generating CSV file, please wait.....\n"
 
@@ -106,6 +109,9 @@ def generateLDMInterfaceReport():
 
         #print df.loc[0, 'LDM Object']
 
+        # insert Metadata related columns columns
+        df.insert(0, "System Name", "ABS")
+        df.insert(1, "Instance Name", "LDM")
 
         # insert two new columns
         df.insert(6, "LDM Text Type",df["LDM Text"])
