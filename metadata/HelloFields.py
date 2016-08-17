@@ -1,5 +1,5 @@
 #encoding=utf-8
-
+import re
 from mdr_util import *
 """
 site_url = "http://sharepoint.btfin.com/sites/trans/tech/architecture"
@@ -33,7 +33,7 @@ username = 'L083646'
 password =  'TCS#2305'
 
 
-displayRowFields(site_url,list_name,username,password)
+#displayRowFields(site_url,list_name,username,password)
 
 
 ''''''
@@ -58,4 +58,25 @@ displayRowFields(site_url,list_name,username,password)
 
 #cleanHTMLTags(a)
 
+string = "acc$acc_bal"
 
+print "Input String: ", string
+
+#pattern = re.compile(r'$')
+pattern = re.compile(r'\d\$,')
+
+if pattern.findall(string):
+    print('Found')
+else:
+    print('Not found')
+
+
+if('$' in string):
+    print "Output String: ", string.split("$")
+    print "Output String type: ", type(string.split("$"))
+    list_of_values = string.split("$")
+    print "list_of_values: ",list_of_values
+    print "Output String 0: ", string.split("$")[0], list_of_values[0]
+    print "Output String 1: ", string.split("$")[1], list_of_values[1]
+else:
+    print "Output String: ", string

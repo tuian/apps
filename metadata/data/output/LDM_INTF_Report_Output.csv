@@ -1,0 +1,473 @@
+Interface Name,Source Name,Element Name,LDM Field,LDM Object,LDM Text,LDM Text Type,Internal ID
+BP Details,BTFG$UI_BP.BP.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+BP Details,BTFG$UI_BP.BP.XSD,acctnt_person_oe_id,Organizational Entity,Organizational Entity,LDM:btfg$code_ldm_obj.person_oe,ldm_obj,person_oe
+BP Details,BTFG$UI_BP.BP.XSD,badge_id,Product,Product,LDM:btfg$code_ldm_obj.prod,ldm_obj,prod
+BP Details,BTFG$UI_BP.BP.XSD,acc_bal,Pension Annual Minimum Amount,,LDM:btfg$code_ldm_obj_fld.acc$acc_bal,ldm_obj_fld,acc$acc_bal
+BP Details,BTFG$UI_BP.BP.XSD,bp_status_id,BP Status ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_status,ldm_obj_fld,acc$acc_status
+BP Details,BTFG$UI_BP.BP.XSD,custr_acc_struct_type_id,Account Structure Type ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_struct_type,ldm_obj_fld,acc$acc_struct_type
+BP Details,BTFG$UI_BP.BP.XSD,acctnt_person_id,Accountant Person ID,,LDM:btfg$code_ldm_obj_fld.acc$acctnt_person,ldm_obj_fld,acc$acctnt_person
+BP Details,BTFG$UI_BP.BP.XSD,avsr_person_id,Adviser Natural Person ID,,LDM:btfg$code_ldm_obj_fld.acc$avsr_person,ldm_obj_fld,acc$avsr_person
+BP Details,BTFG$UI_BP.BP.XSD,avsr_person_oe_id,Adviser Person OE ID,,LDM:btfg$code_ldm_obj_fld.acc$avsr_person_oe,ldm_obj_fld,acc$avsr_person_oe
+BP Details,BTFG$UI_BP.BP.XSD,modi_seq_nr,BP modification sequence number,,LDM:btfg$code_ldm_obj_fld.acc$bp_modi_seq_nr,ldm_obj_fld,acc$bp_modi_seq_nr
+BP Details,BTFG$UI_BP.BP.XSD,bp_nr,BP Numeric Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_nr,ldm_obj_fld,acc$bp_nr
+BP Details,BTFG$UI_BP.BP.XSD,cgt_lkm_tax_id,CGT Lot-Keeping Method ID,,LDM:btfg$code_ldm_obj_fld.acc$cgt_lkm_tax,ldm_obj_fld,acc$cgt_lkm_tax
+BP Details,BTFG$UI_BP.BP.XSD,bp_is_open,Is BP open,,LDM:btfg$code_ldm_obj_fld.acc$is_opn,ldm_obj_fld,acc$is_opn
+BP Details,BTFG$UI_BP.BP.XSD,pens_annu_max_amt,Pension Annual Maximum Amount,,LDM:btfg$code_ldm_obj_fld.acc$pens_annu_max_amt,ldm_obj_fld,acc$pens_annu_max_amt
+BP Details,BTFG$UI_BP.BP.XSD,pens_annu_min_amt,Pension Annual Minimum Amount,,LDM:btfg$code_ldm_obj_fld.acc$pens_annu_min_amt,ldm_obj_fld,acc$pens_annu_min_amt
+BP Details,BTFG$UI_BP.BP.XSD,pens_commence_date,Pension Commencement Date,,LDM:btfg$code_ldm_obj_fld.acc$pens_commence_date,ldm_obj_fld,acc$pens_commence_date
+BP Details,BTFG$UI_BP.BP.XSD,pens_commence_value,LDM:btfg$code_ldm_obj_fld.acc$pens_commence_value,,LDM:btfg$code_ldm_obj_fld.acc$pens_commence_value,ldm_obj_fld,acc$pens_commence_value
+BP Details,BTFG$UI_BP.BP.XSD,pens_pay_amt,LDM:btfg$code_ldm_obj_fld.acc$pens_pay_amt,,LDM:btfg$code_ldm_obj_fld.acc$pens_pay_amt,ldm_obj_fld,acc$pens_pay_amt
+BP Details,BTFG$UI_BP.BP.XSD,ref_curry_id,Reporting Currency ID,,LDM:btfg$code_ldm_obj_fld.acc$ref_curry,ldm_obj_fld,acc$ref_curry
+BP Details,BTFG$UI_BP.BP.XSD,sa_esp_start_date,Eligible Service Date,,LDM:btfg$code_ldm_obj_fld.acc$sa_esp_start_date,ldm_obj_fld,acc$sa_esp_start_date
+BP Details,BTFG$UI_BP.BP.XSD,sa_pens_type,Superannuation Pension Type ID,,LDM:btfg$code_ldm_obj_fld.acc$sa_pens_type,ldm_obj_fld,acc$sa_pens_type
+BP Details,BTFG$UI_BP.BP.XSD,sa_psv,Superannuation Preserved,,LDM:btfg$code_ldm_obj_fld.acc$sa_psv,ldm_obj_fld,acc$sa_psv
+BP Details,BTFG$UI_BP.BP.XSD,sa_rnpsv,Superannuation Restricted Non-Preserved,,LDM:btfg$code_ldm_obj_fld.acc$sa_rnpsv,ldm_obj_fld,acc$sa_rnpsv
+BP Details,BTFG$UI_BP.BP.XSD,sa_sub_type,Superannuation Sub Type ID,,LDM:btfg$code_ldm_obj_fld.acc$sa_sub_type,ldm_obj_fld,acc$sa_sub_type
+BP Details,BTFG$UI_BP.BP.XSD,sa_tax_free_compo,Superannuation Tax Free component,,LDM:btfg$code_ldm_obj_fld.acc$sa_tax_free_compo,ldm_obj_fld,acc$sa_tax_free_compo
+BP Details,BTFG$UI_BP.BP.XSD,sa_txbl_compo,Superannuation Taxable (Taxed) component,,LDM:btfg$code_ldm_obj_fld.acc$sa_txbl_compo,ldm_obj_fld,acc$sa_txbl_compo
+BP Details,BTFG$UI_BP.BP.XSD,sa_unpsv,Superannuation Unrestricted Non-Preserved,,LDM:btfg$code_ldm_obj_fld.acc$sa_unpsv,ldm_obj_fld,acc$sa_unpsv
+BP Details,BTFG$UI_BP.BP.XSD,wtax_liab,Withholding Tax Liable ID,,LDM:btfg$code_ldm_obj_fld.acc$wtax_liab,ldm_obj_fld,acc$wtax_liab
+BP Details,BTFG$UI_BP.BP.XSD,dir_cont_bcode,BPAY Biller Code,,LDM:btfg$code_ldm_obj_fld.cont$bcode,ldm_obj_fld,cont$bcode
+BP Details,BTFG$UI_BP.BP.XSD,dir_cont_bsb,BSB,,LDM:btfg$code_ldm_obj_fld.cont$bsb,ldm_obj_fld,cont$bsb
+BP Details,BTFG$UI_BP.BP.XSD,close_date,Close Date,,LDM:btfg$code_ldm_obj_fld.obj$close_date,ldm_obj_fld,obj$close_date
+BP Details,BTFG$UI_BP.BP.XSD,open_date,Open Date,,LDM:btfg$code_ldm_obj_fld.obj$open_date,ldm_obj_fld,obj$open_date
+BP Details,BTFG$UI_BP.BP.XSD,sign_date,Document Signature Date,,LDM:btfg$code_ldm_obj_fld.person$docm_sign_date,ldm_obj_fld,person$docm_sign_date
+UI AAL Details,BTFG$UI_AAL_LIST.AAL#ASSET.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI AAL Details,BTFG$UI_AAL_LIST.AAL#ASSET.XSD,aal,Collection,Collection,LDM:btfg$code_ldm_obj.collect,ldm_obj,collect
+UI AAL Details,BTFG$UI_AAL_LIST.AAL#ASSET.XSD,dg_id,Dealer Group,Dealer Group,LDM:btfg$code_ldm_obj.person_oe_imed_dg,ldm_obj,person_oe_imed_dg
+UI AAL Details,BTFG$UI_AAL_LIST.AAL#ASSET.XSD,prod_id,Product,Product,LDM:btfg$code_ldm_obj.prod,ldm_obj,prod
+UI APL Details,BTFG$UI_APL_LIST.ALL#PROD.XSD,apl,Collection,Collection,LDM:btfg$code_ldm_obj.collect,ldm_obj,collect
+UI APL Details,BTFG$UI_APL_LIST.ALL#PROD.XSD,oe_id,Organizational Entity,Organizational Entity,LDM:btfg$code_ldm_obj.person_oe,ldm_obj,person_oe
+UI APL Details,BTFG$UI_APL_LIST.ALL#PROD.XSD,apl_type_id,APL Type,,LDM:btfg$code_ldm_obj_fld.collect$apl_type,ldm_obj_fld,collect$apl_type
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,fund_mgr,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,issuer,BP Numeric Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_nr,ldm_obj_fld,acc$bp_nr
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,issuer_name,Name,,LDM:btfg$code_ldm_obj_fld.acc$name,ldm_obj_fld,acc$name
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,cton_class,Asset Class,,LDM:btfg$code_ldm_obj_fld.asset$asset_class,ldm_obj_fld,asset$asset_class
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,class,Asset Class Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_class_grp,ldm_obj_fld,asset$asset_class_grp
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,clustr,Asset Cluster ID,,LDM:btfg$code_ldm_obj_fld.asset$asset_clustr,ldm_obj_fld,asset$asset_clustr
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,grp,Asset Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_grp,ldm_obj_fld,asset$asset_grp
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,isin,Asset ISIN,,LDM:btfg$code_ldm_obj_fld.asset$asset_isin,ldm_obj_fld,asset$asset_isin
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,key,Asset Key,,LDM:btfg$code_ldm_obj_fld.asset$asset_key,ldm_obj_fld,asset$asset_key
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,macc_type,Asset MACC Type ID,,LDM:btfg$code_ldm_obj_fld.asset$asset_macc_type,ldm_obj_fld,asset$asset_macc_type
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,msc_grp,Asset MSC Group ID,,LDM:btfg$code_ldm_obj_fld.asset$asset_msc_grp,ldm_obj_fld,asset$asset_msc_grp
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,msc_sec,Asset MSC Sector ID,,LDM:btfg$code_ldm_obj_fld.asset$asset_msc_sec,ldm_obj_fld,asset$asset_msc_sec
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,generic_asset_id,Asset Name,,LDM:btfg$code_ldm_obj_fld.asset$asset_name,ldm_obj_fld,asset$asset_name
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,period,Asset Period,,LDM:btfg$code_ldm_obj_fld.asset$asset_period,ldm_obj_fld,asset$asset_period
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,status,Asset Status ID,,LDM:btfg$code_ldm_obj_fld.asset$asset_status,ldm_obj_fld,asset$asset_status
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,std_risk_meas,Asset Standard Risk Measure ID,,LDM:btfg$code_ldm_obj_fld.asset$asset_std_risk_meas_type,ldm_obj_fld,asset$asset_std_risk_meas_type
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,wtax_form_relv_id,WTax Form Relevant,,LDM:btfg$code_ldm_obj_fld.asset$wtax_form_relv,ldm_obj_fld,asset$wtax_form_relv
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,ips_invst_style_id,Investment Style ID,,LDM:btfg$code_ldm_obj_fld.ips$invst_style,ldm_obj_fld,ips$invst_style
+UI Assets details,BTFG$UI_ASSET_LIST.ASSET.XSD,mp_sub_type_id,MP Sub Type ID,,LDM:btfg$code_ldm_obj_fld.ips$mp_sub_type,ldm_obj_fld,ips$mp_sub_type
+UI Benchmark Details,BTFG$UI_BMRK_LIST.BMRK.XSD,bmrk_id,Benchmark,Benchmark,LDM:btfg$code_ldm_obj.bmrk,ldm_obj,bmrk
+UI Benchmark Details,BTFG$UI_BMRK_LIST.BMRK.XSD,bmrk_name,Benchmark Name,,LDM:btfg$code_ldm_obj_fld.bmrk$bmrk_name,ldm_obj_fld,bmrk$bmrk_name
+UI Benchmark Details,BTFG$UI_BMRK_LIST.BMRK.XSD,bmrk_sym,Benchmark Key,,LDM:btfg$code_ldm_obj_fld.bmrk$bmrk_sym,ldm_obj_fld,bmrk$bmrk_sym
+"UI Booking details by BP, Cont, Pos, Evt",BTFG$UI_BOOK_LIST.BP_CONT_POS_EVT.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+"UI Booking details by BP, Cont, Pos, Evt",BTFG$UI_BOOK_LIST.BP_CONT_POS_EVT.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+"UI Booking details by BP, Cont, Pos, Evt",BTFG$UI_BOOK_LIST.BP_CONT_POS_EVT.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+"UI Booking details by BP, Cont, Pos, Evt",BTFG$UI_BOOK_LIST.BP_CONT_POS_EVT.XSD,pos_curry_id,Currency,Currency,LDM:btfg$code_ldm_obj.curry,ldm_obj,curry
+"UI Booking details by BP, Cont, Pos, Evt",BTFG$UI_BOOK_LIST.BP_CONT_POS_EVT.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+"UI Booking details by BP, Cont, Pos, Evt",BTFG$UI_BOOK_LIST.BP_CONT_POS_EVT.XSD,pos_name,Position Name,,LDM:btfg$code_ldm_obj_fld.pos$pos_name,ldm_obj_fld,pos$pos_name
+Transaction type sum,BTFG$UI_BOOK_LIST.BP_OT.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,pos_curry_id,Currency,Currency,LDM:btfg$code_ldm_obj.curry,ldm_obj,curry
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,dg_oe_owner,Legal Person,Legal Person,LDM:btfg$code_ldm_obj.person_legal,ldm_obj,person_legal
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,avsr_person,Adviser,Adviser,LDM:btfg$code_ldm_obj.person_natural_imed_avsr,ldm_obj,person_natural_imed_avsr
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,pos,Position,Position,LDM:btfg$code_ldm_obj.pos,ldm_obj,pos
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,avsr_person_phone,Electronic Address,,LDM:btfg$code_ldm_obj_fld.addr_elec$elec_addr,ldm_obj_fld,addr_elec$elec_addr
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,dg_oe_owner_abn,ABN,,LDM:btfg$code_ldm_obj_fld.person_legal$abn,ldm_obj_fld,person_legal$abn
+Fee bookings with GST,BTFG$UI_BOOK_LIST.DG_AVSR_EVT#GST.XSD,gst,Is registered for GST,,LDM:btfg$code_ldm_obj_fld.person_legal$regi_gst,ldm_obj_fld,person_legal$regi_gst
+IM Report - Transaction List,BTFG$UI_BOOK_LIST.INVST_MGR_CONT_DOC_EVT_POS#SHDW_MP.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+IM Report - Transaction List,BTFG$UI_BOOK_LIST.INVST_MGR_CONT_DOC_EVT_POS#SHDW_MP.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+IM Report - Transaction List,BTFG$UI_BOOK_LIST.INVST_MGR_CONT_DOC_EVT_POS#SHDW_MP.XSD,pos,Position,Position,LDM:btfg$code_ldm_obj.pos,ldm_obj,pos
+IM Report - Transaction List,BTFG$UI_BOOK_LIST.INVST_MGR_CONT_DOC_EVT_POS#SHDW_MP.XSD,invst_mgr_id,Investment Manager ID,,LDM:btfg$code_ldm_obj_fld.ips$invst_mgr,ldm_obj_fld,ips$invst_mgr
+Aggregated bookings per money account,BTFG$UI_BOOK_LIST.POS#CACC.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Aggregated bookings per money account,BTFG$UI_BOOK_LIST.POS#CACC.XSD,curry_id,Currency,Currency,LDM:btfg$code_ldm_obj.curry,ldm_obj,curry
+Aggregated bookings per money account,BTFG$UI_BOOK_LIST.POS#CACC.XSD,pos,Position,Position,LDM:btfg$code_ldm_obj.pos,ldm_obj,pos
+UI BP payment details,BTFG$UI_BP.PAY_DET.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI BP payment details,BTFG$UI_BP.PAY_DET.XSD,bp_modi_seq_nr,BP modification sequence number,,LDM:btfg$code_ldm_obj_fld.acc$bp_modi_seq_nr,ldm_obj_fld,acc$bp_modi_seq_nr
+UI BP payment details,BTFG$UI_BP.PAY_DET.XSD,bp_nr,BP Numeric Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_nr,ldm_obj_fld,acc$bp_nr
+UI BP payment details,BTFG$UI_BP.PAY_DET.XSD,dir_cont_bcode,BPAY Biller Code,,LDM:btfg$code_ldm_obj_fld.cont$bcode,ldm_obj_fld,cont$bcode
+UI BP payment details,BTFG$UI_BP.PAY_DET.XSD,dir_cont_bsb,BSB,,LDM:btfg$code_ldm_obj_fld.cont$bsb,ldm_obj_fld,cont$bsb
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,prod_id,Product,Product,LDM:btfg$code_ldm_obj.prod,ldm_obj,prod
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,bp_acc_status_id,BP Status ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_status,ldm_obj_fld,acc$acc_status
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,acc_struct_type_id,Account Structure Type ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_struct_type,ldm_obj_fld,acc$acc_struct_type
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,avsr_person_id,Adviser Natural Person ID,,LDM:btfg$code_ldm_obj_fld.acc$avsr_person,ldm_obj_fld,acc$avsr_person
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,avsr_person_oe_id,Adviser Person OE ID,,LDM:btfg$code_ldm_obj_fld.acc$avsr_person_oe,ldm_obj_fld,acc$avsr_person_oe
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,bp_nr,BP Numeric Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_nr,ldm_obj_fld,acc$bp_nr
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,bp_is_open,Is BP open,,LDM:btfg$code_ldm_obj_fld.acc$is_opn,ldm_obj_fld,acc$is_opn
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,sa_sub_type,Superannuation Sub Type ID,,LDM:btfg$code_ldm_obj_fld.acc$sa_sub_type,ldm_obj_fld,acc$sa_sub_type
+UI BP List,BTFG$UI_BP_LIST.ALL#CUSTR.XSD,open_date,Open Date,,LDM:btfg$code_ldm_obj_fld.obj$open_date,ldm_obj_fld,obj$open_date
+UI Cash Category Caps,BTFG$UI_CASH_CAT.BP#CAPS.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Cash Category Caps,BTFG$UI_CASH_CAT.BP#CAPS.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Cash Category Caps,BTFG$UI_CASH_CAT.BP#CAPS.XSD,person_age,Age,,LDM:btfg$code_ldm_obj_fld.person_natural$age,ldm_obj_fld,person_natural$age
+UI Cash Category Caps,BTFG$UI_CASH_CAT.BP#CAPS.XSD,birth_date,Birth Date,,LDM:btfg$code_ldm_obj_fld.person_natural$birth_date,ldm_obj_fld,person_natural$birth_date
+UI Cash Category Caps,BTFG$UI_CASH_CAT.BP#CAPS.XSD,first_name,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI Cash Category Caps,BTFG$UI_CASH_CAT.BP#CAPS.XSD,last_name,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI Cash Categorization,BTFG$UI_CASH_CAT.DOC_PERSON.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Cash Categorization,BTFG$UI_CASH_CAT.DOC_PERSON.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+"UI - Transactions details by BP, ContType, Cont, AssetGrp, Pos",BTFG$UI_CASH_RECV_LIST.BP_CONT_ASSETGRP_POS.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+"UI - Transactions details by BP, ContType, Cont, AssetGrp, Pos",BTFG$UI_CASH_RECV_LIST.BP_CONT_ASSETGRP_POS.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+"UI - Transactions details by BP, ContType, Cont, AssetGrp, Pos",BTFG$UI_CASH_RECV_LIST.BP_CONT_ASSETGRP_POS.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+"UI - Transactions details by BP, ContType, Cont, AssetGrp, Pos",BTFG$UI_CASH_RECV_LIST.BP_CONT_ASSETGRP_POS.XSD,tax_curry_id,Currency,Currency,LDM:btfg$code_ldm_obj.curry,ldm_obj,curry
+"UI - Transactions details by BP, ContType, Cont, AssetGrp, Pos",BTFG$UI_CASH_RECV_LIST.BP_CONT_ASSETGRP_POS.XSD,asset_grp_id,Asset Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_grp,ldm_obj_fld,asset$asset_grp
+"UI - Transactions details by BP, ContType, Cont, AssetGrp, Pos",BTFG$UI_CASH_RECV_LIST.BP_CONT_ASSETGRP_POS.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+"UI - Transactions details by BP, ContType, Cont, AssetGrp, Pos",BTFG$UI_CASH_RECV_LIST.BP_CONT_ASSETGRP_POS.XSD,pos_name,Position Name,,LDM:btfg$code_ldm_obj_fld.pos$pos_name,ldm_obj_fld,pos$pos_name
+Realised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_REAL.BP_CONT_ASSETGRP_ASSET.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Realised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_REAL.BP_CONT_ASSETGRP_ASSET.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+Realised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_REAL.BP_CONT_ASSETGRP_ASSET.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+Realised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_REAL.BP_CONT_ASSETGRP_ASSET.XSD,asset_grp_id,Asset Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_grp,ldm_obj_fld,asset$asset_grp
+Realised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_REAL.BP_CONT_ASSETGRP_ASSET.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+Unrealised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_UNREAL.BP_CONT_ASSETGRP_ASSET.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Unrealised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_UNREAL.BP_CONT_ASSETGRP_ASSET.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+Unrealised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_UNREAL.BP_CONT_ASSETGRP_ASSET.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+Unrealised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_UNREAL.BP_CONT_ASSETGRP_ASSET.XSD,asset_grp_id,Asset Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_grp,ldm_obj_fld,asset$asset_grp
+Unrealised Capital Gains Tax and Losses (CGT),BTFG$UI_CGT_UNREAL.BP_CONT_ASSETGRP_ASSET.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,cont,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,dd_strat_id,Draw Down Strategy ID,,LDM:btfg$code_ldm_obj_fld.cont$dd_strat,ldm_obj_fld,cont$dd_strat
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,has_invst_mngt_fee,Container is Subject to Investment Management Fee,,LDM:btfg$code_ldm_obj_fld.cont$has_invst_mngt_fee,ldm_obj_fld,cont$has_invst_mngt_fee
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,has_tmp_mngt_fee,Container is Subject to Portfolio Management Fee,,LDM:btfg$code_ldm_obj_fld.cont$has_tmp_mngt_fee,ldm_obj_fld,cont$has_tmp_mngt_fee
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,ips_id,Investment Policy Statement,,LDM:btfg$code_ldm_obj_fld.cont$ips,ldm_obj_fld,cont$ips
+UI Container List,BTFG$UI_CONT_LIST.ALL#CUSTR.XSD,prod_id,Product,,LDM:btfg$code_ldm_obj_fld.cont$prod,ldm_obj_fld,cont$prod
+UI Container Preference List,BTFG$UI_CONT_LIST.BP_CONT_PREF.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Container Preference List,BTFG$UI_CONT_LIST.BP_CONT_PREF.XSD,cont,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,acc_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,invstr,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,bp_acc_status_id,BP Status ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_status,ldm_obj_fld,acc$acc_status
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,bp_acc_struct_type_id,Account Structure Type ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_struct_type,ldm_obj_fld,acc$acc_struct_type
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,bp_adviser_id,Adviser Natural Person ID,,LDM:btfg$code_ldm_obj_fld.acc$avsr_person,ldm_obj_fld,acc$avsr_person
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,acc_name,Name,,LDM:btfg$code_ldm_obj_fld.acc$name,ldm_obj_fld,acc$name
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,bp_acc_prod_id,Product,,LDM:btfg$code_ldm_obj_fld.acc$prod_id,ldm_obj_fld,acc$prod_id
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,invstr_dom_country_id,Country,,LDM:btfg$code_ldm_obj_fld.addr_postal$country,ldm_obj_fld,addr_postal$country
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,invstr_dom_state_id,State ID_,,LDM:btfg$code_ldm_obj_fld.addr_postal$state_id_,ldm_obj_fld,addr_postal$state_id_
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,invstr_type_id,Person Type ID,,LDM:btfg$code_ldm_obj_fld.person$person_type,ldm_obj_fld,person$person_type
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,invstr_fname,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI Clients,BTFG$UI_CUSTR_LIST.BP_PERSON_CONT.XSD,bp_avsr_lname,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI Deceased Estates,BTFG$UI_DEC_EST_LIST.DOC.XSD,resp_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Deceased Estates,BTFG$UI_DEC_EST_LIST.DOC.XSD,resp_phone,Electronic Address,,LDM:btfg$code_ldm_obj_fld.addr_elec$elec_addr,ldm_obj_fld,addr_elec$elec_addr
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,bp_status_id,BP Status ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_status,ldm_obj_fld,acc$acc_status
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,acc_own_struct_id,Account Structure Type ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_struct_type,ldm_obj_fld,acc$acc_struct_type
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,bp_is_open,Is BP open,,LDM:btfg$code_ldm_obj_fld.acc$is_opn,ldm_obj_fld,acc$is_opn
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,bp_pri_phone_nr,Electronic Address,,LDM:btfg$code_ldm_obj_fld.addr_elec$elec_addr,ldm_obj_fld,addr_elec$elec_addr
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_birth_suburb,City,,LDM:btfg$code_ldm_obj_fld.addr_postal$city,ldm_obj_fld,addr_postal$city
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_birth_country,Country,,LDM:btfg$code_ldm_obj_fld.addr_postal$country,ldm_obj_fld,addr_postal$country
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_birth_state_alt,State,,LDM:btfg$code_ldm_obj_fld.addr_postal$state,ldm_obj_fld,addr_postal$state
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_birth_state_id,State Name,,LDM:btfg$code_ldm_obj_fld.addr_postal$state_,ldm_obj_fld,addr_postal$state_
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_rel_id,Client authority id over its account,,LDM:btfg$code_ldm_obj_fld.person$auth_role,ldm_obj_fld,person$auth_role
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,gcm_id,GCM ID,,LDM:btfg$code_ldm_obj_fld.person$gcm,ldm_obj_fld,person$gcm
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_has_tfn,Person has TFN,,LDM:btfg$code_ldm_obj_fld.person$has_tfn,ldm_obj_fld,person$has_tfn
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_wtax_exmp,Withholding Tax Exemption ID,,LDM:btfg$code_ldm_obj_fld.person$wtax_exempt,ldm_obj_fld,person$wtax_exempt
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_acn,Australian Company Number,,LDM:btfg$code_ldm_obj_fld.person_legal$acn,ldm_obj_fld,person_legal$acn
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_asic_name,ASIC Name,,LDM:btfg$code_ldm_obj_fld.person_legal$asic_name,ldm_obj_fld,person_legal$asic_name
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,bp_pri_ctact_fname,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,has_to_accept_tnc,Has T&C Document,,LDM:btfg$code_ldm_obj_fld.person_natural$has_docm_tnc,ldm_obj_fld,person_natural$has_docm_tnc
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_reg_online,Is Person a Panorama Registered User,,LDM:btfg$code_ldm_obj_fld.person_natural$is_reg,ldm_obj_fld,person_natural$is_reg
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,has_approved_tnc,Is a Terms & Conditions Approver,,LDM:btfg$code_ldm_obj_fld.person_natural$is_tnc_aprver,ldm_obj_fld,person_natural$is_tnc_aprver
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_reg_wpl,Is Person a WestpacLive Registered User,,LDM:btfg$code_ldm_obj_fld.person_natural$is_wpl_reg,ldm_obj_fld,person_natural$is_wpl_reg
+Get Account Activation Status,BTFG$UI_DOC_CUSTR_LIST.DOC.XSD,person_lname,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,bp_status_id,BP Status ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_status,ldm_obj_fld,acc$acc_status
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,custr_acc_struct_type_id,Account Structure Type ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_struct_type,ldm_obj_fld,acc$acc_struct_type
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,addr_print,Address ID,,LDM:btfg$code_ldm_obj_fld.acc$addr,ldm_obj_fld,acc$addr
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,avsr_oe_id,Adviser Person OE ID,,LDM:btfg$code_ldm_obj_fld.acc$avsr_person_oe,ldm_obj_fld,acc$avsr_person_oe
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,bp_sym,BP Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_key,ldm_obj_fld,acc$bp_key
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,bp_modi_seq_nr,BP modification sequence number,,LDM:btfg$code_ldm_obj_fld.acc$bp_modi_seq_nr,ldm_obj_fld,acc$bp_modi_seq_nr
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,bp_nr,BP Numeric Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_nr,ldm_obj_fld,acc$bp_nr
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,lkm_id,CGT Lot-Keeping Method ID,,LDM:btfg$code_ldm_obj_fld.acc$cgt_lkm_tax,ldm_obj_fld,acc$cgt_lkm_tax
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,bp_is_open,Is BP open,,LDM:btfg$code_ldm_obj_fld.acc$is_opn,ldm_obj_fld,acc$is_opn
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,prod_id,Product,,LDM:btfg$code_ldm_obj_fld.acc$prod_id,ldm_obj_fld,acc$prod_id
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,ref_curry_id,Reporting Currency ID,,LDM:btfg$code_ldm_obj_fld.acc$ref_curry,ldm_obj_fld,acc$ref_curry
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,opn_date,Open Date,,LDM:btfg$code_ldm_obj_fld.obj$open_date,ldm_obj_fld,obj$open_date
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,sign_date,Document Signature Date,,LDM:btfg$code_ldm_obj_fld.person$docm_sign_date,ldm_obj_fld,person$docm_sign_date
+Client On-boarding Details,BTFG$UI_DOC_CUSTR_LIST.DOC#DOC_DET.XSD,fee_eff_date,Fee Date from,,LDM:btfg$code_ldm_obj_fld.prod$fee_date_from,ldm_obj_fld,prod$fee_date_from
+UI TD Transactions,BTFG$UI_DOC_FIDD_LIST.DOC.XSD,td_asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI Order Trading,BTFG$UI_DOC_LIST.DOC.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Order Trading,BTFG$UI_DOC_LIST.DOC.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI Order Status details,BTFG$UI_DOC_LIST.INVST_STATUS.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Order Status details,BTFG$UI_DOC_LIST.INVST_STATUS.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI Order Status details,BTFG$UI_DOC_LIST.INVST_STATUS.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+Rebalance Triggers order by Transaction type,BTFG$UI_DOC_REBAL_TRIG.IPS_TRIG_GRP_DOC.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+Rebalance Triggers order by Transaction type,BTFG$UI_DOC_REBAL_TRIG.IPS_TRIG_GRP_DOC.XSD,rebal_grp_id,Rebalance Group,,LDM:btfg$code_ldm_obj_fld.cont$rebal_grp,ldm_obj_fld,cont$rebal_grp
+Rebalance Triggers order by Transaction type,BTFG$UI_DOC_REBAL_TRIG.IPS_TRIG_GRP_DOC.XSD,ips_status_id,Status ID,,LDM:btfg$code_ldm_obj_fld.ips$status,ldm_obj_fld,ips$status
+UI CA Event Action,BTFG$UI_DOC_SECEVT.DOC.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI CA Event Transaction details,BTFG$UI_DOC_SECTRX.POS.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI CA Event Transaction details,BTFG$UI_DOC_SECTRX.POS.XSD,pos_id,Position,Position,LDM:btfg$code_ldm_obj.pos,ldm_obj,pos
+BP Tariff account admin fees,BTFG$UI_FEE.BP_COSTP.XSD,btfg_book_kind_id,Fee Book kind,,LDM:btfg$code_ldm_obj_fld.prod$fee_book_kind,ldm_obj_fld,prod$fee_book_kind
+BP Tariff account admin fees,BTFG$UI_FEE.BP_COSTP.XSD,tariff_factor,Fee Cap Factor,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_factor,ldm_obj_fld,prod$fee_cap_factor
+BP Tariff account admin fees,BTFG$UI_FEE.BP_COSTP.XSD,max,Fee Maximum Cap,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_max,ldm_obj_fld,prod$fee_cap_max
+BP Tariff account admin fees,BTFG$UI_FEE.BP_COSTP.XSD,min,Fee Minimum Cap,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_min,ldm_obj_fld,prod$fee_cap_min
+BP Tariff account admin fees,BTFG$UI_FEE.BP_COSTP.XSD,bound_from,Fee Date from,,LDM:btfg$code_ldm_obj_fld.prod$fee_date_from,ldm_obj_fld,prod$fee_date_from
+BP Tariff account admin fees,BTFG$UI_FEE.BP_COSTP.XSD,bound_to,Fee Date to,,LDM:btfg$code_ldm_obj_fld.prod$fee_date_to,ldm_obj_fld,prod$fee_date_to
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,avsr_id,Adviser,Adviser,LDM:btfg$code_ldm_obj.person_natural_imed_avsr,ldm_obj,person_natural_imed_avsr
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,dg_id,Dealer Group,Dealer Group,LDM:btfg$code_ldm_obj.person_oe_imed_dg,ldm_obj,person_oe_imed_dg
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,white_lbl_id,Badge,Badge,LDM:btfg$code_ldm_obj.prod_white_label,ldm_obj,prod_white_label
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,btfg_class_cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,btfg_book_kind_id,Fee Book kind,,LDM:btfg$code_ldm_obj_fld.prod$fee_book_kind,ldm_obj_fld,prod$fee_book_kind
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,factor,Fee Cap Factor,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_factor,ldm_obj_fld,prod$fee_cap_factor
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,maxim,Fee Maximum Cap,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_max,ldm_obj_fld,prod$fee_cap_max
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,minim,Fee Minimum Cap,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_min,ldm_obj_fld,prod$fee_cap_min
+BP Tariff transactional fees,BTFG$UI_FEE.COSTP_COST.XSD,offset,Fee Offset Cap,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_offset,ldm_obj_fld,prod$fee_cap_offset
+UI Feedback List,BTFG$UI_FEEDBACK_LIST.DOC.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Feedback List,BTFG$UI_FEEDBACK_LIST.DOC.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Feedback List,BTFG$UI_FEEDBACK_LIST.DOC.XSD,resp_phone,Electronic Address,,LDM:btfg$code_ldm_obj_fld.addr_elec$elec_addr,ldm_obj_fld,addr_elec$elec_addr
+UI Feedback List,BTFG$UI_FEEDBACK_LIST.DOC.XSD,open_date,Open Date,,LDM:btfg$code_ldm_obj_fld.obj$open_date,ldm_obj_fld,obj$open_date
+UI Feedback List,BTFG$UI_FEEDBACK_LIST.DOC.XSD,resp_name,Full Name,,LDM:btfg$code_ldm_obj_fld.person$full_name,ldm_obj_fld,person$full_name
+UI TD rates with Dealer Group,BTFG$UI_FIDD_RATE_LIST.IRC_DG.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI TD rates with Dealer Group,BTFG$UI_FIDD_RATE_LIST.IRC_DG.XSD,dealer_group,Dealer Group,Dealer Group,LDM:btfg$code_ldm_obj.person_oe_imed_dg,ldm_obj,person_oe_imed_dg
+UI TD rates with Dealer Group,BTFG$UI_FIDD_RATE_LIST.IRC_DG.XSD,dealer_group_eop,Close Date,,LDM:btfg$code_ldm_obj_fld.obj$close_date,ldm_obj_fld,obj$close_date
+UI TD rates with Dealer Group,BTFG$UI_FIDD_RATE_LIST.IRC_DG.XSD,dealer_group_sop,Open Date,,LDM:btfg$code_ldm_obj_fld.obj$open_date,ldm_obj_fld,obj$open_date
+MIT Fund Payment Notice,BTFG$UI_FUND_NOTICE.DOC.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI Cash Interest Rate History,BTFG$UI_INTR_RATE.ASSET#HIST.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,aal_collect_id,Investible universe (AAL),,LDM:btfg$code_ldm_obj_fld.ips$aal_collect,ldm_obj_fld,ips$aal_collect
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,ips_apir,APIR Code,,LDM:btfg$code_ldm_obj_fld.ips$apir_code,ldm_obj_fld,ips$apir_code
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,ips_asset_class_id,Asset Class ID,,LDM:btfg$code_ldm_obj_fld.ips$asset_class,ldm_obj_fld,ips$asset_class
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,invst_mgr_id,Investment Manager ID,,LDM:btfg$code_ldm_obj_fld.ips$invst_mgr,ldm_obj_fld,ips$invst_mgr
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,ips_invst_style_id,Investment Style ID,,LDM:btfg$code_ldm_obj_fld.ips$invst_style,ldm_obj_fld,ips$invst_style
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,ips_name,Investment Policy Statement Name,,LDM:btfg$code_ldm_obj_fld.ips$ips_name,ldm_obj_fld,ips$ips_name
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,ips_sym,IPS Symbolic Key,,LDM:btfg$code_ldm_obj_fld.ips$ips_sym,ldm_obj_fld,ips$ips_sym
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,min_init_invst,Minimum Initial Investment Amount,,LDM:btfg$code_ldm_obj_fld.ips$min_invst_amount,ldm_obj_fld,ips$min_invst_amount
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,ips_status_id,Status ID,,LDM:btfg$code_ldm_obj_fld.ips$status,ldm_obj_fld,ips$status
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,btfg_master_book_kind_id,Fee Book kind,,LDM:btfg$code_ldm_obj_fld.prod$fee_book_kind,ldm_obj_fld,prod$fee_book_kind
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,tariff_factor,Fee Cap Factor,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_factor,ldm_obj_fld,prod$fee_cap_factor
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,max,Fee Maximum Cap,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_max,ldm_obj_fld,prod$fee_cap_max
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,min,Fee Minimum Cap,,LDM:btfg$code_ldm_obj_fld.prod$fee_cap_min,ldm_obj_fld,prod$fee_cap_min
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,bound_from,Fee Date from,,LDM:btfg$code_ldm_obj_fld.prod$fee_date_from,ldm_obj_fld,prod$fee_date_from
+UI IPS Details,BTFG$UI_IPS_LIST.IPS.XSD,bound_to,Fee Date to,,LDM:btfg$code_ldm_obj_fld.prod$fee_date_to,ldm_obj_fld,prod$fee_date_to
+IM Report Header,BTFG$UI_IPS_LIST.IPS#IM_REP_HDR.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+IM Report Header,BTFG$UI_IPS_LIST.IPS#IM_REP_HDR.XSD,invst_mgr_id,Investment Manager ID,,LDM:btfg$code_ldm_obj_fld.ips$invst_mgr,ldm_obj_fld,ips$invst_mgr
+IM Report Header,BTFG$UI_IPS_LIST.IPS#IM_REP_HDR.XSD,status_id,Status ID,,LDM:btfg$code_ldm_obj_fld.ips$status,ldm_obj_fld,ips$status
+UI Client Account Performance Summary by Period,BTFG$UI_PERF_LIST.PRD_PRDDET#BP.XSD,bmrk_id,Benchmark,Benchmark,LDM:btfg$code_ldm_obj.bmrk,ldm_obj,bmrk
+UI Client Account Performance Summary by Period,BTFG$UI_PERF_LIST.PRD_PRDDET#BP.XSD,obj_id,Object,Object,LDM:btfg$code_ldm_obj.obj,ldm_obj,obj
+UI Notification List,BTFG$UI_NTFCN_LIST.NTFCN.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Notification List,BTFG$UI_NTFCN_LIST.NTFCN.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Notification List,BTFG$UI_NTFCN_LIST.NTFCN.XSD,owner_type_id,Account Structure Type ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_struct_type,ldm_obj_fld,acc$acc_struct_type
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe,Organizational Entity,Organizational Entity,LDM:btfg$code_ldm_obj.person_oe,ldm_obj,person_oe
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,activ_acc,Organisational Entity Active Accounts,,LDM:btfg$code_ldm_obj_fld.person_oe$activ_acc,ldm_obj_fld,person_oe$activ_acc
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,distr_channel_id,Distibution Channel ID,,LDM:btfg$code_ldm_obj_fld.person_oe$distr_channel,ldm_obj_fld,person_oe$distr_channel
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,fua,Organisational Entity Funds Under Administration,,LDM:btfg$code_ldm_obj_fld.person_oe$fua,ldm_obj_fld,person_oe$fua
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,has_dg_advcong_fee,Is License Advice Fee Activated,,LDM:btfg$code_ldm_obj_fld.person_oe$has_dg_advcong_fee,ldm_obj_fld,person_oe$has_dg_advcong_fee
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,intm_entity_type_id,Intermediary Entity Type ID,,LDM:btfg$code_ldm_obj_fld.person_oe$intm_entity_type,ldm_obj_fld,person_oe$intm_entity_type
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,is_bpay_alw,Is Bpay Allowed ID,,LDM:btfg$code_ldm_obj_fld.person_oe$is_bpay_alw,ldm_obj_fld,person_oe$is_bpay_alw
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,is_linked_acc_alw,Is Linked Accounts Allowed ID,,LDM:btfg$code_ldm_obj_fld.person_oe$is_linked_acc_alw,ldm_obj_fld,person_oe$is_linked_acc_alw
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,is_pay_anyone_alw,Is Pay anyone Allowed ID,,LDM:btfg$code_ldm_obj_fld.person_oe$is_pay_anyone_alw,ldm_obj_fld,person_oe$is_pay_anyone_alw
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,is_payable_party,Is Payable Party,,LDM:btfg$code_ldm_obj_fld.person_oe$is_pay_oe,ldm_obj_fld,person_oe$is_pay_oe
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,is_silo,Is Silo ID,,LDM:btfg$code_ldm_obj_fld.person_oe$is_silo,ldm_obj_fld,person_oe$is_silo
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_aprv_offline,Can Approve Offline,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_aprv_offline,ldm_obj_fld,person_oe$oe_aprv_offline
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_ebi_key,Organisational Entity EBI Key,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_ebi_key,ldm_obj_fld,person_oe$oe_ebi_key
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_gcm_id,Organisational Entity GCM ID,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_gcm,ldm_obj_fld,person_oe$oe_gcm
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_key,Organisational Entity Key,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_key,ldm_obj_fld,person_oe$oe_key
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_open_date,Organisational Entity Open Date,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_open_date,ldm_obj_fld,person_oe$oe_open_date
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_parent_id,Organisational Entity Parent ID,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_parent,ldm_obj_fld,person_oe$oe_parent
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_parent_ebi_key,Organisational Entity Parent EBI Key,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_parent_ebi_key,ldm_obj_fld,person_oe$oe_parent_ebi_key
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_parent_key,Organisational Entity Parent Key,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_parent_key,ldm_obj_fld,person_oe$oe_parent_key
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_pers_gcm_id,Owner GCM ID,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_pers_gcm,ldm_obj_fld,person_oe$oe_pers_gcm
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_pers_leg_id,Owner,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_pers_leg,ldm_obj_fld,person_oe$oe_pers_leg
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_pers_leg_key,Owner Key,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_pers_leg_key,ldm_obj_fld,person_oe$oe_pers_leg_key
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_pers_leg_name,Owner Name,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_pers_leg_name,ldm_obj_fld,person_oe$oe_pers_leg_name
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_pers_open_date,Owner Open Date,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_pers_open_date,ldm_obj_fld,person_oe$oe_pers_open_date
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_ppid_key,LDM:btfg$code_ldm_obj_fld.person_oe$oe_ppid_key,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_ppid_key,ldm_obj_fld,person_oe$oe_ppid_key
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,oe_type_id,Organisational Entity Type ID,,LDM:btfg$code_ldm_obj_fld.person_oe$oe_type,ldm_obj_fld,person_oe$oe_type
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,prty_chan_id,Party Channel ID,,LDM:btfg$code_ldm_obj_fld.person_oe$prty_chan,ldm_obj_fld,person_oe$prty_chan
+OE Intermediary Structure,BTFG$UI_OE_STRUCT.PERSON#HIRA.XSD,user_exper_id,LDM:btfg$code_ldm_obj_fld.person_oe$user_exper,,LDM:btfg$code_ldm_obj_fld.person_oe$user_exper,ldm_obj_fld,person_oe$user_exper
+UI Portfolio Movement,BTFG$UI_PERF_CF_LIST.BP#PORTF_MVT.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Adviser Dashboard,BTFG$UI_PERF_LIST.BP#TOP_BP.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Adviser dashboard,BTFG$UI_PERF_LIST.BP#TOP_BP_CASH.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Portfolio Performance by Cont,BTFG$UI_PERF_LIST.CONT_ASSETGRP_POS.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI Portfolio Performance by Cont,BTFG$UI_PERF_LIST.CONT_ASSETGRP_POS.XSD,cont,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI Portfolio Performance by Cont,BTFG$UI_PERF_LIST.CONT_ASSETGRP_POS.XSD,ref_obj_id,Object,Object,LDM:btfg$code_ldm_obj.obj,ldm_obj,obj
+UI Portfolio Performance by Cont,BTFG$UI_PERF_LIST.CONT_ASSETGRP_POS.XSD,asset_grp_id,Asset Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_grp,ldm_obj_fld,asset$asset_grp
+UI Portfolio Performance by Cont,BTFG$UI_PERF_LIST.CONT_ASSETGRP_POS.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+UI Portfolio Performance by Cont,BTFG$UI_PERF_LIST.CONT_ASSETGRP_POS.XSD,pos_name,Position Name,,LDM:btfg$code_ldm_obj_fld.pos$pos_name,ldm_obj_fld,pos$pos_name
+UI Performance Summary by Period,BTFG$UI_PERF_LIST.PRD_PRDDET.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI Performance Summary by Period,BTFG$UI_PERF_LIST.PRD_PRDDET.XSD,bmrk_id,Benchmark,Benchmark,LDM:btfg$code_ldm_obj.bmrk,ldm_obj,bmrk
+UI Performance Summary by Period,BTFG$UI_PERF_LIST.PRD_PRDDET.XSD,obj_id,Object,Object,LDM:btfg$code_ldm_obj.obj,ldm_obj,obj
+UI Adviser List,BTFG$UI_PERSON.PERSON#AVSR.XSD,avsr_person,Adviser,Adviser,LDM:btfg$code_ldm_obj.person_natural_imed_avsr,ldm_obj,person_natural_imed_avsr
+UI Adviser List,BTFG$UI_PERSON.PERSON#AVSR.XSD,avsr_pos,Intermediary Structure,Intermediary Structure,LDM:btfg$code_ldm_obj.person_oe_imed,ldm_obj,person_oe_imed
+UI Adviser List,BTFG$UI_PERSON.PERSON#AVSR.XSD,dealer_grp,Dealer Group,Dealer Group,LDM:btfg$code_ldm_obj.person_oe_imed_dg,ldm_obj,person_oe_imed_dg
+UI Adviser List,BTFG$UI_PERSON.PERSON#AVSR.XSD,pri_email,Electronic Address,,LDM:btfg$code_ldm_obj_fld.addr_elec$elec_addr,ldm_obj_fld,addr_elec$elec_addr
+UI Adviser List,BTFG$UI_PERSON.PERSON#AVSR.XSD,avsr_first_name,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI Adviser List,BTFG$UI_PERSON.PERSON#AVSR.XSD,avsr_last_name,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,person_birth_suburb,City,,LDM:btfg$code_ldm_obj_fld.addr_postal$city,ldm_obj_fld,addr_postal$city
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,person_birth_country,Country,,LDM:btfg$code_ldm_obj_fld.addr_postal$country,ldm_obj_fld,addr_postal$country
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,person_birth_state_alt,State,,LDM:btfg$code_ldm_obj_fld.addr_postal$state,ldm_obj_fld,addr_postal$state
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,person_birth_state_id,State Name,,LDM:btfg$code_ldm_obj_fld.addr_postal$state_,ldm_obj_fld,addr_postal$state_
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,open_date,Open Date,,LDM:btfg$code_ldm_obj_fld.obj$open_date,ldm_obj_fld,obj$open_date
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,aml_status_id,AML Status ID,,LDM:btfg$code_ldm_obj_fld.person$aml_status,ldm_obj_fld,person$aml_status
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,cis_key,CIS Identifier,,LDM:btfg$code_ldm_obj_fld.person$cis,ldm_obj_fld,person$cis
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,country_tax_id,Country Tax ID,,LDM:btfg$code_ldm_obj_fld.person$country_tax,ldm_obj_fld,person$country_tax
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,full_name,Full Name,,LDM:btfg$code_ldm_obj_fld.person$full_name,ldm_obj_fld,person$full_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,gcm_id,GCM ID,,LDM:btfg$code_ldm_obj_fld.person$gcm,ldm_obj_fld,person$gcm
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,gcm_cust_nr,GCM Customer Number,,LDM:btfg$code_ldm_obj_fld.person$gcm_cust_nr,ldm_obj_fld,person$gcm_cust_nr
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,is_avsr,Has person an adviser job,,LDM:btfg$code_ldm_obj_fld.person$has_avsr_profile,ldm_obj_fld,person$has_avsr_profile
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,is_avsra,Has person an adviser assistant job,,LDM:btfg$code_ldm_obj_fld.person$has_avsra_profile,ldm_obj_fld,person$has_avsra_profile
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,is_prplnr,Has person a para planner job,,LDM:btfg$code_ldm_obj_fld.person$has_prplnr_profile,ldm_obj_fld,person$has_prplnr_profile
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,has_tfn,Person has TFN,,LDM:btfg$code_ldm_obj_fld.person$has_tfn,ldm_obj_fld,person$has_tfn
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,idv_status_id,IDV Status ID,,LDM:btfg$code_ldm_obj_fld.person$idv_status,ldm_obj_fld,person$idv_status
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,is_safi_active,Is SAFI Active,,LDM:btfg$code_ldm_obj_fld.person$is_safi_active,ldm_obj_fld,person$is_safi_active
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,modi_seq_nr,Person modification sequence number,,LDM:btfg$code_ldm_obj_fld.person$person_modi_seq_nr,ldm_obj_fld,person$person_modi_seq_nr
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,person_type_id,Person Type ID,,LDM:btfg$code_ldm_obj_fld.person$person_type,ldm_obj_fld,person$person_type
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,safi_device,SAFI Device,,LDM:btfg$code_ldm_obj_fld.person$safi_device,ldm_obj_fld,person$safi_device
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,au_tfn_wtax_exempt_id,Withholding Tax Exemption ID,,LDM:btfg$code_ldm_obj_fld.person$wtax_exempt,ldm_obj_fld,person$wtax_exempt
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,abn,ABN,,LDM:btfg$code_ldm_obj_fld.person_legal$abn,ldm_obj_fld,person_legal$abn
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,acn,Australian Company Number,,LDM:btfg$code_ldm_obj_fld.person_legal$acn,ldm_obj_fld,person_legal$acn
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,asic_name,ASIC Name,,LDM:btfg$code_ldm_obj_fld.person_legal$asic_name,ldm_obj_fld,person_legal$asic_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,legal_form_id,Legal Form ID,,LDM:btfg$code_ldm_obj_fld.person_legal$legal_form,ldm_obj_fld,person_legal$legal_form
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,is_regi_gst,Is registered for GST,,LDM:btfg$code_ldm_obj_fld.person_legal$regi_gst,ldm_obj_fld,person_legal$regi_gst
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,anzsic_div_id,ANZSIC Division,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_co$anzsic_div,ldm_obj_fld,person_legal_invstr_co$anzsic_div
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,anzsic_grp_id,ANZSIC Group ID,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_co$anzsic_grp,ldm_obj_fld,person_legal_invstr_co$anzsic_grp
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,anzsic_industry_id,ANZSIC Industry ID,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_co$anzsic_industry,ldm_obj_fld,person_legal_invstr_co$anzsic_industry
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,anzsic_subdiv_id,ANZSIC Sub-division ID,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_co$anzsic_subdiv,ldm_obj_fld,person_legal_invstr_co$anzsic_subdiv
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,trust_desc,Trust Description,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_trust$trust_desc,ldm_obj_fld,person_legal_invstr_trust$trust_desc
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,trust_legi_name,Trust Legislation Name,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_trust$trust_legi_name,ldm_obj_fld,person_legal_invstr_trust$trust_legi_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,trust_lic_nr,Trust License Number,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_trust$trust_lic_nr,ldm_obj_fld,person_legal_invstr_trust$trust_lic_nr
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,trust_mbr_class,Trust Member Class,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_trust$trust_mbr_class,ldm_obj_fld,person_legal_invstr_trust$trust_mbr_class
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,trust_regi_state_id,Trust Registration State,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_trust$trust_regi_state,ldm_obj_fld,person_legal_invstr_trust$trust_regi_state
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,trust_regu_name,Trust Regulatory Name,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_trust$trust_regu_name,ldm_obj_fld,person_legal_invstr_trust$trust_regu_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,trust_type_id,Trust Type ID,,LDM:btfg$code_ldm_obj_fld.person_legal_invstr_trust$trust_type,ldm_obj_fld,person_legal_invstr_trust$trust_type
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,age,Age,,LDM:btfg$code_ldm_obj_fld.person_natural$age,ldm_obj_fld,person_natural$age
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,pref_salut,Artist Name,,LDM:btfg$code_ldm_obj_fld.person_natural$artist_name,ldm_obj_fld,person_natural$artist_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,birth_date,Birth Date,,LDM:btfg$code_ldm_obj_fld.person_natural$birth_date,ldm_obj_fld,person_natural$birth_date
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,death_date,Death Date,,LDM:btfg$code_ldm_obj_fld.person_natural$death_date,ldm_obj_fld,person_natural$death_date
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,first_name,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,gender_id,Gender ID,,LDM:btfg$code_ldm_obj_fld.person_natural$gender,ldm_obj_fld,person_natural$gender
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,is_online_reg,Is Person a Panorama Registered User,,LDM:btfg$code_ldm_obj_fld.person_natural$is_reg,ldm_obj_fld,person_natural$is_reg
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,is_wpl_reg,Is Person a WestpacLive Registered User,,LDM:btfg$code_ldm_obj_fld.person_natural$is_wpl_reg,ldm_obj_fld,person_natural$is_wpl_reg
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,last_name,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,middle_name,Middle Name,,LDM:btfg$code_ldm_obj_fld.person_natural$middle_name,ldm_obj_fld,person_natural$middle_name
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,profession,Profession,,LDM:btfg$code_ldm_obj_fld.person_natural$profession,ldm_obj_fld,person_natural$profession
+UI Person Details,BTFG$UI_PERSON.PERSON_DET.XSD,ttl_id,Title,,LDM:btfg$code_ldm_obj_fld.person_natural$ttl,ldm_obj_fld,person_natural$ttl
+UI Person Details for Avoka,BTFG$UI_PERSON.PERSON_DET_AVOKA.XSD,person,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Person Details for Avoka,BTFG$UI_PERSON.PERSON_DET_AVOKA.XSD,gcm_id,GCM ID,,LDM:btfg$code_ldm_obj_fld.person$gcm,ldm_obj_fld,person$gcm
+UI Person Details for Avoka,BTFG$UI_PERSON.PERSON_DET_AVOKA.XSD,first_name,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI Person Details for Avoka,BTFG$UI_PERSON.PERSON_DET_AVOKA.XSD,last_name,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,pri_email,Electronic Address,,LDM:btfg$code_ldm_obj_fld.addr_elec$elec_addr,ldm_obj_fld,addr_elec$elec_addr
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,suburb,City,,LDM:btfg$code_ldm_obj_fld.addr_postal$city,ldm_obj_fld,addr_postal$city
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,cty_id,Country,,LDM:btfg$code_ldm_obj_fld.addr_postal$country,ldm_obj_fld,addr_postal$country
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,state_other,State,,LDM:btfg$code_ldm_obj_fld.addr_postal$state,ldm_obj_fld,addr_postal$state
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,state_id,State ID_,,LDM:btfg$code_ldm_obj_fld.addr_postal$state_id_,ldm_obj_fld,addr_postal$state_id_
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,zip,Zip,,LDM:btfg$code_ldm_obj_fld.addr_postal$zip,ldm_obj_fld,addr_postal$zip
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,close_date,Close Date,,LDM:btfg$code_ldm_obj_fld.obj$close_date,ldm_obj_fld,obj$close_date
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,cis_key,CIS Identifier,,LDM:btfg$code_ldm_obj_fld.person$cis,ldm_obj_fld,person$cis
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,full_name,Full Name,,LDM:btfg$code_ldm_obj_fld.person$full_name,ldm_obj_fld,person$full_name
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,gcm_id,GCM ID,,LDM:btfg$code_ldm_obj_fld.person$gcm,ldm_obj_fld,person$gcm
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,idv_status_id,IDV Status ID,,LDM:btfg$code_ldm_obj_fld.person$idv_status,ldm_obj_fld,person$idv_status
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,person_type_id,Person Type ID,,LDM:btfg$code_ldm_obj_fld.person$person_type,ldm_obj_fld,person$person_type
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,asic_name,ASIC Name,,LDM:btfg$code_ldm_obj_fld.person_legal$asic_name,ldm_obj_fld,person_legal$asic_name
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,legal_form_id,Legal Form ID,,LDM:btfg$code_ldm_obj_fld.person_legal$legal_form,ldm_obj_fld,person_legal$legal_form
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,birth_date,Birth Date,,LDM:btfg$code_ldm_obj_fld.person_natural$birth_date,ldm_obj_fld,person_natural$birth_date
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,first_name,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,is_online_reg,Is Person a Panorama Registered User,,LDM:btfg$code_ldm_obj_fld.person_natural$is_reg,ldm_obj_fld,person_natural$is_reg
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,is_wpl_reg,Is Person a WestpacLive Registered User,,LDM:btfg$code_ldm_obj_fld.person_natural$is_wpl_reg,ldm_obj_fld,person_natural$is_wpl_reg
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,last_name,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI Investor Person Type Details,BTFG$UI_PERSON_LIST.ALL#INVSTR.XSD,ttl_id,Title,,LDM:btfg$code_ldm_obj_fld.person_natural$ttl,ldm_obj_fld,person_natural$ttl
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,pri_email,Electronic Address,,LDM:btfg$code_ldm_obj_fld.addr_elec$elec_addr,ldm_obj_fld,addr_elec$elec_addr
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,suburb,City,,LDM:btfg$code_ldm_obj_fld.addr_postal$city,ldm_obj_fld,addr_postal$city
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,cty_id,Country,,LDM:btfg$code_ldm_obj_fld.addr_postal$country,ldm_obj_fld,addr_postal$country
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,state_other,State,,LDM:btfg$code_ldm_obj_fld.addr_postal$state,ldm_obj_fld,addr_postal$state
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,state_id,State ID_,,LDM:btfg$code_ldm_obj_fld.addr_postal$state_id_,ldm_obj_fld,addr_postal$state_id_
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,zip,Zip,,LDM:btfg$code_ldm_obj_fld.addr_postal$zip,ldm_obj_fld,addr_postal$zip
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,cis_key,CIS Identifier,,LDM:btfg$code_ldm_obj_fld.person$cis,ldm_obj_fld,person$cis
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,full_name,Full Name,,LDM:btfg$code_ldm_obj_fld.person$full_name,ldm_obj_fld,person$full_name
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,gcm_id,GCM ID,,LDM:btfg$code_ldm_obj_fld.person$gcm,ldm_obj_fld,person$gcm
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,gcm_cust_nr,GCM Customer Number,,LDM:btfg$code_ldm_obj_fld.person$gcm_cust_nr,ldm_obj_fld,person$gcm_cust_nr
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,has_tfn,Person has TFN,,LDM:btfg$code_ldm_obj_fld.person$has_tfn,ldm_obj_fld,person$has_tfn
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,idv_status_id,IDV Status ID,,LDM:btfg$code_ldm_obj_fld.person$idv_status,ldm_obj_fld,person$idv_status
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,legal_form_id,Legal Form ID,,LDM:btfg$code_ldm_obj_fld.person_legal$legal_form,ldm_obj_fld,person_legal$legal_form
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,birth_date,Birth Date,,LDM:btfg$code_ldm_obj_fld.person_natural$birth_date,ldm_obj_fld,person_natural$birth_date
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,first_name,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI Investor Person Type Details - Flat,BTFG$UI_PERSON_LIST.ALL#INVSTR_FLAT.XSD,last_name,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI - Available balance,BTFG$UI_POS_LIST.BP#BAL.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,pos_curry_id,Currency,Currency,LDM:btfg$code_ldm_obj.curry,ldm_obj,curry
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,ref_obj_id,Object,Object,LDM:btfg$code_ldm_obj.obj,ldm_obj,obj
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,asset_grp_id,Asset Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_grp,ldm_obj_fld,asset$asset_grp
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,cont_status,Container Status ID,,LDM:btfg$code_ldm_obj_fld.cont$cont_status,ldm_obj_fld,cont$cont_status
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,pos_name,Position Name,,LDM:btfg$code_ldm_obj_fld.pos$pos_name,ldm_obj_fld,pos$pos_name
+UI - Available balance,BTFG$UI_POS_LIST.BP_CONT_ASSETGRP_POS.XSD,pos_type_id,Position Type ID,,LDM:btfg$code_ldm_obj_fld.pos$pos_type,ldm_obj_fld,pos$pos_type
+MP Models With FUM,BTFG$UI_POS_LIST.IPS_AUM.XSD,ips,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+MP Models With FUM,BTFG$UI_POS_LIST.IPS_AUM.XSD,ips_apir,APIR Code,,LDM:btfg$code_ldm_obj_fld.ips$apir_code,ldm_obj_fld,ips$apir_code
+MP Models With FUM,BTFG$UI_POS_LIST.IPS_AUM.XSD,ips_asset_class_id,Asset Class ID,,LDM:btfg$code_ldm_obj_fld.ips$asset_class,ldm_obj_fld,ips$asset_class
+MP Models With FUM,BTFG$UI_POS_LIST.IPS_AUM.XSD,ips_invst_style_id,Investment Style ID,,LDM:btfg$code_ldm_obj_fld.ips$invst_style,ldm_obj_fld,ips$invst_style
+MP Models With FUM,BTFG$UI_POS_LIST.IPS_AUM.XSD,ips_sym,IPS Symbolic Key,,LDM:btfg$code_ldm_obj_fld.ips$ips_sym,ldm_obj_fld,ips$ips_sym
+MP Models With FUM,BTFG$UI_POS_LIST.IPS_AUM.XSD,ips_status_id,Status ID,,LDM:btfg$code_ldm_obj_fld.ips$status,ldm_obj_fld,ips$status
+Model Cash Report,BTFG$UI_POS_LIST.IPS_SHDW_MP_CASH.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+Model Cash Report,BTFG$UI_POS_LIST.IPS_SHDW_MP_CASH.XSD,invst_mgr_id,Investment Manager Structure,Investment Manager Structure,LDM:btfg$code_ldm_obj.person_oe_im,ldm_obj,person_oe_im
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,acc_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,avsr_id,Adviser,Adviser,LDM:btfg$code_ldm_obj.person_natural_imed_avsr,ldm_obj,person_natural_imed_avsr
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,acc_type_id,Account Structure Type ID,,LDM:btfg$code_ldm_obj_fld.acc$acc_struct_type,ldm_obj_fld,acc$acc_struct_type
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,acc_nr,BP Numeric Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_nr,ldm_obj_fld,acc$bp_nr
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,prod_id,Product,,LDM:btfg$code_ldm_obj_fld.acc$prod_id,ldm_obj_fld,acc$prod_id
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,avsr_state_id,State ID_,,LDM:btfg$code_ldm_obj_fld.addr_postal$state_id_,ldm_obj_fld,addr_postal$state_id_
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,avsr_gcm_id,GCM ID,,LDM:btfg$code_ldm_obj_fld.person$gcm,ldm_obj_fld,person$gcm
+Model Cash Report,BTFG$UI_POS_LIST.POS#FIDD.XSD,avsr_ora_id,Oracle User,,LDM:btfg$code_ldm_obj_fld.person_natural$oracle_user,ldm_obj_fld,person_natural$oracle_user
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,asset,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,prod_id,Product,Product,LDM:btfg$code_ldm_obj.prod,ldm_obj,prod
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,drawdown_curry_id,Drawndown Currency,,LDM:btfg$code_ldm_obj_fld.prod$drawdown_curry,ldm_obj_fld,prod$drawdown_curry
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,drawdown_trig_amount,Drawdown Trigger Amount,,LDM:btfg$code_ldm_obj_fld.prod$drawdown_trig_amount,ldm_obj_fld,prod$drawdown_trig_amount
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,has_dg_advcong_fee,Has license advice fee,,LDM:btfg$code_ldm_obj_fld.prod$has_dg_advcong_fee,ldm_obj_fld,prod$has_dg_advcong_fee
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,has_pltf_adm_fee,Has platform administartion fee,,LDM:btfg$code_ldm_obj_fld.prod$has_pltf_adm_fee,ldm_obj_fld,prod$has_pltf_adm_fee
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,is_direct,Is Direct,,LDM:btfg$code_ldm_obj_fld.prod$is_direct,ldm_obj_fld,prod$is_direct
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,is_super,Is Super,,LDM:btfg$code_ldm_obj_fld.prod$is_super,ldm_obj_fld,prod$is_super
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,min_cash_amount,Minimum Cash Amount,,LDM:btfg$code_ldm_obj_fld.prod$min_cash_amount,ldm_obj_fld,prod$min_cash_amount
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,prod_parent_id,Parent Product,,LDM:btfg$code_ldm_obj_fld.prod$parent_prod,ldm_obj_fld,prod$parent_prod
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,active,Product Is Active,,LDM:btfg$code_ldm_obj_fld.prod$prod_is_active,ldm_obj_fld,prod$prod_is_active
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,prod_type,Product Level ID,,LDM:btfg$code_ldm_obj_fld.prod$prod_level,ldm_obj_fld,prod$prod_level
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,prod_name,Product Name,,LDM:btfg$code_ldm_obj_fld.prod$prod_name,ldm_obj_fld,prod$prod_name
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,prod_nr,Product Numeric Key,,LDM:btfg$code_ldm_obj_fld.prod$prod_nr,ldm_obj_fld,prod$prod_nr
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,prod_short_name,Product Short Name,,LDM:btfg$code_ldm_obj_fld.prod$prod_short_name,ldm_obj_fld,prod$prod_short_name
+UI Product List,BTFG$UI_PROD_LIST.ALL#PROD_DET.XSD,cpc_code,Product Badge CPC,,LDM:btfg$code_ldm_obj_fld.prod_white_label$prod_cpc,ldm_obj_fld,prod_white_label$prod_cpc
+UI Product/IPS Investment Options,BTFG$UI_PROD_LIST.PROD#IPS_DET.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+UI Product/IPS Investment Options,BTFG$UI_PROD_LIST.PROD#IPS_DET.XSD,prod_id,Product,Product,LDM:btfg$code_ldm_obj.prod,ldm_obj,prod
+Recipient Created Tax Invoices,BTFG$UI_RECP_CREATE_TAX_INVC.INVST_MNGTFEE.XSD,supl,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+Recipient Created Tax Invoices,BTFG$UI_RECP_CREATE_TAX_INVC.INVST_MNGTFEE.XSD,recp_addr,Address ID,,LDM:btfg$code_ldm_obj_fld.person$addr,ldm_obj_fld,person$addr
+Recipient Created Tax Invoices,BTFG$UI_RECP_CREATE_TAX_INVC.INVST_MNGTFEE.XSD,recp_abn,ABN,,LDM:btfg$code_ldm_obj_fld.person_legal$abn,ldm_obj_fld,person_legal$abn
+Scheduled Transactions,BTFG$UI_SCD_TRX_LIST.POS_TRX.XSD,payee,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Job User list,BTFG$UI_SEC_USER_LIST.JOB_USER.XSD,person_job,Job name,,LDM:btfg$code_ldm_obj_fld.person_profile$job_name,ldm_obj_fld,person_profile$job_name
+UI Job User list,BTFG$UI_SEC_USER_LIST.JOB_USER.XSD,job_type,Job type ID,,LDM:btfg$code_ldm_obj_fld.person_profile$job_type,ldm_obj_fld,person_profile$job_type
+UI Job User list,BTFG$UI_SEC_USER_LIST.JOB_USER.XSD,job_user_exper,LDM:btfg$code_ldm_obj_fld.person_profile$job_user_exper,,LDM:btfg$code_ldm_obj_fld.person_profile$job_user_exper,ldm_obj_fld,person_profile$job_user_exper
+UI-Triggering Position List,BTFG$UI_SECEVT_POSLIST.TRIG_POS.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI-Triggering Position List,BTFG$UI_SECEVT_POSLIST.TRIG_POS.XSD,ips_id,Investment Policy Statement,Investment Policy Statement,LDM:btfg$code_ldm_obj.ips,ldm_obj,ips
+UI-Triggering Position List,BTFG$UI_SECEVT_POSLIST.TRIG_POS.XSD,avsr_person_oe_id,Adviser,Adviser,LDM:btfg$code_ldm_obj.person_natural_imed_avsr,ldm_obj,person_natural_imed_avsr
+UI-Triggering Position List,BTFG$UI_SECEVT_POSLIST.TRIG_POS.XSD,trig_pos_id,Position,Position,LDM:btfg$code_ldm_obj.pos,ldm_obj,pos
+UI-Triggering Position List,BTFG$UI_SECEVT_POSLIST.TRIG_POS.XSD,prod_id,Product,Product,LDM:btfg$code_ldm_obj.prod,ldm_obj,prod
+UI-Triggering Position List,BTFG$UI_SECEVT_POSLIST.TRIG_POS.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+UI Transactions Details,BTFG$UI_SECTRX_LIST.BP_CONT_ASSETGRP_POS.XSD,bp_id,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Transactions Details,BTFG$UI_SECTRX_LIST.BP_CONT_ASSETGRP_POS.XSD,asset_id,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI Transactions Details,BTFG$UI_SECTRX_LIST.BP_CONT_ASSETGRP_POS.XSD,cont_id,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI Transactions Details,BTFG$UI_SECTRX_LIST.BP_CONT_ASSETGRP_POS.XSD,tax_curry_id,Currency,Currency,LDM:btfg$code_ldm_obj.curry,ldm_obj,curry
+UI Transactions Details,BTFG$UI_SECTRX_LIST.BP_CONT_ASSETGRP_POS.XSD,asset_grp_id,Asset Group,,LDM:btfg$code_ldm_obj_fld.asset$asset_grp,ldm_obj_fld,asset$asset_grp
+UI Transactions Details,BTFG$UI_SECTRX_LIST.BP_CONT_ASSETGRP_POS.XSD,cont_type_id,Container Type,,LDM:btfg$code_ldm_obj_fld.cont$cont_type,ldm_obj_fld,cont$cont_type
+UI Transactions Details,BTFG$UI_SECTRX_LIST.BP_CONT_ASSETGRP_POS.XSD,pos_name,Position Name,,LDM:btfg$code_ldm_obj_fld.pos$pos_name,ldm_obj_fld,pos$pos_name
+Transition settlement status,BTFG$UI_SETTLE_DOC_LIST.BP#TRANS_SETTLE_DOC.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+Transition settlement status,BTFG$UI_SETTLE_DOC_LIST.BP#TRANS_SETTLE_DOC.XSD,asset,Asset,Asset,LDM:btfg$code_ldm_obj.asset,ldm_obj,asset
+UI Transitioned Client Status,BTFG$UI_TRANS_BP_LIST.STATUS.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Transitioned Client Status,BTFG$UI_TRANS_BP_LIST.STATUS.XSD,avsr,Adviser,Adviser,LDM:btfg$code_ldm_obj.person_natural_imed_avsr,ldm_obj,person_natural_imed_avsr
+UI Transitioned Client Status,BTFG$UI_TRANS_BP_LIST.STATUS.XSD,avsr_name,Full Name,,LDM:btfg$code_ldm_obj_fld.person$full_name,ldm_obj_fld,person$full_name
+UI Transaction Bundler Orders,BTFG$UI_TRX_BDL_LIST.DOC.XSD,bp,Account,Account,LDM:btfg$code_ldm_obj.acc,ldm_obj,acc
+UI Transaction Bundler Orders,BTFG$UI_TRX_BDL_LIST.DOC.XSD,cont,Container,Container,LDM:btfg$code_ldm_obj.cont,ldm_obj,cont
+UI Transaction Bundler Orders,BTFG$UI_TRX_BDL_LIST.DOC.XSD,owner,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI Transaction Bundler Orders,BTFG$UI_TRX_BDL_LIST.DOC.XSD,trig_pos,Position,Position,LDM:btfg$code_ldm_obj.pos,ldm_obj,pos
+UI Transaction Bundler Orders,BTFG$UI_TRX_BDL_LIST.DOC.XSD,bp_nr,BP Numeric Key,,LDM:btfg$code_ldm_obj_fld.acc$bp_nr,ldm_obj_fld,acc$bp_nr
+UI Matching for User Registration Details,BTFG$UI_USER.PERSON#MATCH_CHK.XSD,is_safi_active,Is SAFI Active,,LDM:btfg$code_ldm_obj_fld.person$is_safi_active,ldm_obj_fld,person$is_safi_active
+UI Matching for User Registration Details,BTFG$UI_USER.PERSON#MATCH_CHK.XSD,safi_device_nr,SAFI Device,,LDM:btfg$code_ldm_obj_fld.person$safi_device,ldm_obj_fld,person$safi_device
+UI ABS basis information for investor,BTFG$UI_USER.USER_AUTH.XSD,person_id,Person,Person,LDM:btfg$code_ldm_obj.person,ldm_obj,person
+UI ABS basis information for investor,BTFG$UI_USER.USER_AUTH.XSD,nat_person_id,Natural Person,Natural Person,LDM:btfg$code_ldm_obj.person_natural,ldm_obj,person_natural
+UI ABS basis information for investor,BTFG$UI_USER.USER_AUTH.XSD,nat_person_full_name,Full Name,,LDM:btfg$code_ldm_obj_fld.person$full_name,ldm_obj_fld,person$full_name
+UI ABS basis information for investor,BTFG$UI_USER.USER_AUTH.XSD,nat_person_safi_device,SAFI Device,,LDM:btfg$code_ldm_obj_fld.person$safi_device,ldm_obj_fld,person$safi_device
+UI ABS basis information for investor,BTFG$UI_USER.USER_AUTH.XSD,nat_person_first_name,First Name,,LDM:btfg$code_ldm_obj_fld.person_natural$first_name,ldm_obj_fld,person_natural$first_name
+UI ABS basis information for investor,BTFG$UI_USER.USER_AUTH.XSD,nat_person_last_name,Last Name,,LDM:btfg$code_ldm_obj_fld.person_natural$last_name,ldm_obj_fld,person_natural$last_name
+UI ABS basis information for investor,BTFG$UI_USER.USER_AUTH.XSD,nat_person_middle_name,Middle Name,,LDM:btfg$code_ldm_obj_fld.person_natural$middle_name,ldm_obj_fld,person_natural$middle_name
