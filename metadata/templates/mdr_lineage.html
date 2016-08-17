@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Panorama  - Metadata Lineage by Screen Name and Field Name</title>
+</head>
+<body>
+
+<b>Screen Name: </b>{{ screen_name }}
+<br/>
+<b>Attrubites:</b> {{ screen_field_name }}
+
+<br/>
+<b>Lineage: </b>
+<h3>Visual Map</h3>
+{% for item in lineage_object[0] %}
+
+<p>{{item.Entity_Name}}</p>
+<p>{{item.Attribute}}</p>
+
+{%endfor%}
+
+<h3>IFS</h3>
+{% for item in lineage_object[1] %}
+
+<p>{{item.Entity_Name}}</p>
+<p>{{item.Attribute}}</p>
+
+
+{%endfor%}
+
+<h3>XSD</h3>
+{% for item in lineage_object[2] %}
+
+<p>{{item.Entity_Name}}</p>
+<p>{{item.Attribute}}</p>
+
+
+{%endfor%}
+
+</body>
+</html>

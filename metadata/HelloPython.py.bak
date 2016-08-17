@@ -1,0 +1,36 @@
+""" 
+
+Refer the ReadMe word document to set up the Python environment with docx and xlsxwriter modules
+
+"""
+from docx import Document
+import os
+import xlsxwriter 
+import sys  
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
+
+
+file = open("sourcefile.txt","r")
+lines = file.readlines()
+file.close()
+
+countTotalLines = 0
+
+workbook = xlsxwriter.Workbook("Screen_Attributes.xlsx")
+worksheet = workbook.add_worksheet("Screen_Attributes")
+
+bold = workbook.add_format({'bold': 1});
+
+#worksheet.write('A1', 'Screen Name', bold);
+#worksheet.write('B1', 'Attribute Name', bold)
+
+for line in lines:
+
+ worksheet.write_string(countTotalLines ,0 , line)
+ countTotalLines = 	countTotalLines + 1
+
+workbook.close();
+

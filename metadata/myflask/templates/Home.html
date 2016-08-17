@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if name.Name %}
+<h1>Hello {{ name.Name }} !</h1>
+    <h2>Email: {{ name.Email }} !</h2>
+    <h3>DOB: {{ name.DOB }} !</h3>
+{% else %}
+
+    <h1> Hello Guest !</h1>
+{% endif %}
+
+</body>
+</html>

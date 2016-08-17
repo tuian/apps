@@ -1,0 +1,74 @@
+
+        <table class="table">
+            <thead class="text-center">
+                 <tr>
+                 <th class="col-lg-1">System Name</th>
+                 <th class="col-lg-2">Entity Name</th>
+                 <th class="col-lg-3">Attribute Name</th>
+                 <th class="col-lg-3">Mapping Type</th>
+                 <th class="col-lg-3">Mapping Description</th>
+                 </tr>
+            </thead>
+            <tbody>
+
+            <!-- Visual Map -->
+
+            {% for item in lineage_object[0] %}
+
+            <tr class="success">
+                <td class="col-lg-1">{{item.Target_System_Name}}</td>
+                <td class="col-lg-2">{{item.Target_Entity_Name_D}}</td>
+                <td class="col-lg-3">{{item.Target_Attribute_Name_D}}</td>
+                <td class="col-lg-3">{{cleanHTMLTags_Flask(item.Business_Rule)}}</td>
+                <td class="col-lg-3">{{cleanHTMLTags_Flask(item.Transformation_Mapping_Rule)}}</td>
+            </tr>
+
+            {%endfor%}
+
+            <!-- IFS Map -->
+
+                 {% for item in lineage_object[1] %}
+
+            <tr class="danger">
+                <td>{{item.Target_System_Name}}</td>
+                <td>{{item.Target_Entity_Name_D}}</td>
+                <td>{{item.Target_Attribute_Name_Duplicate}}</td>
+                <td>{{cleanHTMLTags_Flask(item.Business_Rule)}}</td>
+                <td class="col-lg-3">{{cleanHTMLTags_Flask(item.Transformation_Mapping_Rule)}}</td>
+            </tr>
+
+            {%endfor%}
+
+            <!-- XSD Map -->
+
+                 {% for item in lineage_object[2] %}
+
+            <tr class="info">
+                <td>{{item.Target_System_Name}}</td>
+                <td>{{item.Target_Entity_Name_Duplicate}}</td>
+                <td>{{item.Target_Attribute_Name_Duplicate}}</td>
+                <td>{{cleanHTMLTags_Flask(item.Business_x0020_Rule)}}</td>
+                <td class="col-lg-3">{{cleanHTMLTags_Flask(item.Transformation_Mapping_Rule)}}</td>
+            </tr>
+
+            {%endfor%}
+
+            <!-- LDM Map -->
+
+            {% for item in lineage_object[3] %}
+
+            <tr class="warning">
+                <td>{{item.Target_System_Name}}</td>
+                <td>{{item.Target_Entity_Name_Duplicate}}</td>
+                <td>{{item.Target_Attribute_Name_Duplicate}}</td>
+                <td>{{cleanHTMLTags_Flask(item.Business_x0020_Rule)}}</td>
+                <td class="col-lg-3">{{cleanHTMLTags_Flask(item.Transformation_Mapping_Rule)}}</td>
+            </tr>
+
+            {%endfor%}
+
+
+            </tbody>
+        </table>
+
+

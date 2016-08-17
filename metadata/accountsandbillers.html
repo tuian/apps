@@ -1,0 +1,533 @@
+<div class="grid">
+    <div class="columns-41">
+        <div data-view-component="messagealert" data-component-name="successmessage">
+            <type>success</type>
+            <html>
+                <p><span data-name="addlinkedAccountBillerName"></span> {{cms 'Ins-IP-0039'}}</p>
+            </html>
+        </div>
+        <div data-view-component="messagealert" data-component-name="addaccountsuccessmessage">
+            <type>success</type>
+            <html>
+                <p><span data-name="addAccountName"></span> {{cms 'Ins-IP-0039'}}</p>
+            </html>
+        </div>
+        <div data-view-component="messagealert" data-component-name="failmessage">
+            <type>error</type>
+            <html>
+                <p>{{cms 'Err.IP-0330'}}</p>
+            </html>
+        </div>
+        <div data-view-component="messagealert" data-component-name="changelimitmessage">
+            <type>success</type>
+            <html>
+                <p><span data-name="accountType"></span> {{cms 'Err.IP-0294'}}</p>
+            </html>
+        </div>
+        <div data-view-component="messagealert" data-component-name="removesuccessmsg">
+            <type>success</type>
+            <html>
+                <p>{{cms 'Ins-IP-0038'}}</p>
+            </html>
+        </div>
+        <div data-view-component="messagealert" data-component-name="serverfailmessage">
+            <type>error</type>
+            <html>
+                <p>{{cms 'Err.IP-0333'}}</p>
+            </html>
+        </div>
+        <div data-view-component="messagealert" data-component-name="emulationerrormessage">
+            <type>error</type>
+            <html>
+                <p>{{cms 'Err.IP-0363'}}</p>
+            </html>
+        </div>
+        <div data-view-component="messagealert" data-component-name="blockmessage" class="margin-bottom-2">
+            <type>pending</type>
+            <html>
+                <p></p>
+            </html>
+        </div>
+    </div>
+</div>
+
+<div class="js-accountsbillersPage">
+<div class="grid ">
+    <div class="columns-41 border-bottom-1">
+        <div class="margin-bottom-1"><span>{{#permission '!account.direct.accountsbillers.linked' 'a' }}Linked accounts can be used to transfer money to and from your Panorama account. Pay anyone accounts can be used by authorised users to make payments to others.{{/permission}}{{#permission 'account.direct.accountsbillers.linked' 'a' }}You can add, remove or edit the nickname for linked accounts. You can make withdrawals to and investments from linked accounts, and you can link up to 5 accounts.{{/permission}}</span></div>
+        <hr>
+        <div data-view-component="expandcollapseall"></div>
+    </div>
+</div>
+
+<div data-mvc-component="section" data-component-name="linkedaccount">
+    <accordion>true</accordion>
+    <callback>onAddlinkedaccount</callback>
+    <header>
+        <caption>Linked accounts</caption>
+        <cell/>
+        <cell>
+             {MVC{#permission 'account.payee.view' 'a' }}
+                <html>
+                    <span data-view-component="button" data-component-name="addlinkedaccount">
+                        <image>icon-add</image>
+                        <label>Add linked account</label>
+                        <action>parent.openLinkedAccount()</action>
+                        <style>tertiary</style>
+                        <type>button</type>
+                    </span>
+                </html>
+                {MVC{/permission}}
+        </cell>
+    </header>
+    <body>
+        <html>
+        <div data-mvc-component="tablev3" data-component-name="linkedaccounttable">
+            <columns>
+                <column>
+                    <label>Account details</label>
+                    <grid_width>15</grid_width>
+                    <html>
+                        <div class="grid">
+                            <div class="columns-1">
+                                {{#if primary}}
+                                    <span data-view-component="tooltip">
+                                        <label>Primary linked account</label>
+                                        <icon>primary</icon>
+                                        <icon_color>amber</icon_color>
+                                        <style>form</style>
+                                    </span>
+                                {{else}} &nbsp {{/if}}
+                            </div>
+                            <div class="columns-15">
+                                <div class="accountname">
+                                    <strong>{{accountName}}</strong>
+                                </div>
+                                <div class="bsb">BSB {{code}}</div>
+                                <div class="accountid">Account no. {{accountId}}</div>
+                            </div>
+                        </div>
+                    </html>
+                </column>
+                <column>
+                    <html>
+                        <span class="icon-double-wrapper">
+                            <span data-view-component="icon">
+                                <icon>icon-transfer-deposit</icon>
+                                <title>Deposits</title>
+                                <icon_color>green</icon_color>
+                            </span>
+                            <span data-view-component="icon">
+                                <icon>icon-transfer-payment</icon>
+                                <title>Payments</title>
+                                <icon_color>amber</icon_color>
+                            </span>
+                        </span>
+                    </html>
+                    <grid_width>3</grid_width>
+                    <align>left</align>
+                </column>
+
+                {MVC{#permission 'account.payee.view' 'a'}}
+                    <column>
+                        <label>Account nickname</label>
+                        <grid_width>12</grid_width>
+                        <html>
+                            <div class="grid">
+                                <div data-view-component="forminputtext" data-component-name="inputtext{{accountId}}{{bsb}}" class="columns-12" >
+                                    <name>inputtext{{accountId}}{{bsb}}</name>
+                                    <placeholder>{{nickname}}</placeholder>
+                                    <limit_length>30</limit_length>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <span data-permission="emulating" data-action="disable">
+                                    <span data-view-component="button" data-component-name="save{{accountId}}{{bsb}}" class="inputtext{{accountId}}{{bsb}}" >
+                                        <label>Save</label>
+                                        <action>parent.parent.saveButton(inputtext{{accountId}}{{bsb}},{{accountId}},LINKED,{{code}},{{accountName}},{{primary}})</action>
+                                        <style>secondary</style>
+                                        <image>icon-save</image>
+                                    </span>
+                                </span>
+                                <span data-view-component="button" data-component-name="cancel{{accountId}}{{bsb}}" class="inputtext{{accountId}}{{bsb}}">
+                                    <label>Cancel</label>
+                                    <action>parent.parent.cancelButton(inputtext{{accountId}}{{bsb}})</action>
+                                    <style>tertiary</style>
+                                </span>
+                            </div>
+                        </html>
+                    </column>
+                {MVC{/permission}}
+
+                {MVC{#permission '!account.payee.view' 'a'}}
+                    <column>
+                        <label>Account nickname</label>
+                        <grid_width>12</grid_width>
+                        <html>
+                            <div class="grid">
+                                <span>{{nickname}}</span>
+                            </div>
+                        </html>
+                    </column>
+                {MVC{/permission}}
+
+                <column>
+                    <grid_width>5</grid_width>
+                    <align>right</align>
+                    <html>
+
+                    <div data-view-component="menuaction">
+                        <items>
+                        </items>
+                        {{#permission 'account.payment.linked.create' 'a'}}
+                            <items>
+                                <label>
+                                    {{#permission '!account.direct.accountsbillers.linked' 'a'}}Make a payment{{/permission}}
+                                    {{#permission 'account.direct.accountsbillers.linked' 'a'}}Make a withdrawal{{/permission}}
+                                </label>
+                                {{#permission '!account.direct.accountsbillers.linked' 'a'}}
+                                    <href>#ng/account/movemoney/payments?payeeId={{accountId}}&amp;a={{parent.parentId}}</href>
+                                {{/permission}}
+                                {{#permission 'account.direct.accountsbillers.linked' 'a'}}
+                                    <href>#direct/account/movemoney/payments?payeeId={{accountId}}&amp;a={{parent.parentId}}</href>
+                                {{/permission}}
+                            </items>
+                        {{/permission}}
+
+                        {{#permission 'account.deposit.linked.create' 'a'}}
+                            <items>
+                                <label>Make a deposit</label>
+                                {{#permission '!account.direct.accountsbillers.linked' 'a'}}
+                                    <href>#ng/account/movemoney/deposits?payeeId={{accountId}}&amp;a={{parent.parentId}}</href>
+                                {{/permission}}
+                                {{#permission 'account.direct.accountsbillers.linked' 'a'}}
+                                    <href>#direct/account/movemoney/deposits?payeeId={{accountId}}&amp;a={{parent.parentId}}</href>
+                                {{/permission}}
+                            </items>
+                        {{/permission}}
+
+                        {{#if primary '!==' true}}
+                            {{#permission 'account.payee.view' 'a'}}
+                                <items>
+                                    <label>Set as primary account</label>
+                                     <action>parent.parent.setAsPrimaryAccount({{accountId}},LINKED,{{code}},{{accountName}},{{nickname}})
+                                    </action>
+                                </items>
+                                <items>
+                                    <label>Remove</label>
+                                    <action>parent.parent.openModelPopup({{accountId}},LINKED,{{code}})
+                                    </action>
+                                </items>
+                            {{/permission}}
+                        {{/if}}
+                    </div>
+                    </html>
+                </column>
+            </columns>
+            <no_data>
+                <html>
+                    No Linked accounts added
+                </html>
+            </no_data>
+        </div>
+
+        </html>
+    </body>
+</div>
+{{#permission '!account.direct.accountsbillers.linked' 'a'}}
+    <div data-mvc-component="section" data-component-name="payanyoneaccount">
+        <accordion>true</accordion>
+        <callback>onAddAccount</callback>
+        <header>
+            <caption>Pay Anyone accounts</caption>
+            <cell>
+                {MVC{#permission 'account.payee.view' 'a'}}
+                    <html>
+                         <span data-view-component="button" data-component-name="changedailylimit">
+                            <image>icon-edit</image>
+                            <label>Change daily limit*</label>
+                            <action>parent.openchangedailylimit(PAY_ANYONE)</action>
+                            <style>tertiary</style>
+                            <type>button</type>
+                        </span>
+                    </html>
+                {MVC{/permission}}
+            </cell>
+            <cell>
+                {MVC{#permission 'account.payee.view' 'a'}}
+                    <html>
+                        <span data-view-component="button" data-component-name="addaccount">
+                            <image>icon-add</image>
+                            <label>Add account</label>
+                            <action>parent.openaddaccount</action>
+                            <style>tertiary</style>
+                            <type>button</type>
+                        </span>
+                    </html>
+                {MVC{/permission}}
+            </cell>
+        </header>
+        <body>
+            <html>
+                <div class="grid dailyLimit">
+                    <div class="columns-41">
+                        <div>The daily limit for Pay Anyone is <strong><span data-name="parent.payAnyoneLimit"><span></strong>
+                        </div>
+                    </div>
+                </div>
+                <div data-mvc-component="tablev3" data-component-name="payanyoneaccounttable">
+                    <columns>
+                        <column>
+                            <label>Account details</label>
+                            <grid_width>15</grid_width>
+                            <html>
+                                <div class="grid">
+                                    <div class="columns-1">
+                                       &nbsp
+                                    </div>
+                                    <div class="columns-15">
+                                        <div class="accountname"><strong>{{accountName}}</strong></div>
+                                        <div class="bsb">BSB {{code}}</div>
+                                        <div class="accountid">Account no. {{accountId}}</div>
+                                    </div>
+                                </div>
+                            </html>
+                        </column>
+                        <column>
+                            <grid_width>3</grid_width>
+                            <align>left</align>
+                            <html>
+                                <span data-view-component="icon">
+                                    <icon>icon-transfer-payment</icon>
+                                    <title>Payments</title>
+                                    <icon_color>amber</icon_color>
+                                </span>
+                            </html>
+                        </column>
+                        {MVC{#permission 'account.payee.view' 'a'}}
+                            <column>
+                                <label>Account nickname</label>
+                                <grid_width>12</grid_width>
+                                <html>
+                                    <div class="grid">
+                                        <div data-view-component="forminputtext" data-component-name="inputtext{{accountId}}{{bsb}}" class="columns-12">
+                                            <name>inputtext{{accountId}}{{bsb}}</name>
+                                            <placeholder>{{nickname}}</placeholder>
+                                            <limit_length>30</limit_length>
+                                        </div>
+                                    </div>
+                                    <div class="grid">
+                                        <span data-permission="emulating" data-action="disable">
+                                        <span data-view-component="button" data-component-name="save{{accountId}}{{bsb}}" class="inputtext{{accountId}}{{bsb}}">
+                                            <label>Save</label>
+                                            <action>parent.parent.saveButton(inputtext{{accountId}}{{bsb}},{{accountId}},PAY_ANYONE,{{code}},{{accountName}})</action>
+                                            <style>secondary</style>
+                                            <image>icon-save</image>
+                                        </span>
+                                        </span>
+                                        <span data-view-component="button" data-component-name="cancel{{accountId}}{{bsb}}" class="inputtext{{accountId}}{{bsb}}">
+                                            <label>Cancel</label>
+                                            <action>parent.parent.cancelButton(inputtext{{accountId}}{{bsb}})</action>
+                                            <style>tertiary</style>
+                                        </span>
+                                    </div>
+                                </html>
+                            </column>
+                        {MVC{/permission}}
+                        {MVC{#permission '!account.payee.view' 'a'}}
+                            <column>
+                                <label>Account nickname</label>
+                                <grid_width>12</grid_width>
+                                <html>
+                                    <div class="grid">
+                                        <span>{{nickname}}</span>
+                                    </div>
+                                </html>
+                            </column>
+                        {MVC{/permission}}
+                        <column>
+                            <grid_width>5</grid_width>
+                            <align>right</align>
+                            <html>
+                                <div data-view-component="menuaction">
+                                    <items>
+                                    </items>
+                                    {{#permission 'account.payment.anyone.create' 'a'}}
+                                        <items>
+                                            <label>Make a payment</label>
+                                            <href>#ng/account/movemoney/payments?payeeId={{accountId}}&amp;a={{parent.parentId}}</href>
+                                        </items>
+                                    {{/permission}}
+                                    {{#permission 'account.payee.view' 'a'}}
+                                        <items>
+                                            <label> Remove</label>
+                                            <action>parent.parent.openModelPopup({{accountId}},PAY_ANYONE,{{code}})</action>
+                                        </items>
+                                    {{/permission}}
+                                </div>
+                            </html>
+                        </column>
+                    </columns>
+                    <no_data>
+                        <html>No Pay Anyone accounts added</html>
+                    </no_data>
+                </div>
+            </html>
+        </body>
+    </div>
+    <div data-mvc-component="section" data-component-name="bpaybillers">
+        <accordion>true</accordion>
+        <callback>onAddBiller</callback>
+        <header>
+            <caption>BPay billers</caption>
+            <cell>
+                {MVC{#permission 'account.payee.view' 'a'}}
+                    <html>
+                        <span data-view-component="button" data-component-name="changedailylimitbpay">
+                            <image>icon-edit</image>
+                            <label>Change daily limit*</label>
+                            <action>parent.openchangedailylimit(BPAY)</action>
+                            <style>tertiary</style>
+                            <type>button</type>
+                        </span>
+                    </html>
+                {MVC{/permission}}
+            </cell>
+            <cell>
+                {MVC{#permission 'account.payee.view' 'a'}}
+                    <html>
+                        <span data-view-component="button" data-component-name="addbiller">
+                            <image>icon-add</image>
+                            <label>Add biller</label>
+                            <action>parent.openaddbiller</action>
+                            <style>tertiary</style>
+                            <type>button</type>
+                        </span>
+                    </html>
+                {MVC{/permission}}
+            </cell>
+        </header>
+        <body>
+            <html>
+                <div class="grid dailyLimit">
+                    <div class="columns-41" >
+                        <div class="text-overflow">
+                            The daily limit for BPay is <strong><span data-name="parent.bpayLimit"><span></strong>
+                        </div>
+                    </div>
+                </div>
+                <div data-mvc-component="tablev3" data-component-name="bpaybillertable">
+                    <columns>
+                        <column>
+                            <label>Biller details</label>
+                            <grid_width>15</grid_width>
+                            <html>
+                                <div class="grid">
+                                    <div class="columns-1">
+                                        <span data-view-component="icon">
+                                            <icon>icon-bpay</icon>
+                                            <title>BPay</title>
+                                        </span>
+                                    </div>
+                                    <div class="columns-15">
+                                        <div class="accountname"><strong>{{accountName}}</strong></div>
+                                        <div class="billercode">Biller code {{code}}</div>
+                                        <div class="crn">CRN {{crn}}</div>
+                                    </div>
+                                </div>
+                            </html>
+                        </column>
+                        <column>
+                            <grid_width>3</grid_width>
+                            <align>right</align>
+                        </column>
+                        {MVC{#permission 'account.payee.view' 'a'}}
+                            <column>
+                                <label>Biller nickname</label>
+                                <grid_width>12</grid_width>
+                                <html>
+                                    <div class="grid">
+                                        <div data-view-component="forminputtext" data-component-name="inputtext{{code}}{{crn}}" class="columns-12">
+                                            <name>inputtext{{code}}{{crn}}</name>
+                                            <placeholder>{{nickname}}</placeholder>
+                                            <limit_length>30</limit_length>
+                                        </div>
+                                    </div>
+                                    <div class="grid">
+                                        <span data-permission="emulating" data-action="disable">
+                                        <span data-view-component="button" data-component-name="save{{code}}{{crn}}" class="inputtext{{code}}{{crn}}">
+                                            <label>Save</label>
+                                            <action>parent.parent.saveButton(inputtext{{code}}{{crn}},{{code}},BPAY,{{crn}},{{accountName}})</action>
+                                            <style>secondary</style>
+                                            <image>icon-save</image>
+                                        </span>
+                                        </span>
+                                        <span data-view-component="button" data-component-name="cancel{{code}}{{crn}}" class="inputtext{{code}}{{crn}}">
+                                            <label>Cancel</label>
+                                            <action>parent.parent.cancelButton(inputtext{{code}}{{crn}},{{code}})</action>
+                                            <style>tertiary</style>
+                                        </span>
+                                    </div>
+                                </html>
+                            </column>
+                        {MVC{/permission}}
+                        {MVC{#permission '!account.payee.view' 'a'}}
+                            <column>
+                                <label>Biller nickname</label>
+                                <grid_width>12</grid_width>
+                                <html>
+                                    <div class="grid">
+                                        <span>{{nickname}}</span>
+                                    </div>
+                                </html>
+                            </column>
+                        {MVC{/permission}}
+
+                        <column>
+                        <grid_width>5</grid_width>
+                        <align>right</align>
+                            <html>
+                                <div data-view-component="menuaction">
+                                    <items>
+                                    </items>
+                                    {{#permission 'account.payment.bpay.create' 'a'}}
+                                        <items>
+                                            <label>Make a payment</label>
+                                            <href>#ng/account/movemoney/payments?payeeId={{code}}&amp;a={{parent.parentId}}</href>
+                                        </items>
+                                    {{/permission}}
+
+                                    {{#permission 'account.payee.view' 'a'}}
+                                        <items>
+                                            <label> Remove</label>
+                                            <action>parent.parent.openModelPopup({{code}},BPAY,{{crn}})</action>
+                                        </items>
+                                    {{/permission}}
+                                </div>
+                            </html>
+                        </column>
+                    </columns>
+                    <no_data>
+                        <html>
+                            No BPay billers added
+                        </html>
+                    </no_data>
+                </div>
+            </html>
+        </body>
+    </div>
+
+    {{#permission 'account.payee.view' 'a'}}
+        <div class="js-validation-message">
+            <div class="grid ">
+                <div class="columns-41 border-bottom-1">
+                    <div class="margin-bottom-1"><span>
+                        *Any changes to your daily Pay Anyone or BPAY limit will apply to all such transactions initiated by you or your adviser (if adviser permission has been granted).</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/permission}}
+{{/permission}}
+</div>
+<div data-mvc-child="removebiller,addlinkedaccount,changedailylimit,addbiller,addaccount"></div>

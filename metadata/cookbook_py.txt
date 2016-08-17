@@ -1,0 +1,21 @@
+IP Details
+http://10.35.84.129:5000/
+http://10.35.40.233:5000/
+
+
+sorted()
+clean()
+filter - using Angularjs
+
+
+
+Pace.js loader pluging
+github.hubspot.com/pace/docs/welcome/
+
+Spinner...
+loading spinner example - AngularJS demo
+http://fiddle.jshell.net/KmXTy/1/light/
+
+
+Flask loading bar...
+https://www.reddit.com/r/flask/comments/2me3hv/making_loading_bar/

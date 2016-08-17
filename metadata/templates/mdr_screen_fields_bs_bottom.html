@@ -1,0 +1,36 @@
+
+
+
+
+
+        <table class="table">
+            <thead class="text-center">
+                 <tr>
+                 <th class="col-lg-4">Screen Field</th><th class="col-lg-8">Screen Field Description</th><th class="col-lg-8">Metadata Phase</th>
+                 </tr>
+            </thead>
+            <tbody>
+
+            {% for  screen_field_object in getScreenFieldObjects_bs(screen_name) %}
+
+            <tr class="success">
+                <td>
+                    <a href="/mdr_lineage/{{screen_functionality}}/{{screen_name}}/{{screen_field_object.Attribute_Name}}">{{screen_field_object.Attribute_Name}}</a>
+                </td>
+                <td>
+                    {{screen_field_object.Description}}
+                </td>
+                <td>
+                    {{screen_field_object.MDR_Phase}}
+                </td>
+            </tr>
+
+            {%endfor%}
+
+
+
+
+
+            </tbody>
+        </table>
+

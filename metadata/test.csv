@@ -1,0 +1,1591 @@
+System_Name,Instance_Name,Entity_Name,Attribute_Name,Owner,Parent,Type,Description
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,NEW,,,Screen,
+UX Sitemap,Default,Messages_Alerts_Unread_Count_UX,,,,Screen,
+UX Sitemap,Default,Account_Portfolio_Property_UX,,,,Screen,
+UX Sitemap,Default,Portfolio_Management_Fee_UX,,,,Screen,
+UX Sitemap,Default,SMSF_Admin_Fee_UX,,,,Screen,
+UX Sitemap,Default,Corporate Action Details Accounts,,,,Screen,
+UX Sitemap,Default,Advice_Fees_Edit_UX,,,,Screen,
+UX Sitemap,Default,Account_Insurance_Documents_UX,NEW,,,Screen,
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,NEW,,,Screen,
+UX Sitemap,Default,Adviser Dashboard,To Review,,,Screen,
+UX Sitemap,Default,Business-Model portfolios-Model upload unsuccessful,,,,Screen,
+UX Sitemap,Default,Client_Statements_UX,,,,Screen,
+UX Sitemap,Default,SMSF_Account_Overview,,,,Screen,
+UX Sitemap,Default,Order Capture,To Review,,,Screen,
+UX Sitemap,Default,Charge One-off Fee Receipt,To Review,,,Screen,
+UX Sitemap,Default,Charge One-off Fee Review,To Review,,,Screen,
+UX Sitemap,Default,Charge One-off Fee,To Review,,,Screen,
+UX Sitemap,Default,Accountant _ Client Msg and My Msg _ Total Unread Msg Count,To Review,,,Screen,
+UX Sitemap,Default,Accountant Client Messages,To Review,,,Screen,
+UX Sitemap,Default,Account - Payments and Deposits - Make a deposit,,,,Screen,
+UX Sitemap,Default,Account - Payments and Deposits - Make a payment,,,,Screen,
+UX Sitemap,Default,Account - Payments and Deposits - Accounts and billers,,,,Screen,
+UX Sitemap,Default,Account-Investment orders-Place an order,,,,Screen,
+UX Sitemap,Default,Account-Income received,,,,Screen,
+UX Sitemap,Default,Account-Income accrued,,,,Screen,
+UX Sitemap,Default,Account-Investment orders-Order status,,,,Screen,
+UX Sitemap,Default,Account-Investment orders-Saved orders,,,,Screen,
+UX Sitemap,Default,Fee Revenue Statement,To Review,,,Screen,
+UX Sitemap,Default,Portfolio performance screen,To Review,,,Screen,
+UX Sitemap,Default,Account - Overview,,,,Screen,
+UX Sitemap,Default,Saved Orders,To Review,,,Screen,
+UX Sitemap,Default,Tracking-Transitions,,,,Screen,
+UX Sitemap,Default,Account activation,,,,Screen,
+UX Sitemap,Default,Fund establishment tracking for investors,,,,Screen,
+UX Sitemap,Default,Investment_Manager_Desktop_UX,,,,Screen,
+UX Sitemap,Default,Investor_Home_Multi_Account_UX,,,,Screen,
+UX Sitemap,Default,Client_Details_Trust_UX,,,,Screen,
+UX Sitemap,Default,Client_Details_Corporate_Trust_UX,,,,Screen,
+UX Sitemap,Default,Client_Details_SMSF_UX,,,,Screen,
+UX Sitemap,Default,Client_Details_Corporate_SMSF_UX,,,,Screen,
+UX Sitemap,Default,Open an account-Existing SMSF-Corporate trustee,,,,Screen,
+UX Sitemap,Default,Open an account-New SMSF-Individual trustee,,,,Screen,
+UX Sitemap,Default,Open an account-New SMSF-Corporate trustee,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with a corporate trustee-Regulated trust,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with a corporate trustee-Registered managed investment scheme,,,,Screen,
+UX Sitemap,Default,Open an account-Company,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with a corporate trustee-Other,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with individual trustees-Other,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with individual trustees-Regulated trust,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with a corporate trustee-Government super fund,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with a corporate trustee-Family trust,,,,Screen,
+UX Sitemap,Default,IM dashboard_daily model report,To Review,,,Screen,
+UX Sitemap,Default,Global Client and Account Search,To Review,,,Screen,
+UX Sitemap,Default,IM dashboard_Monthly model report,To Review,,,Screen,
+UX Sitemap,Default,Contribution categorisation report,To Review,,,Screen,
+UX Sitemap,Default,Update address,To Review,,,Screen,
+UX Sitemap,Default,Update contact details,To Review,,,Screen,
+UX Sitemap,Default,Investment Management Fees_Managed Portfolios,To Review,,,Screen,
+UX Sitemap,Default,Onboarding Client Search,To Review,,,Screen,
+UX Sitemap,Default,Updates to Client Details,To Review,,,Screen,
+UX Sitemap,Default,SMSF Corporate,To Review,,,Screen,
+UX Sitemap,Default,Update GST Status,To Review,,,Screen,
+UX Sitemap,Default,Update Tax Options,To Review,,,Screen,
+UX Sitemap,Default,Messages-For information-Your messages,,,,Screen,
+UX Sitemap,Default,Messages-For action-Client Alerts,,,,Screen,
+UX Sitemap,Default,IM dashboard screen visual mapping,To Review,,,Screen,
+UX Sitemap,Default,Profiles and Settings-Your details-Profile details,,,,Screen,
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,,,,Screen,
+UX Sitemap,Default,Adviser Client Messages And Your Messages,To Review,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Bulk_Rebalance_UX,NEW,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Client_Exclusions_UX,NEW,,,Screen,
+UX Sitemap,Default,Business-Model portfolios-Verifying model file,,,,Screen,
+UX Sitemap,Default,Business-Model portfolios-Model upload success,,,,Screen,
+UX Sitemap,Default,Business-Model portfolios-Upload model file,,,,Screen,
+UX Sitemap,Default,Transition Dashboard,To Review,,,Screen,
+UX Sitemap,Default,Term deposits - Withdraw,,,,Screen,
+UX Sitemap,Default,Tracking-Term deposit maturities -Closed term deposits,,,,Screen,
+UX Sitemap,Default,Manage_Clients_UX,,,,Screen,
+UX Sitemap,Default,Client_Details_Company_UX,,,,Screen,
+UX Sitemap,Default,Administration_Investment_Fees,,,,Screen,
+UX Sitemap,Default,Advice_Fees,,,,Screen,
+UX Sitemap,Default,Account-Asset transfers-Transfer status,,,,Screen,
+UX Sitemap,Default,Account-Asset transfers-Create transfers,,,,Screen,
+UX Sitemap,Default,Corporate Action Details_Account Transactions,,,,Screen,
+UX Sitemap,Default,Account-Investment orders-Regular investment plan,,,,Screen,
+UX Sitemap,Default,Account-Scheduled transactions,,,,Screen,
+UX Sitemap,Default,Transaction_History_Contribution_Pension_Reports_UX,,,,Screen,
+UX Sitemap,Default,Transaction_History_All_Transactions_UX,,,,Screen,
+UX Sitemap,Default,Transaction_History_Cash_statement_UX,,,,Screen,
+UX Sitemap,Default,Adviser Dashboard Monitor,To Review,,,Screen,
+UX Sitemap,Default,Open an account-Existing SMSF-Individual trustee,,,,Screen,
+UX Sitemap,Default,Tracking-Order status,,,,Screen,
+UX Sitemap,Default,Tracking-Corporate actions-For action,,,,Screen,
+UX Sitemap,Default,Tracking-Corporate actions-For information,,,,Screen,
+UX Sitemap,Default,Tracking-Term deposit maturities -Maturing term deposits,,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,To Review,,,Screen,
+UX Sitemap,Default,Client list,To Review,,,Screen,
+UX Sitemap,Default,Transaction History,OK,,,Screen,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,To Review,,,Screen,
+UX Sitemap,Default,Client Overview,To Review,,,Screen,
+UX Sitemap,Default,View Intermediary User Light box_Registered User,To Review,,,Screen,
+UX Sitemap,Default,View Intermediary User Light box_Not registered User,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Update Tax Preferences,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,To Review,,,Screen,
+UX Sitemap,Default,Company,To Review,,,Screen,
+UX Sitemap,Default,Individual Trustee,To Review,,,Screen,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Update Primary Account Holder,To Review,,,Screen,
+UX Sitemap,Default,Individual,To Review,,,Screen,
+UX Sitemap,Default,Corporate Trustee,To Review,,,Screen,
+UX Sitemap,Default,SMSF Individual,To Review,,,Screen,
+UX Sitemap,Default,Track business,,,,Screen,
+UX Sitemap,Default,Client_Details_Individual_UX,,,,Screen,
+UX Sitemap,Default,Blue Tray,To Review,,,Screen,
+UX Sitemap,Default,Manage Users_Intermediary List,To Review,,,Screen,
+UX Sitemap,Default,Portfolio Valuation,To Review,,,Screen,
+UX Sitemap,Default,SMSF External Holding View,To Review,,,Screen,
+UX Sitemap,Default,Portfolio movements,To Review,,,Screen,
+UX Sitemap,Default,Tax Invoice,To Review,,,Screen,
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,NEW,,,Screen,
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,NEW,,,Screen,
+UX Sitemap,Default,Pension_Account_Details_UX,NEW,,,Screen,
+UX Sitemap,Default,Account details - SMSF - Individual,,,,Screen,
+UX Sitemap,Default,Account details - Trust - Corporate,,,,Screen,
+UX Sitemap,Default,Account details - Individual,,,,Screen,
+UX Sitemap,Default,Account details - SMSF - Corporate,,,,Screen,
+UX Sitemap,Default,Account-Portfolio-Valuation,,,,Screen,
+UX Sitemap,Default,Account details - Company,,,,Screen,
+UX Sitemap,Default,Account-Portfolio-Portfolio performance,,,,Screen,
+UX Sitemap,Default,Account-Portfolio-Asset allocation,,,,Screen,
+UX Sitemap,Default,Account-Portfolio-External assets,,,,Screen,
+UX Sitemap,Default,Account-Portfolio-Movements,,,,Screen,
+UX Sitemap,Default,User_Access_Review_UX,NEW,,,Screen,
+UX Sitemap,Default,Corporate Action Details Header and Summary,To Review,,,Screen,
+UX Sitemap,Default,Esimated Unrealised CGT Page,OK,,,Screen,
+UX Sitemap,Default,Manage Fees,To Review,,,Screen,
+UX Sitemap,Default,Portfolio performance SMA Report,To Review,,,Screen,
+UX Sitemap,Default,Esimated Realised CGT Page,OK,,,Screen,
+UX Sitemap,Default,Investment Options Products And News,To Review,,,Screen,
+UX Sitemap,Default,Order Status and Cancel,To Review,,,Screen,
+UX Sitemap,Default,Onboarding Application Tracking,To Review,,,Screen,
+UX Sitemap,Default,Business-Model portfolios-Manage models,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with individual trustees-Government super fund,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with individual trustees-Registered managed investment scheme,,,,Screen,
+UX Sitemap,Default,Open an account-Joint,,,,Screen,
+UX Sitemap,Default,Open an account-Trust with individual trustees-Family trust,,,,Screen,
+UX Sitemap,Default,Account-Details and Preferences-Investment preferences,,,,Screen,
+UX Sitemap,Default,Open an account-Individual,,,,Screen,
+UX Sitemap,Default,Account-Details and Preferences-Account details,,,,Screen,
+UX Sitemap,Default,Account-Details and Preferences-Additional services,,,,Screen,
+UX Sitemap,Default,Account-Reports,,,,Screen,
+UX Sitemap,Default,Account-Document library,,,,Screen,
+UX Sitemap,Default,Signin_Page_UX,,,,Screen,
+UX Sitemap,Default,Search-Clients and accounts,,,,Screen,
+UX Sitemap,Default,Account details - Trust - Individual,,,,Screen,
+UX Sitemap,Default,Business-Model portfolios-Confirm model upload,,,,Screen,
+UX Sitemap,Default,Corporate Actions View,To Review,,,Screen,
+UX Sitemap,Default,TD Maturity,To Review,,,Screen,
+UX Sitemap,Default,Account Overview,To Review,,,Screen,
+UX Sitemap,Default,Adviser Search,To Review,,,Screen,
+UX Sitemap,Default,Manage Users,To Review,,,Screen,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,To Review,,,Screen,
+UX Sitemap,Default,Accountant My Messages,To Review,,,Screen,
+UX Sitemap,Default,Cash Adviser Client Messages,To Review,,,Screen,
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Subscription_UX,,,,Screen,
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,NEW,,,Screen,
+UX Sitemap,Default,BP Fee Schedule,To Review,,,Screen,
+UX Sitemap,Default,Asset Allocation,To Review,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Review_Submit_UX,NEW,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Add_investments_UX,NEW,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Create_Model_UX,NEW,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_View_Model_Details_UX,NEW,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Download_Model_UX,NEW,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Manage_Models_UX,NEW,,,Screen,
+UX Sitemap,Default,Tracking-ROAs UX,,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Edit_Model_Investments_UX,NEW,,,Screen,
+UX Sitemap,Default,Tailored_Portfolios_Confirmation_UX,NEW,,,Screen,
+UX Sitemap,Default,Registration_Page_UX,,,,Screen,
+UX Sitemap,Default,Tracking-Account applications,,,,Screen,
+UX Sitemap,Default,Account_Portfolio_Property_UX,Property Value,,,UI Field,Property value of individual property
+UX Sitemap,Default,Account_Portfolio_Property_UX,Financial year drop down list,,,UI Field,List of all the financial years.Will this FY list be stored at the UI end?
+UX Sitemap,Default,Account_Portfolio_Property_UX,Gross yield,,,UI Field,Can be ignored for now
+UX Sitemap,Default,Account_Portfolio_Property_UX,Property Name,,,UI Field,This is a free text as entered by the user on external assets page  (OR) The property name coming from the class data feed  It will generally be the property address 
+UX Sitemap,Default,Account_Portfolio_Property_UX,Income,,,UI Field,UI to sum up all income related transactions for a financial year
+UX Sitemap,Default,Account_Portfolio_Property_UX,Expenses,,,UI Field,UI to sum up all expense related transactions for a financial year
+UX Sitemap,Default,User_Access_Review_UX,Is Frozen,,,UI Field,Do not show jobs of which their is_frozen flag is true.
+UX Sitemap,Default,Account_Portfolio_Property_UX,Property portfolio value,,,UI Field,UI to sum up all the individual property values
+UX Sitemap,Default,User_Access_Review_UX,Status,,,UI Field,"If descn_id is one of (“CHG_ACCESS”, “REMV_ACCESS”, “RETAIN_ACCESS”) and there is no error in error list, the UI status is “Completed” from UI point of view. Otherwise, the UI status is “Pending”.  btfg$code_uar_decsn  ID INTL_ID USER_ID Name 1 retain_access RETAIN_ACCESS Retain Access 2 chg_access CHG_ACCESS Change Access 3 remv_access REMV_ACCESS Remove Access"
+UX Sitemap,Default,User_Access_Review_UX,Is Invalid,,,UI Field,Do not show jobs of which their is_invalid flag is true.
+UX Sitemap,Default,Account Overview,Current Rate,,,UI Field,
+UX Sitemap,Default,Account Overview,Total Portfolio Value,,,UI Field,
+UX Sitemap,Default,Account Overview,Bank Account Name of the payer,,,UI Field,
+UX Sitemap,Default,Account Overview,Bank Account Name of the payee,,,UI Field,
+UX Sitemap,Default,Account Overview,Next due date for the transaction,,,UI Field,
+UX Sitemap,Default,Account Overview,Frequency of the transaction,,,UI Field,
+UX Sitemap,Default,Account Overview,Income(Last Quarter),,,UI Field,
+UX Sitemap,Default,Account Overview,Cash Available,,,UI Field,
+UX Sitemap,Default,Account Overview,Performance(Last Quarter),,,UI Field,
+UX Sitemap,Default,Account Overview,Capital Growth(Last Quarter),,,UI Field,
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Next Renewal Date,,,UI Field,Indicates  Date of renewal of policy
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Commission Type,,,UI Field,Indicates commission type
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Portfolio Number,,,UI Field,Portfolio number for the policy
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Policy Commence Date,,,UI Field,Commencement date of the policy
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Super contribution benefit,,,UI Field,Super contribution benefit displays when Income ratio >0
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Renewal percentage,,,UI Field,Commission to be paid on renewal of policy
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Opt-in opt-out status,,,UI Field,Indicates  Opt-in / opt-out status
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Commission split,,,UI Field,Indicates if a commission split is involved
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Paid to date,,,UI Field,Indicates Paid to date
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Dial down,,,UI Field,Indicates  Dial down percentage
+UX Sitemap,Default,Company,Linked client role,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Trust Name,,,UI Field,
+UX Sitemap,Default,Company,Linked clients name,,,UI Field,
+UX Sitemap,Default,Company,Linked clients salutation,,,UI Field,
+UX Sitemap,Default,Company,Registered company office,,,UI Field,
+UX Sitemap,Default,Company,Principal place of business,,,UI Field,
+UX Sitemap,Default,Company,Tax options,,,UI Field,
+UX Sitemap,Default,Company,Registered for GST,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Trust type,,,UI Field,
+UX Sitemap,Default,Individual Trustee,ABN,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Email,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Net Income,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Closing Balance,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,TD position name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Residential Address,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Help button,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Date of Birth,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Tax Preferences,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Account Number,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,MP container name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,TD logo,,,UI Field,
+UX Sitemap,Default,Order Capture,Interest Rate TD only,,,UI Field,
+UX Sitemap,Default,Order Capture,Term TD only,,,UI Field,
+UX Sitemap,Default,Order Capture,Order pad Asset ID,,,UI Field,
+UX Sitemap,Default,Order Capture,Order pad Adviser ID,,,UI Field,
+UX Sitemap,Default,Order Capture,Common Asset Details Asset Type,,,UI Field,
+UX Sitemap,Default,Order Capture,Asset ID of the Portfolio Container,,,UI Field,
+UX Sitemap,Default,Order Capture,Asset Type,,,UI Field,
+UX Sitemap,Default,Order Capture,Asset Code,,,UI Field,
+UX Sitemap,Default,Order Capture,Value of Current Holding,,,UI Field,
+UX Sitemap,Default,Order Capture,Asset Name,,,UI Field,
+UX Sitemap,Default,Manage Users,Role of the Intermediary,,,UI Field,The intermediary could be one of the following: • Dealer Group Manager • Practice Manager • Adviser • Paraplanner • Admin Assistant 
+UX Sitemap,Default,Manage Users,Name of the Intermediary,,,UI Field,To get the name of the intermediary concatenate the following fields: pers_first_name pers_middle_name pers_last_name 
+UX Sitemap,Default,Blue Tray,Available cash balance,,,UI Field,
+UX Sitemap,Default,Blue Tray,Adviser Business address,,,UI Field,
+UX Sitemap,Default,Blue Tray,Adviser Preferred email address,,,UI Field,
+UX Sitemap,Default,Blue Tray,Adviser Business Phone Number,,,UI Field,
+UX Sitemap,Default,Blue Tray,Name of the Adviser linked to the Account,,,UI Field,
+UX Sitemap,Default,Blue Tray,Name of the Related Clients,,,UI Field,
+UX Sitemap,Default,Blue Tray,Primary Client Address,,,UI Field,
+UX Sitemap,Default,Blue Tray,Primary Contact mobile number,,,UI Field,
+UX Sitemap,Default,Charge One-off Fee Review,Investor details,,,UI Field,Field value from UI Cache
+UX Sitemap,Default,Charge One-off Fee,Description of advice/services,,,UI Field,Free Text Field
+UX Sitemap,Default,Charge One-off Fee,One-off advice fee,,,UI Field,Free Text Field
+UX Sitemap,Default,Charge One-off Fee,Available cash,,,UI Field,
+UX Sitemap,Default,Charge One-off Fee,Total one-off advice fees charged in past 12 months,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Term Deposit Maturity Date,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Term Deposit Principal Value,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Term Deposit Brand Logo,,,UI Field,
+UX Sitemap,Default,Charge One-off Fee Review,Primary account holder,,,UI Field,Field value from UI Cache
+UX Sitemap,Default,Charge One-off Fee Review,Portfolio Value,,,UI Field,Field value from UI Cache
+UX Sitemap,Default,Transition Dashboard,Asset transfer status LS,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Total transferred amount LS,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Total FUA,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Total transferred amount MF,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Pie Chart Status list,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Client Filter,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Client details,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Pie Chart No. of clients,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,X Axis Period Scale,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Total Active Accounts,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Account Name,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Product,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Practice Name,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Revenue Details,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Amount,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Bank Details BSB Number,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Description,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Fee Date,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Adviser Id,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Adviser Name,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Corporate action type,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Asset name and code,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Asset price,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Corporate action status,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Panorama close date,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Pay date,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Option summary,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Last updated,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,asset id,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Header and Summary,Default option,,,UI Field,
+UX Sitemap,Default,User_Access_Review_UX,Days since last UAR,,,UI Field,"The label shows two types of data, namely, days since last UAR and last UAR date.  Days since last UAR is calculated by UI based on last_uar_date provided in the xml. "
+UX Sitemap,Default,User_Access_Review_UX,Permission,,,UI Field,"The value in curr_job_oe_auth_role_id (btfg$code_ui_auth_role) is provided below.  ID INTL_ID USER_ID Name 1 btfg$can_tran BTFG$CAN_TRAN Can transact 2 btft$can_updt BTFG$CAN_UPDT Can update 3 btfg$can_not_tran BTFG$CAN_NOT_TRAN Cannot transact cash 4 btfg$read_only BTFG$READ_ONLY Read only  In one of the following cases, the data source is the xpath shown on the left column: 1. Successful navigation to the UAR page, 2. Successful submission of request to Avaloq (However, the underlying jobs in the request can be successfully or unsuccessfully processed.), or 3. Confirmed request to “Cancel and revert all”.  Where a UAR authoriser has modified the permission of a job in current session and has not submitted any request to update and has not made any request to “Cancel and revert all”, the permission shown here is the one entered by the UAR authoriser in the “Manage permissions for this role” modal.   Note that where a new permission is selected by a UAR authoriser in the “Manage permissions for this role” modal, in the submit request the new permission is passed to the service via • data/uar_lists/dir_job_list/uar_rec/job_oe_auth_role_id or • data/uar_lists/indir_job_list/uar_rec/job_oe_auth_role_id. In the submit request, decsn_id and job_oe_auth_role_id go hand-in-hand. If decsn_id is provided, job_oe_auth_role_id must be provided. Otherwise, job_oe_auth_role_id must be null. Please refer to the IFS for a xml sample on this.   "
+UX Sitemap,Default,Term deposits - Withdraw,Error Message Popo up,,,UI Field,"“s#err.10050” is returned by Avaloq when the Notice Period cannot be applied as maturity is in 32 days or less.  If a term deposit cannot be broken from Notice Period and maturity date perspective, error message “s#err.10050” will appear in the path: fidd:fidd_rsp/rsp/valid/err_list/err/err_msg  Otherwise (i.e. the term deposit can be broken), the “s#err.10050” error message will not be returned by Avaloq.  Note that it is possible to have other error message(s) in the error list. At the moment, they are all technical errors, if any. There is not any other business scenario error (other than 10050). The technical errors are to be handled by the standard way. "
+UX Sitemap,Default,Term deposits - Withdraw,Adjusted interest rate,,,UI Field,"adjust_widrw_intr_rate is in %. For example, value 2.15 means 2.15%."
+UX Sitemap,Default,User_Access_Review_UX,Recommended review date,,,UI Field,The Recommended review date is 28 days from the UAR date.
+UX Sitemap,Default,User_Access_Review_UX,Pending UAR,,,UI Field,"This is the count of jobs which are in Pending status. Please refer to Wireframe Id No. 8 for further details. If descn_id is one of (“CHG_ACCESS”, “REMV_ACCESS”, “RETAIN_ACCESS”) and there is no error in error list, the UI status is “Completed” from UI point of view. Otherwise, the UI status is “Pending”.  btfg$code_uar_decsn  ID INTL_ID USER_ID Name 1 retain_access RETAIN_ACCESS Retain Access 2 chg_access CHG_ACCESS Change Access 3 remv_access REMV_ACCESS Remove Access  "
+UX Sitemap,Default,User_Access_Review_UX,Role,,,UI Field,"Based on job_id, fetch job_type_id in cache as provided by the BTFG$UI_OE_STRUCT.PERSON#HIRA service."
+UX Sitemap,Default,User_Access_Review_UX,User,,,UI Field,"Based on person_id, fetch pers_first_name, pers_middle_name and pers_last_name in cache as provided by the BTFG$UI_OE_STRUCT.PERSON#HIRA service."
+UX Sitemap,Default,User_Access_Review_UX,OE to which the user is attached,,,UI Field,Case 1: Role = Dealer group manager               Dealer group name – Use Path 2  Case 2: Role = Practice manager:               Practice name – Use Path 2 Case 3: Role = Adviser               Sub-case a – The role is attached to an office.                         Office name – Use Path 1               Sub-case b – The role is attached to a practice.                         Practice name – Use Path 1               Sub-case c – The role is attached to a dealer group.                        Dealer group name – Use Path 1  Case 4: Role = Admin assistant                Sub-case a – The role is attached to an adviser position.                        Keyword “For” + adviser name – Use Path 2                Sub-case b – The role is attached to an office.                       Office name – Use Path 2                Sub-case c – The role is attached to a practice.                       Practice name  – Use Path 2                Sub-case d – The role is attached to a dealer group.                       Dealer group name  – Use Path 2  Case 5: Role = Para-planner               Sub-case a – The role is attached to an adviser position.                          Keyword “For” + adviser name – Use Path 2               Sub-case b – The role is attached to an office.                          Office name – Use Path 2                Sub-case c – The role is attached to a practice.                          Practice name  – Use Path 2                Sub-case d – The role is attached to a dealer group.                          Dealer group name – Use Path 2 
+UX Sitemap,Default,User_Access_Review_UX,OE to which the user is attached,,,UI Field,Case 1: Role = Dealer group manager               Dealer group name – Use Path 2  Case 2: Role = Practice manager:               Practice name – Use Path 2 Case 3: Role = Adviser               Sub-case a – The role is attached to an office.                         Office name – Use Path 1               Sub-case b – The role is attached to a practice.                         Practice name – Use Path 1               Sub-case c – The role is attached to a dealer group.                        Dealer group name – Use Path 1  Case 4: Role = Admin assistant                Sub-case a – The role is attached to an adviser position.                        Keyword “For” + adviser name – Use Path 2                Sub-case b – The role is attached to an office.                       Office name – Use Path 2                Sub-case c – The role is attached to a practice.                       Practice name  – Use Path 2                Sub-case d – The role is attached to a dealer group.                       Dealer group name  – Use Path 2  Case 5: Role = Para-planner               Sub-case a – The role is attached to an adviser position.                          Keyword “For” + adviser name – Use Path 2               Sub-case b – The role is attached to an office.                          Office name – Use Path 2                Sub-case c – The role is attached to a practice.                          Practice name  – Use Path 2                Sub-case d – The role is attached to a dealer group.                          Dealer group name – Use Path 2 
+UX Sitemap,Default,Account Overview,Total amount in dollars for the transaction,,,UI Field,
+UX Sitemap,Default,Account Overview,Scheduled Transaction Type,,,UI Field,
+UX Sitemap,Default,Account Overview,Frequency of the transaction,,,UI Field,
+UX Sitemap,Default,Account Overview,Next due date for the transaction,,,UI Field,
+UX Sitemap,Default,Account Overview,Principle Value of TDs,,,UI Field,
+UX Sitemap,Default,Account Overview,TD Maturity Date,,,UI Field,
+UX Sitemap,Default,Account Overview,Order Value,,,UI Field,
+UX Sitemap,Default,Account Overview,Order Type,,,UI Field,
+UX Sitemap,Default,Account Overview,Bank Account Name of the payee,,,UI Field,
+UX Sitemap,Default,Account Overview,Bank Account Name of the payer,,,UI Field,
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Phone,,,UI Field,Contact Number
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Smoker,,,UI Field,Smoking Status
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Beneficiary LastName,,,UI Field,Beneficiary Name(Not applicable for Super Account type)
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Beneficiary  GivenName,,,UI Field,Beneficiary Name(Not applicable for Super Account type)
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Date Of Birth,,,UI Field,Date of Birth
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Beneficiary Percent,,,UI Field,Beneficiary percentage for IP account
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Waiting Period,,,UI Field,Waiting period
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Benefit period,,,UI Field,Constitutes duration for the benefit – Applicable for Income Protection benefit
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Owner Last Name,,,UI Field,GivenName and LastName together constitute policy owner for IP accounts
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Owner First Name,,,UI Field,Policy owner for Super accounts
+UX Sitemap,Default,Individual Trustee,Licensing number,,,UI Field,
+UX Sitemap,Default,Individual Trustee,ARSN,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Registration state,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Regulator name,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Registered for GST,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Tax options,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Legislation establishing fund,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Date of registration,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Address,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Charity,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_Managed portfolio container name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_TD position name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_TD performance percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_Cash performance percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_Total Portfolio,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_MP performance percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G2_Benchmark name,,,UI Field,"Cached service BTFG$UI_BMRK_LIST.ALL For benchmark name, use : rep/data/bmrk_list/bmrk/bmrk_head_list/bmrk_head/bmrk_name/val "
+UX Sitemap,Default,Portfolio performance screen,G1_Total Portfolio performance percentage,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Account Number,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Tax Preferences,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Sales,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Market movement,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Opening Balance,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Purchases,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G3_Total Portfolio Capital Returns percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Investment,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Email Primary,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Email,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G3_Managed Portfolio Capital Returns percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G3_TD Income Return percentage,,,UI Field,
+UX Sitemap,Default,Manage Users,Mobile Primary,,,UI Field,elec_addr field will give the mobile number for the user
+UX Sitemap,Default,Manage Users,Business Phone,,,UI Field,elec_addr field will give the mobile number for the user
+UX Sitemap,Default,Manage Users,City to which the user belongs,,,UI Field,This will be the postal address so the is_mail should be ‘True’ and then the value should be picked from field ‘City’ If the address is Domicile then UI needs to check the value of the flag is_domi = TRUE or  if it is Mailing address then the value of the flag is_mail = TRUE
+UX Sitemap,Default,Manage Users,State to which the user belongs,,,UI Field,This will be the postal address so the is_mail should be ‘True’ and then the value should be picked from field ‘state_id’ and the value to be looked in cached table  BTFG$STATE If the address is Domicile then UI needs to check the value of the flag is_domi = TRUE or  if it is Mailing address then the value of the flag is_mail = TRUE
+UX Sitemap,Default,Manage Users,Association_the position with which the role is associated,,,UI Field,Name of the organizational entity
+UX Sitemap,Default,Manage Users,Permission for the respective role,,,UI Field,The values of the permissions are following: • Transact • Read only • Transact without cash • Transact with cash • Update
+UX Sitemap,Default,Manage Users,Not registered info message,,,UI Field,To get the name of the intermediary concatenate the following fields: pers_first_name pers_middle_name pers_last_name 
+UX Sitemap,Default,Manage Users,Email Primary,,,UI Field,In Avaloq it is stored as Boolean field so if the value if True then the user is registered online and if it is false then the user is not registered and accordingly the user has to display it
+UX Sitemap,Default,Manage Users,Last Modified or Created date,,,UI Field,Time stamp when the job was created/modified
+UX Sitemap,Default,Manage Users,Status of user,,,UI Field,In UI status of user will only display for following: • Pending Registration In Avaloq it is stored as Boolean field so if the value if True then the user is registered online and if it is false then the user is not registered Please note that the SUSPENDED status will not be displayed as confirmed by Product
+UX Sitemap,Default,Tax Invoice,Fee Period,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Dealer Group Name,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Adviser Primary Phone Number,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Practice Or Dealer Group Name to which the Adviser belongs,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Primary Account Holder Residential Address,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Adviser Name,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Primary Account Holder Name,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Primary Account Holder Phone Number,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Dealer Group ABN,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Fee Date,,,UI Field,
+UX Sitemap,Default,Client Overview,Portfolio Valuation,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Indexed cost base of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Reduced cost base of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Quantity a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Market value of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Tax cost of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Cost base of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Avaloq internal Id,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Acquisition date of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,No. of days a tax lot has been held,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Effective date of price,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Icon High Priority,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Month Outflow,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Monthly net flow,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Closing FUM,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Month Average FUM,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Month Fees,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,YTD Net Flow,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,YTD Average FUM,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,YTD Fees,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Asset class,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Asset code,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Last Updated Target percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Floating target percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Units,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Market value,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Shadow client portfolio percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Diff percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Floating target Percentage Total,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Market value total,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Shadow client portfolio percentage Total,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Total model asset class Diff Percentage,,,UI Field,
+UX Sitemap,Default,Account_Insurance_Documents_UX,Document_ID_URL,,,UI Field,Unique ID appended to document URL.
+UX Sitemap,Default,Account_Insurance_Documents_UX,Document_Type_URL,,,UI Field,The URL where image can be retrieved.
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Policy Number,,,UI Field,Unique number of the policy
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Policy Type,,,UI Field,Type of policy
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Policy Status,,,UI Field,Status of policy
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Premium,,,UI Field,Amount of instalment to be paid at given frequency
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Payment Frequency,,,UI Field,Frequency at which insurance instalments need to be paid
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Renewal Commission,,,UI Field,Commission to be paid on renewal of policy
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Commencement date,,,UI Field,Commencement date
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Next Renewal date,,,UI Field,Next renewal date
+UX Sitemap,Default,Administration_Investment_Fees,Fee Componet- Asset Classes,,,UI Field,This element shows the asset class(es) applicable for the fee component.  Multiple asset classes may be applicable in the case of tailored fee component or min/max fee component.  The following table shows the cached values of btfg_cost_misc_id.  ID INTL_ID USER_ID Name 1 btfg$fixed_amt AMT Fixed dollar amount 41 btfg$fua_tailored FUA_TAILORED Tailored 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios 8 btfg$minmax MINMAX Min/Max   
+UX Sitemap,Default,Administration_Investment_Fees,Lower Bound Range,,,UI Field,"The UI needs to add text like “Over”, “Balance over” or hyphen symbol in the bound range."
+UX Sitemap,Default,Administration_Investment_Fees,Fee component type,,,UI Field,This element provides the fee component type in the current path. The following table shows the cached values of btfg_cost_misc_id.  ID INTL_ID USER_ID Name 1 btfg$fixed_amt AMT Fixed dollar amount 41 btfg$fua_tailored FUA_TAILORED Tailored 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios 8 btfg$minmax MINMAX Min/Max   
+UX Sitemap,Default,Administration_Investment_Fees,Tariff Type Id,,,UI Field,"The following table shows the cached values of btfg_tariff_type_id.  ID INTL_ID USER_ID NAME 1 compo_amt COMPO_AMT Dollar fee component 2 compo_pct COMPO_PCT Percentage fee component 3 compo_slidescl COMPO_SLIDESCL Sliding scale fee component 4 compo_minmax COMPO_MINMAX Min/Max fee component  Case btfg_tariff_type_id: When = 1, wireframe id 1 is applicable. When = 2, wireframe id 8 is applicable. When = 3, wireframe id 3, 4 and 5 are applicable. When = 4, btfg$minmax fee component is applicable.  "
+UX Sitemap,Default,Administration_Investment_Fees,book_kind,,,UI Field,btfg$book_kind (cached table)  ID INTL_ID USER_ID NAME 5870 btfg$platform_adm PLATFORM_ADM Administration fee  
+UX Sitemap,Default,Administration_Investment_Fees,Fixed dollar amount,,,UI Field,Amount in Dollar
+UX Sitemap,Default,SMSF_Admin_Fee_UX,Administration Fee Type-SMSF,,,UI Field,The presence of this path indicates the existence of SMSF administration fee.
+UX Sitemap,Default,SMSF_Admin_Fee_UX,Administration Fee Type-SMSF Bundeled,,,UI Field,The presence of this path indicates the existence of SMSF bundled administration fee.
+UX Sitemap,Default,SMSF_Admin_Fee_UX,Dollar Fee Component,,,UI Field,Receiving a value in tariff_amt in this path indicates dollar fee component exists.
+UX Sitemap,Default,SMSF_Admin_Fee_UX,Fee Value,,,UI Field,"As the business sets up discount for SMSF administration fee as a percentage, the spcd_offset_val_type_id will be 9. The details of the code is available in Btfg$cost_ovr_type (cached table)  ID INTL_ID USER_ID NAME 9 spcd_perc_disc SPCD_PERC_DISC Discount in %  Appendix A (Avaloq Fee Concept) provides an explanation of how the special condition codes work. It is intended for general knowledge only. The steps describe below has already taken into account how the business intends to use the system and is sufficient for the current UI build.  Use the following steps to calculate the SMSF administration fee net of discount. 1. For each btfg_book_kind_id (i.e. component) of the SMSF administration fee where spcd_offset_val_type_id is equal to 9, calculate net fee amount of the component = tariff_amt * (1 – (spcd_offset_val / 100)) 2. The net fee amount of each component (i.e. each of the amount calculated in first step) of SMSF administration fee  is rounded up to 2 decimal places. 3. Sum up the amount calculated in second step  Btfg$book_kind (cached table) for SMSF administration fee are provided below. This is for information only. The UI should not worry about what btfg_book_kind_id is.  ID INTL_ID USER_ID NAME 544 btfg$smsf_fd_admin_fee SMSF_FD_ADMIN_FEE SMSF Administration fee 555 btfg$smsf_fd_admin_fee_dg SMSF_FD_ADMIN_FEE_DG SMSF Administration fee DG   "
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G2 X Axis,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G2_Y1_Performance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G2_Y2_Closing balance after fees,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G2_L1_Performance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Your portfolio net $ return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Performance report,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G2_Start of Period,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G2_End of Period,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G2_L2_Closing balance after fees,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_CH1_Your portfolio $ returns,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G3_Managed Portfolio Income Return percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G2_Benchmark performance percentage,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,ARSN,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,ABN,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Trust Type,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Trust Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Accountant Software,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Accountant Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Adviser Payment Settings,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Adviser Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Client Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Adviser Permissions,,,UI Field,
+UX Sitemap,Default,Manage Users,User ID,,,UI Field,Name of the organizational entity
+UX Sitemap,Default,Manage Users,Username,,,UI Field,The intermediary could be one of the following: • Dealer Group Manager • Practice Manager • Adviser • Paraplanner • Admin Assistant 
+UX Sitemap,Default,Client Overview,Account name,,,UI Field,
+UX Sitemap,Default,Manage Users,Registered Since,,,UI Field,The values of the permissions are following: • Transact • Read only • Transact without cash • Transact with cash • Update
+UX Sitemap,Default,Manage Users,Date of Birth,,,UI Field,
+UX Sitemap,Default,Manage Users,Address,,,UI Field,
+UX Sitemap,Default,Manage Users,Permission for the respective role,,,UI Field,job_pers_id needs to be matched to person_id in Person Details service to fetch the requisite data 
+UX Sitemap,Default,Manage Users,Gender,,,UI Field,job_pers_id needs to be matched to person_id in Person Details service to fetch the requisite data 
+UX Sitemap,Default,Client Overview,Account ID,,,UI Field,
+UX Sitemap,Default,Client Overview,Account Type,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Activity Datetime,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Activity Date,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Key Activity Category,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Accounts,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Description,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Account Name,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Total FUA,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Fee Amount excl GST,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Description of Supply,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Fee Amount incl GST,,,UI Field,
+UX Sitemap,Default,Tax Invoice,GST,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Total of GST,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Total of Fee Amount excl GST,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Currency for the Amounts,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Total of Fee Amount incl GST,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Description,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Revenue,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,Start of Period,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,Your performance report for the period,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Accounts,Current election option,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Accounts,Election status,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Accounts,Available cash,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Accounts,Current holding,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Accounts,Adviser name,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Accounts,Product name,,,UI Field,
+UX Sitemap,Default,Corporate Action Details Accounts,Client name,,,UI Field,
+UX Sitemap,Default,Esimated Unrealised CGT Page,Gain or loss of a tax lot,,,UI Field,
+UX Sitemap,Default,Corporate Actions View,Number of eligible accounts to be actioned,,,UI Field,Sum of eligible accounts from now to 30 days in the future.
+UX Sitemap,Default,IM dashboard_Monthly model report,A model name,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Net Gain/Loss,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Market movement,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Expenses,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Total number of accounts,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Dealer Group name,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Investment manager Fee,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,A model unique identifier,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Month Inflow,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Total Portfolio Value,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Final Total current Shadow client portfolio percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Final Total market value of all asset,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Final Total Floating target Percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Final Total Last Updated Target Percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Transaction type,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Transaction ID,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Tab name,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Final Total model level Difference percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Status,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Asset holding,,,UI Field,
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Linked policies,,,UI Field,Child policy would contain PolicyNumber of parent policy in this field
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Policy Status,,,UI Field,Status of policy
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Policy name,,,UI Field,Type of policy
+UX Sitemap,Default,Account_Insurance_Documents_UX,Date value of the Index Property,,,UI Field,Date value of index property
+UX Sitemap,Default,Account_Insurance_Documents_UX,String value of Index Property,,,UI Field,"This field is used for validation for policy id and portfolio number and also being used to get the document type. Based on the document type, UI will display document name on UI.  For e.g. if Doc type is RENEW, UI should display REnewel pack. "
+UX Sitemap,Default,Account_Insurance_Documents_UX,Name of index property,,,UI Field,This field contains below values – DocumentType EffectiveDate BusinessLine sNumber sPolicyID
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Total Premium Installment,,,UI Field,Amount of instalment to be paid at given frequency
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Premium Frequency,,,UI Field,Frequency at which insurance instalments need to be paid
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Policy Number,,,UI Field,Unique number of the policy
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Benefit type/Policy name,,,UI Field,Indicates subtype of benefit - Applicable for Income Protection benefit. Also used for identifying Business Overhaed policy
+UX Sitemap,Default,Advice_Fees,value for percentage fee component,,,UI Field,NrFld value for percentage fee component – Eg.  0.001 would mean 0.1% 
+UX Sitemap,Default,Advice_Fees,Percentage value for the tier of sliding fee component,,,UI Field,NrFld Percentage value for the tier of sliding fee component –  Eg. 0.002 would mean 0.2% 
+UX Sitemap,Default,Advice_Fees,Upper dollar boundary for a tier in a sliding fee component,,,UI Field,NrFld Upper dollar boundary for a tier in a sliding fee component – Eg. 110 
+UX Sitemap,Default,Advice_Fees,Lower dollar boundary for a tier in a sliding fee component,,,UI Field,NrFld Lower dollar boundary for a tier in a sliding fee component – Eg. 0 
+UX Sitemap,Default,Advice_Fees,Sliding Scale Fee Component -Asset Classes,,,UI Field,Asset classes that Sliding Scale Fee Component is to be applied to.  Multiple asset classes may be applicable.  The following table shows the cached values of btfg_cost_misc_id.  ID INTL_ID USER_ID Name 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios   
+UX Sitemap,Default,Advice_Fees,Next CPI Indexation date for flat dollar component,,,UI Field,DateFld Next CPI Indexation date for flat dollar component - YYYY-MM-DD 
+UX Sitemap,Default,Advice_Fees,CPI Indexation flag for flat dollar component,,,UI Field,BoolFld CPI Indexation flag for flat dollar component - Eg. ‘true’ 
+UX Sitemap,Default,Advice_Fees,Fixed dollar amount for Flat Fee Component,,,UI Field,NrFld Fixed dollar amount for Flat Fee Component - Eg. 100 
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_R3_Income return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_R2_Capital return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_R1_Total Performance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_RH5_Active return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_RH4_Selected Benchmark,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_RH3_Income return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_RH2_Capital return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_RH1_Total Performance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_R5_Active return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_R4_Benchmark,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,New Message Count,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Client Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,SMSF Name,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Unread messages are in bold font,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Postal Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Date of Birth,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Preferred Contact,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Residential Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Tax Preferences,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Adviser Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,BSB,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Account Number,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Messages read is in normal font,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Filter by Category List,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,High Priority Message Count,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Performance percentage,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Account Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Email Primary,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Account Number,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Mobile,,,UI Field,
+UX Sitemap,Default,Investment Options Products And News,P1_Investment Option,,,UI Field,
+UX Sitemap,Default,Investment Options Products And News,I1_APIR Code,,,UI Field,
+UX Sitemap,Default,Investment Options Products And News,I2_Asset Class,,,UI Field,
+UX Sitemap,Default,Investment Options Products And News,I3_Investment Style,,,UI Field,
+UX Sitemap,Default,Investment Options Products And News,I4_Minimum Initial Investment,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,asset id,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Avaloq internal Id,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Sale date of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Acquisition date of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Quantity sold of a tax lot,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Cash position name,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Asset class total_not in panorama,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Asset class allocation_not in panorama,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Asset Code,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Asset Name,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Quantity,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Market Value,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Holding Asset Code,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Holding Asset Name,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Property Type,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Property name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Period of days,,,UI Field,
+UX Sitemap,Default,Accountant Client Messages,Messages read is in normal font,,,UI Field,Filter the notifications by this field to retrieve Adviser – my messages
+UX Sitemap,Default,Accountant Client Messages,New Message Count,,,UI Field,Sum of both High Priority & Non Priority Unread messages for New Messages Count.
+UX Sitemap,Default,Accountant Client Messages,Unread messages are in bold font,,,UI Field,"Unread messages, filter by this field"
+UX Sitemap,Default,Accountant _ Client Msg and My Msg _ Total Unread Msg Count,Client Messages _Total Number of High Priority Messages Unread,,,UI Field,
+UX Sitemap,Default,Accountant Client Messages,Display Adviser Client messages,,,UI Field,Filter the notifications by this field to retrieve Adviser client  messages.
+UX Sitemap,Default,Accountant Client Messages,Filter by Category List,,,UI Field,Static category values are retrieved from cache table
+UX Sitemap,Default,Accountant Client Messages,High Priority Message Count,,,UI Field,High Priority Message Count
+UX Sitemap,Default,Accountant Client Messages,Icon High Priority,,,UI Field,event_type_prio = 1 (highest priority) event_type_prio = 2 (lowest priority)
+UX Sitemap,Default,Accountant _ Client Msg and My Msg _ Total Unread Msg Count,Client Messages _Total Number of Messages Unread,,,UI Field,
+UX Sitemap,Default,Accountant _ Client Msg and My Msg _ Total Unread Msg Count,Your Messages _Total Number of High Priority Messages Unread,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Cash T plus 3,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Cash T plus N,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Cash T plus 1,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Cash T plus 2,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Description,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Cash today plus 0,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Performance date,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Quantity/Amount,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Trade date,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Value date,,,UI Field,
+UX Sitemap,Default,Update contact details,Secondary email,,,UI Field,
+UX Sitemap,Default,Update contact details,Preferred,,,UI Field,
+UX Sitemap,Default,SMSF Corporate,Company details,,,UI Field,
+UX Sitemap,Default,Updates to Client Details,Preferred Name,,,UI Field,
+UX Sitemap,Default,SMSF Corporate,SMSF Details,,,UI Field,
+UX Sitemap,Default,SMSF Corporate,Linked clients,,,UI Field,
+UX Sitemap,Default,Update GST Status,GST Status,,,UI Field,
+UX Sitemap,Default,Update contact details,Primary email,,,UI Field,
+UX Sitemap,Default,Update Tax Options,Tax options,,,UI Field,
+UX Sitemap,Default,Update Tax Options,Exemption reason,,,UI Field,
+UX Sitemap,Default,Advice_Fees_Edit_UX,Fee Name,,,UI Field,This is the fee name. Applicable values are:  btfg$book_kind (cache table) ID INTL_ID USER_ID NAME 5825 btfg$avsr_advcong AVSR_ADVCONG Ongoing advice fee 5850 btfg$dg_advcong DG_ADVCONG Licensee advice fee   
+UX Sitemap,Default,Advice_Fees_Edit_UX,Fee Component type,,,UI Field,"Identify whether the component is a flat dollar amount component, percentage component or sliding scale component  ID 1 means fixed dollar amount component. ID 41 means sliding scale component. Other ID’s (i.e. 3, 4, 5, 6, 7) are percentage component.  btfg$cost_misc (cache table) ID INTL_ID USER_ID NAME 1 btfg$fixed_amt AMT Fixed Dollar Amount 41 btfg$fua_tailored FUA_TAILORED Tailored 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios  "
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Sliding Scale Fee,,,UI Field,"The existence of tariff_bnd_list path of a btfg$book_kind_id indicates that the fee is a sliding scale fee for the btfg$book_kind_id.  For each book kind, the tariff_factor and tariff_bnd_list are mutually exclusive. "
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Percentage value,,,UI Field,"Fixed % fee rate, e.g. 0.02563 would be 2.563%.  For display purpose, the percentage figure is rounded up to 2 decimal places. In the example, it will be 2.57%.  In the case of an investment management fee of a portfolio, it can have multiple fixed percentage fee profiles. (It cannot be in sliding scale). Hence this element is added up for the same portfolio and same master book kind and then rounded up to 2 decimal places before displaying on UI.  In the case of a portfolio management fee, it can have one fee profile only. Hence there is no need to add this element for the same portfolio and same master book kind. However, the value is still rounded up to 2 decimal places before displaying on UI. "
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Cost Profile,,,UI Field,This element shows the underlying components (cost profile) of a fee.  The underlying components of an investment management fee of a portfolio can have multiple components which are listed below. (Btfg$book_kind cached table)   USER_ID INTL_ID NAME INVST_MNGT_IM btfg$invst_mngt_im Investment management fee - Invst. mgr. INVST_MNGT_RE1 btfg$invst_mngt_re1 Investment management fee - Resp. entity 1 INVST_MNGT_RE2 btfg$invst_mngt_re2 Investment management fee - Resp. entity 2  The underlying components of a portfolio management fee of a portfolio can have one component only which is listed below. (Btfg$book_kind cached table)  USER_ID INTL_ID NAME TMP_MNGT btfg$tmp_mngt Portfolio management fee   
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Fixed Percentage Fee,,,UI Field,"The existence of tariff_factor path of a btfg$book_kind_id indicates that the fee is a fixed percentage fee for the btfg$book_kind_id.  For each book kind, the tariff_factor and tariff_bnd_list are mutually exclusive. "
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Bound To,,,UI Field,Upper dollar boundary for a tier in a sliding fee component – Eg. 110
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Fee Rate,,,UI Field,"Fee rate for the tier, e.g. 0.02563 would be 2.563%.  For display purpose, the percentage figure is rounded up to 2 decimal places. In the example, it will be 2.57%. "
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Aggregate,,,UI Field,Aggregate fee value
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Bound From,,,UI Field,Lower dollar boundary for a tier in a sliding fee component – Eg. 0 
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH10_Performance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R1_Opening Balance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH8_Fees including footnote,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH9_Closing balance after fees,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R4_Income,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R5_Expenses,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R2_Inflows,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R3_Outflows,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R6_Market movement,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R7_Closing balance before platform fees,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Total clients accounts FUM percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Last_Updated_Target,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Floating _Target_Total_Model_level,,,UI Field,
+UX Sitemap,Default,Messages-For information-Your messages,Display Adviser Client messages,,,UI Field,NrFld  Filter the notifications by this field to retrieve Adviser client  messages.   msg_avsr_ctr_id = 1  btfg$code_ntfcn_advsr_msgctr (cache table)  ID INTL_ID USER_ID NAME 1 clt_msg CLT_MSG Client messages 2 my_msg MY_MSG My messages 3 na NA N/A 
+UX Sitemap,Default,IM dashboard_Monthly model report,Shadow_Portfolio_Market_value_Total_at_Asset_Class,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Shadow Current weight,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Total model asset class Difference,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Total clients accounts FUM amount,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Shadow_client_portfolio_Total_Model_level,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Calculated total model level Difference,,,UI Field,
+UX Sitemap,Default,Messages-For information-Your messages,Date,,,UI Field,DateTimeFld  Format  < DD MMM YYYY> Eg  28 Jan 2014 
+UX Sitemap,Default,Messages-For information-Your messages,Details,,,UI Field,TextFld Notification message 
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Registered for GST,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Title,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Primary Contact,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Date of Registration,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,ABN,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Tax File Number,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Registration state,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Linked Account Role,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Full Name,,,UI Field,
+UX Sitemap,Default,Manage Fees,value,,,UI Field,
+UX Sitemap,Default,Manage Fees,value,,,UI Field,
+UX Sitemap,Default,Manage Fees,do_cpi,,,UI Field,
+UX Sitemap,Default,Manage Fees,misc,,,UI Field,
+UX Sitemap,Default,Manage Fees,qty_2_bound_to,,,UI Field,
+UX Sitemap,Default,Manage Fees,qty_1_bound_from,,,UI Field,
+UX Sitemap,Default,Manage Fees,Asset Classes for sliding fee scale component,,,UI Field,
+UX Sitemap,Default,Manage Fees,value,,,UI Field,
+UX Sitemap,Default,Manage Fees,bound_factor,,,UI Field,
+UX Sitemap,Default,Manage Fees,bound_factor,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Inflows,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Opening balance,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Date to,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Date from,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Payments from BT cash,,,UI Field,
+UX Sitemap,Default,Portfolio movements,OutFlows,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Asset transfer in,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Deposit to BT cash,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Income on investments,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Asset transfer out,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,FUM Amount,,,UI Field,
+UX Sitemap,Default,Messages-For information-Your messages,Messages read is in normal font,,,UI Field,"NrFld  Read messages, filter by this field ntfcn_status_id = 2  btfg$ntfcn_status  (cache table) Note: * open is unread "
+UX Sitemap,Default,Messages_Alerts_Unread_Count_UX,Your Messages – Total Number of Messages Unread,,,UI Field,Where : -  1)Rep/data/report/prio_list/prio/prio_head_list/prio_head/prio/val = “High Priority” 2)Rep/data/report/prio_list/prio/cat_list/cat/msgctr_list/msg_ctr/msgctr_head_list/msgctr_head/msg_avsr_ctr_id/val = 2 & Where : - 1)Rep/data/report/prio_list/prio/prio_head_list/prio_head/prio/val = “Non priority” 2)Rep/data/report/prio_list/prio/cat_list/cat/msgctr_list/msg_ctr/msgctr_head_list/msgctr_head/msg_avsr_ctr_id/val = 2 
+UX Sitemap,Default,Messages_Alerts_Unread_Count_UX,Client Messages  - Total Number of High Priority Messages Unread,,,UI Field,Where : -  1)Rep/data/report/prio_list/prio/prio_head_list/prio_head/prio/val = “High priority” 2)Rep/data/report/prio_list/prio/cat_list/cat/msgctr_list/msg_ctr/msgctr_head_list/msgctr_head/msg_avsr_ctr_id/val = 1 
+UX Sitemap,Default,IM dashboard_Monthly model report,Units,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Postal Address,,,UI Field,
+UX Sitemap,Default,Messages_Alerts_Unread_Count_UX,Your Messages – Total Number of High Priority Messages Unread,,,UI Field,Where :-  1) Rep/data/report/prio_list/prio/prio_head_list/prio_head/prio/val = “High Priority” 2)Rep/data/report/prio_list/prio/cat_list/cat/msgctr_list/msg_ctr/msgctr_head_list/msgctr_head/msg_avsr_ctr_id/val = 2 
+UX Sitemap,Default,Accountant Client Messages,Category,,,UI Field,
+UX Sitemap,Default,Accountant Client Messages,Account Type,,,UI Field,"Account Type, Eg. Individual, Joint etc."
+UX Sitemap,Default,Accountant Client Messages,Account Name,,,UI Field,to retrieve the Account Name from the Client List cache.
+UX Sitemap,Default,Accountant Client Messages,Account ID,,,UI Field,Avaloq Client Account identifier
+UX Sitemap,Default,Accountant My Messages,Unread messages are in bold font,,,UI Field,
+UX Sitemap,Default,Accountant My Messages,New Message Count,,,UI Field,
+UX Sitemap,Default,Accountant My Messages,Messages read is in normal font,,,UI Field,
+UX Sitemap,Default,Accountant My Messages,Icon high priority,,,UI Field,
+UX Sitemap,Default,Accountant Client Messages,Details,,,UI Field,Notification message
+UX Sitemap,Default,Accountant Client Messages,Date,,,UI Field,DateTimeFld
+UX Sitemap,Default,Tracking-ROAs UX,Elected option text,,,UI Field,Payload data will contain the selected option(s).  Specific order handling code will interpret the data contained and rebuild the information and cash movement amount.
+UX Sitemap,Default,Tracking-ROAs UX,Account name,,,UI Field,BP ID will be used to look up the account name.
+UX Sitemap,Default,Tracking-ROAs UX,View advice document,,,UI Field,Doc ID will be used to retrieve advice document from FileNet P8
+UX Sitemap,Default,Tracking-ROAs UX,ROA status,,,UI Field,The ROA status will be derived from the 2 fields.  Refer to mapping table on the next page.
+UX Sitemap,Default,Tracking-ROAs UX,Date from,,,UI Field,Search field generate ROA date from
+UX Sitemap,Default,Tracking-ROAs UX,Response status,,,UI Field,Response status will be derived from each approver status.  Refer to mapping table on the next page.
+UX Sitemap,Default,Tracking-ROAs UX,Order type,,,UI Field,"The order type (Corporate Action, Rebalance, Investment orders/Trade)"
+UX Sitemap,Default,Tracking-ROAs UX,Date to,,,UI Field,Search field generate ROA date from
+UX Sitemap,Default,IM dashboard screen visual mapping,Modify_User_ID,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Update_Date_time,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Last Edit,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Model Portfolio,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,IM company name,,,UI Field,
+UX Sitemap,Default,IM dashboard_daily model report,Model Status,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Model_Name,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,IM persons name,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Model_unique_id,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Model_Code,,,UI Field,
+UX Sitemap,Default,Update address,Address Line 2,,,UI Field,
+UX Sitemap,Default,Update address,Address Line 1,,,UI Field,
+UX Sitemap,Default,Update address,Suburb,,,UI Field,
+UX Sitemap,Default,Update address,Country,,,UI Field,
+UX Sitemap,Default,Update contact details,Add,,,UI Field,
+UX Sitemap,Default,Update contact details,Primary mobile,,,UI Field,
+UX Sitemap,Default,Update address,List of addresses,,,UI Field,
+UX Sitemap,Default,Update address,Name,,,UI Field,
+UX Sitemap,Default,Update address,State,,,UI Field,
+UX Sitemap,Default,Update address,Postcode,,,UI Field,
+UX Sitemap,Default,Administration_Investment_Fees,Discount Value,,,UI Field,"spcd_val is a percentage number, e.g. A value 10 means 10%.  At the moment, Avaloq only calculates discount when it is set up as a percentage discount. Hence only up to one discount, which is in percentage, is provided in the xml response. "
+UX Sitemap,Default,Administration_Investment_Fees,Tariff_factor,,,UI Field,"Tariff_factor is a percentage number, e.g. A value 10 means 10%."
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Portfolio name,,,UI Field,Text Field: Portfolio name
+UX Sitemap,Default,Portfolio_Management_Fee_UX,IPS ID,,,UI Field,Nr Field:IPS Id
+UX Sitemap,Default,Administration_Investment_Fees,Tariff_factor,,,UI Field,"Tariff_factor is a percentage number, e.g. A value 10 means 10%."
+UX Sitemap,Default,Administration_Investment_Fees,Upper Bound Range,,,UI Field,"The UI needs to add text like “Over”, “Balance over” or hyphen symbol in the bound range."
+UX Sitemap,Default,Administration_Investment_Fees,Maximum Fee,,,UI Field,The cardinality of this element in each fee component is 0..1.
+UX Sitemap,Default,Administration_Investment_Fees,Minimum Fee,,,UI Field,The cardinality of this element in each fee component is 0..1.
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Fee Type,,,UI Field,"This element indicates whether the fee for a portfolio is reported in the section “Investment management fee” or “Portfolio management fee”.  Btfg$book_kind (cached table)   USER_ID INTL_ID NAME INVST_MNGT btfg$invst_mngt Investment management fee TMP_MNGT btfg$tmp_mngt Portfolio management fee  From business perspective, the fee charged by ready-made portfolio and tailored made portfolio are reported in the section “Investment management fee” and “Portfolio management fee” respectively.  Hence, the UI needs to select the corresponding btfg_master_book_kind_id for reporting fees in the “Investment management fee” and “Portfolio management fee” sections. "
+UX Sitemap,Default,Portfolio_Management_Fee_UX,Portfolio Code,,,UI Field,Text Field: Portfolio code
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH7_Closing balance before platform fees,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH6_Market movement,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH3_Outflows,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH2_Inflows,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH5_Expenses,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH4_Income,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_CH3_Period return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_CH2_Period Columns,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_RH1_Opening Balance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_CH4_Since Inception,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,A models asset class,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,FUM Percentage,,,UI Field,
+UX Sitemap,Default,Messages_Alerts_Unread_Count_UX,Client Messages  - Total Number of Messages Unread,,,UI Field,Where : -  1)Rep/data/report/prio_list/prio/prio_head_list/prio_head/prio/val = “High priority” 2)Rep/data/report/prio_list/prio/cat_list/cat/msgctr_list/msg_ctr/msgctr_head_list/msgctr_head/msg_avsr_ctr_id/val = 1 & Where:- 1)Rep/data/report/prio_list/prio/prio_head_list/prio_head/prio/val = “Non priority” 2)Rep/data/report/prio_list/prio/cat_list/cat/msgctr_list/msg_ctr/msgctr_head_list/msgctr_head/msg_avsr_ctr_id/val = 1 
+UX Sitemap,Default,IM dashboard_Monthly model report,Diff_Percentage_Floating_shadow_client,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,model portfolio weight percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,model market value,,,UI Field,
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,List of F#,,,UI Field,ID of Accessible Account (F#)
+UX Sitemap,Default,IM dashboard_Monthly model report,Model Floating target percentage,,,UI Field,
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Account Type,,,UI Field,"When account number from Policy and Avaloq match, UI displays Account type from Avaloq"
+UX Sitemap,Default,Business_Insurance_Accounts_List_UX,Account name,,,UI Field,"When account number from Policy and Avaloq match, UI displays Account name from Avaloq"
+UX Sitemap,Default,IM dashboard_Monthly model report,Floating_Target_Total_at_Asset_Class,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Last_updated_Target_Total_at_Asset_Class,,,UI Field,
+UX Sitemap,Default,Messages-For information-Your messages,Unread messages are in bold font,,,UI Field,"NrFld  Unread messages, filter by this field ntfcn_status_id = 1    btfg$ntfcn_status  (cache table) Note: * open is unread  ID INTL_ID USER_ID NAME *1 open OPEN Open 2 read READ Read 3 deleted DELETED Deleted "
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Account Number,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Tax Preferences,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Primary Contact,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Adviser Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Client Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Company Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,ASIC registered name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,ACN,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,ABN,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Tax File Number,,,UI Field,
+UX Sitemap,Default,Messages-For information-Your messages,Icon – High Priority,,,UI Field,NrFld event_type_prio = 1 (highest priority) event_type_prio = 2 (lowest priority) 
+UX Sitemap,Default,Portfolio movements,Establishment fee,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Ongoing advice fee,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Investment management fees,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Advice Fees,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Expenses,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Administration fees,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Managed portfolio income,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Other income,,,UI Field,
+UX Sitemap,Default,Portfolio movements,BT cash income,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Term deposit income,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Total_GST $,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Total_Fee including GST $,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,GST $,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Fee including GST$,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Account Id,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Fee excluding GST $,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Subtotal_Fee including GST $,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Total_Fee excluding GST $,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Subtotal_Fee excluding GST $,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Subtotal_GST $,,,UI Field,
+UX Sitemap,Default,Order Capture,Avaloq Vetting Result ID,,,UI Field,
+UX Sitemap,Default,Order Capture,Order,,,UI Field,
+UX Sitemap,Default,Order Capture,Order ID per order,,,UI Field,
+UX Sitemap,Default,Order Capture,Vetting Result Type,,,UI Field,
+UX Sitemap,Default,Accountant My Messages,Date,,,UI Field,
+UX Sitemap,Default,Accountant My Messages,Details,,,UI Field,
+UX Sitemap,Default,Order Capture,Cash Available to Invest,,,UI Field,
+UX Sitemap,Default,Order Capture,Cash Remaining,,,UI Field,
+UX Sitemap,Default,Accountant My Messages,Display Adviser My messages,,,UI Field,
+UX Sitemap,Default,Accountant My Messages,High Priority Message Count,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,P1_N2_Benchmark name,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S1_Account name,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S2_Account type,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S3_Product Name,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R7_Closing balance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R8_Performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,All text in notes section,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,P1_N1_Portfolio measurement commencement date,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S5_Performance report created on,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S6_Timestamp,,,UI Field,
+UX Sitemap,Default,Advice_Fees_Edit_UX,Remove a sliding scale tier,,,UI Field," Remove a sliding scale tier  The ‘/tariff/bound_list’ element of the message will be rebuilt. The deleted tier/s will not be included in the list. That is, no ‘/tariff/bound_list/tariff_bound’ element/s will be created for the deleted tier/s.   "
+UX Sitemap,Default,Messages-For action-Client Alerts,Date,,,UI Field,DateTimeFld  Format  < DD MMM YYYY> Eg  28 Jan 2014 
+UX Sitemap,Default,Messages-For action-Client Alerts,Category,,,UI Field,btfg$code_ntfcn_msg_cat (cache table)  ID INTL_ID USER_ID NAME 1 chg_act CHG_ACT Changes to accounts 2 clt_act CLT_ACT Client Actions 3 conf_trx CONF_TRX Confirmed Transaction 4 fail_trx FAIL_TRX Failed transactions and warnings 5 mat_term MAT_TERM Maturing term deposits 6 new_clt NEW_CLNT New clients 7 new_stmt NEW_STMT New statements 8 prod_news PROD_NEWS Product news 9 clt_activ CLT_ACTIV Client activation 10 fail_pay FAIL_PAY Failed payments 11 welc_pck WELC_PCK Welcome Pack - with the Registration code message 
+UX Sitemap,Default,Messages-For action-Client Alerts,New  Message Count,,,UI Field,NrFld  Sum of both High Priority & Non Priority Unread messages for New Messages Count.   Unread Notification Messages Count IFS Document :  http://sharepoint.btfin.com/sites/trans/tech/architecture/Solution%20Design/Investment%20Platform/Web%20UI%20To%20Avaloq%20Integration/IFS/Count%20of%20Unread%20Notification%20Messages%20-%20Web%20UI%20-%20Avaloq%20-%20IFS%20-%20Version_0.1.docx 
+UX Sitemap,Default,Messages-For action-Client Alerts,High Priority Message Count,,,UI Field,NrFld   High Priority Message Count 
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Asset Type,,,UI Field,Btfg$cost_misc is a cached table.  ID INTL_ID USER_ID NAME 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios   
+UX Sitemap,Default,Messages-For action-Client Alerts,Display Adviser Client messages,,,UI Field,NrFld  Filter the notifications by this field to retrieve Adviser client  messages.   msg_avsr_ctr_id = 1  btfg$code_ntfcn_advsr_msgctr (cache table)  ID INTL_ID USER_ID NAME 1 clt_msg CLT_MSG Client messages 2 my_msg MY_MSG My messages 3 na NA N/A 
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Bound To,,,UI Field,Bound To
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Bound Factor,,,UI Field,Bound Factor
+UX Sitemap,Default,Messages-For action-Client Alerts,Account Name,,,UI Field, NrFld  Use bp_id to retrieve the Account Name from the Client List cache. Client List IFS http://sharepoint.btfin.com/sites/trans/tech/architecture/Solution%20Design/Investment%20Platform/Web%20UI%20To%20Avaloq%20Integration/IFS/Client%20List%20-%20Web%20UI%20-%20Avaloq%20-%20IFS%20-%20Version_1.0.docx  
+UX Sitemap,Default,Messages-For action-Client Alerts,Account Type,,,UI Field," NrFld Account Type, Eg. Individual, Joint etc.  btfg$custr_acc_struct_type (cache table)  ID INTL_ID USER_ID NAME 20611 btfg$indvl I Individual 20612 btfg$jacc J Joint 20613 btfg$company C Company 20614 btfg$trust T Trust 20615 btfg$smsf S SMSF  "
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S15_Primary Contact email,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S16_Primary Contact address,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S7_Page x of y,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S8_Account ID,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S9_Account ID,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S10_Account Holders,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S11_Account Holders,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S12_Primary Contact,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S13_Primary Contact name,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S14_Primary Contact phone,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Model_Portfolio_Total_Return,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Benchmark_Return,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Performance return percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Performance return calculation,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Closing Balance,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Inflows,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Active return percentage,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Opening Balance,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Outflows,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Income,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_R1_Total Performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_R4_Benchmark,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Primary Contact,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Principal place of business,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Registered company office,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Registered for GST,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Email Primary,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Linked Account Role,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Full Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Title,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Mobile,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Company,Email,,,UI Field,
+UX Sitemap,Default,Messages-For information-Your messages,High Priority Message Count,,,UI Field,NrFld   High Priority Message Count 
+UX Sitemap,Default,Blue Tray,Account Name,,,UI Field,
+UX Sitemap,Default,Blue Tray,Accounts,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Licensee advice fee,,,UI Field,
+UX Sitemap,Default,Portfolio movements,One_off advice fee,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Foreign resident withholding tax,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Taxes,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Market movement,,,UI Field,
+UX Sitemap,Default,Portfolio movements,TFN withholding tax,,,UI Field,
+UX Sitemap,Default,Blue Tray,Total FUA,,,UI Field,
+UX Sitemap,Default,Portfolio movements,Closing balance,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Predefined date expressions,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,End of Period,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Update button,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Available Benchmarks in the system,,,UI Field,"Cached service BTFG$UI_BMRK_LIST.ALL For benchmark name, use : rep/data/bmrk_list/bmrk/bmrk_head_list/bmrk_head/bmrk_name/val "
+UX Sitemap,Default,Portfolio performance screen,Total Performance figure,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Number of days,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Start of Period,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,day performance is,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_Cash position name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G1_Performance in percentage,,,UI Field,
+UX Sitemap,Default,Order Capture,Adviser ID,,,UI Field,
+UX Sitemap,Default,Order Capture,Last Saved Date Time,,,UI Field,
+UX Sitemap,Default,Order Capture,Order Amount $,,,UI Field,
+UX Sitemap,Default,Order Capture,Amount Type,,,UI Field,
+UX Sitemap,Default,Order Capture,Reference,,,UI Field,
+UX Sitemap,Default,Order Capture,Order Value $,,,UI Field,
+UX Sitemap,Default,Order Capture,Order Group Vetting Result Type,,,UI Field,
+UX Sitemap,Default,Order Capture,Pay Interest Option,,,UI Field,
+UX Sitemap,Default,Order Capture,Current Holdings,,,UI Field,
+UX Sitemap,Default,Order Capture,Order Type,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R4_Income,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R3_Outflows,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R2_Inflows,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R1_Opening Balance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH8_Performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH7_Closing balance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH6_Market movement,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH5_Expenses,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R6_Market movement,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_R5_Expenses,,,UI Field,
+UX Sitemap,Default,Messages-For action-Client Alerts,Details,,,UI Field,TextFld Notification message 
+UX Sitemap,Default,Advice_Fees_Edit_UX,Sliding fee scale componenet,,,UI Field,This is the list of asset classes to be included in the sliding fee scale component fee calculation. Possible values for asset classes are described below  btfg$cost_misc (cache table) ID INTL_ID USER_ID NAME 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios  
+UX Sitemap,Default,Advice_Fees_Edit_UX,Asset Class,,,UI Field,This is for asset class.  btfg$cost_misc (cache table) ID INTL_ID USER_ID NAME 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios  
+UX Sitemap,Default,Advice_Fees_Edit_UX,Is Indexed Anually,,,UI Field,Specifies if the flat dollar amount is indexed annually to CPI or not.
+UX Sitemap,Default,Advice_Fees_Edit_UX,Dollar Amount,,,UI Field,"For flat dollar amount, this is the dollar amount, e.g. 100  For percentage fee applied to an asset class, value is returned as a factor UI percentage value = value * 100 Eg. 0.1% for value = 0.001 "
+UX Sitemap,Default,Advice_Fees_Edit_UX,Remove Dollar fee Componenet,,,UI Field,Remove dollar fee component from the Fee Schedule.  The ‘tariff’ element of the message will not be populated for the following ‘misc’ field. ID INTL_ID USER_ID NAME 1 btfg$fixed_amt AMT Fixed Dollar Amount 
+UX Sitemap,Default,Advice_Fees_Edit_UX,Percentage Fee,,,UI Field,This is for percentage fee to be applied for a tier.  This is a factor value. UI percentage value = bound_factor * 100 Eg. 0.1% for bound_factor = 0.001 
+UX Sitemap,Default,Advice_Fees_Edit_UX,To-value,,,UI Field,This is To-value ($) of a tier in a sliding scale.
+UX Sitemap,Default,Advice_Fees_Edit_UX,From-value,,,UI Field,This is From-value ($) of a tier in a sliding scale.
+UX Sitemap,Default,Advice_Fees_Edit_UX,Remove sliding scale fee componenet,,,UI Field, Remove sliding scale fee component from the Fee Schedule.  1) The ‘tariff’ element of the message will not be populated for the following ‘misc’ field. ID INTL_ID USER_ID NAME 41 btfg$fua_tailored FUA_TAILORED Tailored 2) The ‘appl_def_list’ element will not be populated. 
+UX Sitemap,Default,Advice_Fees_Edit_UX,Remove percentage fee Componenet,,,UI Field, Remove percentage fee component from the Fee Schedule.  The ‘tariff’ element of the message will not be populated for the following ‘misc’ fields. ID INTL_ID USER_ID NAME 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios  
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Fee Type,,,UI Field,Establishment fee is in btfg$book_kind cache table.  ID INTL_ID USER_ID NAME 5829 btfg$avsr_estab AVSR_ESTAB Establishment fee   
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Total contributions amount,,,UI Field,Total contribution amount
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Periodic Advice Fee,,,UI Field,Ongoing advice fee and licensee fee are in btfg$book_kind cache table.  ID INTL_ID USER_ID NAME 5825 btfg$avsr_advcong AVSR_ADVCONG Ongoing advice fee 5850 btfg$dg_advcong DG_ADVCONG Licensee advice fee   
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Amount,,,UI Field,Amount is a dollar value.
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Fee Amount,,,UI Field,Factor is a dollar value.
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Fee Componenet Type,,,UI Field,Btfg$cost_misc is a cached table.  ID INTL_ID USER_ID NAME What type of fee component? 1 btfg$fixed_amt AMT Fixed Dollar Amount Dollar fee component 41 btfg$fua_tailored FUA_TAILORED Tailored Sliding scale fee component 3 btfg$fua_clust_cash FUA_CASH Cash Percentage fee component 4 btfg$fua_clust_td FUA_TD Term deposits Percentage fee component 5 btfg$fua_clust_mf FUA_MF Managed funds Percentage fee component 6 btfg$fua_clust_ls FUA_LS Listed securities Percentage fee component 7 btfg$fua_clust_ma FUA_MA Managed portfolios Percentage fee component   
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Percentage Fee Component-Type,,,UI Field,Btfg$cost_misc is a cached table.  ID INTL_ID USER_ID NAME 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios   
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Is CPI,,,UI Field,A Boolean ‘true’ or ‘false’.
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Bound From,,,UI Field,Bound From
+UX Sitemap,Default,Onboarding_Application_Summary_Fees_Section_UX,Factor,,,UI Field,"Factor is a number, not a percentage. As the UI shows a percentage figure, factor need to be multiplied by 100 before displaying on screen."
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S6_Timestamp,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S5_Performance report created on,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,All text in notes section,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R10_Performance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R9_Closing balance after fees,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T2_R8_Fees,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S3_Product Name,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S2_Account type,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S1_Account name,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,P1_N1_Portfolio measurement commencement date,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Model Portfolio,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Description,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Value date,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Trade date,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Quantity/Amount,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Performance date,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Transaction type,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Transaction ID,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Status,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Asset holding,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Adviser Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Client Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Account Number,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Tax Preferences,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Date of Birth,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,BSB,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Residential Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Postal Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Preferred Contact,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Mobile,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Valuation Date,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Asset Maturity Date,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Asset Name,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Asset Source,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Asset class total,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Asset class allocation,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Holding Container,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,External Asset Class Category,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Balance of Term Deposit/Cash,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Total External Assets,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Total number of clients,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Total Portfolio value,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Available Cash,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Portfolio value,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Expected cash,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Expected asset value,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Status,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Available Cash,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Expected Value,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Assets transferred,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S19_Adviser phone,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S20_Adviser email,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S17_Adviser,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S18_Adviser name,,,UI Field,
+UX Sitemap,Default,Manage Fees,book_kind,,,UI Field,
+UX Sitemap,Default,Manage Fees,misc,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S21_Dealer Group,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S22_Dealer Group name,,,UI Field,
+UX Sitemap,Default,Manage Fees,misc,,,UI Field,
+UX Sitemap,Default,Manage Fees,misc,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Median Portfolio Value,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Client Account Identifier,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Closing Period Cash Value,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Closing Period Portfolio Value,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Funds Under Administration,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,FUA Value per Portfolio Value Band 1,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,XAxis Number of Accounts in the portfolio value band,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Average Portfolio Value,,,UI Field,
+UX Sitemap,Default,Adviser Search,Adviser First name,,,UI Field,
+UX Sitemap,Default,Adviser Search,Adviser Last name,,,UI Field,
+UX Sitemap,Default,Tracking-ROAs UX,Event status,,,UI Field,The status of the event.  Open or Closed
+UX Sitemap,Default,Tracking-ROAs UX,Send advice documents/Retrieve orders,,,UI Field,Order number will be used to load to the screen specific to the event.
+UX Sitemap,Default,Tracking-ROAs UX,Asset name,,,UI Field,Id is used to to look-up asset name
+UX Sitemap,Default,Tracking-ROAs UX,Order sub-type,,,UI Field,The order sub type.  This will be derived from the 4 fields (in the case of Corporate Action)
+UX Sitemap,Default,Tracking-ROAs UX,Approval required,,,UI Field,Number is calculated from number of positions minus number of approved.
+UX Sitemap,Default,Tracking-ROAs UX,ROA date,,,UI Field,The first ROA submitted for the event?
+UX Sitemap,Default,Term deposits - Withdraw,Open date,,,UI Field,The open date of Term Deposit
+UX Sitemap,Default,Pension_Account_Details_UX,Commencement date,,,UI Field,Date of commencement
+UX Sitemap,Default,Pension_Account_Details_UX,Commencement value,,,UI Field,Value at the commencement
+UX Sitemap,Default,Pension_Account_Details_UX,Account balance,,,UI Field,Account balance on commmence or 1st July 
+UX Sitemap,Default,Pension_Account_Details_UX,Minimum amount,,,UI Field,Minimum amount in current Financial Year
+UX Sitemap,Default,Pension_Account_Details_UX,Maximum amount,,,UI Field,To be displayed only if Pension account is in TTR state.  How to identify if Pension account is in TTR? If value of field ‘sa_pens_type‘ in BP details response is ‘ttr’ then Pension is in TTR state.  Code table: btfg$au_tax_bp_sa_pens_type  
+UX Sitemap,Default,Pension_Account_Details_UX,Life expectancy_Account holder,,,UI Field,TO BE DEVELOPED
+UX Sitemap,Default,Pension_Account_Details_UX,Life expectancy_Centre link schedule,,,UI Field,TO BE DEVELOPED
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Contribution type,,,UI Field,"Code table: btfg$au_tax_sa_contri_type To display the Contribution Type Name, please use the extension field “btfg$ui_name” of code table “BTFG$AU_TAX_SA_CONTRI_TYPE”.  "
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Contribution amount,,,UI Field,Contribution amount
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Total other amount,,,UI Field,Summation of all gross_tc where sa_cap_type = 3 (N/A or Other) Code table: btfg$au_tax_sa_conc_type 
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Cap  – Concessional,,,UI Field,Cap concessional
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Available,,,UI Field,UI calculated Concessional cap – Total concessional amount  
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Total contributions amount,,,UI Field,Summation of all gross_tc for all orders
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Last contribution date,,,UI Field,UI needs to pick up the order with the biggest value in doc_id. Use the val_date of that order. 
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Last contribution amount,,,UI Field,UI needs to pick up the order with the biggest value in doc_id. Use the gross_tc of that order.
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Total concessional contribution amount,,,UI Field,Summation of all gross_tc where sa_cap_type = 1 (Concessional) Code table: btfg$au_tax_sa_conc_type 
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,Total Non concessional contribution  amount,,,UI Field,Summation of all gross_tc where sa_cap_type = 2 (Non Concessional) Code table: btfg$au_tax_sa_conc_type 
+UX Sitemap,Default,Transaction History,Order ID,,,UI Field,
+UX Sitemap,Default,Transaction History,Balance,,,UI Field,
+UX Sitemap,Default,Transaction History,Quantity,,,UI Field,
+UX Sitemap,Default,Transaction History,Net Amount $,,,UI Field,
+UX Sitemap,Default,Transaction History,Description,,,UI Field,
+UX Sitemap,Default,Transaction History,Transaction Type,,,UI Field,
+UX Sitemap,Default,Transaction History,Investment Type,,,UI Field,
+UX Sitemap,Default,Transaction History,Security,,,UI Field,
+UX Sitemap,Default,Transaction History,Uncleared,,,UI Field,
+UX Sitemap,Default,Client list,Adviser Search,,,UI Field,
+UX Sitemap,Default,TD Maturity,Adviser Name,,,UI Field,
+UX Sitemap,Default,TD Maturity,Adviser ID,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Trust Name,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Trust Business Name,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Company Name,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,ASIC Registered Name,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,SMSF Name,,,UI Field,
+UX Sitemap,Default,TD Maturity,Account name,,,UI Field,
+UX Sitemap,Default,TD Maturity,Account id,,,UI Field,
+UX Sitemap,Default,TD Maturity,Product Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,BSB,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Date of Birth,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Full Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Title,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Email,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Email Primary,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Mobile,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Preferred Contact,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Postal Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Joint,Residential Address,,,UI Field,
+UX Sitemap,Default,Individual,Preferred Name,,,UI Field,
+UX Sitemap,Default,Individual,Contact details - Email,,,UI Field,
+UX Sitemap,Default,Individual,Contact details - Mobile,,,UI Field,
+UX Sitemap,Default,Individual,Residential address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Update Tax Preferences,Tax keeping method,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Update Primary Account Holder,Account for which the updates are requested,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Update Primary Account Holder,Person_id who needs to be updated as Primary Account Holder,,,UI Field,
+UX Sitemap,Default,Individual,Name,,,UI Field,
+UX Sitemap,Default,Individual,Postal address,,,UI Field,
+UX Sitemap,Default,Individual,Date of birth,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Last price,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Market Value,,,UI Field,Calculated for a managed portfolio = sum of current value = ∑ curr_val_ref 
+UX Sitemap,Default,Portfolio Valuation,Quantity,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Last price date,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Gain_loss value,,,UI Field,Calculated = current value – historical value = curr_val_ref – hist_val_ref 
+UX Sitemap,Default,Portfolio Valuation,Cost,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Available Balance,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Gain_loss percentage,,,UI Field,Calculated = (current value – historical value) / historical value = (curr_val_ref – hist_val_ref) / hist_val_ref 
+UX Sitemap,Default,SMSF External Holding View,Total External Assets,,,UI Field,
+UX Sitemap,Default,SMSF External Holding View,Data Feed Status,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Product Name,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Account Type,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,Messages read is in normal font,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,Icon high priority,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,High Priority Message Count,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,Display Adviser My messages,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Client application id/Account Number,,,UI Field,
+UX Sitemap,Default,Transition Dashboard,Account Name,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,Unread messages are in bold font,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,New Message Count,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S16_Primary Contact address,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S15_Primary Contact email,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S12_Primary Contact,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S11_Account Holders,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S14_Primary Contact phone,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S13_Primary Contact name,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S8_Account ID,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S7_Page x of y,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S10_Account Holders,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,S9_Account ID,,,UI Field,
+UX Sitemap,Default,Corporate Actions View,Corporate action type,,,UI Field,"If ui_aft_id = ‘MULTI_BLOCK’, then use offer_type_id for description lookup"
+UX Sitemap,Default,Corporate Actions View,Asset code/name,,,UI Field,Lookup ID to asset details
+UX Sitemap,Default,Corporate Actions View,Panorama close date,,,UI Field,
+UX Sitemap,Default,Corporate Actions View,Last update date/announcement date,,,UI Field,Screen field name is to be discussed/finalised.
+UX Sitemap,Default,Adviser Search,Registered address State,,,UI Field,
+UX Sitemap,Default,Adviser Search,Registered address City,,,UI Field,
+UX Sitemap,Default,Adviser Search,Practice name,,,UI Field,
+UX Sitemap,Default,Adviser Search,Adviser USER ID,,,UI Field,
+UX Sitemap,Default,Corporate Actions View,Eligible accounts,,,UI Field,
+UX Sitemap,Default,Corporate Actions View,Corporate action status,,,UI Field,Lookup ID to static code
+UX Sitemap,Default,Term deposits - Withdraw,Date term deposit will withdraw,,,UI Field,"If widrw_date is current date, the UI needs to present the word “immediate”. Otherwise, show widrw_date in dd Mmm yy format."
+UX Sitemap,Default,Term deposits - Withdraw,Adjusted interest,,,UI Field,"This is the balancing item between Principal and “Total principal plus interest paid at withdrawal”, which is the remaining interest to be paid or amount to be recouped from Principal."
+UX Sitemap,Default,Term deposits - Withdraw,Maturity date,,,UI Field,The date of Term Deposit maturity
+UX Sitemap,Default,Term deposits - Withdraw,% of term elapsed,,,UI Field,Time elapsed since the open date
+UX Sitemap,Default,Term deposits - Withdraw,Days until maturity,,,UI Field,Days to maturity
+UX Sitemap,Default,Term deposits - Withdraw,Principal,,,UI Field,The principal amount of Term Deposit
+UX Sitemap,Default,Term deposits - Withdraw,Total principal plus interest paid at withdrawal,,,UI Field,Amount to be paid at withdrawal
+UX Sitemap,Default,Term deposits - Withdraw,Interest rate,,,UI Field,Rate of Interest
+UX Sitemap,Default,Term deposits - Withdraw,Interest accrued since last payment,,,UI Field,Interest accrued since last payment
+UX Sitemap,Default,Term deposits - Withdraw,Interest paid,,,UI Field,Amount of Interest paid
+UX Sitemap,Default,Super_Account_Rollover_Contribution_History_UX,As at date,,,UI Field,UI calculated  Current date
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Eligible service date,,,UI Field,Eligible service date in case of superannuation account
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Total,,,UI Field,UI Calculated Field. Total amount
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Un restricted non preserved,,,UI Field,Unrestricted non preserved amount
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Restricted non preserved,,,UI Field,Restricted no preserved amount
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Preserved,,,UI Field,Preserved amount
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Total (amount),,,UI Field,Tax free (amount) + Taxable (amount)
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Total (percentage),,,UI Field,If there is no tax free or taxable amount then display ‘-‘
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Taxable (amount),,,UI Field,Taxable amount
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Taxable (percentage),,,UI Field,(Taxable (amount)/ Total (amount)) x 100
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S18_Adviser name,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S17_Adviser,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S20_Adviser email,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S19_Adviser phone,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S22_Dealer Group name,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,S21_Dealer Group,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Practice Details,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Portfolio Value,,,UI Field,
+UX Sitemap,Default,Transaction History,Settlement Date,,,UI Field,
+UX Sitemap,Default,Transaction History,Trade Date,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G3_Total Portfolio Income Return percentage,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Country,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Region,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Date of Birth,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Title,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Last Name,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,First Name,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,City,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Postcode,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,State,,,UI Field,
+UX Sitemap,Default,Onboarding Client Search,Suburb,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Account Type,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Account Name,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Cancellable,,,UI Field,
+UX Sitemap,Default,Company,ASIC registered name,,,UI Field,
+UX Sitemap,Default,Company,Company Name,,,UI Field,
+UX Sitemap,Default,Individual,Country of residence for tax purpose,,,UI Field,
+UX Sitemap,Default,Individual,Tax options,,,UI Field,
+UX Sitemap,Default,Individual,Advisers,,,UI Field,
+UX Sitemap,Default,Individual,Username,,,UI Field,
+UX Sitemap,Default,Individual,Gender,,,UI Field,
+UX Sitemap,Default,Individual,Age,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Order Value,,,UI Field,
+UX Sitemap,Default,Company,ABN,,,UI Field,
+UX Sitemap,Default,Company,ACN,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Term,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Generic Asset ID,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Residential Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Postal Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Date of Birth,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Benchmark Name,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G1_X1_Plot,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,BSB,,,UI Field,
+UX Sitemap,Default,Client Overview,Available Cash,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,G3_Cash Income Returns percentage,,,UI Field,
+UX Sitemap,Default,Client Overview,Account Status,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Total Performance Report Download,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Your performance report for the period,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Start of Period,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,End of Period,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,Your account VS,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Mobile,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Individual,Preferred Contact,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Average cost of managed portfolio,,,UI Field,Calculated for a managed portfolio = sum of historical value = ∑ hist_val_ref 
+UX Sitemap,Default,Portfolio Valuation,Estimated gain / loss for a managed portfolio,,,UI Field,Estimated gain / loss for a managed portfolio in $ = sum of current value – sum of historical value  = ∑ curr_val_ref – hist_val_ref 
+UX Sitemap,Default,Portfolio Valuation,Maturity instruction id,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Has open book,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Asset_id of a managed portfolio container,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Estimated yield of a managed portfolio,,,UI Field,Estimated yield of a managed portfolio is calculated = (∑ estimated yield at position level of a managed portfolio * current market value at position level of the portfolio ) / (∑ current market value at position level of the portfolio) = (∑ estim_yield of a pos in a cont * curr_val_ref of the pos in the cont) / (∑ curr_val_ref of the pos in the cont) 
+UX Sitemap,Default,Portfolio Valuation,Current reference value,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Accured Income,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Asset id_logo,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Asset id of a position,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Order Status,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_RH4_Benchmark,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_RH5_Active return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G1_L3_Benchmark,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_CH1_Your managed portfolio returns,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_CH2_Period Columns,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_CH3_Period return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_CH4_Since Inception,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_RH1_Total Performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_RH2_Capital return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_RH3_Income return,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Name,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Date of birth,,,UI Field,
+UX Sitemap,Default,Corporate Actions View,Actioned,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Interest Rate,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Contribution amount,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Concessional caps,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Age,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Contribution type,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Concessional or Non concessional or Others,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Concessional available,,,UI Field,
+UX Sitemap,Default,Advice_Fees,Percentage value for the tier of sliding fee component,,,UI Field,NrFld Percentage value for the tier of sliding fee component –  Eg. 0.002 would mean 0.2% 
+UX Sitemap,Default,Order Status and Cancel,Order Type,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Avaloq Asset ID,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Asset Code,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Asset Name,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Order ID,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Order Source,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Details,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Display Adviser Client messages,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Issuer ID,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Brand,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,Date,,,UI Field,
+UX Sitemap,Default,Cash Adviser Investor Your Messages,Details,,,UI Field,
+UX Sitemap,Default,Account Overview,TD Maturity Date,,,UI Field,
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Tax free (percentage),,,UI Field,(Tax free (amount)/ Total (amount)) x 100
+UX Sitemap,Default,Pension_Account_Details_Tax_Preservation_UX,Tax free (amount),,,UI Field,Tax free amount
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Gender,,,UI Field,Code table: Btfg$gender
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Contact_Details_Email,,,UI Field,Email conatact details
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Date_of_Birth,,,UI Field,Date of birth of beneficiary
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Relationship,,,UI Field,Code table: btfg$person_rel_type
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Allocation,,,UI Field,Allocation or Percentage
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Total_Allocation,,,UI Field,UI Calculated. Summation of individual percentage allocation (pct) 
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Contact_Details_Phone,,,UI Field,Phone number contact details
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Nomination_Type,,,UI Field,Code table: btfg$au_sa_death_benf
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Email Primary,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Email,,,UI Field,
+UX Sitemap,Default,Client list,Filter Account Status,,,UI Field,
+UX Sitemap,Default,Client list,Filter State,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Title,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Individual,Full Name,,,UI Field,
+UX Sitemap,Default,Client list,Product Name,,,UI Field,
+UX Sitemap,Default,Client list,Account Type,,,UI Field,
+UX Sitemap,Default,Client list,Account Number,,,UI Field,
+UX Sitemap,Default,Client list,Portfolio Value,,,UI Field,
+UX Sitemap,Default,Global Client and Account Search,Product Name,,,UI Field,
+UX Sitemap,Default,Global Client and Account Search,Client/Client Entity Full name,,,UI Field,
+UX Sitemap,Default,Global Client and Account Search,Account ID/Number,,,UI Field,
+UX Sitemap,Default,Global Client and Account Search,Account Type,,,UI Field,
+UX Sitemap,Default,Global Client and Account Search,First Name,,,UI Field,
+UX Sitemap,Default,Global Client and Account Search,Account Name,,,UI Field,
+UX Sitemap,Default,Investment Management Fees_Managed Portfolios,Investment management fees Managed Portfolios,,,UI Field,"This element indicates whether the fee for a portfolio is reported in the section “Investment management fee” or “Portfolio management fee”. Btfg$book_kind (cached table)  USER_ID INTL_ID NAME INVST_MNGT btfg$invst_mngt Investment management fee TMP_MNGT btfg$tmp_mngt Portfolio management fee  From business perspective, the fee charged by ready-made portfolio and tailored made portfolio are reported in the section “Investment management fee” and “Portfolio management fee” respectively. Hence, the UI needs to select the corresponding btfg_master_book_kind_id for reporting fees in the “Investment management fee” and “Portfolio management fee” sections. "
+UX Sitemap,Default,Global Client and Account Search,Last Name,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Models asset code,,,UI Field,
+UX Sitemap,Default,IM dashboard_Monthly model report,Model initial/Last Target percentage,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Beneficiaries Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Beneficiaries Residential Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Client Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Adviser Permissions,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,Linked Client Trust,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,Linked Client Company,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,Trust Details,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,Company Details,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,Account Details,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,Account setting,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_CH4_Since Inception,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_CH3_Period return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G1_L1_Active return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G1_Y3_Selected benchmark,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G1_Y2_Total performance,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G1_Y1_Active return,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_CH2_Period Columns,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,T1_CH1_Your account returns,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G1_L3_Selected benchmark,,,UI Field,
+UX Sitemap,Default,Port perf_Total  Account Performance Report,G1_L2_Total performance,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Estimation yeild,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Position Name,,,UI Field,
+UX Sitemap,Default,Portfolio Valuation,Container Type ID,,,UI Field,
+UX Sitemap,Default,Corporate Action Details_Account Transactions,Transaction number,,,UI Field,Transaction number generated
+UX Sitemap,Default,Corporate Action Details_Account Transactions,Outcome,,,UI Field,Outcome of CA
+UX Sitemap,Default,Corporate Action Details_Account Transactions,Account name,,,UI Field,Lookup ID for client
+UX Sitemap,Default,Saved Orders,Your Reference,,,UI Field,
+UX Sitemap,Default,Saved Orders,Saved By_Name,,,UI Field,
+UX Sitemap,Default,Saved Orders,Date Saved,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Portfolio Value as at date,,,UI Field,"Use Client List Service, cached BTFG$UI_CUSTR_LIST.USER#CUSTR (xml\rep:rep\data\bp_list\bp\bp_head_list\bp_head\acc_id\val) "
+UX Sitemap,Default,Portfolio performance SMA Report,G1_L2_Total performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G1_L1_Active return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,Benchmark name,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,Your portfolio vs benchmark comparison,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,Managed Portfolio Name,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,End of Period,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G1_Y3_Benchmark,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G1_Y2_Total performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G1_Y1_Active return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G1 X Axis,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Managed Portfolio Component,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Next CPI Indexation date,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Ongoing advice fee Component name,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Ongoing advice fee id,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,CPI Indexation flag,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Flat Fee Component amount,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Non concessional caps,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Total contributions,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Financial years,,,UI Field,
+UX Sitemap,Default,Contribution categorisation report,Non concessional available,,,UI Field,
+UX Sitemap,Default,Adviser Client Messages And Your Messages,Client Messages Total Number of High Priority Messages Unread,,,UI Field,
+UX Sitemap,Default,Accountant _ Client Msg and My Msg _ Total Unread Msg Count,Your Messages _Total Number of Messages Unread,,,UI Field,
+UX Sitemap,Default,Adviser Client Messages And Your Messages,Your Messages Total Number of High Priority Messages Unread,,,UI Field,
+UX Sitemap,Default,Adviser Client Messages And Your Messages,Client Messages Total Number of Messages Unread,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Account ID,,,UI Field,
+UX Sitemap,Default,Adviser Client Messages And Your Messages,Your Messages Total Number of Messages Unread,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Account Type,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Account Name,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Date,,,UI Field,
+UX Sitemap,Default,Cash Adviser Client Messages,Category,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Account ID,,,UI Field,
+UX Sitemap,Default,Tax Invoice,Product Name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Performance $,,,UI Field,
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Gender,,,UI Field,Code table: btfg$gender  UI Code table value to be sent Male male Female female
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Date of birth,,,UI Field,Date of birth of beneficiary
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Email address,,,UI Field,Email contact of beneficiary
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Phone number,,,UI Field,Phone contact of beneficiary
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Relationship,,,UI Field,Code table: btfg$person_rel_type  UI Code table value to be sent Spouse spouse Child child Financial dependent fin_dep Interdependent interdependent Legal personal representative lpr
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Allocation,,,UI Field,Allocation percentage
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Last name,,,UI Field,Last name of beneficiary
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,First name,,,UI Field,First name of beneficiary
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Beneficiary_Name,,,UI Field,Name of the beneficiary
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Last_Updated,,,UI Field,Last updated date
+UX Sitemap,Default,Client list,Account Name,,,UI Field,
+UX Sitemap,Default,Client list,Adviser Permission,,,UI Field,
+UX Sitemap,Default,Client list,Adviser Last name,,,UI Field,
+UX Sitemap,Default,Client list,Adviser First name,,,UI Field,
+UX Sitemap,Default,Client list,Person Name,,,UI Field,
+UX Sitemap,Default,Client list,Status,,,UI Field,
+UX Sitemap,Default,Client list,State,,,UI Field,
+UX Sitemap,Default,Client list,Available Cash,,,UI Field,
+UX Sitemap,Default,Client list,Portfolio Valuation,,,UI Field,
+UX Sitemap,Default,Client list,Products,,,UI Field,
+UX Sitemap,Default,TD Maturity,Interest rate,,,UI Field,
+UX Sitemap,Default,TD Maturity,TD brand,,,UI Field,
+UX Sitemap,Default,TD Maturity,Maturity instructions,,,UI Field,
+UX Sitemap,Default,TD Maturity,Term,,,UI Field,
+UX Sitemap,Default,TD Maturity,Maturity date,,,UI Field,
+UX Sitemap,Default,TD Maturity,Status,,,UI Field,
+UX Sitemap,Default,Investment Management Fees_Managed Portfolios,Investment Name,,,UI Field,Name of a portfolio
+UX Sitemap,Default,TD Maturity,Principal Amount,,,UI Field,
+UX Sitemap,Default,Investment Management Fees_Managed Portfolios,pa,,,UI Field,"Fixed % fee rate, e.g. 0.02563 would be 2.563%. For display purpose, the percentage figure is rounded up to 2 decimal places. In the example, it will be 2.57%. In the case of an investment management fee of a portfolio, it can have multiple fixed percentage fee profiles. (It cannot be in sliding scale). Hence this element is added up for the same portfolio and same master book kind and then rounded up to 2 decimal places before displaying on UI. In the case of a portfolio management fee, it can have one fee profile only. Hence there is no need to add this element for the same portfolio and same master book kind. However, the value is still rounded up to 2 decimal places before displaying on UI. "
+UX Sitemap,Default,Investment Management Fees_Managed Portfolios,Code,,,UI Field,Code of a portfolio
+UX Sitemap,Default,Account Details and Maintenance_Account Type_Update Tax Preferences,Account for which the updates are requested,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,Accountant Details,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,Account Details,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,Linked Client Company,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,Adviser Details,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,Account setting,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,SMSF Details,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Corporate,Beneficiaries,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,Linked Client SMSF,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_SMSF Corporate,Company Details,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Investor name,,,UI Field,"Use Client List Service, cached BTFG$UI_CUSTR_LIST.USER#CUSTR First Name xml\rep:rep\data\bp_list\bp\PersonList\person\PersonHeadList\person_head\invstr_fname\val Last Name xml\rep:rep\data\bp_list\bp\PersonList\person\PersonHeadList\person_head\invstr_lname\val "
+UX Sitemap,Default,Portfolio performance screen,Account ID,,,UI Field,"Use Client List Service, cached BTFG$UI_CUSTR_LIST.USER#CUSTR (xml\rep:rep\data\bp_list\bp\bp_head_list\bp_head\bp_portf_val\val) "
+UX Sitemap,Default,Portfolio performance screen,Total performance Report,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Benchmark performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Total performance after admin and adviser fees dollar value,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Total performance after admin and adviser fees percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Disclaimer,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Adviser Name,,,UI Field,"Use Client List Service, cached BTFG$UI_CUSTR_LIST.USER#CUSTR First Name: xml\rep:rep\data\bp_list\bp\bp_head_list\bp_head\bp_advr_fname\val Last Name: xml\rep:rep\data\bp_list\bp\bp_head_list\bp_head\bp_advr_lname\val "
+UX Sitemap,Default,Portfolio performance screen,Performance to date,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Performance Formula,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Opening Balance $,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Purchases_Inflows,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Sales_outflows,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Market movement $,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Closing Balance $,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Net Income $,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH1_Opening Balance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH2_Inflows,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_CH3_Period return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_CH4_Since Inception,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_CH1_Your portfolio $ returns,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_CH2_Period Columns,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G2_L1_Performance,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G2_L2_Closing balance after fees,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Performance_percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH3_Outflows,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T2_RH4_Income,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Upper dollar boundary Licensee advice fee,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Percentage value of Licensee advice fee,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Managed Portfolio component percentage,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Term deposit Component,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Term deposit component percentage,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Cash Component,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Cash Component percentage,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Licensee advice fee,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Sliding scale fee component,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Lower dollar boundary Licensee advice fee,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Cost base of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Reduced cost base of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Net proceeds of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Tax cost of a tax lot,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Date,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Time lapse from Application submission date,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Indexed cost base of a tax lot,,,UI Field,
+UX Sitemap,Default,Esimated Realised CGT Page,Gain or loss of a tax lot,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Account Name,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Application reference number,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Preferred Contact,,,UI Field,
+UX Sitemap,Default,Account_Portfolio_Property_UX,Interest rate,,,UI Field,"btfg$ui_pos_list.bp#pos_val service This is an Optional field If this data is available at ABS, then it will be displayed, else it will not"
+UX Sitemap,Default,Account_Portfolio_Property_UX,Edit loan details,,,UI Field,BP details service This edit icon will be enabled only when there are no class feeds for that SMSF account  Clicking on this icon will open the property loan details modal pop-up with the loan details in editable mode. 
+UX Sitemap,Default,Account_Portfolio_Property_UX,Delete loan details,,,UI Field,BP details service This edit icon will be enabled only when there are no class feeds for that SMSF account  Clicking on this icon will open the property delete loan confirmation modal pop-up with the loan details in editable mode.  
+UX Sitemap,Default,Account_Portfolio_Property_UX,Dropdown list of loan providers,,,UI Field,New code table for loan provider BTFG$CODE_PROVID_LOAN (CODE TAB)  This list is retrieved from the code list table
+UX Sitemap,Default,Account_Portfolio_Property_UX,Balance outstanding amount,,,UI Field,
+UX Sitemap,Default,Account_Portfolio_Property_UX,Balance outstanding as on date,,,UI Field,
+UX Sitemap,Default,Account_Portfolio_Property_UX,Repayment amount,,,UI Field,This is an optional field New field – Repayment amount
+UX Sitemap,Default,Account_Portfolio_Property_UX,Repayment frequency,,,UI Field,This list is retrieved from the code list table  New code table for repayment frequency BTFG$CODE_PAY_FREQ (CODE TAB)
+UX Sitemap,Default,Account_Portfolio_Property_UX,Interest rate,,,UI Field,This is an optional field New field – interest rate
+UX Sitemap,Default,Account_Details_Super_Beneficiaries_UX,Nomination type,,,UI Field,Code table: btfg$au_sa_death_benf  UI                Code table value to be sent Non-lapsing nomination nomn_nbind_sis Trustee discretion nomn_bind_nlaps_trustd Auto reversionary nomn_auto_revsnry
+UX Sitemap,Default,Adviser Dashboard Monitor,Net Flows,,,UI Field,
+UX Sitemap,Default,Advice_Fees,Fee Name,,,UI Field,NrFld Fee Name – Eg. 5825  btfg$book_kind (cached table) ID INTL_ID USER_ID NAME 5825 btfg$avsr_advcong AVSR_ADVCONG Ongoing advice fee  
+UX Sitemap,Default,Advice_Fees,Fee component type,,,UI Field,"NrFld Fee component type Identify whether the component is a flat dollar amount component, percentage component or sliding scale component  ID 1 means fixed dollar amount component. ID 41 means sliding scale component. Other ID’s (i.e. 3, 4, 5, 6, 7) are percentage component.  btfg$cost_misc (cache table)  ID INTL_ID USER_ID NAME 1 btfg$fixed_amt AMT Fixed Dollar Amount 41 btfg$fua_tailored FUA_TAILORED Tailored 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios   "
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Subscription_UX,Subscribe_button_FA subscription confirmation modal,,,UI Field,Req:  <bp_id> <wfc_action>opn_new_fa_aw_docm</wfc_action>
+UX Sitemap,Default,Investment Management Fees_Managed Portfolios,Cost Profile,,,UI Field,This element shows the underlying components (cost profile) of a fee. The underlying components of an investment management fee of a portfolio can have multiple components which are listed below. (Btfg$book_kind cached table)  USER_ID INTL_ID NAME INVST_MNGT_IM btfg$invst_mngt_im Investment management fee - Invst. mgr. INVST_MNGT_RE1 btfg$invst_mngt_re1 Investment management fee - Resp. entity 1 INVST_MNGT_RE2 btfg$invst_mngt_re2 Investment management fee - Resp. entity 2  The underlying components of a portfolio management fee of a portfolio can have one component only which is listed below. (Btfg$book_kind cached table) USER_ID INTL_ID NAME TMP_MNGT btfg$tmp_mngt Portfolio management fee 
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,Status,,,UI Field,"For every order number, check If only the application submission date is present  and the T&C sign date is blank in the Client onboarding tracking service Then Status = “Awaiting documents” If both application submission date and the T&C sign date is present in the Client onboarding tracking service and the appl_stat_id is not equal to DONE Then Status=""In progress"" If both application submission date and the T&C sign date is present in the Client onboarding tracking service and the appl_stat_id is equal to DONE Then FA subscription details should not be displayed in this list"
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Subscription_UX,Add Fund administration subscription service,,,UI Field,This is the additional services widget on the ‘Account overview’ screen.  Fund admin subscription service is applicable only for eligible SMSF accounts  Only eligible SMSF accounts will have Fund administration in additional services widget.  
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,Date,,,UI Field,The date when ‘Fund admin’ services were subscribed by the adviser for an eligible SMSF account.
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,Account_Application Reference number,,,UI Field,This field specifies the SMSF account name / and the Avaloq order number Account/Application reference number <name of SMSF> / <Avaloq order number>
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,Upgrade trust deed date,,,UI Field,This field is applicable only Transfer funds (SMSF funds which have financial reports)
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,Transition fund date,,,UI Field,This field is applicable only Transfer funds (SMSF funds which have financial reports)
+UX Sitemap,Default,Account Overview,Performance(Last Quarter),,,UI Field,
+UX Sitemap,Default,Account Overview,Capital Growth(Last Quarter),,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Total FUM,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,contact number,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,contact email address,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Cutoff time,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Investment_Style,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Asset_Class,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Model_Status,,,UI Field,
+UX Sitemap,Default,IM dashboard screen visual mapping,Market_Value,,,UI Field,
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,State,,,UI Field,State
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Post Code,,,UI Field,Post code
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Address Line,,,UI Field,Constitues address of insured person
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Benefit Type,,,UI Field,Type of benefit
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Insured person GivenName,,,UI Field,Name of insured person
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Insured person LastName,,,UI Field,Name of insured person
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,StructureAddressDetail,,,UI Field,Address details
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,City,,,UI Field,City
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Current Sum Insured,,,UI Field,Current sum insured amount
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Proposed Sum Insured,,,UI Field,Proposed sum insured amount
+UX Sitemap,Default,Corporate Trustee,Beneficiaries,,,UI Field,
+UX Sitemap,Default,Corporate Trustee,Company details,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Linked account,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Client name,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Linked account client salutation,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Linked account role,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Beneficiaries Name,,,UI Field,
+UX Sitemap,Default,Individual Trustee,Beneficiaries residential address,,,UI Field,
+UX Sitemap,Default,Corporate Trustee,Trust details,,,UI Field,
+UX Sitemap,Default,Corporate Trustee,Linked clients,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Total performance after admin and adviser fees,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Total performance before admin and adviser fees,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Performance to date,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Benchmark name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Total number of securities,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Underlying securities,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,MP Asset name,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Asset Code,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Total performance before admin and adviser fees percentage,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Total performance before admin and adviser fees dollar value,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_R2_Capital return,,,UI Field,
+UX Sitemap,Default,Messages-For information-Your messages,New  Message Count,,,UI Field,NrFld  Sum of both High Priority & Non Priority Unread messages for New Messages Count.  
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,BSB,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_R3_Income return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,Your portfolio net $ return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,T1_R5_Active return,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G2 X Axis,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,Performance report,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G2_Y2_Closing balance after fees,,,UI Field,
+UX Sitemap,Default,Portfolio performance SMA Report,G2_Y1_Performance,,,UI Field,
+UX Sitemap,Default,Messages-For action-Client Alerts,Messages read is in normal font,,,UI Field,"NrFld  Read messages, filter by this field ntfcn_status_id = 2  btfg$ntfcn_status  (cache table) Note: * open is unread "
+UX Sitemap,Default,IM dashboard_Monthly model report,Shadow_Portfolio_Market_value,,,UI Field,
+UX Sitemap,Default,Messages-For action-Client Alerts,Icon - High Priority,,,UI Field,NrFld event_type_prio = 1 (highest priority) event_type_prio = 2 (lowest priority) 
+UX Sitemap,Default,Messages-For action-Client Alerts,Unread messages are in bold font,,,UI Field,"NrFld  Unread messages, filter by this field ntfcn_status_id = 1    btfg$ntfcn_status  (cache table) Note: * open is unread  ID INTL_ID USER_ID NAME *1 open OPEN Open 2 read READ Read 3 deleted DELETED Deleted "
+UX Sitemap,Default,BP Fee Schedule,Upper dollar boundary Administration fee,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Lower dollar boundary Administration fee,,,UI Field,
+UX Sitemap,Default,Messages-For action-Client Alerts,Account ID,,,UI Field,NrFld Avaloq Client Account identifier 
+UX Sitemap,Default,BP Fee Schedule,Flat Dollar Fee Component amount,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Dollar fee component,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Administration fee id,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Asset classes,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Maximum Administration Fee,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Minimum Administration Fee,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Managed Portfolio,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Tailored,,,UI Field,
+UX Sitemap,Default,Order Status and Cancel,Date Submitted,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Adviser contact number,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,T_C approved Status,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Primary Contact Mobile number,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Adviser Name,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Online Registration Status,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Account Status,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Account Structure Type,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Associated persons,,,UI Field,
+UX Sitemap,Default,Onboarding Application Tracking,Primary Contact Person,,,UI Field,
+UX Sitemap,Default,Account_Portfolio_Property_UX,Repayments,,,UI Field,Out of scope for now
+UX Sitemap,Default,Account_Portfolio_Property_UX,Expenses,,,UI Field,UI to sum up all expense related transactions for a financial year
+UX Sitemap,Default,Account_Portfolio_Property_UX,Income,,,UI Field,UI to sum up all income related transactions for a financial year
+UX Sitemap,Default,Account_Portfolio_Property_UX,Gross yield & gross return,,,UI Field,Can be ignored for now
+UX Sitemap,Default,Account_Portfolio_Property_UX,Name of Loan provider,,,UI Field,New field - btfg$ui_pos_list.bp#pos_val service This is name of the loan provider
+UX Sitemap,Default,Account_Portfolio_Property_UX,Loan details,,,UI Field,"Business rules: One property can only have one loan associated  If there is no loan associated to a property, then the “Add a loan” link will be displayed to the user  If there is a loan associated to a property, then the “Add a loan” link will not be displayed to the user  When “add a loan” link is clicked, then “Add a loan” modal pop-up is displayed to the user "
+UX Sitemap,Default,Account_Portfolio_Property_UX,Expense breakdown,,,UI Field,Out of scope for now
+UX Sitemap,Default,Account_Portfolio_Property_UX,Interest paid,,,UI Field,Out of scope for now
+UX Sitemap,Default,Account_Portfolio_Property_UX,Repayments,,,UI Field,"btfg$ui_pos_list.bp#pos_val service This is an Optional field If this data is available at ABS, then it will be displayed, else it will not"
+UX Sitemap,Default,Account_Portfolio_Property_UX,Balance,,,UI Field,This is the outstanding loan balance on the property as on a particular date
+UX Sitemap,Default,Adviser Dashboard Monitor,Y Axis Outflows,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Y Axis Net Flows,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,X Axis Date Period,,,UI Field,
+UX Sitemap,Default,Advice_Fees,Fee Name,,,UI Field,NrFld Fee Name –  Eg. 5850 btfg$book_kind (cached table) ID INTL_ID USER_ID NAME 5850 btfg$dg_advcong DG_ADVCONG Licensee advice fee  
+UX Sitemap,Default,Advice_Fees,value for percentage fee component,,,UI Field,NrFld value for percentage fee component – Eg.  0.001 would mean 0.1% 
+UX Sitemap,Default,Fee Revenue Statement,Description,,,UI Field,
+UX Sitemap,Default,Advice_Fees,CPI Indexation flag for flat dollar component,,,UI Field,BoolFld CPI Indexation flag for flat dollar component - Eg. ‘true’ 
+UX Sitemap,Default,Advice_Fees,Fixed dollar amount for Flat Fee Component,,,UI Field,NrFld Fixed dollar amount for Flat Fee Component - Eg. 100 
+UX Sitemap,Default,Advice_Fees,Sliding Scale Fee Component-Asset Classes,,,UI Field,Asset classes that Sliding Scale Fee Component is to be applied to.  Multiple asset classes may be applicable.  The following table shows the cached values of btfg_cost_misc_id.  ID INTL_ID USER_ID Name 3 btfg$fua_clust_cash FUA_CASH Cash 4 btfg$fua_clust_td FUA_TD Term deposits 5 btfg$fua_clust_mf FUA_MF Managed funds 6 btfg$fua_clust_ls FUA_LS Listed securities 7 btfg$fua_clust_ma FUA_MA Managed portfolios   
+UX Sitemap,Default,Advice_Fees,Next CPI Indexation date for flat dollar component,,,UI Field,DateFld Next CPI Indexation date for flat dollar component - YYYY-MM-DD 
+UX Sitemap,Default,Advice_Fees,Upper dollar boundary for a tier in a sliding fee component,,,UI Field,NrFld Upper dollar boundary for a tier in a sliding fee component – Eg. 110 
+UX Sitemap,Default,Advice_Fees,Lower dollar boundary for a tier in a sliding fee component,,,UI Field,NrFld Lower dollar boundary for a tier in a sliding fee component – Eg. 0 
+UX Sitemap,Default,Adviser Dashboard Monitor,Active Accounts,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Inflows,,,UI Field,
+UX Sitemap,Default,Account Overview,Total amount in dollars for the transaction,,,UI Field,
+UX Sitemap,Default,Account Overview,Scheduled Transaction Type,,,UI Field,
+UX Sitemap,Default,Account Overview,Order Value,,,UI Field,
+UX Sitemap,Default,Account Overview,Order Type,,,UI Field,
+UX Sitemap,Default,Account Overview,Principle Value of TD’s,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Outflows,,,UI Field,
+UX Sitemap,Default,Account Overview,Total Portfolio Value,,,UI Field,
+UX Sitemap,Default,Account Overview,Current Rate,,,UI Field,
+UX Sitemap,Default,Account Overview,Cash Available,,,UI Field,
+UX Sitemap,Default,Account Overview,Income(Last Quarter),,,UI Field,
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,FA subscription activation date,,,UI Field,"This is the date when the FA subscription has been completed and activated. If appl status ID = done Then, look at the last update date and populate this value"
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,Display Text,,,UI Field,Derived text – “Subscription active”  Interface name: BTFG$UI_DOC_CUSTR_LIST.BP#DOC XSD : BTFG$UI_DOC_CUSTR_LIST.DOC.XSD  Rep\data\doc_list\doc\doc_head_list\doc_head\appl_stat_id Where statis ID = “Done”
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Benefit Option Status,,,UI Field,Benefit option status
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Benefit Option Type,,,UI Field,Type of optional benefit. BenefitOptionStatus should be ‘In Force’
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Occupation Class,,,UI Field,Indicates Occupation class - Applicable for TPD and Income Protection benefits
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,TPD Definition,,,UI Field,TPD definition - . Applicable for TPD and Income Protection benefits
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Benefit Commence Date,,,UI Field,Earliest commencement date for the benefit
+UX Sitemap,Default,Account_Insurance_Term_Life_Policy_Details_UX,Premium Type,,,UI Field,Indicates premium structure
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,Upload T and C Date,,,UI Field,Date field
+UX Sitemap,Default,Tracking_Additional_Services_Fund_Administration_Tracking_UX,FA subscription submission date,,,UI Field,Date field
+UX Sitemap,Default,SMSF Individual,Linked accounts role,,,UI Field,
+UX Sitemap,Default,SMSF Individual,Linked clients salutation,,,UI Field,
+UX Sitemap,Default,SMSF Individual,Registration state,,,UI Field,
+UX Sitemap,Default,SMSF Individual,Date of registration,,,UI Field,
+UX Sitemap,Default,SMSF Individual,ABN,,,UI Field,
+UX Sitemap,Default,SMSF Individual,SMSF name,,,UI Field,
+UX Sitemap,Default,SMSF Individual,Linked client name,,,UI Field,
+UX Sitemap,Default,SMSF Individual,Address,,,UI Field,
+UX Sitemap,Default,SMSF Individual,Registered for GST,,,UI Field,
+UX Sitemap,Default,SMSF Individual,Tax options,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Primary Contact,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Title,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Legislation establishing fund,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Address,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Registered for GST,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Date of Registration,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Registration state,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Tax File Number,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,Period of days,,,UI Field,
+UX Sitemap,Default,Portfolio performance screen,SMA report Download button,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Full Name,,,UI Field,
+UX Sitemap,Default,Account Details and Maintenance_Account Type_TRUST Individual,Linked Account Role,,,UI Field,
+UX Sitemap,Default,Order Capture,Queued Buys,,,UI Field,
+UX Sitemap,Default,Order Capture,Order pad Product ID,,,UI Field,
+UX Sitemap,Default,Order Capture,Available Cash,,,UI Field,
+UX Sitemap,Default,Order Capture,Pending Sales,,,UI Field,
+UX Sitemap,Default,Charge One-off Fee Receipt,One-off advice fee Receipt,,,UI Field,
+UX Sitemap,Default,Charge One-off Fee Receipt,Description of advice/services Receipt,,,UI Field,
+UX Sitemap,Default,Charge One-off Fee Review,Description of advice/services Review,,,UI Field,
+UX Sitemap,Default,Charge One-off Fee Receipt,Advice fee successfully charged,,,UI Field,UI Web server timestamp when the response is received
+UX Sitemap,Default,Charge One-off Fee Review,Adviser,,,UI Field,Field value from UI Cache
+UX Sitemap,Default,Charge One-off Fee Review,One-off advice fee Review,,,UI Field,
+UX Sitemap,Default,Blue Tray,Primary Contact age,,,UI Field,
+UX Sitemap,Default,Blue Tray,Primary Contact primary email,,,UI Field,
+UX Sitemap,Default,Blue Tray,Accoun No,,,UI Field,
+UX Sitemap,Default,Blue Tray,Biller Code associated with client,,,UI Field,
+UX Sitemap,Default,Blue Tray,Customer Reference Number,,,UI Field,
+UX Sitemap,Default,Blue Tray,Name of the Primary Contact,,,UI Field,
+UX Sitemap,Default,Blue Tray,Account Number,,,UI Field,
+UX Sitemap,Default,Blue Tray,Number of account members,,,UI Field,
+UX Sitemap,Default,Blue Tray,Portfolio Value Total,,,UI Field,
+UX Sitemap,Default,Blue Tray,BSB Number,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Saved Orders Description,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Draft Applications,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Date,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Total count of Term Deposits maturing in the period,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,High Priority Icon,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Saved Orders Result Count,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Saved order Account Name,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Saved order timestamp,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Term Data Maturity Account Name,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard,Days to maturity,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Bank Details Account Name,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Bank Details Account ID,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Fee,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Total Fees,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Amount,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Total,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Balance,,,UI Field,
+UX Sitemap,Default,Adviser Dashboard Monitor,Y Axis Inflows,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Amount,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Closing Balance,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Payments,,,UI Field,
+UX Sitemap,Default,Fee Revenue Statement,Date,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Asset_id of a security,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Qty,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Curr_val_ref,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Accr_ref,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Cont_id,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Pos,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Percentage value of Administration fee,,,UI Field,
+UX Sitemap,Default,BP Fee Schedule,Fee Discount Percentage,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Calculated fields,,,UI Field,
+UX Sitemap,Default,Asset Allocation,Asset_id of a managed portfolio container,,,UI Field,

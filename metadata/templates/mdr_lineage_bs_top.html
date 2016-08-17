@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BT Panorama - Metadata Lineage - Explorer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Pace plugin -->
+    <link href="/static/css/pace_barber_shop.css" rel="stylesheet">
+    <script src="/static/js/pace.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="/static/css/logo-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <script>
+            $(function () {
+
+                url_str = "/mdr_lineage_bs_bottom/"
+
+                s_name = $("#s_name").text()
+                console.log(s_name)
+
+                a_name = $("#a_name").text()
+                console.log(a_name)
+
+                new_s_name = s_name.replace(/ /gi, "%20");
+                console.log(new_s_name)
+
+                new_a_name = a_name.replace(/ /gi, "%20");
+                console.log(new_a_name)
+
+
+                console.log(url_str+s_name+"/"+a_name)
+                console.log(url_str+new_s_name+"/"+new_a_name)
+
+                $("#attributes_table").load(url_str+new_s_name+"/"+new_a_name);
+            });
+        </script>
+
+</head>
+
+<body>
+<!---->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="" width="50" height="50" alt=""> -->
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                     <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/screens">Screens</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-11">
+                <h1>BT Panorama - Metatadata Lineage Explorer</h1>
+            </div>
+              <div class="col-lg-1">
+             <button type="button" class="btn btn-danger" onclick="javascript:history.back();">Back</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <h2>Lineage Viewer</h2>
+        <p> Lineage from screen to logical data model</p>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <span style="color: black;text-decoration: none">Functionality:</span>&nbsp;
+              <span id="f_name">{{screen_functionality}}</span>  &nbsp;
+              <span style="color: black;text-decoration: none">Screen Name:</span>&nbsp;
+              <span id="s_name">{{screen_name}}</span>  &nbsp;
+              <span style="color: black;text-decoration: none">Attribute Name:&nbsp;</span>
+              <span id="a_name">{{screen_field_name}}</span>
+          </div>
+        </div>
+
+        <div id="attributes_table">Loading mapping<img src="/static/img/g-dots.gif" width="100px" height="50px"/></div>
+
+
+    </div>
+
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<div data-view-component="messagealert" data-component-name="errormessage" class="margin-bottom-2">
+    <type>error</type>
+    <html>
+        <p></p>
+    </html>
+</div>
+<div data-view-component="messagealert" data-component-name="blockmessage" class="margin-bottom-2">
+    <type>pending</type>
+    <html>
+        <p></p>
+    </html>
+</div>
+
+<form class="js-depositpage">
+    <div class="grid margin-bottom-1">
+        <h4 class="header-statement">
+            Make a deposit into <span class="color-highlight">this account</span>
+        </h4>
+    </div>
+    <div class="grid margin-bottom-1">
+        <div data-view-component="forminputautocomplete" class="columns-20">
+            <name>payeelist</name>
+            <label>
+                {{#permission '!account.direct.deposit.view' 'a'}}Make deposit from{{/permission}}
+                {{#permission 'account.direct.deposit.view' 'a'}}Make an investment from{{/permission}}
+            </label>
+            <placeholder>Search or select</placeholder>
+            <min_length>0</min_length>
+            <no_data>No results found.</no_data>
+            <html>
+            <div class="grid">
+                <div class="columns-16">
+                    {{#if primary}}<span class="icon icon-best"></span>{{/if}}
+                    <span>{{#if nickname}}{{nickname}}{{else}}{{accountName}}{{/if}}</span>
+                </div>
+                <div class="icon-double-wrapper" aria-hidden="true">
+                    <span class="icon icon-transfer-deposit"></span>
+                    <span class="icon icon-transfer-payment"></span>
+                </div>
+            </div>
+            <div> BSB {{code}} </div>
+            <div>Account {{accountId}}</div>
+
+            </html>
+            <view_value>
+                <html>
+                {{#if nickname}}{{nickname}}{{else}}{{accountName}}{{/if}} - {{code}} {{accountId}}
+
+                </html>
+            </view_value>
+            <match>
+                accountId,accountName,nickname,code
+            </match>
+            <error_messages>
+                <required>{{cms 'Err.IP-0277'}}</required>
+            </error_messages>
+        </div>
+    </div>
+
+    <div class="grid margin-bottom-1">
+        <div data-view-component="forminputtext" class="columns-10" data-component-name="amounttext">
+            <name>amount</name>
+            <label>Amount</label>
+            <symbol>$</symbol>
+            <error_messages>
+                <required>{{cms 'Err.IP-0278'}}</required>
+                <custom_format>{{cms 'Err.IP-0278'}}</custom_format>
+                <min_value>{{cms 'Err.IP-0278'}}</min_value>
+                <custom_account_check>{{cms 'Err.IP-0277'}}</custom_account_check>
+            </error_messages>
+        </div>
+    </div>
+
+    <div class="grid margin-bottom-half">
+        <div data-view-component="forminputdate" class="columns-9">
+            <label>Date</label>
+            <name>depositdate</name>
+            <error_messages>
+                <custom_format>{{cms 'Err.IP-0281'}}</custom_format>
+                <required>{{cms 'Err.IP-0281'}}</required>
+                <min_value>{{cms 'Err.IP-0281'}}</min_value>
+                <custom_time_validation>{{cms 'Err.IP-0280'}}</custom_time_validation>
+            <custom_checkweekend_validation>{{cms 'Err.IP-0281'}}</custom_checkweekend_validation>
+            </error_messages>
+        </div>
+    </div>
+
+    <div class="grid margin-bottom-1">
+        <div data-view-component="forminputcheckbox" class="columns-9">
+            <value>repeat</value>
+            <name>repeatdeposit</name>
+            <label>
+                {{#permission '!account.direct.deposit.view' 'a'}}Repeat deposit{{/permission}}
+                {{#permission 'account.direct.deposit.view' 'a'}}Make regular savings{{/permission}}
+            </label>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div data-view-component="forminputselect" data-component-name="depositfrequency" class="columns-8 margin-bottom-1 margin-right-1">
+            <label>Repeat every</label>
+            <name>depositfrequency</name>
+            <options>
+                <label>Week</label>
+                <value>Weekly</value>
+            </options>
+            <options>
+                <label>Fortnight</label>
+                <value>Fortnightly</value>
+            </options>
+            <options>
+                <label>Month</label>
+                <value>Monthly</value>
+            </options>
+            <options>
+                <label>Quarter</label>
+                <value>Quarterly</value>
+            </options>
+            <options>
+                <label>Year</label>
+                <value>Yearly</value>
+            </options>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div data-view-component="forminputselect" data-component-name="endrepeats" class="columns-8 margin-bottom-1 margin-right-1">
+            <label>End repeats</label>
+            <name>endrepeats</name>
+            <options>
+                <label>Set end date</label>
+                <value>setDate</value>
+            </options>
+            <options>
+                <label>No end date</label>
+                <value>noDate</value>
+            </options>
+            <options>
+                <label>Set number</label>
+                <value>setNumber</value>
+            </options>
+        </div>
+        <div data-view-component="forminputdate" data-component-name="repeatenddate" class="columns-9">
+            <label>Date</label>
+            <name>repeatenddate</name>
+            <error_messages>
+                <required>{{cms 'Err.IP-0281'}}</required>
+                <custom_format>{{cms 'Err.IP-0281'}}</custom_format>
+                <min_value>{{cms 'Err.IP-0281'}}</min_value>
+                <custom_validation>{{cms 'Err.IP-0282'}}</custom_validation>
+            </error_messages>
+        </div>
+        <div data-view-component="forminputtext" class="columns-4 margin-bottom-1 margin-right-1" data-component-name="repeatnumber">
+            <label>Number</label>
+            <name>repeatnumber</name>
+            <type>number</type>
+            <error_messages>
+                <required>{{cms 'Err.IP-0283'}}</required>
+                <regexp>{{cms 'Err.IP-0283'}}</regexp>
+                <min_value>{{cms 'Err.IP-0359'}}</min_value>
+                <max_value>{{cms 'Err.IP-0359'}}</max_value>
+            </error_messages>
+        </div>
+        <div>&nbsp;</div>
+        <p class="calculated-end-date margin-top-half">
+            Ends on
+            <span data-name="calculatedEndDate"></span>
+        </p>
+    </div>
+
+    <div class="grid">
+        <div data-view-component="forminputtext" class="columns-20">
+            <name>description</name>
+            <tip>Optional</tip>
+            <label>Description</label>
+            <limit_length>18</limit_length>
+            <error_messages>
+                <regexp>{{cms 'Err.IP-0332'}}</regexp>
+            </error_messages>
+        </div>
+    </div>
+
+    <div class="grid">
+        <p class="margin-bottom-2">Maximum 18 letters and numbers</p>
+    </div>
+
+    <div class="grid">
+        <span data-view-component="button" data-component-name="next">
+            <label>Next</label>
+            <style>primary</style>
+            <type>submit</type>
+        </span>
+    </div>
+</form>
+
+<div data-mvc-child="confirmation"></div>

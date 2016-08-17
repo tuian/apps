@@ -1,0 +1,280 @@
+<div data-view-component="messagealert" data-component-name="successmessage">
+    <type>success</type>
+    <html>
+    <p>
+        <span data-name="accountBillerName"></span> {{cms 'Ins-IP-0039'}}
+    </p>
+    </html>
+</div>
+<div data-view-component="messagealert" data-component-name="changelimitmessage">
+    <type>success</type>
+    <html>
+        <p>
+            <span data-name="changeLimitType"></span> {{cms 'Err.IP-0294'}}
+        </p>
+    </html>
+</div>
+<div data-view-component="messagealert" data-component-name="errormessage" class="margin-bottom-2">
+    <type>error</type>
+    <html>
+        <p>
+        </p>
+    </html>
+</div>
+<div data-view-component="messagealert" data-component-name="blockmessage" class="margin-bottom-2">
+    <type>pending</type>
+    <html>
+        <p>
+        </p>
+    </html>
+</div>
+
+<form class="js-paymentpage">
+    <div class="grid margin-bottom-1">
+        <h4 class="header-statement">
+            Make a payment to <span class="color-highlight">another account</span>
+        </h4>
+    </div>
+    <div class="grid margin-bottom-1">
+        <div data-view-component="forminputautocomplete" class="columns-22 margin-right-1" data-component-name="payeelist">
+            <name>payeelist</name>
+            <label>
+                {{#permission '!account.direct.withdrawal.view' 'a'}}Make payment to{{/permission}}
+                {{#permission 'account.direct.withdrawal.view' 'a'}}Make withdrawal to{{/permission}}
+            </label>
+            <placeholder>Search or select</placeholder>
+            <min_length>0</min_length>
+            <no_data>No results found.</no_data>
+            <html>
+                <div class="grid">
+                    {{#if payeeType '===' 'LINKED'}}
+                        <div class="columns-16">
+                            {{#if primary}}<span class="icon icon-best"></span>{{/if}}<span> {{#if nickname}}{{nickname}}{{else}}{{accountName}}{{/if}}<span>
+                        </div>
+                        <div class="icon-double-wrapper" aria-hidden="true">
+                            <span class="icon icon-transfer-deposit"></span>
+                            <span class="icon icon-transfer-payment"></span>
+                        </div>
+                    {{else}}
+                        <div class="columns-17">
+                            <span>{{#if nickname}}{{nickname}}{{else}}{{accountName}}{{/if}}</span>
+                        </div>
+                        <div class="icon icon-{{#if payeeType '===' 'BPAY'}}bpay{{else}}transfer-payment{{/if}}" aria-hidden="true"></div>
+                    {{/if}}
+                </div>
+                {{#if payeeType '===' 'BPAY'}}
+                    <div>Biller Code {{code}}</div>
+                    <div>CRN {{crn}}</div>
+                {{else}}
+                    <div>BSB {{code}}</div>
+                    <div>Account {{accountId}}</div>
+                {{/if}}
+            </html>
+            <view_value>
+                <html>
+                    {{#if payeeType '===' 'BPAY'}} {{#if nickname}}{{nickname}}{{else}}{{accountName}}{{/if}} - {{code}}{{#if fixedCRN '===' true}} {{crn}} {{/if}} {{else}} {{#if nickname}}{{nickname}}{{else}}{{accountName}}{{/if}} - {{code}} {{accountId}}{{/if}}
+                </html>
+            </view_value>
+            <match>
+                accountId,accountName,nickname,code,crn
+            </match>
+            <error_messages>
+                <required>{{cms 'Err.IP-0277'}}</required>
+                <custom_account_check>{{cms 'Err.IP-0277'}}</custom_account_check>
+            </error_messages>
+        </div>
+        <div>&nbsp;</div>
+
+        {{#permission 'account.payee.view' 'a'}}
+            <div data-view-component="button" class="margin-top-half" data-component-name="addaccountbiller">
+                <label>
+                    {{#permission '!account.direct.withdrawal.view' 'a'}}Add account or biller{{/permission}}
+                    {{#permission 'account.direct.withdrawal.view' 'a'}}Add linked account{{/permission}}
+                </label>
+                <action>addAccountBillers</action>
+                <style>tertiary</style>
+                <type>button</type>
+                <image>icon-add</image>
+            </div>
+        {{/permission}}
+
+    </div>
+
+    <div class="grid">
+        <div data-view-component="forminputtext" class="columns-10 margin-bottom-1" data-component-name="crn">
+            <name>crn</name>
+            <label>CRN</label>
+            <limit_length>20</limit_length>
+        </div>
+    </div>
+
+    <div class="grid margin-bottom-1">
+        <div class="grid">
+            <div data-view-component="forminputtext" class="columns-20" data-component-name="amount">
+                <name>amount</name>
+                <label>Amount</label>
+                <symbol>$</symbol>
+                <type>dollar</type>
+                <error_messages>
+                    <required>{{cms 'Err.IP-0278'}}</required>
+                    <custom_format>{{cms 'Err.IP-0278'}}</custom_format>
+                    <custom_user_daily_max_limit>{{cms 'Err.IP-0345'}}</custom_user_daily_max_limit>
+                    <custom_daily_limit>{{cms 'Err.IP-0279'}}</custom_daily_limit>
+                    <custom_account_check>{{cms 'Err.IP-0277'}}</custom_account_check>
+                    <min_value>{{cms 'Err.IP-0278'}}</min_value>
+                </error_messages>
+            </div>
+        </div>
+        <div class="grid">
+            <div data-view-component="button" data-component-name="changepaymentlimit">
+                <label>Change limit</label>
+                <action>changePaymentLimit</action>
+                <style>
+                tertiary
+                </style>
+                <type>button</type>
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div data-view-component="forminputdate" class="columns-9 margin-bottom-1" data-component-name="paymentdate">
+            <label>Date</label>
+            <name>paymentdate</name>
+            <error_messages>
+                <custom_format>{{cms 'Err.IP-0281'}}</custom_format>
+                <required>{{cms 'Err.IP-0281'}}</required>
+                <custom_time_validation>{{cms 'Err.IP-0280'}}</custom_time_validation>
+                <min_value>{{cms 'Err.IP-0281'}}</min_value>
+                <custom_repayament_validation>{{cms 'Err.IP-0423'}}</custom_repayament_validation>
+             <custom_checkweekend_validation>{{cms 'Err.IP-0281'}}</custom_checkweekend_validation>
+            </error_messages>
+        </div>
+    </div>
+    {{#permission '!account.direct.withdrawal.view' 'a'}}
+        <div class="grid margin-bottom-1">
+            <div data-view-component="forminputcheckbox" class="columns-8">
+                <value>repeat</value>
+                <name>repeatpayment</name>
+                <label>Repeat payment</label>
+            </div>
+        </div>
+    {{/permission}}
+
+    <div class="grid">
+        <div data-view-component="forminputselect" data-component-name="paymentfrequency" class="columns-8 margin-bottom-1 margin-right-1">
+            <label>Repeat every</label>
+            <name>paymentfrequency</name>
+            <options>
+                <label>Week</label>
+                <value>Weekly</value>
+            </options>
+            <options>
+                <label>Fortnight</label>
+                <value>Fortnightly</value>
+            </options>
+            <options>
+                <label>Month</label>
+                <value>Monthly</value>
+            </options>
+            <options>
+                <label>Quarter</label>
+                <value>Quarterly</value>
+            </options>
+            <options>
+                <label>Year</label>
+                <value>Yearly</value>
+            </options>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div data-view-component="forminputselect" data-component-name="endrepeats" class="columns-8 margin-bottom-1 margin-right-1">
+            <label>End repeats</label>
+            <name>endrepeats</name>
+            <options>
+                <label>Set end date</label>
+                <value>setDate</value>
+            </options>
+            <options>
+                <label>No end date</label>
+                <value>noDate</value>
+            </options>
+            <options>
+                <label>Set number</label>
+                <value>setNumber</value>
+            </options>
+        </div>
+        <div data-view-component="forminputdate" data-component-name="repeatenddate" class="columns-9">
+            <label>Date</label>
+            <name>repeatenddate</name>
+            <error_messages>
+                <required>{{cms 'Err.IP-0281'}}</required>
+                <custom_format>{{cms 'Err.IP-0281'}}</custom_format>
+                <min_value>{{cms 'Err.IP-0281'}}</min_value>
+                <custom_validation>{{cms 'Err.IP-0282'}}</custom_validation>
+            </error_messages>
+        </div>
+        <div data-view-component="forminputtext" class="columns-4 margin-bottom-1 margin-right-1" data-component-name="repeatnumber">
+            <label>Number</label>
+            <name>repeatnumber</name>
+            <type>number</type>
+            <limit_length>3</limit_length>
+            <error_messages>
+                <required>{{cms 'Err.IP-0283'}}</required>
+                <custom_numeric>{{cms 'Err.IP-0283'}}</custom_numeric>
+                <custom_min>{{cms 'Err.IP-0359'}}</custom_min>
+                <max_value>{{cms 'Err.IP-0359'}}</max_value>
+            </error_messages>
+        </div>
+        <div>&nbsp;</div>
+        <p class="calculated-end-date margin-top-half">
+            Ends on
+            <span data-name="calculatedEndDate"></span>
+        </p>
+    </div>
+    {{#permission 'account.portfolio.cashcategorisation.view' 'a'}}
+        {{#permission 'account.portfolio.cashcategorisation.update' 'a'}}
+        <div class="grid">
+            <span class="label">Category</span>
+            <div data-view-component="button" data-component-name="editcategory">
+                <style>tertiary</style>
+                <image>icon-edit</image>
+                <label>Uncategorised</label>
+                <title>Edit</title>
+                <action>showEditCategory</action>
+            </div>
+            <div data-view-component="messagealert" data-component-name="amountchanged" data-visible="showAmountChangedError">
+                <type>help</type>
+                <html><p>{{cms 'Err.IP-0491'}}</p></html>
+            </div>
+        </div>
+        {{/permission}}
+    {{/permission}}
+
+    <div class="grid">
+        <div data-view-component="forminputtext" class="columns-20">
+            <name>description</name>
+            <tip>Optional</tip>
+            <label>Description</label>
+            <limit_length>18</limit_length>
+            <describe>Maximum 18 letters and numbers</describe>
+            <error_messages>
+                <regexp>{{cms 'Err.IP-0332'}}</regexp>
+            </error_messages>
+        </div>
+    </div>
+
+    <div class="grid">
+        <p class="margin-bottom-2">Maximum 18 letters and numbers</p>
+    </div>
+
+    <div class="grid">
+        <span data-view-component="button" data-component-name="next">
+            <label>Next</label>
+            <style>primary</style>
+            <type>submit</type>
+        </span>
+    </div>
+</form>
+
+<div data-mvc-child="cancel,confirmation,add,changelimit,editcategory"></div>

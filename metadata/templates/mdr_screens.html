@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Panorama  - Metadata Lineage - Screen Names</title>
+</head>
+<body>
+
+<table>
+    {% for  screen_object in screen_objects  %}
+    <tr><td><a href="/screen_fields/{{screen_object.Entity_x0020_Name}}">{{screen_object.Entity_x0020_Name}}</a></td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>

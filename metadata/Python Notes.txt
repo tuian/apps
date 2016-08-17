@@ -1,0 +1,28 @@
+pip install requests_ntlm
+pip install requests
+
+ntlm-1.1.0
+python setup.py install
+
+AUAUTD0001\L085792
+
+
+
+pip --proxy http://user:passwd@secure-proxy.btfin.com:8080 install openpyxl
+pip --proxy http://l083646:TCS#1234@secure-proxy.btfin.com:8080 install openpyxl
+pip --proxy http://l084756:Aug@2016!@secure-proxy.btfin.com:8080 install xlrd
+
+pip install openpyxl
+pip install xlrd
+
+pip --proxy http://l083646:TCS#2305@secure-proxy.btfin.com:8080 install xlrd
+
+gatehousek1.stgeorge.com.au 
+port: 8080 
+
+
+#screen_field_objects_bs = {"Attribute_Name":"Test Attribute 1"}
+
+screen_field_objects_bs = getScreenFieldObjects_bs({{screen_name}})
+
+$("#attributes_table").load("/mdr_screen_fields_bs_bottom/{{screen_name}}");

@@ -1,0 +1,279 @@
+<div class="js-yourdetails-page">
+    <div class="grid">
+        <div class="columns-41">
+            <div data-view-component="messagealert" data-component-name="usernamesuccessmessage">
+                <type>success</type>
+                <html>
+                <p>
+                    {{cms 'Err.IP-0340'}}
+                </p>
+                </html>
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="columns-41">
+            <div data-view-component="messagealert" data-component-name="passwordsuccessmessage">
+                <type>success</type>
+                <html>
+                <p>
+                    {{cms 'Err.IP-0341'}}
+                </p>
+                </html>
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="columns-41">
+            <div data-view-component="messagealert" data-component-name="serverfailmessage">
+            <type>error</type>
+            <html>
+            <p>{{cms 'Err.IP-0333'}}</p>
+            </html>
+        </div>
+        </div>
+    </div>
+
+    <div class="margin-bottom-1">
+        <h2 class="heading-five margin-bottom-0">
+            <span data-name="title"></span>
+            <span data-name="fullName"></span>
+        </h2> <div class="deemphasis">
+            <div data-name="activeRole"></div>
+            {{#permission 'user.detail.intermediary.view' ''}}
+            <div data-name="dealerGroupName"></div>
+            {{/permission}}
+        </div>
+    </div>
+    <div class="grid">
+        <div class="columns-7 margin-bottom-1">
+            <span class="btblue heading-six">Contact details</span>
+        </div>
+        <div class="columns-1">
+            <div data-view-component="tooltip">
+                <icon>support-help</icon>
+                <style>
+                    default
+                </style>
+                {{#permission 'user.detail.intermediary.view' ''}}
+                    <label>{{cms 'Ins-IP-0029'}}</label>
+                {{/permission}}
+                {{#permission 'user.detail.investor.view' ''}}
+                    <label>{{cms 'Ins-IP-0041'}}</label>
+                {{/permission}}
+                <icon_color>btblue</icon_color>
+                <show_on>click</show_on>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="columns-41">
+            {{#permission 'user.detail.investor.view' ''}}
+                <div data-mvc-child="email"></div>
+                <div data-mvc-child="phone"></div>
+            {{/permission}}
+        </div>
+        {{#permission 'user.detail.intermediary.view' ''}}
+            <div class="columns-41 margin-bottom-1">
+                <div class="grid margin-bottom-half primaryEmail">
+                    <div class="columns-12">
+                        <strong>Email – primary</strong>
+                    </div>
+                    <div class="columns-1 iconPrimaryEmail">
+                        <span data-view-component="tooltip">
+                            <icon>primary</icon>
+                            <icon_color>amber</icon_color>
+                            <label>Preferred contact method</label>
+                            <style>form</style>
+                            <position>bottom-middle</position>
+                        </span>
+                    </div>
+                    <div class="columns-10">
+                        <html>
+                            <span data-name="primaryEmail"></span>
+                        </html>
+                    </div>
+                </div>
+                <div class="grid margin-bottom-half primaryMobile">
+                    <div class="columns-12 ">
+                        <strong>Mobile – primary</strong>
+                    </div>
+
+                    <div class="columns-1 iconPrimaryMobile">
+                        <span data-view-component="tooltip">
+                            <icon>primary</icon>
+                            <icon_color>amber</icon_color>
+                            <label>Preferred contact method</label>
+                            <style>form</style>
+                            <position>bottom-middle</position>
+                        </span>
+                    </div>
+
+                    <div class="columns-10">
+                        <html>
+                        <span data-name="primaryMobile"></span>
+                        </html>
+                    </div>
+                </div>
+                <div class="grid margin-bottom-half businessPhone">
+                    <div class="columns-12 ">
+                        <strong>Business phone</strong>
+                    </div>
+                    <div class="columns-1 iconBusinessphone">
+                        <span data-view-component="tooltip">
+                            <icon>primary</icon>
+                            <icon_color>amber</icon_color>
+                            <label>Preferred contact method</label>
+                            <style>form</style>
+                            <position>bottom-middle</position>
+                        </span>
+                    </div>
+                    <div class="columns-10">
+                        <html>
+                        <span data-name="workTelephone"></span>
+                        </html>
+                    </div>
+                </div>
+             </div>
+        {{/permission}}
+
+    </div>
+
+    <div class="grid">
+        <div class="columns-41 margin-bottom-1">
+            {{#permission 'user.detail.intermediary.view' ''}}
+                <div class="grid margin-bottom-half businessAddress">
+                    <div class="columns-12 ">
+                        <strong> Business address</strong>
+                    </div>
+
+                    <div class="columns-14">
+                        <html>
+                            <span data-name="address"></span>
+                        </html>
+                    </div>
+                </div>
+            {{/permission}}
+
+            {{#permission 'user.detail.investor.view' ''}}
+                <div class="grid margin-bottom-half residentialAddress">
+                    <div class="columns-12 ">
+                        <strong>Residential address</strong>
+                    </div>
+                    <div class="columns-14">
+                        <html>
+                            <span data-name="residentialAddress"></span>
+                        </html>
+                    </div>
+                </div>
+                <div class="grid  margin-bottom-half postalAddress">
+                    <div class="columns-12">
+                        <strong>Postal address</strong>
+                    </div>
+                    <div class="columns-14">
+                        <html>
+                            <span data-name="postalAddress"></span>
+                        </html>
+                    </div>
+                </div>
+            {{/permission}}
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="columns-41 margin-bottom-1">
+            <div class="grid margin-bottom-half registeredSince">
+                <div class="columns-12 ">
+                    <strong>Registered since</strong>
+                </div>
+                <div class="columns-10">
+                    <html>
+                    <span data-name="registeredSince"></span>
+                    </html>
+                </div>
+            </div>
+
+            {{#permission 'user.detail.intermediary.view' ''}}
+                <div class="grid margin-bottom-half userId">
+                    <div class="columns-12 ">
+                        <strong>User ID</strong>
+                    </div>
+                    <div class="columns-10">
+                        <html>
+                        <span data-name="userId"></span>
+                        </html>
+                    </div>
+                </div>
+            {{/permission}}
+
+            {{#permission 'user.detail.investor.view' ''}}
+                <div class="grid margin-bottom-half customerNumber">
+                    <div class="columns-12 ">
+                        <strong>Customer number</strong>
+                    </div>
+                    <div class="columns-10">
+                        <html>
+                        <span data-name="customerNumber"></span>
+                        </html>
+                    </div>
+                </div>
+            {{/permission}}
+        </div>
+    </div>
+
+    {{#permission 'user.detail.investor.view' ''}}
+        <div class="grid">
+            <div class="columns-41 margin-bottom-1">
+                <div class="grid margin-bottom-half taxFileNumber">
+                    <div class="columns-12 ">
+                        <strong>Tax file number option</strong>
+                    </div>
+                    <div class="columns-10">
+                        <html>
+                        <span data-name="taxFileNumber"></span>
+                        </html>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="columns-12 margin-bottom-half">
+                        <strong>Country of residence for tax purposes</strong>
+                    </div>
+                    <div class="columns-10">
+                        <html>
+                        <span data-name="residenceContry"></span>
+                        </html>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/permission}}
+
+    <div class="grid ">
+        <div class="columns-41 margin-bottom-1">
+            <span class="btblue heading-six ">Your username and password</span>
+        </div>
+    </div>
+
+    <div data-view-component="definitionlist" class="columns-41 ">
+        <item>
+            <title>Username</title>
+            <edit>editUsername</edit>
+            <value>
+                <html>
+                <span data-name="userName"></span>
+                </html>
+            </value>
+        </item>
+        <item>
+            <title>Password</title>
+            <edit>editPassword</edit>
+            <value>
+                <html>
+                <span>******</span>
+                </html>
+            </value>
+        </item>
+    </div>
+</div>
+<div data-mvc-child="twofa,updateusername,updatepassword"></div>
