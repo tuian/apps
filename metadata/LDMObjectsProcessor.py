@@ -20,7 +20,7 @@ def generateLDMObjectReport():
     print "Confirm if you have deleted the first column in the Avaloq report ? [Yes/No]:"
     # answer = raw_input()
     answer = "Yes"
-    
+
     if(answer == 'Yes'):
         print "Generating CSV file, please wait.....\n"
 
@@ -36,6 +36,16 @@ def generateLDMObjectReport():
         #df.insert(1,'LDM Object New', "-")
 
         #print df.loc[0, 'LDM Object']
+
+
+
+        # insert Metadata related columns columns
+        df.insert(0, "System Name", "ABS")
+        df.insert(1, "Instance Name", "LDM")
+        df.insert(4, "Owner", "")
+        df.insert(5, "Parent", "")
+        df.insert(6, "Type", df["Field Type Details"])
+        df.insert(7, "Description", df["Field Description"])
 
         # insert two new columns for LDM Object and LDM Field. Copy the value of Internal ID into these two columns
         df.insert(10,"Internal ID LDM Object",df["Internal ID"])
@@ -61,6 +71,14 @@ def generateLDMObjectReport():
                 #print "Inside None"
                 df.loc[i, 'LDM Object'] = df.loc[i-1, 'LDM Object']
 
+            if(pd.isnull(df.loc[i,'Description'])):
+                df.loc[i,"Description"]  = "(ABS Field Type " + str(df.loc[i,"Field Type"]) + ")"
+            else:
+                df.loc[i, "Description"] = str(df.loc[i, "Description"]) + " / (ABS Field Type " + str(df.loc[i, "Field Type"]) + ")"
+
+            if("Compiles to a" in str(df.loc[i, "Type"])): df.loc[i, "Type"] = str(df.loc[i, "Type"]).replace("Compiles to a ","")
+
+
         # drop rows with Field as blank
         df = df.dropna(subset=['Field'])
         # drop rows with Field Type as blank
@@ -69,7 +87,12 @@ def generateLDMObjectReport():
         #print df.head(10)
 
 
-        df.to_csv("./data/output/"+output_csv_filename,sep=",",index=False,header=True)
+        df.drop("Field Type Details",axis=1,inplace=True)
+
+        df.rename(columns={"LDM Object":"Entity Name","Field":"Attribute Name"}, inplace=True)
+        required_columns = ["System Name","Instance Name","Entity Name","Attribute Name","Owner","Parent","Type","Description"]
+
+        df.to_csv("./data/output/"+output_csv_filename,sep=",",index=False,header=True,columns=required_columns)
 
         print "Program completed successfully."
         print "Check the output csv file in the folder: ", output_csv_filename
@@ -112,6 +135,8 @@ def generateLDMInterfaceReport():
         # insert Metadata related columns columns
         df.insert(0, "System Name", "ABS")
         df.insert(1, "Instance Name", "LDM")
+        df.insert(2, "Owner", "")
+        df.insert(3, "Parent", "")
 
         # insert two new columns
         df.insert(6, "LDM Text Type",df["LDM Text"])
