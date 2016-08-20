@@ -1,3 +1,7 @@
+'''
+Axis 0 row (drops a row, mean of the row)
+Axis 1 column (drops a the column, mean of the column etc)
+'''
 import pandas as pd
 
 csv_folder_path = "C:\\MDR\\Data\Labs\\"
@@ -9,13 +13,20 @@ df1 = pd.read_csv(csv_folder_path + csv_filename_1, sep=",")
 df2 = pd.read_csv(csv_folder_path + csv_filename_2, sep=",")
 
 print "################## Staff Table ##############################################"
-print df1.head()
-df1["Staff Name"].value_counts()
+df1 = df1.fillna('-')
+print df1
 
+print "\nValue Counts: \n",df1["Staff Name"].value_counts()
 
+df1_duplicates = df1[(df1.duplicated(keep='first'))]
+print df1_duplicates
+df1_unquies = df1.drop_duplicates(keep='first')
+print df1_unquies
+print df1
 
 print "################## Department Table ##############################################"
-print df2.head()
+df2 = df2.fillna('-')
+print df2
 
 def joinTables(left_df,right_df,join_left_columns_on,join_right_columns_on,join_how):
     print "################## {} JOIN ##############################################".format(join_how)
@@ -23,7 +34,7 @@ def joinTables(left_df,right_df,join_left_columns_on,join_right_columns_on,join_
     merged = merged.fillna('-')
     print merged
     merged.to_csv(csv_folder_path + output_csv_filename +join_how+".csv", sep=",", index=False, header=True)
-
+'''
 print "################## LEFT JOIN ##############################################"
 merged_inner = pd.merge(left=df1,right=df2, left_on='Department ID', right_on='Department ID',how='left',sort=True)
 merged_inner = merged_inner.fillna('-')
@@ -48,15 +59,15 @@ merged_inner = merged_inner.fillna('-')
 # merged_inner["Staff Name"] = merged_inner["Staff Name"].fillna('-')
 print merged_inner.head()
 
-''''''
+'''
 
 left_columns  = ["Department ID"]
 right_columns = ["Department ID"]
 
-joinTables(df1,df2,left_columns,right_columns,"inner")
-joinTables(df1,df2,left_columns,right_columns,"left")
-joinTables(df1,df2,left_columns,right_columns,"right")
-joinTables(df1,df2,left_columns,right_columns,"outer")
+# joinTables(df1,df2,left_columns,right_columns,"inner")
+# joinTables(df1,df2,left_columns,right_columns,"left")
+# joinTables(df1,df2,left_columns,right_columns,"right")
+# joinTables(df1,df2,left_columns,right_columns,"outer")
 
 
 #df.rename(columns={"LDM Object": "Entity Name"}, inplace=True)

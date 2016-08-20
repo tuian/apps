@@ -12,6 +12,7 @@ df2 = pd.read_csv(csv_folder_path + csv_filename_2, sep=",")
 
 print "################## Interface Table ##############################################"
 df1.drop(df1.columns[[0,1,2,3]], axis=1, inplace=True)
+
 print df1.head()
 print df1.info()
 print "################## Object Table ##############################################"
