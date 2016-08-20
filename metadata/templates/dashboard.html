@@ -14,6 +14,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Pace plugin -->
+    <link href="/static/css/pace_barber_shop.css" rel="stylesheet">
+    <script src="/static/js/pace.min.js"></script>
+
     <!-- Custom CSS -->
     <link href="/static/css/logo-nav.css" rel="stylesheet">
 
@@ -87,9 +91,9 @@
         <table class="table">
             <thead>
                  <tr>
-                     <th >Status</th>
-                     <th >Count</th>
-                     <th >Percentage</th>
+                     <th class="col-lg-4">Status</th>
+                     <th class="col-lg-4">Count</th>
+                     <th class="col-lg-4">Percentage</th>
                  </tr>
             </thead>
             <tbody>
@@ -134,9 +138,9 @@
         <table class="table">
             <thead>
                  <tr>
-                     <th >Status</th>
-                     <th >Count</th>
-                     <th >Percentage</th>
+                     <th class="col-lg-4">Status</th>
+                     <th class="col-lg-4">Count</th>
+                     <th class="col-lg-4">Percentage</th>
                  </tr>
             </thead>
             <tbody>
@@ -169,6 +173,29 @@
                                <td>{{status[1].Review_Percentage}}%</td>
             </tr>
 
+            </tbody>
+        </table>
+    </div>
+
+        <div class="">
+        <table class="table">
+            <thead>
+                 <tr>
+                     <th class="col-lg-4">Sharepoint List Name</th>
+                     <th class="col-lg-4">Total Records</th>
+                     <th class="col-lg-4">Remarks</th>
+                 </tr>
+            </thead>
+            <tbody>
+
+            {% for  sharepointTotal in getSharepointTotals_Phase2(2) %}
+
+            <tr class="success">
+                               <td>{{sharepointTotal["Entity Name"]}}</td>
+                               <td>{{sharepointTotal["Total"]}}</td>
+                               <td>&nbsp;-</td>
+            </tr>
+            {%endfor%}
             </tbody>
         </table>
     </div>

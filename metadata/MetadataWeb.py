@@ -2,6 +2,7 @@
 
 from flask import Flask, render_template,jsonify
 from mdr_util import *
+from MetadataExtractor import *
 
 app = Flask(__name__)
 
@@ -127,7 +128,10 @@ def utility_processor():
     def getScreenFieldObjects_bs(screen_name):
         return getScreenFieldObjects(screen_name)
 
-    return dict(cleanHTMLTags_Flask=cleanHTMLTags_Flask,getScreenFieldObjects_bs=getScreenFieldObjects_bs)
+    def getSharepointTotals_Phase2(phase):
+        return getSharepointListTotals_From_CSV_File(phase)
+
+    return dict(cleanHTMLTags_Flask=cleanHTMLTags_Flask,getScreenFieldObjects_bs=getScreenFieldObjects_bs,getSharepointTotals_Phase2=getSharepointTotals_Phase2)
 
 
 if __name__ == '__main__':

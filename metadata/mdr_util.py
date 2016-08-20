@@ -1,5 +1,6 @@
 #encoding=utf8
 from __future__ import division
+import os
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -58,6 +59,19 @@ def createFolder(folder_path,folder_name,flag_timestamp):
 
     except IOError:
         print "ERROR: Unable to create the folder " + mdr_dir
+
+def createFolderPath(folder_path):
+
+    import os
+    #Usage:
+    #createFolderPath('C:\TEST\\')
+
+    try:
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+    except IOError:
+        print "ERROR: Unable to create the folder " + folder_path
+
 
 def json_sharepointListRowsByListName(list_name):
     from flask import jsonify
@@ -566,3 +580,13 @@ def processYesNo(input_value):
     #print "Type is {} and Value is {} ".format(type(input_value), output_string)
 
     return output_string
+
+def checkFileName(filename):
+
+    result_boolean = False
+    #print "File Name: ", filename
+
+    if os.path.exists(filename):
+        result_boolean = True
+
+    return result_boolean
