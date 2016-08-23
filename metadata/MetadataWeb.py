@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template,jsonify
 from mdr_util import *
-from MetadataExtractor import *
+from MetadataExtractor import getSharepointListTotals_From_CSV_File
 
 app = Flask(__name__)
 

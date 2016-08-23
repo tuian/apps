@@ -710,9 +710,9 @@ def getSharepointListTotals_From_CSV_File(phase):
         return totals_list
 
 #
-buidObjects()
-buildMapings()
-sharepointTotal_list = getSharepointListTotals_From_CSV_File(2)
+#buidObjects()
+#buildMapings()
+#sharepointTotal_list = getSharepointListTotals_From_CSV_File(2)
 
 #sendSharepointListTotals_To_CSV_File()
 
