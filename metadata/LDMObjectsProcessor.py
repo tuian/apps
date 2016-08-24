@@ -125,7 +125,7 @@ def generateLDMInterfaceReport():
 
 
     input_excel_folder_path = "C:\\MDR\\Data\\Avaloq_Report_Export\\Input\\"
-    input_excel_filename = "LDM_INTF_Report.xlsx"
+    input_excel_filename = "LDM_INTF_Report_2.xlsx"
 
     output_csv_filename = "LDM_INTF_Report_Output.csv"
     output_csv_folder_path = "C:\\MDR\\Data\\Avaloq_Report_Export\\Output\\"
@@ -165,55 +165,55 @@ def generateLDMInterfaceReport():
             df.insert(3, "Parent", "")
 
             # insert two new columns
-            df.insert(6, "LDM Text Type",df["LDM Text"])
-            df.insert(7, "Internal ID"  ,df["LDM Text"])
-            df.insert(8, "LDM Object Type", df["LDM Text"])
+            # df.insert(6, "LDM Text Type",df["LDM Text"])
+            # df.insert(7, "Internal ID"  ,df["LDM Text"])
+            # df.insert(8, "LDM Object Type", df["LDM Text"])
 
             #print df.head()
             ''' '''
             # Go through each row and make corrections to cell values
-            for i in range(1, len(df)):
+            # for i in range(1, len(df)):
                 #print df.loc[i,'LDM Object']
 
-                if (pd.isnull(df.loc[i, 'LDM Field'])):
-                    # print "Inside None"
-                    df.loc[i, 'LDM Field'] = df.loc[i, 'LDM Object']
+                # if (pd.isnull(df.loc[i, 'LDM Field'])):
+                #     # print "Inside None"
+                #     df.loc[i, 'LDM Field'] = df.loc[i, 'LDM Object']
 
-                #split the value by $ delimiter to get the LDM Object and LDM Field
-                if ("." in str(df.loc[i,"LDM Text"])):
-                    list_of_values = df.loc[i,"LDM Text"].split(".")
-                    df.loc[i,"LDM Text Type"]  = str(list_of_values[0]).replace("LDM:btfg$code_","")
-                    df.loc[i,"Internal ID"]    = list_of_values[1]
+                # #split the value by $ delimiter to get the LDM Object and LDM Field
+                # if ("." in str(df.loc[i,"LDM Text"])):
+                #     list_of_values = df.loc[i,"LDM Text"].split(".")
+                #     df.loc[i,"LDM Text Type"]  = str(list_of_values[0]).replace("LDM:btfg$code_","")
+                #     df.loc[i,"Internal ID"]    = list_of_values[1]
+                #
+                # else:
+                #     #df.loc[i, "Internal ID LDM Object"] = df.loc[i,"Internal ID"]
+                #     df.loc[i, "LDM Text Type"] = ""
+                #     df.loc[i, "Internal ID"]   = ""
 
-                else:
-                    #df.loc[i, "Internal ID LDM Object"] = df.loc[i,"Internal ID"]
-                    df.loc[i, "LDM Text Type"] = ""
-                    df.loc[i, "Internal ID"]   = ""
+                # if ("$" in str(df.loc[i, "Internal ID"])):
+                #     list_of_values = df.loc[i, "Internal ID"].split("$")
+                #     df.loc[i, "LDM Object Type"] = list_of_values[0]
+                #     if(list_of_values[0] == "obj"):
+                #         df.loc[i, "LDM Object"] = "Object"
 
-                if ("$" in str(df.loc[i, "Internal ID"])):
-                    list_of_values = df.loc[i, "Internal ID"].split("$")
-                    df.loc[i, "LDM Object Type"] = list_of_values[0]
-                    if(list_of_values[0] == "obj"):
-                        df.loc[i, "LDM Object"] = "Object"
-
-                if(pd.isnull(df.loc[i,'Interface Name'])):
-                    #print "Inside None"
-                    df.loc[i, 'Interface Name'] = df.loc[i-1, 'Interface Name']
-
-                if (pd.isnull(df.loc[i, 'Source Name'])):
-                    # print "Inside None"
-                    df.loc[i, 'Source Name'] = df.loc[i - 1, 'Source Name']
+                # if(pd.isnull(df.loc[i,'Interface Name'])):
+                #     #print "Inside None"
+                #     df.loc[i, 'Interface Name'] = df.loc[i-1, 'Interface Name']
+                #
+                # if (pd.isnull(df.loc[i, 'Source Name'])):
+                #     # print "Inside None"
+                #     df.loc[i, 'Source Name'] = df.loc[i - 1, 'Source Name']
 
 
-            # drop rows if column "Element Name" is blank
-            df = df.dropna(subset=['Element Name'])
+            # # drop rows if column "Element Name" is blank
+            # df = df.dropna(subset=['Element Name'])
 
             # drop rows if column "LDM Field" is blank
             # df = df.dropna(subset=['LDM Field']) # Do not drop the LDM Field if blank, rather copy the LDM Object column value
 
             #print df.head(10)
 
-            df.rename(columns={"LDM Object": "Entity Name"}, inplace=True)
+            df.rename(columns={"LDM Object": "Entity Name","LDM Field":"Attribute Name"}, inplace=True)
             df.to_csv(output_csv_folder_path+output_csv_filename,sep=",",index=False,header=True)
 
             print " All good. LDM Interface Report CSV file generated successfully.\n"

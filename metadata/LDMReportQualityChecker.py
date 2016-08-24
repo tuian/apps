@@ -25,23 +25,26 @@ print df2.head()
 print df2.info()
 
 print "################## INNER JOIN ##############################################"
-merged_df = pd.merge(left=df1,right=df2, left_on='Internal ID', right_on='Internal ID',how='inner')
+join_columns = ["Entity Name","Attribute Name"]
+#merged_df = pd.merge(left=df1,right=df2, left_on='Internal ID', right_on='Internal ID',how='inner')
+merged_df_inner = pd.merge(left=df1,right=df2, left_on=join_columns, right_on=join_columns,how='inner')
 #merged_df = pd.merge(left=df1,right=df2, on=['Internal ID','Entity Name'],copy=False)
-merged_df = merged_df.fillna('-')
-print merged_df.head()
-print merged_df.info()
+merged_df_inner = merged_df_inner.fillna('-')
+print merged_df_inner.head()
+print merged_df_inner.info()
 
 
 displayColumns = ["Element Name",""]
-merged_df.to_csv(csv_folder_path+output_csv_filename_inner,sep=",",index=False,header=True)
+merged_df_inner.to_csv(csv_folder_path+output_csv_filename_inner,sep=",",index=False,header=True)
 
-'''
+''' '''
 print "################## LEFT JOIN ##############################################"
-merged_df = pd.merge(left=df1,right=df2, left_on='Internal ID', right_on='Internal ID',how='left',sort=True)
-merged_df = merged_df.fillna('-')
-print merged_df.head()
-print merged_df.info()
+join_columns = ["Entity Name","Attribute Name"]
+merged_df_left = pd.merge(left=df1,right=df2, left_on=join_columns, right_on=join_columns,how='left')
+#merged_df = pd.merge(left=df1,right=df2, left_on='Internal ID', right_on='Internal ID',how='left',sort=True)
+merged_df_left = merged_df_left.fillna('-')
+print merged_df_left.head()
+print merged_df_left.info()
 
-merged_df.to_csv(csv_folder_path+output_csv_filename_left,sep=",",index=False,header=True)
+merged_df_left.to_csv(csv_folder_path+output_csv_filename_left,sep=",",index=False,header=True)
 
-'''
