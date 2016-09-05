@@ -1,5 +1,6 @@
 #encoding=utf8
-from __future__ import division
+import difflib as diff
+import Levenshtein as L
 import os
 import sys
 reload(sys)
@@ -590,3 +591,68 @@ def checkFileName(filename):
         result_boolean = True
 
     return result_boolean
+
+
+def addMatchedString(algorithm, orphaned_string,matched_string,control_limit,score):
+
+    output_dict = {}
+
+    output_dict["Algorithm"] = algorithm
+    output_dict["Orphaned_String"] = orphaned_string
+    output_dict["Match_String"] = matched_string
+    output_dict["Control_Limit"] = control_limit
+    output_dict["Match_Percentage"] = score
+
+    return output_dict
+
+def SeqMatch(orphaned_string,list_of_strings,control_limit):
+    output_list = []
+    output_dict_list = []
+
+    xsd_str = orphaned_string + ".XSD"
+    #print "String with .XSD", xsd_str
+
+    if(xsd_str in list_of_strings):
+        print "Exact Match with .XSD suffix. Orphaned String {} | Matched String {}".format(orphaned_string, xsd_str)
+        output_list.append(xsd_str)
+        output_dict_list.append(addMatchedString("SequenceMatch", orphaned_string, xsd_str, control_limit, 1.0))
+    else:
+
+        for str in list_of_strings:
+            # use the Sequence Matcher Ratio
+            s = diff.SequenceMatcher(None, orphaned_string,str ).ratio()
+            #print str, s
+            if (s == 1.00):
+                #print "score is 1.0"
+                output_list.append(str)
+                output_dict_list.append(addMatchedString("SequenceMatch", orphaned_string, str, control_limit, s))
+                break
+            else:
+                if(s >= control_limit):
+
+                    #print "The string '{}' has {} % match with the orphaned string '{}' ".format(str,s*100,orphaned_string)
+                    output_list.append(str)
+                    output_dict_list.append(addMatchedString("SequenceMatch",orphaned_string,str,control_limit,s))
+                    #if(s == 1.0):
+                    #break
+
+
+    return list(set(output_list))
+    #return output_dict_list
+
+def LevenshteinMatch(orphaned_string,list_of_strings,control_limit):
+    output_list = []
+    output_dict_list = []
+
+    for str in list_of_strings:
+        # use the Levenshtein jaro_winkler score
+        #j = L.jaro_winkler(orphaned_string, str, control_limit)
+        j = L.jaro(orphaned_string, list_of_strings[0])
+        if(j >= control_limit):
+            #print "The string '{}' has {} % match with the orphaned string '{}' ".format(str,s*100,orphaned_string)
+            output_list.append(str)
+            output_dict_list.append(addMatchedString("Jaro /Winkler",orphaned_string,str,control_limit,j))
+
+
+
+    return output_dict_list

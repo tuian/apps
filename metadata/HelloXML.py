@@ -4,15 +4,16 @@ import re
 import xml.etree.ElementTree as ET
 import pandas as pd
 
-def setAttribute(system_name,element_count,xsd_name,element_type,obj_name,sub_element_count,attribute_name,attribute_desc,xpath):
+def setAttribute(system_name,instance_name,element_count,xsd_name,element_type,obj_name,sub_element_count,attribute_name,attribute_desc,xpath):
 
     dict_object = {}
     dict_object["System Name"] = system_name
-    dict_object["Instance Name"] = "Default"
+    dict_object["Instance Name"] = instance_name
     dict_object["Owner"] = ""
     dict_object["Parent"] = ""
     dict_object["URL"] = ""
     dict_object["Document Name"] = ""
+    dict_object["MDR_Phase"] = "Phase 2"
 
     dict_object["XPATH"] = xpath
 
@@ -36,13 +37,13 @@ def setAttribute(system_name,element_count,xsd_name,element_type,obj_name,sub_el
 def sentToCSV(output_filepath,output_filename,list_objects):
     import pandas as pd
     #required_columns = ["Element_Count","SubElement_Count","System Name","Instance Name","Owner","Parent","Entity Name","Type","Complex_Object_Name","Element_Name","Attribute Name","Attribute Description"]
-    required_columns    = ["System Name", "Instance Name", "Entity Name",  "Element Type","Attribute Name", "Owner", "Parent","Type","Description","URL","Document Name","XPATH"]
+    required_columns    = ["System Name", "Instance Name", "Entity Name",  "Element Type","Attribute Name", "Owner", "Parent","Type","Description","URL","Document Name","XPATH","MDR_Phase"]
     #columns_objects_csv = ["System Name", "Instance Name", "Entity Name",  "Attribute Name", "Owner", "Parent", "Type","Description"]
     #print list_objects
     df = pd.DataFrame(data=list_objects,columns=required_columns,index=None)
     df.to_csv(output_filepath + output_filename, sep=",", index=False, header=True)
 
-def processXML(system_name,folder_path_input,xsd_filename,folder_path_output,output_csv_filename):
+def processXML(system_name,instance_name,folder_path_input,xsd_filename,folder_path_output,output_csv_filename):
 
     list_object = []
 
@@ -95,7 +96,7 @@ def processXML(system_name,folder_path_input,xsd_filename,folder_path_output,out
         else:
             desc_simple = ""
 
-        list_object.append(setAttribute(system_name,count,xsd_filename,"SimpleType","","",simpleType.get('name'),desc_simple,""))
+        list_object.append(setAttribute(system_name,instance_name,count,xsd_filename,"SimpleType","","",simpleType.get('name'),desc_simple,""))
         count = count + 1
 
     for complexType in root.iter('{http://www.w3.org/2001/XMLSchema}complexType'):
@@ -119,7 +120,7 @@ def processXML(system_name,folder_path_input,xsd_filename,folder_path_output,out
                 xpath_value = element.get('type')
 
                 print "{}. | Complex Type Name: {} | {}.{}. | Complex Element Name: {} | Description: {} | XPATH: {}".format(count,complexType.get('name'),count,element_count,element.get('name'),desc,xpath_value)
-                list_object.append(setAttribute(system_name,count, xsd_filename,"ComplexType", complexType.get('name'),str(count)+"."+str(element_count), element.get('name'),desc,xpath_value))
+                list_object.append(setAttribute(system_name,instance_name,count, xsd_filename,"ComplexType", complexType.get('name'),str(count)+"."+str(element_count), element.get('name'),desc,xpath_value))
                 element_count = element_count + 1
 
         count = count + 1
@@ -183,12 +184,12 @@ def merge_csv_files():
     df.to_csv(xml_folder_path_output+output_xml_filename,sep=",", index=False, header=True)
 
 
-processXML("GESB",xml_folder_path_input,xml_filename_1,xml_folder_path_output,output_xml_filename_1)
-processXML("GESB",xml_folder_path_input,xml_filename_2,xml_folder_path_output,output_xml_filename_2)
-processXML("GESB",xml_folder_path_input,xml_filename_3,xml_folder_path_output,output_xml_filename_3)
-processXML("GESB",xml_folder_path_input,xml_filename_4,xml_folder_path_output,output_xml_filename_4)
-processXML("BTICC",xml_folder_path_input,xml_filename_5,xml_folder_path_output,output_xml_filename_5)
-processXML("BTICC",xml_folder_path_input,xml_filename_6,xml_folder_path_output,output_xml_filename_6)
+processXML("GESB","XSD",xml_folder_path_input,xml_filename_1,xml_folder_path_output,output_xml_filename_1)
+processXML("GESB","XSD",xml_folder_path_input,xml_filename_2,xml_folder_path_output,output_xml_filename_2)
+processXML("GESB","XSD",xml_folder_path_input,xml_filename_3,xml_folder_path_output,output_xml_filename_3)
+processXML("GESB","XSD",xml_folder_path_input,xml_filename_4,xml_folder_path_output,output_xml_filename_4)
+processXML("BTICC","XSD",xml_folder_path_input,xml_filename_5,xml_folder_path_output,output_xml_filename_5)
+processXML("BTICC","XSD",xml_folder_path_input,xml_filename_6,xml_folder_path_output,output_xml_filename_6)
 merge_csv_files()
 
 # list_xsd_files = getXSDFiles(xml_folder_path)

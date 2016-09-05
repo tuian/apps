@@ -1,6 +1,9 @@
 '''
+Objectives: How to merge two dataframes...or CSV files.... or tables...
+Learnings:
 Axis 0 row (drops a row, mean of the row)
 Axis 1 column (drops a the column, mean of the column etc)
+
 '''
 import pandas as pd
 
@@ -64,7 +67,7 @@ print merged_inner.head()
 left_columns  = ["Department ID"]
 right_columns = ["Department ID"]
 
-# joinTables(df1,df2,left_columns,right_columns,"inner")
+joinTables(df1,df2,left_columns,right_columns,"inner")
 # joinTables(df1,df2,left_columns,right_columns,"left")
 # joinTables(df1,df2,left_columns,right_columns,"right")
 # joinTables(df1,df2,left_columns,right_columns,"outer")

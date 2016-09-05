@@ -26,3 +26,19 @@ port: 8080
 screen_field_objects_bs = getScreenFieldObjects_bs({{screen_name}})
 
 $("#attributes_table").load("/mdr_screen_fields_bs_bottom/{{screen_name}}");
+
+
+
+
+
+
+Microsoft Visual C++ Compiler for Python 2.7
+
+http://aka.ms/vcpython27
+https://www.microsoft.com/en-us/download/details.aspx?id=44266
+
+
+
+C:\Python27\python-Levenshtein-0.12.0.tar\python-Levenshtein-0.12.0>
+
+python setup.py install

@@ -14,14 +14,14 @@ site_url = "http://sharepoint.btfin.com/it/home/itpm/PST/TCSTeam/Panorama/MDR/"
 #list_name = "Visual Map Master"
 #list_name = "Visual Map Fields"
 
-#list_name = "IFS Master"
+list_name = "IFS Master"
 #list_name = "IFS Fields"
 
 #list_name = "XSD Master"
 #list_name = "XSD Fields"
 
 #list_name = "Mapping_Screen_VisualMap"
-list_name = "Mapping_VisualMap_IFS"
+#list_name = "Mapping_VisualMap_IFS"
 #list_name = "Mapping_IFS_XSD"
 
 
@@ -33,12 +33,12 @@ username = 'L083646'
 password =  'TCS#2305'
 
 
-#displayRowFields(site_url,list_name,username,password)
+displayRowFields(site_url,list_name,username,password)
 
 
-''''''
+'''
 #print "Unique Items: ",len(UniqueListItemsByListName_AttributeName("Mapping_Screen_VisualMap","Source_Entity_Name_D"))
-''' '''
+
 #for item in UniqueListItemsByListName_AttributeName(list_name,list_column_name): print "Entity Names: ", item
 
 
@@ -80,3 +80,4 @@ if('$' in string):
     print "Output String 1: ", string.split("$")[1], list_of_values[1]
 else:
     print "Output String: ", string
+'''
