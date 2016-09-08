@@ -1,4 +1,6 @@
 #encoding=utf8
+from __future__ import division
+import pandas as pd
 import difflib as diff
 import Levenshtein as L
 import os
@@ -450,7 +452,85 @@ def displayLineageByScreenEntityName(screen_entity_name):
             print row_ux_vm.Source_Entity_Name_D.upper() ," : ",row_ux_vm.Source_Attribute_Name0.upper()
             displayLineage(row_ux_vm.Source_Entity_Name_D,row_ux_vm.Source_Attribute_Name0)
 
+def getMDRLineageRowsFromCSV(entity_name,attribute_name):
+    #lineage_object = []
+    #from csv file
 
+    input_excel_folder_path_phase2 = "C:\MDR\Data\Repository\CSV_Sharepoint_Output"
+    input_excel_filename_phase2_object = "\Objects.csv"
+    input_excel_filename_phase2_mappings = "\Mappings.csv"
+
+    #df_phase2_objects = pd.read_csv(input_excel_folder_path_phase2 + input_excel_filename_phase2_object, sep=",")
+    df_phase2_mappings = pd.read_csv(input_excel_folder_path_phase2 + input_excel_filename_phase2_mappings, sep=",")
+    #print df_phase2_mappings.info()
+
+    df_phase2_mappings = df_phase2_mappings[(df_phase2_mappings["Source Entity Name"] == entity_name) & (df_phase2_mappings["Source Attribute Name"] == attribute_name)]
+
+    #print df_phase2_mappings.info()
+    df_list =  df_phase2_mappings.to_dict(orient='list')
+    #print df_list
+    # for i in range(0,len(df_list["Target Attribute Name"])):
+    #     print df_list["Target System Name"][i],"|",df_list["Target Entity Name"][i],"|",df_list["Target Attribute Name"][i],"|",df_list["Business Rule"][i],"|",df_list["Transformation_Mapping rule"][i]
+
+    return df_list
+
+
+def getMDRLineageFromCSV(screen_entity_name,screen_attribute_name):
+    lineage_object = []
+
+    #lineage_object_vm  = [{"Target_System_Name":"Visual Map","Target_Entity_Name_Duplicate":"VM Name","Target_Attribute_Name_Duplicate":"VM Attribute Name","Business_Rule":"-","Transformation_Mapping_Rule":"-"}]
+    #lineage_object_ifs = [{"Target_System_Name":"IFS","Target_Entity_Name_Duplicate":"IFS Name","Target_Attribute_Name_Duplicate":"IFS Attribute Name ","Business_Rule":"-","Transformation_Mapping_Rule":"-"}]
+    #lineage_object_xsd = [{"Target_System_Name":"XSD","Target_Entity_Name_Duplicate":"XSD Name","Target_Attribute_Name_Duplicate":"XSD Attribute Name","Business_Rule":"-","Transformation_Mapping_Rule":"-"}]
+    #lineage_object_ldm = [{"Target_System_Name":"ABS LDM", "Target_Entity_Name_Duplicate": "LDM Name","Target_Attribute_Name_Duplicate": "LDM Attribute Name", "Business_Rule": "TBC","Transformation_Mapping_Rule": "TBC"}]
+
+    lineage_object_vm = getMDRLineageRowsFromCSV("Account - Overview", "Amount")
+    lineage_object_ifs = []
+    lineage_object_xsd = []
+    lineage_object_ldm = []
+
+
+    # for i in range(0,len(lineage_object_vm["Target Attribute Name"])):
+    #     print lineage_object_vm["Target System Name"][i],"|",lineage_object_vm["Target Entity Name"][i],"|",lineage_object_vm["Target Attribute Name"][i],"|",lineage_object_vm["Business Rule"][i],"|",lineage_object_vm["Transformation_Mapping rule"][i]
+
+    #print lineage_object_vm
+
+    for i in range(0,len(lineage_object_vm["Target Attribute Name"])):
+        print "[",lineage_object_vm["Source System Name"][i],"|",lineage_object_vm["Source Entity Name"][i],"|",lineage_object_vm["Source Attribute Name"][i],"],[",lineage_object_vm["Target System Name"][i],"|",lineage_object_vm["Target Entity Name"][i],"|",lineage_object_vm["Target Attribute Name"][i],"]"
+        lineage_object_ifs.append(getMDRLineageRowsFromCSV(lineage_object_vm["Target Entity Name"][i],lineage_object_vm["Target Attribute Name"][i]))
+
+    #print lineage_object_ifs
+
+    for item in lineage_object_ifs:
+        #print item
+        #print "[",item["Source System Name"],"|",item["Source Entity Name"],"|",item["Source Attribute Name"],"],[",item["Target System Name"],"|",item["Target Entity Name"],"|",item["Target Attribute Name"],"]"
+        for j in range(0,len(item["Target Attribute Name"])):
+            print "[",item["Source System Name"][j],"|",item["Source Entity Name"][j],"|",item["Source Attribute Name"][j],"],[",item["Target System Name"][j],"|",item["Target Entity Name"][j],"|",item["Target Attribute Name"][j],"]"
+            lineage_object_xsd.append(getMDRLineageRowsFromCSV(item["Target Entity Name"][j],item["Target Attribute Name"][j]))
+
+    #print lineage_object_xsd
+
+    for item in lineage_object_xsd:
+        #print item
+        #print "[",item["Source System Name"],"|",item["Source Entity Name"],"|",item["Source Attribute Name"],"],[",item["Target System Name"],"|",item["Target Entity Name"],"|",item["Target Attribute Name"],"]"
+        for k in range(0,len(item["Target Attribute Name"])):
+            print "[",item["Source System Name"][k],"|",item["Source Entity Name"][k],"|",item["Source Attribute Name"][k],"],[",item["Target System Name"][k],"|",item["Target Entity Name"][k],"|",item["Target Attribute Name"][k],"]"
+            lineage_object_ldm.append(getMDRLineageRowsFromCSV(item["Target Entity Name"][k],item["Target Attribute Name"][k]))
+
+    #print lineage_object_ldm
+
+    for item in lineage_object_ldm:
+        #print item
+        #print "[",item["Source System Name"],"|",item["Source Entity Name"],"|",item["Source Attribute Name"],"],[",item["Target System Name"],"|",item["Target Entity Name"],"|",item["Target Attribute Name"],"]"
+        for m in range(0,len(item["Target Attribute Name"])):
+            print "[",item["Source System Name"][m],"|",item["Source Entity Name"][m],"|",item["Source Attribute Name"][m],"],[",item["Target System Name"][m],"|",item["Target Entity Name"][m],"|",item["Target Attribute Name"][m],"]"
+            #lineage_object_ldm.append(getMDRLineageRowsFromCSV(item["Target Entity Name"][m],item["Target Attribute Name"][m]))
+
+    lineage_object.append(lineage_object_vm)
+    lineage_object.append(lineage_object_ifs)
+    lineage_object.append(lineage_object_xsd)
+    lineage_object.append(lineage_object_ldm)
+
+    return lineage_object
 def getMDRLineage(screen_entity_name,screen_attribute_name):
 
     lineage_object = []
@@ -548,19 +628,27 @@ def getScreenStatusByPhase(phase):
 
     # status = {"Total": "100", "Open": "20", "WIP": "30", "Completed": "40", "Review": "10", "Review_Percentage": "50","Open_Percentage": "20", "WIP_Percentage": "30", "Completed_Percentage": "40"}
     status = {}
-    total = total
+    #total = total
     status["Total"] = total
     status["Open"] = open
     status["WIP"] = wip
     status["Review"] = review
     status["Completed"] = completed
 
+    if(total==0): total = 1
 
     status["Open_Percentage"]       = int(round(open / total,2) * 100)
     status["WIP_Percentage"]        = int(round(wip / total,2) * 100)
     status["Review_Percentage"]     = int(round(review / total,2) * 100)
     status["Completed_Percentage"]  = int(round(completed / total,2) * 100)
-
+    # print "----------------------------------"
+    # print "Completed {},Total {}, Completed / Total {}".format(completed,total,completed / total)
+    # print round(completed / total, 2)
+    # print int(round(completed / total, 2) * 100)
+    # print "Open  | Completed  ", open, completed
+    # print "Open % | Completed % ",status["Open_Percentage"], status["Completed_Percentage"]
+    # print total
+    # print "----------------------------------"
     return status
 
 
@@ -656,3 +744,7 @@ def LevenshteinMatch(orphaned_string,list_of_strings,control_limit):
 
 
     return output_dict_list
+
+
+#getMDRLineageRowsFromCSV("Account - Overview","Amount")
+getMDRLineageFromCSV("Account - Overview","Amount")

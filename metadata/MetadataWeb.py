@@ -110,6 +110,7 @@ def getLineage(screen_name,screen_field_name):
     list_name = "Screen Fields"
 
     lineage_object = getMDRLineage(screen_name,screen_field_name)
+    #lineage_object = getMDRLineageFromCSV(screen_name, screen_field_name)
 
     #displayLineage (screen_name,screen_field_name)
 

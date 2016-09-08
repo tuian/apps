@@ -1,10 +1,11 @@
 #encoding=utf8
 import sys
 import csv
+import numpy as np
 import pandas as pd
 from pandas import DataFrame, read_csv
 from mdr_util import *
-
+from Phase1_2_Duplicates import *
 # print('Python version ' + sys.version)
 # print('Pandas version ' + pd.__version__)
 reload(sys)
@@ -173,7 +174,7 @@ def getObject_VisualMapFields(list_name,mdr_phase_no):
             row_object["System Name"] = str(row.System_x0020_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_x0020_Name).encode("utf-8")
             row_object["Entity Name"] = str(row.Title).encode("utf-8") #Entity Name Duplicate
-            row_object["Attribute Name"] = str(row.Attribute_x0020_Name)
+            row_object["Attribute Name"] = cleanHTMLTags(row.Attribute_x0020_Name)
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
             row_object["Type"] = str(row.Entity_x0020_Type).encode("utf-8")
@@ -492,14 +493,14 @@ def getMapping_IFS_XSD(list_name,mdr_phase_no):
             row_object["Source System Name"] = row.Source_System_Name
             row_object["Source Instance Name"] = row.Title
             row_object["Source Entity Name"] = row.Source_Entity_Name_Duplicate
-            row_object["Source Attribute Name"] = row.Source_Attribute_Name_Duplicate
+            row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate)
             row_object["Target System Name"] = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
             row_object["Target Entity Name"] = row.Target_Entity_Name_Duplicate
             row_object["Target Attribute Name"] = row.Target_Attribute_Name_Duplicate
 
             row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_D
-            row_object["Target_Attribute_Name_ABS_D"] = row.Target_Attribute_Name_ABS_D
+            row_object["Target_Attribute_Name_ABS_D"] = cleanHTMLTags(row.Target_Attribute_Name_ABS_D)
 
             row_object["Attribute Description"] = row.Attribute_x0020_Description
             row_object["Business Rule"] = cleanHTMLTags(row.Business_x0020_Rule)
@@ -534,11 +535,11 @@ def getMapping_IFS_XSD_All(list_name):
         row_object["Source System Name"] = row.Source_System_Name
         row_object["Source Instance Name"] = row.Title
         row_object["Source Entity Name"] = row.Source_Entity_Name_Duplicate
-        row_object["Source Attribute Name"] = row.Source_Attribute_Name_Duplicate
+        row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate)
         row_object["Target System Name"] = row.Target_System_Name
         row_object["Target Instance Name"] = row.Target_Instance_Name
         row_object["Target Entity Name"] = row.Target_Entity_Name_Duplicate
-        row_object["Target Attribute Name"] = row.Target_Attribute_Name_Duplicate
+        row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_Duplicate)
 
         row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_D
         row_object["Target_Attribute_Name_ABS_D"] = row.Target_Attribute_Name_ABS_D
@@ -576,11 +577,11 @@ def getMapping_XSD_LDM(list_name,mdr_phase_no):
             row_object["Source System Name"] = row.Source_System_Name
             row_object["Source Instance Name"] = row.Source_Instance_Name
             row_object["Source Entity Name"] = row.Source_Entity_Name
-            row_object["Source Attribute Name"] = row.Source_Attribute_Name
+            row_object["Source Attribute Name"] = (row.Source_Attribute_Name)
             row_object["Target System Name"] = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
             row_object["Target Entity Name"] = row.Target_Entity_Name_D
-            row_object["Target Attribute Name"] = row.Target_Attribute_Name_D
+            row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D)
 
 
 
@@ -616,11 +617,11 @@ def getMapping_XSD_LDM_All(list_name):
         row_object["Source System Name"] = row.Source_System_Name
         row_object["Source Instance Name"] = row.Source_Instance_Name
         row_object["Source Entity Name"] = row.Source_Entity_Name
-        row_object["Source Attribute Name"] = row.Source_Attribute_Name
+        row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name)
         row_object["Target System Name"] = row.Target_System_Name
         row_object["Target Instance Name"] = row.Target_Instance_Name
         row_object["Target Entity Name"] = row.Target_Entity_Name_D
-        row_object["Target Attribute Name"] = row.Target_Attribute_Name_D
+        row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_D)
 
 
 
@@ -640,7 +641,7 @@ def getMapping_XSD_LDM_All(list_name):
     #setTotal(list_name, len(list_objects), 14)
     return list_objects
 
-def buidObjects():
+def buidObjects(phase):
 
 
 
@@ -724,7 +725,7 @@ def buidObjects():
     sendSharepointListTotals_To_CSV_File()
     #Objects End
 
-def buildMapings():
+def buildMapings(phase):
 
     createFolderPath(output_csv_folder_path)
 
@@ -834,47 +835,104 @@ def buildMapings():
     sendSharepointListTotals_To_CSV_File()
     # Mapping Builder End
 
-def getObjectsForLoad(load_batch_number):
+def checkAttributes():
+    print "\n####################   checkAttributes()  ####################\n"
 
+    input_excel_folder_path_phase1 = "C:\MDR\Data\Repository\Input\Phase1"
+    input_excel_filename_phase1 = "\Phase1_Objects_Mappings.xlsx"
+
+    df_phase1_objects =  pd.read_excel(input_excel_folder_path_phase1 + input_excel_filename_phase1, sheetname="Objects",index_col=None)
+    df_phase2_objects  = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
+    df_objects = pd.concat([df_phase1_objects,df_phase2_objects])
+    df_mappings = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Mappings.csv', sep=",")
+
+
+
+    #df_mappings = df_mappings[df_mappings["Source Attribute Name"] <> '' | df_mappings["Target Attribute Name"] <> '']
+    df_mappings.dropna(subset=["Source Attribute Name"],inplace=True)
+    df_mappings = df_mappings.reset_index();  # http://www.sirhamy.com/blog/2016/03/troubleshoot-pandas-label-not-in-index/
+
+    #df_mappings = df_mappings[np.isfinite(df_mappings['Source Attribute Name'])]
+    #df = df[pd.notnull(df['EPS'])]
+    #print df_objects.head()
+    #print df_mappings.head()
+
+    #if mapping Source Atribute Name or Target Attribute Name - is not in Object - then Error
+    #print df_mappings["Source Attribute Name"],df_mappings["Target Attribute Name"]
+
+    print "Source Attribute Count is:",len(df_mappings)
+    df_mappings_s_missing = df_mappings[~df_mappings["Source Attribute Name"].isin(df_objects["Attribute Name"])]
+    print df_mappings_s_missing["Source Attribute Name"]
+    print "Source Attributes Missing count is:",len(df_mappings_s_missing)
+    df_mappings_s_missing.to_csv(output_csv_folder_path + "Mapping_Fields_Missing_SA.csv", sep=",")
+    '''
+    for row in range(1,len(df_mappings)):
+       #print df_mappings.loc[row, "Source Attribute Name"]
+       if (df_mappings.loc[row,"Source Attribute Name"].isin(df_objects["Attribute Name"])):
+            print "Error {}".format(df_mappings.loc[row,"Source Attribute Name"])
+    '''
+
+
+    df_mappings.dropna(subset=["Target Attribute Name"], inplace=True)
+    df_mappings = df_mappings.reset_index();  # http://www.sirhamy.com/blog/2016/03/troubleshoot-pandas-label-not-in-index/
+
+    print "Target Attribute Count is:", len(df_mappings)
+
+    df_mappings_t_missing = df_mappings[~df_mappings["Target Attribute Name"].isin(df_objects["Attribute Name"])]
+    print df_mappings_t_missing["Target Attribute Name"]
+    print "Target Attributes Missing count is:", len(df_mappings_t_missing)
+    df_mappings_t_missing.to_csv(output_csv_folder_path+"Mapping_Fields_Missing_TA.csv",sep=",")
+    '''
+    for row in range(1,len(df_mappings)):
+     print df_mappings.loc[row, "Target Attribute Name"]
+    '''
+
+def getObjectsForLoad(load_batch_number):
+    print "\n####################   getObjectsForLoad({})  ####################\n".format(load_batch_number)
     # columns required in the output csv file [Objects]
     columns_objects_csv = ["System Name", "Instance Name", "Entity Name", "Attribute Name", "Owner", "Parent", "Type","Description","URL","Document Name","XPATH"]
 
     # read the Mapping file
-    df = pd.read_csv(output_csv_folder_path + 'Objects.csv', sep=",")
+    #df = pd.read_csv(output_csv_folder_path + 'Objects.csv', sep=",")
+    df = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
 
     # do the filtering
         # get the list of items we want
-    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Objects_Mappings")
+    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Systems")
     df_filter = df_filter[df_filter["Status"].str.upper() == "Open".upper()]
 
-    entity_names_list = df_filter["Entity Name"]
+    #entity_names_list = df_filter["Entity Name"]
+    entity_names_list = df_filter["System Name"]
 
     print df_filter.head()
 
-    df_load = df[df["Entity Name"].isin(entity_names_list)]
+    #df_load = df[df["Entity Name"].isin(entity_names_list)]
+    df_load = df[df["System Name"].isin(entity_names_list)]
 
     # write to a csv file - that is ready for MDR loading
     df_load.to_csv(output_csv_folder_path + "loading\\BTP_MDR_Objects_Load_"+str(load_batch_number)+".csv", sep=",", header=True, index=None,columns=columns_objects_csv)
 
 def getMappingsForLoad(load_batch_number):
-
+    print "\n####################   getMappingsForLoad({})  ####################\n".format(load_batch_number)
     columns_mappings_csv = ["Source System Name", "Source Instance Name", "Source Entity Name", "Source Attribute Name",
                             "Target System Name", "Target Instance Name", "Target Entity Name", "Target Attribute Name",
                             "Attribute Description", "Business Rule", "Transformation_Mapping rule", "Comments",
                             "Mapping Name", "Action", "Last_Update_Date", "Modified_By"]
 
     # read the Mapping file
-    df = pd.read_csv(output_csv_folder_path + 'Mappings.csv', sep=",")
+    #df = pd.read_csv(output_csv_folder_path + 'Mappings.csv', sep=",")
+    df = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Mappings.csv', sep=",")
+    df.dropna(subset=["Target Attribute Name"],inplace=True)
     # do the filtering
         # get the list of items we want
-    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Objects_Mappings")
+    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Systems")
     df_filter = df_filter[df_filter["Status"].str.upper() == "Open".upper()]
 
-    entity_names_list = df_filter["Entity Name"]
+    entity_names_list = df_filter["System Name"]
 
     print df_filter.head()
 
-    df_load = df[df["Source Entity Name"].isin(entity_names_list)]
+    df_load = df[df["Source System Name"].isin(entity_names_list) & df["Target System Name"].isin(entity_names_list)]
 
     # write to a csv file - that is ready for MDR loading
     df_load.to_csv(output_csv_folder_path + "loading\\BTP_MDR_Mappings_Load_"+str(load_batch_number)+".csv", sep=",", header=True, index=None,columns=columns_mappings_csv)
@@ -1064,15 +1122,32 @@ def MatchXSD():
 
     df_mapping_ifs_xsd_subset.to_csv(output_csv_folder_path + "Mapping_ifs_xsd_all_subset.csv", sep=",", header=True, index=None)
 
-#
-buidObjects()
+#extract Objects
+#buidObjects(GP_PHASE_NO)
+
+#extract Mappings
+#buildMapings(GP_PHASE_NO)
+
+
+#check and remove duplicates
+#checkPhase1_2_Duplicates()
+
+#check if the attributes in the mapping sheet has been defined in the object sheet.
+#if the mapping attributes are not in objects - the MDR loading will fail.
+#checkAttributes()
+
+#extract Objects & Mappings for Dataloading
 getObjectsForLoad(1)
+getMappingsForLoad(1)
 
-#buildMapings()
-#getMappingsForLoad(1)
-
+#Join all the Mapping Files to get the Lineage
 #joinDF()
+
+#Match Mapping_IFS_XSD (from IFS) with Mapping_XSD_LDM (from Avaloq report)
+    #Takes more time as it matches each of the XSD field from IFS with a possible value from Avaloq. So run this only when needed
 #MatchXSD()
+
+
 
 #sharepointTotal_list = getSharepointListTotals_From_CSV_File(2)
 #sendSharepointListTotals_To_CSV_File()
