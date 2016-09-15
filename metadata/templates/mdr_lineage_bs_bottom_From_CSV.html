@@ -1,0 +1,44 @@
+
+        <table class="table">
+            <thead class="text-center">
+                 <tr>
+                 <th class="col-lg-1">Source System</th>
+                 <th class="col-lg-1">Source Entity </th>
+                 <th class="col-lg-2">Source Attribute </th>
+                 <th class="col-lg-1">Target System</th>
+                 <th class="col-lg-1">Target Entity </th>
+                 <th class="col-lg-2">Target Attribute </th>
+                 <th class="col-lg-1">Mapping Type</th>
+                 <th class="col-lg-3">Mapping Description</th>
+                 </tr>
+            </thead>
+            <tbody>
+
+            <!-- Visual Map to IFS -->
+            {% for k in range(0,len_MDR(lineage_object)) %}
+
+            {% for item in lineage_object[k] %}
+                {% for i in range(0,len_MDR(item["Target Attribute Name"])) %}
+
+            <tr class="success">
+                <td class="col-lg-1 success">{{item["Source System Name"][i]}}</td>
+                <td class="col-lg-1 success">{{item["Source Entity Name"][i]}}</td>
+                <td class="col-lg-1 success">{{item["Source Attribute Name"][i]}}</td>
+                <td class="col-lg-1 danger">{{item["Target System Name"][i]}}</td>
+                <td class="col-lg-1 danger">{{item["Target Entity Name"][i]}}</td>
+                <td class="col-lg-1 danger">{{item["Target Attribute Name"][i]}}</td>
+                <td class="col-lg-3 info">{{item["Business Rule"][i]}}</td>
+                <td class="col-lg-3 info">{{item["Transformation_Mapping rule"][i]}}</td>
+            </tr>
+
+            {%endfor%}
+            {%endfor%}
+            {%endfor%}
+
+
+
+
+            </tbody>
+        </table>
+
+

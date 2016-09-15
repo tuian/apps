@@ -29,15 +29,24 @@ list_name_ifs_fields = "IFS Fields"
 
 list_name_xsd_master = "XSD Master"
 list_name_xsd_fields = "XSD Fields"
+list_name_xsd_fields_abs = "ABS_XSD_FIELDS"
 
 list_name_ldm_master = "ABS_LDM_Master"
 list_name_ldm_fields = "LDM_Fields"
+
+#BT ICC & GESB - related objects list
+list_name_bt_icc_xsd_fields = "ESB_IFS_Fields"
+list_name_gesb_ifs_fields = "ESB_XSD_Fields"
 
 list_name_mapping_ifs_xsd = "Mapping_IFS_XSD"
 list_name_mapping_screen_visualmap = "Mapping_Screen_VisualMap"
 list_name_mapping_visualmap_ifs = "Mapping_VisualMap_IFS"
 list_name_mapping_xsd_ldm = "Mapping_XSD_LDM"
 
+#BT ICC & GESB - related mappings list
+list_name_mapping_VM_ESB_IFS = "Mapping_VM_ESB_IFS"
+list_name_mapping_VM_ESB_XSD = "Mapping_VM_ESB_XSD"
+list_name_mapping_BTICC_XSD_ABS_XSD = "Mapping_BTICC_XSD_ABS_XSD"
 
 def getURL(url_object):
 
@@ -314,6 +323,73 @@ def getObject_XSDFields(list_name,mdr_phase_no):
     setTotal(list_name, len(list_objects), 8)
     return list_objects
 
+#Generic getObjects method
+def getObjects(list_name):
+
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+
+    list_objects = []
+
+    rows = sharepointListRowsByListName(list_name)
+
+    for row in rows:
+
+        row_object = {}
+        row_object["System Name"] = str(row.System_Name).encode("utf-8")
+        row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
+        #row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
+        row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8")
+        row_object["Attribute Name"] = str(row.Attribute_Name)
+        row_object["Owner"] = str(row.Owner).encode("utf-8")
+        row_object["Parent"] = str(row.Parent).encode("utf-8")
+        row_object["Type"] = str(row.Entity_Type).encode("utf-8")
+        #row_object["Description"] = str(row.Description).encode("utf-8")
+        row_object["Description"] = cleanHTMLTags(row.Description)
+        row_object["URL"] = str(row.URL).encode("utf-8")
+        row_object["Document Name"] = str(row.Document_Name).encode("utf-8")
+        row_object["XPATH"] = cleanHTMLTags(row.XPATH)
+
+        # row_object[""] = row.
+        list_objects.append(row_object)
+
+    print "getObjects('{}','{}') = ".format(list_name, "All Phases"), len(list_objects)
+    setTotal(list_name, len(list_objects), 8)
+    return list_objects
+
+def getObjectsByPhase(list_name,mdr_phase_no):
+
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+
+    list_objects = []
+
+    rows = sharepointListRowsByListName(list_name)
+
+    for row in rows:
+        if ((row.MDR_Phase).upper() == mdr_phase_no.upper()):
+            row_object = {}
+            row_object["System Name"] = str(row.System_Name).encode("utf-8")
+            row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
+            #row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
+            row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8")
+            row_object["Attribute Name"] = str(row.Attribute_Name)
+            row_object["Owner"] = str(row.Owner).encode("utf-8")
+            row_object["Parent"] = str(row.Parent).encode("utf-8")
+            row_object["Type"] = str(row.Entity_Type).encode("utf-8")
+            #row_object["Description"] = str(row.Description).encode("utf-8")
+            row_object["Description"] = cleanHTMLTags(row.Description)
+            row_object["URL"] = str(row.URL).encode("utf-8")
+            row_object["Document Name"] = str(row.Document_Name).encode("utf-8")
+            row_object["XPATH"] = cleanHTMLTags(row.XPATH)
+
+            # row_object[""] = row.
+            list_objects.append(row_object)
+    print "getObjectsByPhase('{}','{}') = ".format(list_name, mdr_phase_no), len(list_objects)
+    setTotal(list_name, len(list_objects), 8)
+    return list_objects
+
+
 def getObject_XSDFields_All_Phases(list_name):
 
     reload(sys)
@@ -322,6 +398,7 @@ def getObject_XSDFields_All_Phases(list_name):
     list_objects = []
 
     rows = sharepointListRowsByListName(list_name)
+    rows_mappings = sharepointListRowsByListName("Mapping_IFS_XSD")
 
     for row in rows:
         if (True):
@@ -342,6 +419,27 @@ def getObject_XSDFields_All_Phases(list_name):
             list_objects.append(row_object)
     print "getObject_XSDFields_All_Phases('{}') = ".format(list_name), len(list_objects)
     #setTotal(list_name, len(list_objects), 8)
+
+    for row_mapping in rows_mappings:
+        if(row_mapping.Target_Attribute_Name_ABS_D <> ""):
+            row_object = {}
+            row_object["System Name"] = str(row_mapping.Target_System_Name).encode("utf-8")
+            row_object["Instance Name"] = str(row_mapping.Target_Instance_Name).encode("utf-8")
+            row_object["Entity Name"] = str(row_mapping.Target_Entity_Name_ABS_D).encode("utf-8")
+            row_object["Attribute Name"] = str(row_mapping.Target_Attribute_Name_ABS_D).encode("utf-8")
+            row_object["Owner"] = "Mapping"
+            row_object["Parent"] = "Mapping"
+            row_object["Type"] = "Attribute"
+            # row_object["Description"] = str(row.Description).encode("utf-8")
+            row_object["Description"] = cleanHTMLTags(row_mapping.Attribute_x0020_Description)
+            row_object["URL"] = ""
+            row_object["Document Name"] = ""
+            row_object["XPATH"] = ""
+            # row_object[""] = row.
+            list_objects.append(row_object)
+
+    print "getObject_XSDFields_All_Phases('{}') = ".format("Mapping_IFS_XSD"), len(list_objects)
+
     return list_objects
 
 #LDM Master - Object
@@ -499,14 +597,14 @@ def getMapping_IFS_XSD(list_name,mdr_phase_no):
             row_object["Target Entity Name"] = row.Target_Entity_Name_Duplicate
             row_object["Target Attribute Name"] = row.Target_Attribute_Name_Duplicate
 
-            row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_D
-            row_object["Target_Attribute_Name_ABS_D"] = cleanHTMLTags(row.Target_Attribute_Name_ABS_D)
+            row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_Object_D
+            row_object["Target_Attribute_Name_ABS_D"] = cleanHTMLTags(row.Target_Attribute_Name_ABS_Object)
 
-            row_object["Attribute Description"] = row.Attribute_x0020_Description
+            row_object["Attribute Description"] = cleanHTMLTags(row.Attribute_x0020_Description)
             row_object["Business Rule"] = cleanHTMLTags(row.Business_x0020_Rule)
             row_object["Transformation_Mapping rule"] = cleanHTMLTags(row.Transformation_Mapping_Rule)
-            row_object["Comments"] = row.Comments
-            row_object["Mapping Name"] = row.Mapping_x0020_Name
+            row_object["Comments"] = cleanHTMLTags(row.Comments)
+            row_object["Mapping Name"] = cleanHTMLTags(row.Mapping_x0020_Name)
             row_object["Action"] = row.Action
             row_object["Last_Update_Date"] = row.Last_Update_Date
             row_object["Modified_By"] = row.Modified_By
@@ -641,6 +739,53 @@ def getMapping_XSD_LDM_All(list_name):
     #setTotal(list_name, len(list_objects), 14)
     return list_objects
 
+# get Mappings By Phase - Generic Method
+def getMappingsByPhase(list_name,mdr_phase_no,xsd_from_abs_report_flag):
+
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+
+    list_objects = []
+
+    rows = sharepointListRowsByListName(list_name)
+
+    for row in rows:
+        if ((row.MDR_Phase).upper() == mdr_phase_no.upper()):
+            row_object = {}
+
+            row_object["Source System Name"]   = row.Source_System_Name
+            row_object["Source Instance Name"] = row.Source_Instance_Name
+            row_object["Target System Name"]   = row.Target_System_Name
+            row_object["Target Instance Name"] = row.Target_Instance_Name
+
+            row_object["Source Entity Name"]    = row.Source_Entity_Name_D
+            row_object["Source Attribute Name"] = (row.Source_Attribute_Name_D)
+
+
+            if(xsd_from_abs_report_flag == 1):
+                row_object["Target Entity Name"] = row.Target_Entity_Name_ABS_Object_D
+                row_object["Target Attribute Name"] = row.Target_Attribute_Name_ABS_Object
+            else:
+                row_object["Target Entity Name"] = row.Target_Entity_Name_D
+                row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D)
+
+            row_object["Attribute Description"] = row.Attribute_Description
+            row_object["Comments"] = row.Comments
+            row_object["Business Rule"] = cleanHTMLTags(row.Business_Rule)
+            row_object["Transformation_Mapping rule"] = cleanHTMLTags(row.Transformation_Mapping_Rule)
+            row_object["Mapping Name"] = row.Mapping_Name
+
+            row_object["Action"] = row.Action
+            row_object["Last_Update_Date"] = row.Last_Update_Date
+            row_object["Modified_By"] = row.Modified_By
+
+            row_object["MDR_Phase"] = row.MDR_Phase
+            # row_object[""] = row.Title
+            list_objects.append(row_object)
+    print "getMappingsByPhase('{}','{}','xsd_from_abs_report_flag:{}') | Count = {}".format(list_name, mdr_phase_no,xsd_from_abs_report_flag, len(list_objects))
+    setTotal(list_name, len(list_objects), 14)
+    return list_objects
+
 def buidObjects(phase):
 
 
@@ -670,9 +815,19 @@ def buidObjects(phase):
 
     row_objects_xsd_all_phases = getObject_XSDFields_All_Phases(list_name_xsd_fields)
 
+    row_objects_xsd_fields_from_abs = getObjects(list_name_xsd_fields_abs)
+
     # row_objects_ldm = getObject_LDMMaster(list_name_ldm_master,GP_PHASE_NO) # No LDM Master, Only LDM Fields
     row_objects_ldm = getObject_LDMFields(list_name_ldm_fields,GP_PHASE_NO)
     #row_objects_ldm = getObject_LDMMaster(list_name_ldm_master,GP_PHASE_NO) + getObject_LDMFields(list_name_ldm_fields,GP_PHASE_NO)
+
+    #getObject_BT_ICC_XSD_Fields
+    #getObject_GESB_IFS_Fields
+
+    # BT ICC XSD Fields
+    row_objects_bt_icc_xsd = getObjectsByPhase(list_name_bt_icc_xsd_fields, GP_PHASE_NO)
+    # GCM IFS Fields
+    row_objects_gesb_ifs = getObjectsByPhase(list_name_gesb_ifs_fields, GP_PHASE_NO)
 
     #columns required in the output csv file [Objects]
     columns_objects_csv = ["System Name","Instance Name","Entity Name","Attribute Name","Owner","Parent","Type","Description","URL","Document Name","XPATH"]
@@ -691,17 +846,29 @@ def buidObjects(phase):
 
     # XSD Objects
     df_xsd = pd.DataFrame(row_objects_xsd,columns=columns_objects_csv)
-    df_xsd.to_csv(output_csv_folder_path + "Objects_xsd.csv",sep=",",header=True,index=None)
+    df_xsd.to_csv(output_csv_folder_path + "Objects_xsd_from_ifs_phases_2.csv",sep=",",header=True,index=None)
 
-    #XSD Objects = All phases
+    #XSD Objects [From IFS] = All phases
     df_xsd_all_phases = pd.DataFrame(row_objects_xsd_all_phases, columns=columns_objects_csv)
-    df_xsd_all_phases.to_csv(output_csv_folder_path + "Objects_xsd_all_phases.csv", sep=",", header=True, index=None)
+    df_xsd_all_phases.to_csv(output_csv_folder_path + "Objects_xsd_from_ifs_phases_all.csv", sep=",", header=True, index=None)
+
+    # XSD Objects [From Avaloq Report] = All phases
+    df_xsd_from_abs_all_phases = pd.DataFrame(row_objects_xsd_fields_from_abs, columns=columns_objects_csv)
+    df_xsd_from_abs_all_phases.to_csv(output_csv_folder_path + "Objects_xsd_from_abs_phases_all.csv", sep=",", header=True, index=None)
 
     #  LDM Objects
     df_ldm = pd.DataFrame(row_objects_ldm,columns=columns_objects_csv)
     df_ldm.to_csv(output_csv_folder_path + "Objects_ldm.csv",sep=",",header=True,index=None)
 
-    df_frames = [df_ux,df_vm,df_ifs,df_xsd,df_ldm]
+    # BT ICC XSD Fields
+    df_bticc_xsd = pd.DataFrame(row_objects_bt_icc_xsd, columns=columns_objects_csv)
+    df_bticc_xsd.to_csv(output_csv_folder_path + "Objects_bt_icc_xsd.csv", sep=",", header=True, index=None)
+
+    # GESB IFS Fields
+    df_gesb_ifs = pd.DataFrame(row_objects_gesb_ifs, columns=columns_objects_csv)
+    df_gesb_ifs.to_csv(output_csv_folder_path + "Objects_gesb_ifs.csv", sep=",", header=True, index=None)
+
+    df_frames = [df_ux,df_vm,df_ifs,df_xsd_from_abs_all_phases,df_ldm,df_bticc_xsd,df_gesb_ifs]
     df = pd.concat(df_frames)
 
     #sort
@@ -724,6 +891,29 @@ def buidObjects(phase):
     # print df.tail().to_string()
     sendSharepointListTotals_To_CSV_File()
     #Objects End
+
+def processMapping(list_name,abs_flag,GP_PHASE_NO,columns_mappings_csv,sort_columns,duplicated_by_columns,output_folder_path,output_csv_file_name):
+
+    # "Mapping_XSD_LDM"
+            ### get the records from sharepoint
+    row_mappings = getMappingsByPhase(list_name, GP_PHASE_NO,abs_flag)
+    df = pd.DataFrame(row_mappings, columns=columns_mappings_csv)
+
+     #sort values
+    df.sort_values(by=sort_columns, inplace=True, na_position='first', ascending=[True, True])
+
+            ###Make a new df to hold the duplicates (keep=False -> flag the first row as well as duplicate)
+    df_duplicate = df[df.duplicated(subset=duplicated_by_columns,keep=False)]
+
+            ###drop the duplicate rows, keep first and inplace=True
+    df.drop_duplicates(subset=duplicated_by_columns, keep='first', inplace=True)
+
+            ###send to CSV file
+    df.to_csv(output_folder_path + output_csv_file_name+".csv",sep=",",header=True,index=None)
+    df_duplicate.to_csv(output_folder_path +output_csv_file_name +"_duplicate.csv", sep=",", header=True, index=None)
+    #print df.head()
+    #print df_duplicate
+    return df
 
 def buildMapings(phase):
 
@@ -813,12 +1003,21 @@ def buildMapings(phase):
     df_mapping_xsd_ldm.to_csv(output_csv_folder_path + "Mapping_xsd_ldm.csv",sep=",",header=True,index=None)
     df_mapping_xsd_ldm_duplicate.to_csv(output_csv_folder_path + "Mapping_xsd_ldm_duplicate.csv", sep=",", header=True, index=None)
 
+    # Mapping Mapping_VM_ESB_XSD
+    df_mapping_vm_esb_xsd = processMapping(list_name_mapping_VM_ESB_XSD,0, GP_PHASE_NO, columns_mappings_csv,sort_columns, duplicated_by_columns, output_csv_folder_path,list_name_mapping_VM_ESB_XSD)
+
+    # Mapping Mapping_VM_ESB_IFS
+    df_mapping_vm_esb_ifs = processMapping(list_name_mapping_VM_ESB_IFS,0,GP_PHASE_NO,columns_mappings_csv,sort_columns,duplicated_by_columns,output_csv_folder_path,list_name_mapping_VM_ESB_IFS)
+
+    # Mapping Mapping_BTICC_XSD_ABS_XSD
+    df_mapping_bt_icc_abs_xsd = processMapping(list_name_mapping_BTICC_XSD_ABS_XSD,1,GP_PHASE_NO,columns_mappings_csv,sort_columns,duplicated_by_columns,output_csv_folder_path,list_name_mapping_BTICC_XSD_ABS_XSD)
+
     # Combined Mapping file
     df_mapping_ifs_xsd_abs = df_mapping_ifs_xsd
     df_mapping_ifs_xsd_abs.drop(labels=["Target Entity Name","Target Attribute Name"],inplace=True,axis=1)
     df_mapping_ifs_xsd_abs.rename(columns={"Target_Entity_Name_ABS_D":"Target Entity Name","Target_Attribute_Name_ABS_D":"Target Attribute Name"},inplace=True)
 
-    df_frames = [df_mapping_ux_vm, df_mapping_vm_ifs, df_mapping_ifs_xsd_abs, df_mapping_xsd_ldm]
+    df_frames = [df_mapping_ux_vm, df_mapping_vm_ifs, df_mapping_ifs_xsd_abs, df_mapping_xsd_ldm,df_mapping_vm_esb_xsd,df_mapping_vm_esb_ifs,df_mapping_bt_icc_abs_xsd]
     df = pd.concat(df_frames)
 
     df.to_csv(output_csv_folder_path + "Mappings.csv", sep=",", header=True, index=None,columns=columns_mappings_csv)
@@ -1123,10 +1322,10 @@ def MatchXSD():
     df_mapping_ifs_xsd_subset.to_csv(output_csv_folder_path + "Mapping_ifs_xsd_all_subset.csv", sep=",", header=True, index=None)
 
 #extract Objects
-#buidObjects(GP_PHASE_NO)
+buidObjects(GP_PHASE_NO)
 
 #extract Mappings
-#buildMapings(GP_PHASE_NO)
+buildMapings(GP_PHASE_NO)
 
 
 #check and remove duplicates
@@ -1137,8 +1336,17 @@ def MatchXSD():
 #checkAttributes()
 
 #extract Objects & Mappings for Dataloading
-getObjectsForLoad(1)
-getMappingsForLoad(1)
+#getObjectsForLoad(1)
+#getMappingsForLoad(1)
+
+###Testing
+# getObjectsByPhase(list_name_bt_icc_xsd_fields,GP_PHASE_NO)
+# getObjectsByPhase(list_name_gesb_ifs_fields,GP_PHASE_NO)
+# getObjects(list_name_xsd_fields_abs)
+
+# getMappingsByPhase(list_name_mapping_VM_ESB_XSD,GP_PHASE_NO,0)
+# getMappingsByPhase(list_name_mapping_VM_ESB_IFS,GP_PHASE_NO,0)
+#getMappingsByPhase(list_name_mapping_BTICC_XSD_ABS_XSD,GP_PHASE_NO,1)
 
 #Join all the Mapping Files to get the Lineage
 #joinDF()

@@ -14,7 +14,7 @@ site_url = "http://sharepoint.btfin.com/it/home/itpm/PST/TCSTeam/Panorama/MDR/"
 #list_name = "Visual Map Master"
 #list_name = "Visual Map Fields"
 
-list_name = "IFS Master"
+#list_name = "IFS Master"
 #list_name = "IFS Fields"
 
 #list_name = "XSD Master"
@@ -24,7 +24,7 @@ list_name = "IFS Master"
 #list_name = "Mapping_VisualMap_IFS"
 #list_name = "Mapping_IFS_XSD"
 
-
+list_name = "Mapping_BTICC_XSD_ABS_XSD"
 
 #screen master
 list_column_name = "Entity_x0020_Name"

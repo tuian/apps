@@ -71,6 +71,15 @@ def mdr_lineage_bs_bottom(screen_name,screen_field_name):
 
     #return render_template('mdr_lineage_bs_top.html',screen_name=screen_name,screen_field_name=screen_field_name)
 
+@app.route('/mdr_lineage_bs_bottom_From_CSV/<screen_name>/<screen_field_name>')
+def mdr_lineage_bs_bottom_From_CSV(screen_name,screen_field_name):
+
+    #lineage_object = getLineage(screen_name,screen_field_name)
+    lineage_object = getMDRLineageFromCSV(screen_name, screen_field_name)
+
+    return render_template('mdr_lineage_bs_bottom_From_CSV.html',screen_name=screen_name,screen_field_name=screen_field_name,lineage_object=lineage_object)
+
+    #return render_template('mdr_lineage_bs_top.html',screen_name=screen_name,screen_field_name=screen_field_name)
 
 def getJSONScreenObjects():
     # screen master sharepoint list name
@@ -120,6 +129,10 @@ def getLineage(screen_name,screen_field_name):
 @app.context_processor
 def utility_processor():
 
+    def len_MDR(list):
+
+        return len(list)
+
     def cleanHTMLTags_Flask(input_string):
 
         output_string = cleanHTMLTags(input_string)
@@ -132,7 +145,7 @@ def utility_processor():
     def getSharepointTotals_Phase2(phase):
         return getSharepointListTotals_From_CSV_File(phase)
 
-    return dict(cleanHTMLTags_Flask=cleanHTMLTags_Flask,getScreenFieldObjects_bs=getScreenFieldObjects_bs,getSharepointTotals_Phase2=getSharepointTotals_Phase2)
+    return dict(len_MDR=len_MDR,cleanHTMLTags_Flask=cleanHTMLTags_Flask,getScreenFieldObjects_bs=getScreenFieldObjects_bs,getSharepointTotals_Phase2=getSharepointTotals_Phase2)
 
 
 if __name__ == '__main__':
