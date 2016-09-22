@@ -84,7 +84,7 @@ def getObject_ScreenMaster(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = row.System_x0020_Name
             row_object["Instance Name"] = row.Instance_x0020_Name
-            row_object["Entity Name"] = row.Entity_x0020_Name
+            row_object["Entity Name"] = row.Entity_x0020_Name.upper()
             row_object["Attribute Name"] = ""
             row_object["Owner"] = ""
             row_object["Parent"] = ""
@@ -117,8 +117,8 @@ def getObject_ScreenFields(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = str(row.System_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
-            row_object["Entity Name"] = str(row.Entity_Name_D).encode("utf-8")
-            row_object["Attribute Name"] = str(row.Attribute_Name)
+            row_object["Entity Name"] = str(row.Entity_Name_D).encode("utf-8").upper()
+            row_object["Attribute Name"] = str(row.Attribute_Name).upper()
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
             row_object["Type"] = str(row.Entity_Type).encode("utf-8")
@@ -150,7 +150,7 @@ def getObject_VisualMapMaster(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = "Visual Map"
             row_object["Instance Name"] = "Default"
-            row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8")
+            row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8").upper()
             row_object["Attribute Name"] = ""
             row_object["Owner"] = ""
             row_object["Parent"] = ""
@@ -182,8 +182,8 @@ def getObject_VisualMapFields(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = str(row.System_x0020_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_x0020_Name).encode("utf-8")
-            row_object["Entity Name"] = str(row.Title).encode("utf-8") #Entity Name Duplicate
-            row_object["Attribute Name"] = cleanHTMLTags(row.Attribute_x0020_Name)
+            row_object["Entity Name"] = str(row.Title).encode("utf-8").upper() #Entity Name Duplicate
+            row_object["Attribute Name"] = cleanHTMLTags(row.Attribute_x0020_Name).upper()
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
             row_object["Type"] = str(row.Entity_x0020_Type).encode("utf-8")
@@ -213,7 +213,7 @@ def getObject_IFSMaster(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = str(row.System_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
-            row_object["Entity Name"] = str(row.Title).encode("utf-8")
+            row_object["Entity Name"] = str(row.Title).encode("utf-8").upper()
             row_object["Attribute Name"] = ""
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
@@ -246,8 +246,8 @@ def getObject_IFSFields(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = str(row.System_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
-            row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
-            row_object["Attribute Name"] = str(row.Attribute_Name)
+            row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8").upper()
+            row_object["Attribute Name"] = str(row.Attribute_Name).upper()
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
             row_object["Type"] = str(row.Entity_Type).encode("utf-8")
@@ -278,7 +278,7 @@ def getObject_XSDMaster(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = "ABS Dev"
             row_object["Instance Name"] = "Default"
-            row_object["Entity Name"] = str(row.Title).encode("utf-8")
+            row_object["Entity Name"] = str(row.Title).encode("utf-8").upper()
             row_object["Attribute Name"] = ""
             row_object["Owner"] = ""
             row_object["Parent"] = ""
@@ -306,8 +306,8 @@ def getObject_XSDFields(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = str(row.System_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
-            row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
-            row_object["Attribute Name"] = str(row.Attribute_Name)
+            row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8").upper()
+            row_object["Attribute Name"] = str(row.Attribute_Name).upper()
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
             row_object["Type"] = str(row.Entity_Type).encode("utf-8")
@@ -339,8 +339,8 @@ def getObjects(list_name):
         row_object["System Name"] = str(row.System_Name).encode("utf-8")
         row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
         #row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
-        row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8")
-        row_object["Attribute Name"] = str(row.Attribute_Name)
+        row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8").upper()
+        row_object["Attribute Name"] = str(row.Attribute_Name).upper()
         row_object["Owner"] = str(row.Owner).encode("utf-8")
         row_object["Parent"] = str(row.Parent).encode("utf-8")
         row_object["Type"] = str(row.Entity_Type).encode("utf-8")
@@ -372,8 +372,8 @@ def getObjectsByPhase(list_name,mdr_phase_no):
             row_object["System Name"] = str(row.System_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
             #row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
-            row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8")
-            row_object["Attribute Name"] = str(row.Attribute_Name)
+            row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8").upper()
+            row_object["Attribute Name"] = str(row.Attribute_Name).upper()
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
             row_object["Type"] = str(row.Entity_Type).encode("utf-8")
@@ -405,8 +405,8 @@ def getObject_XSDFields_All_Phases(list_name):
             row_object = {}
             row_object["System Name"] = str(row.System_Name).encode("utf-8")
             row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
-            row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
-            row_object["Attribute Name"] = str(row.Attribute_Name)
+            row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8").upper()
+            row_object["Attribute Name"] = str(row.Attribute_Name).upper()
             row_object["Owner"] = str(row.Owner).encode("utf-8")
             row_object["Parent"] = str(row.Parent).encode("utf-8")
             row_object["Type"] = str(row.Entity_Type).encode("utf-8")
@@ -425,8 +425,8 @@ def getObject_XSDFields_All_Phases(list_name):
             row_object = {}
             row_object["System Name"] = str(row_mapping.Target_System_Name).encode("utf-8")
             row_object["Instance Name"] = str(row_mapping.Target_Instance_Name).encode("utf-8")
-            row_object["Entity Name"] = str(row_mapping.Target_Entity_Name_ABS_D).encode("utf-8")
-            row_object["Attribute Name"] = str(row_mapping.Target_Attribute_Name_ABS_D).encode("utf-8")
+            row_object["Entity Name"] = str(row_mapping.Target_Entity_Name_ABS_D).encode("utf-8").upper()
+            row_object["Attribute Name"] = str(row_mapping.Target_Attribute_Name_ABS_D).encode("utf-8").upper()
             row_object["Owner"] = "Mapping"
             row_object["Parent"] = "Mapping"
             row_object["Type"] = "Attribute"
@@ -457,7 +457,7 @@ def getObject_LDMMaster(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = "ABS Dev"
             row_object["Instance Name"] = "Default"
-            row_object["Entity Name"] = str(row.Title).encode("utf-8")
+            row_object["Entity Name"] = str(row.Title).encode("utf-8").upper()
             row_object["Attribute Name"] = ""
             row_object["Owner"] = ""
             row_object["Parent"] = ""
@@ -485,8 +485,8 @@ def getObject_LDMFields(list_name,mdr_phase_no):
             row_object = {}
             row_object["System Name"] = "ABS Dev"
             row_object["Instance Name"] = "Default"
-            row_object["Entity Name"] = row.Entity_Name
-            row_object["Attribute Name"] = row.Attribute_Name
+            row_object["Entity Name"] = row.Entity_Name.upper()
+            row_object["Attribute Name"] = row.Attribute_Name.upper()
             row_object["Owner"] = row.Owner
             row_object["Parent"] = row.Parent
             row_object["Type"] = row.Attribute_Type
@@ -516,12 +516,12 @@ def getMapping_UX_VM(list_name,mdr_phase_no):
 
             row_object["Source System Name"] = row.Source_System_Name
             row_object["Source Instance Name"] = "Default"
-            row_object["Source Entity Name"] = row.Source_Entity_Name_D
-            row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name0)
+            row_object["Source Entity Name"] = (row.Source_Entity_Name_D).upper()
+            row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name0).upper()
             row_object["Target System Name"] = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
-            row_object["Target Entity Name"] = row.Target_Entity_Name_D
-            row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_D)
+            row_object["Target Entity Name"] = row.Target_Entity_Name_D.upper()
+            row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_D).upper()
             row_object["Attribute Description"] = row.Attribute_Description
             row_object["Business Rule"] = cleanHTMLTags(row.Business_Rule)
             row_object["Transformation_Mapping rule"] = cleanHTMLTags(row.Transformation_Mapping_Rule)
@@ -553,12 +553,12 @@ def getMapping_VM_IFS(list_name,mdr_phase_no):
 
             row_object["Source System Name"] = row.Source_System_Name
             row_object["Source Instance Name"] = row.Source_Instance_Name #"Default"
-            row_object["Source Entity Name"] = row.Source_Entity_Name_D
-            row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate)
+            row_object["Source Entity Name"] = row.Source_Entity_Name_D.upper()
+            row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate).upper()
             row_object["Target System Name"] = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
-            row_object["Target Entity Name"] = cleanHTMLTags(row.Target_Entity_Name_D)
-            row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_Duplicate)
+            row_object["Target Entity Name"] = cleanHTMLTags(row.Target_Entity_Name_D).upper()
+            row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_Duplicate).upper()
             row_object["Attribute Description"] = row.Attribute_Description
             row_object["Business Rule"] = cleanHTMLTags(row.Business_Rule)
             row_object["Transformation_Mapping rule"] = cleanHTMLTags(row.Transformation_Mapping_Rule)
@@ -590,15 +590,15 @@ def getMapping_IFS_XSD(list_name,mdr_phase_no):
 
             row_object["Source System Name"] = row.Source_System_Name
             row_object["Source Instance Name"] = row.Title
-            row_object["Source Entity Name"] = row.Source_Entity_Name_Duplicate
-            row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate)
+            row_object["Source Entity Name"] = row.Source_Entity_Name_Duplicate.upper()
+            row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate).upper()
             row_object["Target System Name"] = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
-            row_object["Target Entity Name"] = row.Target_Entity_Name_Duplicate
-            row_object["Target Attribute Name"] = row.Target_Attribute_Name_Duplicate
+            row_object["Target Entity Name"] = row.Target_Entity_Name_Duplicate.upper()
+            row_object["Target Attribute Name"] = row.Target_Attribute_Name_Duplicate.upper()
 
-            row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_Object_D
-            row_object["Target_Attribute_Name_ABS_D"] = cleanHTMLTags(row.Target_Attribute_Name_ABS_Object)
+            row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_Object_D.upper()
+            row_object["Target_Attribute_Name_ABS_D"] = cleanHTMLTags(row.Target_Attribute_Name_ABS_Object).upper()
 
             row_object["Attribute Description"] = cleanHTMLTags(row.Attribute_x0020_Description)
             row_object["Business Rule"] = cleanHTMLTags(row.Business_x0020_Rule)
@@ -632,15 +632,15 @@ def getMapping_IFS_XSD_All(list_name):
 
         row_object["Source System Name"] = row.Source_System_Name
         row_object["Source Instance Name"] = row.Title
-        row_object["Source Entity Name"] = row.Source_Entity_Name_Duplicate
-        row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate)
+        row_object["Source Entity Name"] = row.Source_Entity_Name_Duplicate.upper()
+        row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name_Duplicate).upper()
         row_object["Target System Name"] = row.Target_System_Name
         row_object["Target Instance Name"] = row.Target_Instance_Name
-        row_object["Target Entity Name"] = row.Target_Entity_Name_Duplicate
-        row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_Duplicate)
+        row_object["Target Entity Name"] = row.Target_Entity_Name_Duplicate.upper()
+        row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_Duplicate).upper()
 
-        row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_D
-        row_object["Target_Attribute_Name_ABS_D"] = row.Target_Attribute_Name_ABS_D
+        row_object["Target_Entity_Name_ABS_D"] = row.Target_Entity_Name_ABS_D.upper()
+        row_object["Target_Attribute_Name_ABS_D"] = row.Target_Attribute_Name_ABS_D.upper()
 
         row_object["Attribute Description"] = row.Attribute_x0020_Description
         row_object["Business Rule"] = cleanHTMLTags(row.Business_x0020_Rule)
@@ -674,12 +674,12 @@ def getMapping_XSD_LDM(list_name,mdr_phase_no):
 
             row_object["Source System Name"] = row.Source_System_Name
             row_object["Source Instance Name"] = row.Source_Instance_Name
-            row_object["Source Entity Name"] = row.Source_Entity_Name
-            row_object["Source Attribute Name"] = (row.Source_Attribute_Name)
+            row_object["Source Entity Name"] = row.Source_Entity_Name.upper()
+            row_object["Source Attribute Name"] = (row.Source_Attribute_Name).upper()
             row_object["Target System Name"] = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
-            row_object["Target Entity Name"] = row.Target_Entity_Name_D
-            row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D)
+            row_object["Target Entity Name"] = row.Target_Entity_Name_D.upper()
+            row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D).upper()
 
 
 
@@ -714,12 +714,12 @@ def getMapping_XSD_LDM_All(list_name):
 
         row_object["Source System Name"] = row.Source_System_Name
         row_object["Source Instance Name"] = row.Source_Instance_Name
-        row_object["Source Entity Name"] = row.Source_Entity_Name
-        row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name)
+        row_object["Source Entity Name"] = row.Source_Entity_Name.upper()
+        row_object["Source Attribute Name"] = cleanHTMLTags(row.Source_Attribute_Name).upper()
         row_object["Target System Name"] = row.Target_System_Name
         row_object["Target Instance Name"] = row.Target_Instance_Name
-        row_object["Target Entity Name"] = row.Target_Entity_Name_D
-        row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_D)
+        row_object["Target Entity Name"] = row.Target_Entity_Name_D.upper()
+        row_object["Target Attribute Name"] = cleanHTMLTags(row.Target_Attribute_Name_D).upper()
 
 
 
@@ -758,16 +758,16 @@ def getMappingsByPhase(list_name,mdr_phase_no,xsd_from_abs_report_flag):
             row_object["Target System Name"]   = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
 
-            row_object["Source Entity Name"]    = row.Source_Entity_Name_D
-            row_object["Source Attribute Name"] = (row.Source_Attribute_Name_D)
+            row_object["Source Entity Name"]    = row.Source_Entity_Name_D.upper()
+            row_object["Source Attribute Name"] = (row.Source_Attribute_Name_D).upper()
 
 
             if(xsd_from_abs_report_flag == 1):
-                row_object["Target Entity Name"] = row.Target_Entity_Name_ABS_Object_D
-                row_object["Target Attribute Name"] = row.Target_Attribute_Name_ABS_Object
+                row_object["Target Entity Name"] = row.Target_Entity_Name_ABS_Object_D.upper()
+                row_object["Target Attribute Name"] = row.Target_Attribute_Name_ABS_Object.upper()
             else:
-                row_object["Target Entity Name"] = row.Target_Entity_Name_D
-                row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D)
+                row_object["Target Entity Name"] = row.Target_Entity_Name_D.upper()
+                row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D).upper()
 
             row_object["Attribute Description"] = row.Attribute_Description
             row_object["Comments"] = row.Comments
@@ -782,6 +782,7 @@ def getMappingsByPhase(list_name,mdr_phase_no,xsd_from_abs_report_flag):
             row_object["MDR_Phase"] = row.MDR_Phase
             # row_object[""] = row.Title
             list_objects.append(row_object)
+
     print "getMappingsByPhase('{}','{}','xsd_from_abs_report_flag:{}') | Count = {}".format(list_name, mdr_phase_no,xsd_from_abs_report_flag, len(list_objects))
     setTotal(list_name, len(list_objects), 14)
     return list_objects
@@ -1042,7 +1043,13 @@ def checkAttributes():
 
     df_phase1_objects =  pd.read_excel(input_excel_folder_path_phase1 + input_excel_filename_phase1, sheetname="Objects",index_col=None)
     df_phase2_objects  = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
+
+    df_phase1_objects["Entity Name"] = df_phase1_objects["Entity Name"].str.upper()
+    df_phase1_objects["Attribute Name"] = df_phase1_objects["Attribute Name"].str.upper()
+
     df_objects = pd.concat([df_phase1_objects,df_phase2_objects])
+    df_objects.to_csv(output_csv_folder_path + "BTP_Phase1_2_Objects.csv", sep=",")
+
     df_mappings = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Mappings.csv', sep=",")
 
 
@@ -1086,6 +1093,78 @@ def checkAttributes():
      print df_mappings.loc[row, "Target Attribute Name"]
     '''
 
+def checkAttributesByJoin(join_type):
+    print "\n####################   checkAttributesByJoin({})  ####################\n".format(join_type)
+
+    input_excel_folder_path_phase1 = "C:\MDR\Data\Repository\Input\Phase1"
+    input_excel_filename_phase1 = "\Phase1_Objects_Mappings.xlsx"
+
+    df_phase1_objects =  pd.read_excel(input_excel_folder_path_phase1 + input_excel_filename_phase1, sheetname="Objects",index_col=None)
+    df_phase2_objects  = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
+
+    df_phase1_objects["Entity Name"] = df_phase1_objects["Entity Name"].str.upper()
+    df_phase1_objects["Attribute Name"] = df_phase1_objects["Attribute Name"].str.upper()
+
+    df_objects = pd.concat([df_phase1_objects,df_phase2_objects])
+    df_objects.to_csv(output_csv_folder_path + "BTP_Phase1_2_Objects_ByJoin.csv", sep=",")
+
+    df_mappings = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Mappings.csv', sep=",")
+
+
+    #df_mappings = df_mappings[df_mappings["Source Attribute Name"] <> '' | df_mappings["Target Attribute Name"] <> '']
+    df_mappings.dropna(subset=["Source Attribute Name"],inplace=True)
+    df_mappings = df_mappings.reset_index();  # http://www.sirhamy.com/blog/2016/03/troubleshoot-pandas-label-not-in-index/
+
+    #df_mappings = df_mappings[np.isfinite(df_mappings['Source Attribute Name'])]
+    #df = df[pd.notnull(df['EPS'])]
+    #print df_objects.head()
+    #print df_mappings.head()
+
+    #if mapping Source Atribute Name or Target Attribute Name - is not in Object - then Error
+    #print df_mappings["Source Attribute Name"],df_mappings["Target Attribute Name"]
+
+    print "Source Attribute Count is:",len(df_mappings)
+    df_mappings_s_missing = pd.merge(left=df_mappings,right=df_objects,left_on=["Source Entity Name","Source Attribute Name"],right_on=["Entity Name","Attribute Name"],how=join_type)
+    df_mappings_s_missing_count = df_mappings_s_missing[(df_mappings_s_missing["Entity Name"] == '') & (df_mappings_s_missing["Attribute Name"] == '')]
+    #df_mappings_s_missing = df_mappings[~df_mappings["Source Attribute Name"].isin(df_objects["Attribute Name"])]
+    #print df_mappings_s_missing["Source Attribute Name"]
+    print "Source Attributes Join Row is:", len(df_mappings_s_missing)
+    print "Source Attributes Join Missing count is:",len(df_mappings_s_missing_count)
+
+    df_mappings_s_missing.to_csv(output_csv_folder_path + "Mapping_Fields_Missing_S_E_A.csv", sep=",")
+    '''
+    for row in range(1,len(df_mappings)):
+       #print df_mappings.loc[row, "Source Attribute Name"]
+       if (df_mappings.loc[row,"Source Attribute Name"].isin(df_objects["Attribute Name"])):
+            print "Error {}".format(df_mappings.loc[row,"Source Attribute Name"])
+    '''
+
+
+    df_mappings.dropna(subset=["Target Attribute Name"], inplace=True)
+    df_mappings = df_mappings.reset_index();  # http://www.sirhamy.com/blog/2016/03/troubleshoot-pandas-label-not-in-index/
+
+    print "Target Attribute Count is:", len(df_mappings)
+
+    #df_mappings_t_missing = df_mappings[~df_mappings["Target Attribute Name"].isin(df_objects["Attribute Name"])]
+    #print df_mappings_t_missing["Target Attribute Name"]
+    df_mappings_t_missing = pd.merge(left=df_mappings, right=df_objects,left_on=["Target Entity Name", "Target Attribute Name"],right_on=["Entity Name", "Attribute Name"], how=join_type)
+    df_mappings_t_missing_count = df_mappings_t_missing[(df_mappings_t_missing["Entity Name"] == '') & (df_mappings_t_missing["Attribute Name"] == '')]
+    print "Target Attributes Join Row is:", len(df_mappings_t_missing)
+    print "Target Attributes Join count is:", len(df_mappings_t_missing_count)
+    df_mappings_t_missing.to_csv(output_csv_folder_path+"Mapping_Fields_Missing_T_E_A.csv",sep=",")
+    '''
+    for row in range(1,len(df_mappings)):
+     print df_mappings.loc[row, "Target Attribute Name"]
+    '''
+def getPreviouslyLoadedObjects(list):
+    pass
+
+def getPreviouslyLoadedMappings(list):
+
+    for i in list:
+        print "Hello {}".format(i)
+    pass
+
 def getObjectsForLoad(load_batch_number):
     print "\n####################   getObjectsForLoad({})  ####################\n".format(load_batch_number)
     # columns required in the output csv file [Objects]
@@ -1097,19 +1176,23 @@ def getObjectsForLoad(load_batch_number):
 
     # do the filtering
         # get the list of items we want
-    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Systems")
+    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Objects")
     df_filter = df_filter[df_filter["Status"].str.upper() == "Open".upper()]
 
     #entity_names_list = df_filter["Entity Name"]
     entity_names_list = df_filter["System Name"]
 
-    print df_filter.head()
+    print df_filter
 
     #df_load = df[df["Entity Name"].isin(entity_names_list)]
     df_load = df[df["System Name"].isin(entity_names_list)]
 
+    df_objects_prev = getPreviouslyLoadedObjects([1])
+
     # write to a csv file - that is ready for MDR loading
-    df_load.to_csv(output_csv_folder_path + "loading\\BTP_MDR_Objects_Load_"+str(load_batch_number)+".csv", sep=",", header=True, index=None,columns=columns_objects_csv)
+    load_file_name = output_csv_folder_path + "loading\\BTP_MDR_Objects_Load_"+str(load_batch_number)+".csv"
+    df_load.to_csv(load_file_name, sep=",", header=True, index=None,columns=columns_objects_csv)
+    print "Load File Generated: {}".format(load_file_name)
 
 def getMappingsForLoad(load_batch_number):
     print "\n####################   getMappingsForLoad({})  ####################\n".format(load_batch_number)
@@ -1124,17 +1207,22 @@ def getMappingsForLoad(load_batch_number):
     df.dropna(subset=["Target Attribute Name"],inplace=True)
     # do the filtering
         # get the list of items we want
-    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Systems")
+    df_filter = pd.read_excel(output_csv_folder_path + 'control\\MDR_LOADING.xlsx',sheetname="Mappings")
     df_filter = df_filter[df_filter["Status"].str.upper() == "Open".upper()]
 
-    entity_names_list = df_filter["System Name"]
+    entity_names_list_source = df_filter["Source System Name"]
+    entity_names_list_target = df_filter["Target System Name"]
 
-    print df_filter.head()
+    print df_filter
 
-    df_load = df[df["Source System Name"].isin(entity_names_list) & df["Target System Name"].isin(entity_names_list)]
+    df_load = df[df["Source System Name"].isin(entity_names_list_source) & df["Target System Name"].isin(entity_names_list_target)]
+
+    df_mappings_prev = getPreviouslyLoadedMappings([1])
 
     # write to a csv file - that is ready for MDR loading
-    df_load.to_csv(output_csv_folder_path + "loading\\BTP_MDR_Mappings_Load_"+str(load_batch_number)+".csv", sep=",", header=True, index=None,columns=columns_mappings_csv)
+    load_file_name = output_csv_folder_path + "loading\\BTP_MDR_Mappings_Load_"+str(load_batch_number)+".csv"
+    df_load.to_csv(load_file_name, sep=",", header=True, index=None,columns=columns_mappings_csv)
+    print "Load File Generated: {}".format(load_file_name)
 
 def getSharepointList_Totals_From_Sharepoint_AllPhases():
     totals_dict = {}
@@ -1191,7 +1279,6 @@ def sendSharepointListTotals_To_CSV_File():
     df.sort_values(by=['DisplayOrder'],inplace=True)
 
     df.to_csv(output_csv_folder_path + "Sharepoint_Rows_Phase_2_Total.csv", sep=",", header=True, index=None)
-
 
 def getSharepointListTotals_From_CSV_File(phase):
     totals_dict = {"Entity Name":"-","Total":"-","DisplayOrder":"1"}
@@ -1328,16 +1415,16 @@ buidObjects(GP_PHASE_NO)
 buildMapings(GP_PHASE_NO)
 
 
-#check and remove duplicates
-#checkPhase1_2_Duplicates()
+#check and remove duplicates between Phase 1 and Phase 2 - Should be called before getObjectsfor loading()
+checkPhase1_2_Duplicates()
 
 #check if the attributes in the mapping sheet has been defined in the object sheet.
 #if the mapping attributes are not in objects - the MDR loading will fail.
-#checkAttributes()
-
+checkAttributes()
+checkAttributesByJoin('left')
 #extract Objects & Mappings for Dataloading
-#getObjectsForLoad(1)
-#getMappingsForLoad(1)
+getObjectsForLoad(4)
+getMappingsForLoad(4)
 
 ###Testing
 # getObjectsByPhase(list_name_bt_icc_xsd_fields,GP_PHASE_NO)
@@ -1353,7 +1440,7 @@ buildMapings(GP_PHASE_NO)
 
 #Match Mapping_IFS_XSD (from IFS) with Mapping_XSD_LDM (from Avaloq report)
     #Takes more time as it matches each of the XSD field from IFS with a possible value from Avaloq. So run this only when needed
-#MatchXSD()
+# MatchXSD()
 
 
 

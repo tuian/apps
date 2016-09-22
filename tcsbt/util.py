@@ -13,6 +13,7 @@ GV_PASSWORD = base64.b64decode("VENTIzIzMDU=")
 GV_OUTPUT_FOLDER = "C:/apps/apps/tcsbt/Data/output/"
 GV_INPUT_FOLDER = "C:/apps/apps/tcsbt/Data/input/"
 GV_INPUT_FILE = "RESOURCE_TEAM_MAPPING.xlsx"
+GV_INPUT_CURRENT_MONTH = "SEP"
 
 def getSharepointURL():
     return GV_SHAREPOINT_URL

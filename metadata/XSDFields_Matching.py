@@ -11,9 +11,26 @@ Join by Attribute Name
 
 Additional validation:
 Clean the XSD Fields from IFS Documents before comparison
+Performance Tuning:
+Improved the performance from ~20 mins to approx 3 mins, aftering moving the ABS Fields to a global cache.
+ Initially was doing a nasty io operation in the for loop (reading the ABS fields from excel sheet each time)
+ Thanks to PycallGraph module that helped to profile the code and understand the operations vs time.
+
+From: C:\Python27\Scripts\
+C:\Python27\python pycallgraph -v --max-depth 1 graphviz --output-file=XSDFields_Matching_22_09_1125.png -- C:\apps\apps\metadata\XSDFields_Matching.py
+
+
 '''
 
 import pandas as pd
+import time
+from mdr_util import *
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+import cProfile
+import re
+from pycallgraph import PyCallGraph,Config,GlobbingFilter
+from pycallgraph.output import GraphvizOutput
 
 def columnValues():
     #list = ["BTFG$UI_BP.BP","BTFG$UI_BP_LIST.ALL#CUSTR"]
@@ -32,6 +49,32 @@ def columnValues():
 
     #print list
     return list
+def columnValuesWithXSD(column_name):
+    print "Setting ABS Fields in Global Cache: {}".format(column_name)
+    #column_name should be
+        #Entity Name
+        #Attribute Name
+
+    #list = ["BTFG$UI_BP.BP","BTFG$UI_BP_LIST.ALL#CUSTR"]
+
+    csv_folder_path_Avaloq = "C:\\MDR\\Data\\Repository\\CSV_Sharepoint_Output\\"
+    csv_filename_2 = "ABS_Fields.xlsx"
+
+    df = pd.read_excel(csv_folder_path_Avaloq + csv_filename_2, sheetname="Sheet1")
+
+    # for i in range(0, len(df)):
+    #     # split the value by $ delimiter to get the LDM Object and LDM Field
+    #     if (".XSD" in str(df.loc[i, "Source Name"])):
+    #         df.loc[i, "Source Name"] = str(df.loc[i, "Source Name"]).replace(".XSD", "")
+
+    #list = set(df["Entity Name"])
+    list = set(df[column_name])
+
+    #print list
+    return list
+
+GV_ABS_ENTITIES   = columnValuesWithXSD("Entity Name")
+GV_ABS_ATTRIBUTES = columnValuesWithXSD("Attribute Name")
 
 def getIFSXSDFields():
 
@@ -214,6 +257,139 @@ def mergeXSDFields(join_type):
     # print "IFS XSDs", len(set(df1["Entity Name"]))
     # print "Avaloq XSDs", len(set(df2["Entity Name"]))
 
+def setLookupRange():
+    entities_list = []
+    pass
+
+
+def getLookupRange_Entities():
+    entities_list = []
+
+    return entities_list
+
+def getLookupRange_Attributes():
+    attributes_list = []
+
+    return attributes_list
+
+
+def getMatchingXSD_By_MatchPercent(row,p,input_column_name,lookup_field_type):
+    #match_percentage=88
+    match_percentage = p
+
+    #input_string = row["Target Entity Name With XSD"]
+    input_string = row[input_column_name]
+
+    if input_string ==None: input_string = 'nan'
+
+    # print "===Entering getMatchingXSD ==="
+    # print "Input value:",input_string
+
+    if ((input_string <> 'nan')):
+
+        if(lookup_field_type=="E"):
+            matching_xsd_values = process.extractOne(input_string,choices=GV_ABS_ENTITIES,score_cutoff=match_percentage)
+
+        if (lookup_field_type == "A"):
+            matching_xsd_values = process.extractOne(input_string, choices=GV_ABS_ATTRIBUTES, score_cutoff=match_percentage)
+
+        #matching_xsd_values = "Fuzzy"
+
+        if matching_xsd_values == None:
+            #print "Process Output is None"
+            return 'No Match'
+
+        if matching_xsd_values <> None:
+            #return list_of_XSDs[matching_xsd_values[0]]
+            # print "Process Value:", matching_xsd_values
+            # print type(matching_xsd_values)
+
+            # print "Return Value:",matching_xsd_values[0]
+            # print type(str(matching_xsd_values[0]))
+            if (matching_xsd_values[1] ==100): return "Exact Match"
+            if(matching_xsd_values[1] >= match_percentage):
+                #print "===Exiting getMatchingXSD ==="
+                #return "Partial Match: {} with {}% match".format(matching_xsd_values[0], matching_xsd_values[1])
+                return "{}".format(matching_xsd_values[0])
+            else:
+                # print "===Exiting getMatchingXSD ==="
+                return 'Partial Match - Below Control Value {}%, Returned: {} with {}% match'.format(match_percentage, matching_xsd_values[0], matching_xsd_values[1])
+
+    # print 'No Match'
+    # print "===Exiting getMatchingXSD ==="
+    return 'No Match'
+def getMatchingXSD_90(row):
+    match_percentage=90
+    input_string = row["Target Entity Name With XSD"]
+    if input_string ==None: input_string = 'nan'
+
+    # print "===Entering getMatchingXSD ==="
+    # print "Input value:",input_string
+
+    if ((input_string <> 'nan')):
+        matching_xsd_values = process.extractOne(input_string,choices=columnValuesWithXSD("Target Entity Name With XSD"),score_cutoff=match_percentage)
+        #matching_xsd_values = "Fuzzy"
+
+        if matching_xsd_values == None:
+            #print "Process Output is None"
+            return 'No Match'
+
+        if matching_xsd_values <> None:
+            #return list_of_XSDs[matching_xsd_values[0]]
+            # print "Process Value:", matching_xsd_values
+            # print type(matching_xsd_values)
+
+            # print "Return Value:",matching_xsd_values[0]
+            # print type(str(matching_xsd_values[0]))
+            if (matching_xsd_values[1] ==100): return "Exact Match"
+            if(matching_xsd_values[1] >= match_percentage):
+                #print "===Exiting getMatchingXSD ==="
+                #return "Partial Match: {} with {}% match".format(matching_xsd_values[0], matching_xsd_values[1])
+                return "{}".format(matching_xsd_values[0])
+            else:
+                # print "===Exiting getMatchingXSD ==="
+                return 'Partial Match - Below Control Value {}%, Returned: {} with {}% match'.format(match_percentage, matching_xsd_values[0], matching_xsd_values[1])
+
+    # print 'No Match'
+    # print "===Exiting getMatchingXSD ==="
+    return 'No Match'
+def getMatchingXSD_By_MatchPercentage(input_string):
+    match_percentage=95
+    #match_percentage= int(match_percentage_list[0])
+    #input_string = row["Target Entity Name With XSD"]
+
+    if input_string ==None: input_string = 'nan'
+
+    # print "===Entering getMatchingXSD ==="
+    # print "Input value:",input_string
+
+    if ((input_string <> 'nan')):
+        matching_xsd_values = process.extractOne(input_string,choices=columnValuesWithXSD("Target Entity Name With XSD"),score_cutoff=match_percentage)
+        #matching_xsd_values = "Fuzzy"
+
+        if matching_xsd_values == None:
+            #print "Process Output is None"
+            return 'No Match'
+
+        if matching_xsd_values <> None:
+            #return list_of_XSDs[matching_xsd_values[0]]
+            # print "Process Value:", matching_xsd_values
+            # print type(matching_xsd_values)
+
+            # print "Return Value:",matching_xsd_values[0]
+            # print type(str(matching_xsd_values[0]))
+            if (matching_xsd_values[1] ==100): return "Exact Match"
+            if(matching_xsd_values[1] >= match_percentage):
+                #print "===Exiting getMatchingXSD ==="
+                #return "Partial Match: {} with {}% match".format(matching_xsd_values[0], matching_xsd_values[1])
+                return "{}".format(matching_xsd_values[0])
+            else:
+                # print "===Exiting getMatchingXSD ==="
+                return 'Partial Match - Below Control Value {}%, Returned: {} with {}% match'.format(match_percentage, matching_xsd_values[0], matching_xsd_values[1])
+
+    # print 'No Match'
+    # print "===Exiting getMatchingXSD ==="
+    return 'No Match'
 
 #mergeXSDFields('left')
 #columnValues()
@@ -237,7 +413,319 @@ def getSeries(input_filename,input_sheet_name,column_name,output_filename):
 
     return list(column_values)
 
+def getXSDFields_FromAvaloReport_Delta():
+    csv_folder_path_Avaloq_input = "C:\\MDR\\Data\\Avaloq_Report_Export\\Input\\"
+    csv_folder_path_Avaloq = "C:\\MDR\\Data\\Avaloq_Report_Export\\Output\\"
+    input_filename_1 = "LDM_Flat_Report_1_10_09_2016.xlsx"
+    input_filename_2 = "LDM_Flat_Report_2_15_09_2016.xlsx"
+    input_filename_3 = "LDM_Flat_Report_3_19_09_2016.xlsx"
+
+    required_columns = ["Interface Name","Source Name","Element Name"]
+    output_filename = "ABS_LDM_DELTA_19_09.xlsx"
+    output_filename_duplicates = "ABS_LDM_DELTA_19_09_Dup.xlsx"
 
 
-getSeries(csv_folder_path_Avaloq+input_filename,"Flat Layout","Source Name",csv_folder_path_Avaloq+output_filename)
+    df_1 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_1, sheetname="Flat_Report")
+    df_2 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_2, sheetname="Flat_Report")
+    df_3 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_3, sheetname="Flat_Report")
 
+    joined_df = pd.concat([df_1,df_2,df_3])
+    joined_df_duplicates = joined_df[joined_df.duplicated(subset=["Source Name","Element Name"],keep='first')]
+
+    joined_df.drop_duplicates(subset=["Source Name","Element Name"],keep=False,inplace=True)
+
+    #joined_df_duplicates.sort_values(by=["Source Name","Element Name"], inplace=True)
+    joined_df.sort_values(by=["Source Name", "Element Name"], inplace=True)
+
+    joined_df.to_excel(csv_folder_path_Avaloq + output_filename, columns=required_columns,index=False, header=True)
+    joined_df_duplicates.to_excel(csv_folder_path_Avaloq + output_filename_duplicates, columns=required_columns,index=False, header=True)
+
+    df_1.info()
+    df_2.info()
+    df_3.info()
+    joined_df.info()
+    joined_df_duplicates.info()
+
+
+
+def getABS_XSD_FieldsFromSharepoint():
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+    list_objects = []
+
+    rows = sharepointListRowsByListName("ABS_XSD_FIELDS")
+
+    for row in rows:
+        row_object = {}
+        row_object["System Name"] = str(row.System_Name).encode("utf-8")
+        row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
+        #row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
+        row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8").upper()
+        row_object["Attribute Name"] = str(row.Attribute_Name).upper()
+        row_object["Owner"] = str(row.Owner).encode("utf-8")
+        row_object["Parent"] = str(row.Parent).encode("utf-8")
+        row_object["Type"] = str(row.Entity_Type).encode("utf-8")
+        #row_object["Description"] = str(row.Description).encode("utf-8")
+        row_object["Description"] = cleanHTMLTags(row.Description)
+        row_object["URL"] = str(row.URL).encode("utf-8")
+        row_object["Document Name"] = str(row.Document_Name).encode("utf-8")
+        row_object["XPATH"] = cleanHTMLTags(row.XPATH)
+
+        # row_object[""] = row.
+        list_objects.append(row_object)
+
+    print "getABS_XSD_Fields('{}') | Count = {} ".format("Mapping_IFS_XSD", len(list_objects))
+
+    return list_objects
+
+def getIFS_XSD_FieldsFromSharepoint():
+
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+    list_objects = []
+
+    rows = sharepointListRowsByListName("Mapping_IFS_XSD")
+
+    for row in rows:
+        row_object = {}
+
+
+        row_object["Target Entity Name"] = str(row.Target_Entity_Name_Duplicate).upper()
+        row_object["Target Attribute Name"] = str(row.Target_Attribute_Name_Duplicate).upper()
+
+        row_object["Target Entity Name ABS"] = str(row.Target_Entity_Name_ABS_Object_D).upper()
+        row_object["Target Attribute Name ABS"] = str(row.Target_Attribute_Name_ABS_Object).upper()
+
+        row_object["MDR Phase"] = row.MDR_Phase
+
+        # row_object[""] = row.Title
+        list_objects.append(row_object)
+
+    print "getIFS_XSD_Fields('{}') | Count = {} ".format("Mapping_IFS_XSD",len(list_objects))
+
+    return list_objects
+
+def processABS_XSD_Fields():
+
+    output_csv_folder_path = "C:\\MDR\\Data\\Repository\\CSV_Sharepoint_Output\\"
+
+    columns_objects_csv = ["Entity Name", "Attribute Name"]
+
+    #columns_mappings_abs_csv = ["Target Entity Name", "Target Attribute Name", "Target Entity Name ABS","Target Attribute Name ABS"]
+
+    rows = getABS_XSD_FieldsFromSharepoint()
+    df = pd.DataFrame(rows, columns=columns_objects_csv)
+    df.sort_values(by=["Entity Name","Attribute Name"],inplace=True)
+    df.to_excel(output_csv_folder_path + "ABS_Fields.xlsx",header=True, index=None)
+    return df
+
+def processXSDAttribute(input_str):
+    #print "\t\t Original Attribute Name: "+ input_str
+
+    if (input_str[-1] == '/'):
+	    input_str = input_str[:-1]
+
+    pattern = re.compile(r'\s+')
+    input_str = re.sub(pattern, '', input_str)
+
+    if(re.match(r'.*(/val)$', input_str,re.IGNORECASE) ):
+		input_str = input_str[:-4]
+    if(re.match(r'.*(/key)$', input_str,re.IGNORECASE) ):
+		input_str = input_str[:-4]
+    if(re.match(r'.*(/annot/ctx/id)$',input_str,re.IGNORECASE)):
+        input_str = input_str[:-13]
+    output_str =  (input_str.split('/'))[-1]
+    #print "\t\t\t Extracted Attribute Name: " + output_str
+    return output_str
+
+def getLastElement(input_string):
+    output_string = input_string
+    print "Input =",input_string
+
+
+    print "Output=",output_string
+    return output_string
+
+
+def processIFS_XSD_Fields():
+
+    output_csv_folder_path = "C:\\MDR\\Data\\Repository\\CSV_Sharepoint_Output\\"
+
+    columns_objects_csv = ["Target Entity Name", "Target Attribute Name","Target Entity Name ABS", "Target Attribute Name ABS","MDR Phase"]
+
+    #columns_mappings_abs_csv = ["Target Entity Name", "Target Attribute Name", "Target Entity Name ABS","Target Attribute Name ABS"]
+
+    rows = getIFS_XSD_FieldsFromSharepoint()
+    df = pd.DataFrame(rows, columns=columns_objects_csv)
+    df = df[((df["Target Entity Name"]) <> '') & ( (df["Target Attribute Name"]) <> '')]
+    df.sort_values(by=["Target Entity Name","Target Attribute Name"],inplace=True)
+    df.insert(1, "Target Entity Name With XSD", (df["Target Entity Name"] + ".XSD"))
+    df.insert(3, "Target Attribute Name Last", "")
+
+    df = df.reset_index();  # df is a dataframe
+
+    for i in range(0, len(df)):
+        #print "For", df.loc[i, 'Target Attribute Name']
+        if((df.loc[i, 'Target Attribute Name']) <> ''):
+            df.loc[i, "Target Attribute Name Last"] = processXSDAttribute(df.loc[i, "Target Attribute Name"])
+            #print "If", df.loc[i, 'Target Attribute Name']
+            #df.loc[i,"Target Attribute Name Last"] = getLastElement(str(df.loc[i,"Target Attribute Name"]))
+
+
+    df.to_excel(output_csv_folder_path + "XSD_Fields.xlsx",header=True, index=None)
+    return df
+
+def processMatching(join_how):
+    output_folder_path = "C:\\MDR\\Data\\Repository\\CSV_Sharepoint_Output\\"
+    output_filename = "XSD_Matching.xlsx"
+    required_columns_level_all = ["Target Entity Name","Target Entity Name With XSD", "Target Attribute Name","Target Attribute Name Last", "Target Entity Name ABS","Target Attribute Name ABS","MDR Phase"]
+    required_columns_level_1 = ["Target Entity Name","Target Entity Name With XSD", "Target Attribute Name", "Target Entity Name ABS","Target Attribute Name ABS"]
+    required_columns_level_2 = ["Target Entity Name", "Target Entity Name With XSD", "Target Attribute Name",
+                        "Target Attribute Name Last", "Target Entity Name ABS", "Target Attribute Name ABS"]
+
+    merge_left_by_level_1 = ["Target Entity Name With XSD", "Target Attribute Name"]
+    merge_left_by_level_2 = ["Target Entity Name With XSD", "Target Attribute Name Last"]
+
+    merge_right_by = ["Entity Name", "Attribute Name"]
+
+    ifs_xsd_fields = processIFS_XSD_Fields()
+    abs_xsd_fields = processABS_XSD_Fields()
+
+    merged_df_level_1 = pd.merge(left=ifs_xsd_fields,right=abs_xsd_fields,left_on=merge_left_by_level_1,right_on=merge_right_by,how=join_how,sort=True)
+    merged_df_level_1 = merged_df_level_1[merged_df_level_1["Target Attribute Name ABS"] == ""]
+
+    merged_df_level_2 = pd.merge(left=ifs_xsd_fields, right=abs_xsd_fields, left_on=merge_left_by_level_2,right_on=merge_right_by, how=join_how, sort=True)
+    merged_df_level_2 = merged_df_level_2[merged_df_level_2["Target Attribute Name ABS"] == ""]
+
+    merged = pd.concat([merged_df_level_1,merged_df_level_2])
+
+    merged.drop_duplicates(subset=["Target Entity Name","Target Attribute Name"],keep=False,inplace=True)
+
+
+    writer = pd.ExcelWriter(output_folder_path + output_filename)
+    #Sheet 1
+    merged_df_level_1.to_excel(writer, sheet_name="Entity Name With XSD", columns=required_columns_level_1, index=False)
+    # Sheet 2
+    merged.to_excel(writer, sheet_name="Attribute Name Last Element", columns=required_columns_level_2, index=False)
+
+    merged_no_match = pd.concat([ifs_xsd_fields,merged_df_level_1,merged_df_level_2])
+    merged_no_match.drop_duplicates(subset=["Target Entity Name", "Target Attribute Name"], keep=False, inplace=True)
+    merged_no_match = merged_no_match[((merged_no_match["Target Entity Name ABS"]) == '') | ((merged_no_match["Target Attribute Name ABS"]) == '')]
+    merged_no_match.to_excel(writer, sheet_name="No Match Yet XSD Fields", columns=required_columns_level_all, index=False)
+
+    #ifs_xsd_fields.reset_index()
+
+    ################### Entity Level Matching##############################
+    print "Processing Entity Matching"
+    ifs_xsds = ifs_xsd_fields
+    ifs_xsds.drop_duplicates(subset=["Target Entity Name With XSD"], keep='first', inplace=True)
+
+    abs_xsds = abs_xsd_fields
+    abs_xsds.drop_duplicates(subset=["Entity Name"], keep='first', inplace=True)
+
+    xsd_merge = pd.merge(left=ifs_xsds, right=abs_xsds, left_on=["Target Entity Name With XSD"],
+                         right_on=["Entity Name"], how='outer',sort=True)
+
+    # Text Match Percentage
+    P1 = 88
+    P2 = 90
+    P3 = 95
+
+    xsd_merge.insert(2,"FuzzyWuzzy_"+str(P1), "")
+    xsd_merge.insert(3,"FuzzyWuzzy_"+str(P2), "")
+    xsd_merge.insert(4,"FuzzyWuzzy_"+str(P3), "")
+
+    print "\t\t Doing XSD Entity Matching [IFS vs ABS] - Using Fuzzing Logic: {}%, {}%, {}% thresholds".format(P1,P2,P2)
+    xsd_merge["FuzzyWuzzy_"+str(P1)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent,axis=1,p=P1,input_column_name="Target Entity Name With XSD",lookup_field_type="E")
+    # xsd_merge["FuzzyWuzzy_"+str(P2)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P2,input_column_name="Target Entity Name With XSD",lookup_column_name="Entity Name")
+    # xsd_merge["FuzzyWuzzy_"+str(P3)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent, axis=1, p=P3,input_column_name="Target Entity Name With XSD",lookup_column_name="Entity Name")
+
+    # #xsd_merge["FuzzyWuzzy_3"] = map(getMatchingXSD_By_MatchPercentage,xsd_merge["Target Entity Name With XSD"])
+
+    xsd_merge = xsd_merge[xsd_merge["FuzzyWuzzy_"+str(P1)] <> 'Exact Match']
+    xsd_merge.rename(columns={"Target Entity Name With XSD": "IFS_XSD_NAME","Entity Name": "Avaloq_XSD_NAME"}, inplace=True)
+    xsd_merge.to_excel(writer, sheet_name="XSD Match", columns=["IFS_XSD_NAME","Avaloq_XSD_NAME","FuzzyWuzzy_"+str(P1),"FuzzyWuzzy_"+str(P2),"FuzzyWuzzy_"+str(P3)], index=False)
+
+    #############Attribute Level Matching##########################
+    print "Processing Attributes Matching"
+    ifs_xsd_attributes = processIFS_XSD_Fields()
+    ifs_xsd_attributes.drop_duplicates(subset=["Target Entity Name With XSD","Target Attribute Name"], keep='first', inplace=True)
+    # ifs_xsd_attributes.info()
+
+    abs_xsd_attributes = processABS_XSD_Fields()
+    abs_xsd_attributes.drop_duplicates(subset=["Entity Name","Attribute Name"], keep='first', inplace=True)
+    # abs_xsd_attributes.info()
+
+    xsd_merge_attributes = pd.merge(left=ifs_xsd_attributes, right=abs_xsd_attributes, left_on=["Target Entity Name With XSD","Target Attribute Name"],
+                         right_on=["Entity Name","Attribute Name"], how='left', sort=True)
+
+    # xsd_merge_attributes.info()
+
+    xsd_merge_attributes.insert(2,"FuzzyWuzzy_"+str(P1), "")
+    xsd_merge_attributes.insert(3,"FuzzyWuzzy_"+str(P2), "")
+    xsd_merge_attributes.insert(4,"FuzzyWuzzy_"+str(P3), "")
+
+    print "\t\t Doing XSD Attribute Matching [IFS vs ABS] - Using Fuzzing Logic: {}%, {}%, {}% thresholds".format(P1,P2,P2)
+    xsd_merge_attributes["FuzzyWuzzy_"+str(P1)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent,axis=1,p=P1,input_column_name="Target Attribute Name",lookup_field_type="A")
+    # xsd_merge_attributes["FuzzyWuzzy_"+str(P2)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P2,input_column_name="Target Attribute Name Last",lookup_column_name="Attribute Name")
+    # xsd_merge_attributes["FuzzyWuzzy_"+str(P3)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent, axis=1, p=P3,input_column_name="Target Attribute Name Last",lookup_column_name="Attribute Name")
+
+    xsd_merge_attributes.rename(columns={"Target Entity Name With XSD": "IFS_XSD_NAME", "Entity Name": "Avaloq_XSD_NAME"},inplace=True)
+
+    xsd_merge_attributes.to_excel(writer, sheet_name="XSD Attribute Match",
+                       columns=["IFS_XSD_NAME","Target Attribute Name","Target Attribute Name Last", "Avaloq_XSD_NAME","Attribute Name", "FuzzyWuzzy_" + str(P1), "FuzzyWuzzy_" + str(P2),
+                                "FuzzyWuzzy_" + str(P3)], index=False)
+
+    writer.save()
+
+
+# getABS_XSD_FieldsFromSharepoint()
+# getIFS_XSD_FieldsFromSharepoint()
+
+#getSeries(csv_folder_path_Avaloq+input_filename,"Flat Layout","Source Name",csv_folder_path_Avaloq+output_filename)
+
+#getXSDFields_FromAvaloReport_Delta()
+
+# processABS_XSD_Fields()
+# processIFS_XSD_Fields()
+
+#graphviz
+graphviz_output_folder = 'c:/apps/apps/graphviz/output/'
+graphviz = GraphvizOutput()
+graphviz.output_file = graphviz_output_folder+'XSD_Fields_Matching.png'
+config = Config()
+config.max_depth = 10
+config.trace_filter = GlobbingFilter(exclude=[
+    'pycallgraph.*',
+    'foo',
+])
+
+#pr = cProfile.Profile()
+start = time.time()
+localtime_start = time.asctime(time.localtime(start))
+localtime_end = time.asctime(time.localtime(start+1200))
+print "Start time: {}".format(localtime_start)
+print "ETA: 20 mins i.e. {} ".format(localtime_end)
+#pr.enable()
+#with PyCallGraph(output=graphviz,config=None):
+
+processMatching('inner')
+#pr.disable()
+
+end = time.time()
+print "Execution time: {} mins".format((end - start)/60)
+
+#print "cProfile Stats"
+#pr.print_stats(sort="calls")
+#getLastElement('repayment_frequency')
+# processXSDAttribute('repayment_frequency/key')
+# processXSDAttribute('repayment_frequency/val')
+# processXSDAttribute('/data')
+# processXSDAttribute('/data')
+# processXSDAttribute('/data/adhoc_fee')
+# processXSDAttribute('/data/adhoc_fee/book_kind_list')
+
+#columnValuesWithXSD()
+# getMatchingXSD('BTFG$UI_SCD_TRX_LIST.POS_TRX.XSD')
+# getMatchingXSD('BTFG$UI_SCD_TRX_LIST.POS_TRX')
+# getMatchingXSD('BTFG$UI_SCD_TRX_LIST')

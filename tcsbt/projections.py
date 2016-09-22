@@ -1,6 +1,7 @@
 from __future__ import division
 from util import *
 import pandas as pd
+from openpyxl import Workbook
 
 
 
@@ -64,8 +65,14 @@ def processProjections():
     df_sharepoint = pd.DataFrame(getProjectionDataFromSharepoint(),columns=required_columns_sharepoint)
     df_sharepoint["WON"] = df_sharepoint["WON"].astype(str)
     df_sharepoint = df_sharepoint[df_sharepoint["Portfolio_Manager"] == "Shan"]
-    df_sharepoint = df_sharepoint[df_sharepoint["Sep_Business_Days"] > 0]
+    df_sharepoint_Non_Billable = df_sharepoint[df_sharepoint["Portfolio_Manager"] == "Shan"]
+
+    df_sharepoint = df_sharepoint[(df_sharepoint["Sep_Business_Days"] > 0)]
     df_sharepoint.sort_values(by=["WON","Resource_Name"], inplace=True)
+
+    df_sharepoint_Non_Billable = df_sharepoint_Non_Billable[(df_sharepoint_Non_Billable["Sep_Business_Days"] == 0) | ((df_sharepoint_Non_Billable["Sep_Business_Days"]).isnull() )]
+    df_sharepoint_Non_Billable.sort_values(by=["WON","Resource_Name"], inplace=True)
+    df_sharepoint_Non_Billable["WON"] = df_sharepoint_Non_Billable["WON"].astype(str)
 
     print df_sharepoint
 
@@ -77,6 +84,12 @@ def processProjections():
     print df_resource_team
 
     df = pd.merge(left=df_sharepoint,right=df_resource_team,left_on=["WON","Resource_Name"],right_on=["WON","Resource_Name"],how='left')
+    df_non_billable = pd.merge(left=df_sharepoint_Non_Billable,right=df_resource_team,left_on=["WON","Resource_Name"],right_on=["WON","Resource_Name"],how='left')
+
+    df_non_billable_moved_from_onsite = df_non_billable[(((df_non_billable["Team_Name"]).astype(str) == "Offshored") | ((df_non_billable["Team_Name"]).astype(str) == "Released") | ((df_non_billable["Team_Name"]).astype(str) == "WON_Changed"))]
+    df_non_billable = df_non_billable[~(((df_non_billable["Team_Name"]).astype(str) == "Offshored") | ((df_non_billable["Team_Name"]).astype(str) == "Released")| ((df_non_billable["Team_Name"]).astype(str) == "WON_Changed"))]
+
+    #df_non_billable = df_non_billable[~(df_non_billable["Team_Name"] == "Offshored" | df_non_billable["Team_Name"] == "Released")]
 
     print "MERGED=",df.head()
 
@@ -110,7 +123,8 @@ def processProjections():
     print "Location=Onshore", df[df["Location"]=='Onshore'].Sep_Business_Days.sum()
     print "Location=Offshore", df[df["Location"] == 'Offshore'].Sep_Business_Days.sum()
 
-    df_team_onsite_offshore = pd.DataFrame(df.groupby(["Team_Name", "Location"]).Resource_Name.count())
+    df_full_team = pd.concat([df,df_non_billable])
+    df_team_onsite_offshore = pd.DataFrame(df_full_team.groupby(["Team_Name", "Location"]).Resource_Name.count())
     print "Team_Name & Location=", df_team_onsite_offshore
 
 
@@ -156,13 +170,48 @@ def processProjections():
 
     df_stats = pd.DataFrame(stats_list)
 
+    #xlsxwriter,openpyxl
+    writer = pd.ExcelWriter(GV_OUTPUT_FOLDER+"Projection_Data_"+GV_INPUT_CURRENT_MONTH+".xlsx",engine="xlsxwriter")
 
-    writer = pd.ExcelWriter(GV_OUTPUT_FOLDER+"Projection_Data.xlsx")
-    df.to_excel(writer,sheet_name="Projection_Data",columns=required_columns_projection,index=False)
+    df.to_excel(writer,sheet_name="Projection_Data_Billable",columns=required_columns_projection,index=False)
+    df_non_billable.to_excel(writer, sheet_name="Projection_Data_Non_Billable", columns=required_columns_projection, index=False)
+    df_non_billable_moved_from_onsite.to_excel(writer, sheet_name="Resource_Movements", columns=required_columns_projection, index=False)
     df_stats.to_excel(writer,sheet_name="Statistics",columns=required_columns_stats,index=False)
-    df_groupby_WON_COUNT.to_excel(writer,sheet_name="Resource Count - By WON",index=True)
-    df_groupby_WON_SUM.to_excel(writer, sheet_name="Billable Cost - By WON", index=True)
-    df_team_onsite_offshore.to_excel(writer, sheet_name="Team Split", index=True)
-    #df = pd.read_json(rows)
+    df_groupby_WON_COUNT.to_excel(writer,sheet_name="Resource_Count_By_WON",index=True)
+    df_groupby_WON_SUM.to_excel(writer, sheet_name="Billable_Cost_By_WON", index=True)
+    df_team_onsite_offshore.to_excel(writer, sheet_name="Team_Split", index=True)
+
+    #workbook = writer.book
+
+    Projection_Data_Billable = writer.sheets['Projection_Data_Billable']
+    Projection_Data_Non_Billable = writer.sheets['Projection_Data_Non_Billable']
+    Resource_Movements = writer.sheets['Resource_Movements']
+    Statistics = writer.sheets['Statistics']
+    Resource_Count_By_WON = writer.sheets['Resource_Count_By_WON']
+    Billable_Cost_By_WON= writer.sheets['Billable_Cost_By_WON']
+    Team_Split = writer.sheets['Team_Split']
+
+    Projection_Data_Billable.set_column('B:D', 30)
+    Projection_Data_Billable.set_column('E:F', 20)
+    Projection_Data_Billable.set_column('G:J', 20)
+
+    Projection_Data_Non_Billable.set_column('B:D', 30)
+    Projection_Data_Non_Billable.set_column('E:J', 20)
+
+    Resource_Movements.set_column('B:D', 30)
+    Resource_Movements.set_column('E:F', 20)
+    Resource_Movements.set_column('G:J', 20)
+
+    Statistics.set_column('A:A', 50)
+    Statistics.set_column('B:B', 20)
+
+    Resource_Count_By_WON.set_column('A:A', 15)
+    Resource_Count_By_WON.set_column('B:B', 20)
+
+    Billable_Cost_By_WON.set_column('A:E', 25)
+    Team_Split.set_column('A:E', 25)
+
+
+    writer.save()
 
 processProjections()
