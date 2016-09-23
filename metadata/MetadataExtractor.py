@@ -57,6 +57,24 @@ def getURL(url_object):
 
 totals_list_objects_global = []
 
+def getBatchDetails(status):
+    list_batch_no = []
+
+    folder = "C:/MDR/Data/Repository/CSV_Sharepoint_Output/control/"
+
+    df = pd.read_excel(folder + 'MDR_LOADING.xlsx', sheetname="Batch_Info")
+    df = df[df["Status"].str.upper() == status.upper()]
+    list_batch_no = df["Batch No"]
+    #print list_batch_no
+    #print "Batch No [{}] = {}".format(status,list(list_batch_no))
+
+    return list(list_batch_no)
+
+def getBatchDetails_WIP():
+    current_batch_no = getBatchDetails("WIP")[0]
+    #print "Batch No for [WIP] = {}".format(current_batch_no)
+    return current_batch_no
+
 def setTotal(list_name,total,displayOrder):
     #create a temp object
     totals_dict = {}
@@ -455,8 +473,8 @@ def getObject_LDMMaster(list_name,mdr_phase_no):
     for row in rows:
         if ((row.MDR_x0020_Release_x0020_Period).upper() == mdr_phase_no.upper()):
             row_object = {}
-            row_object["System Name"] = "ABS Dev"
-            row_object["Instance Name"] = "Default"
+            row_object["System Name"] = row.System_Name #"ABS Dev"
+            row_object["Instance Name"] = row.Instance_Name #"Default"
             row_object["Entity Name"] = str(row.Title).encode("utf-8").upper()
             row_object["Attribute Name"] = ""
             row_object["Owner"] = ""
@@ -483,8 +501,8 @@ def getObject_LDMFields(list_name,mdr_phase_no):
     for row in rows:
         if ((row.MDR_Phase).upper() == mdr_phase_no.upper()):
             row_object = {}
-            row_object["System Name"] = "ABS Dev"
-            row_object["Instance Name"] = "Default"
+            row_object["System Name"] = row.System_Name #"ABS Dev"
+            row_object["Instance Name"] = row.Instance_Name #"Default"
             row_object["Entity Name"] = row.Entity_Name.upper()
             row_object["Attribute Name"] = row.Attribute_Name.upper()
             row_object["Owner"] = row.Owner
@@ -869,6 +887,8 @@ def buidObjects(phase):
     df_gesb_ifs = pd.DataFrame(row_objects_gesb_ifs, columns=columns_objects_csv)
     df_gesb_ifs.to_csv(output_csv_folder_path + "Objects_gesb_ifs.csv", sep=",", header=True, index=None)
 
+    # control what objects you want. Edit the df_frames[] list below
+
     df_frames = [df_ux,df_vm,df_ifs,df_xsd_from_abs_all_phases,df_ldm,df_bticc_xsd,df_gesb_ifs]
     df = pd.concat(df_frames)
 
@@ -1125,13 +1145,13 @@ def checkAttributesByJoin(join_type):
 
     print "Source Attribute Count is:",len(df_mappings)
     df_mappings_s_missing = pd.merge(left=df_mappings,right=df_objects,left_on=["Source Entity Name","Source Attribute Name"],right_on=["Entity Name","Attribute Name"],how=join_type)
-    df_mappings_s_missing_count = df_mappings_s_missing[(df_mappings_s_missing["Entity Name"] == '') & (df_mappings_s_missing["Attribute Name"] == '')]
+    df_mappings_s_missing_count = df_mappings_s_missing[(df_mappings_s_missing["Entity Name"].isnull() ) & (df_mappings_s_missing["Attribute Name"].isnull())]
     #df_mappings_s_missing = df_mappings[~df_mappings["Source Attribute Name"].isin(df_objects["Attribute Name"])]
     #print df_mappings_s_missing["Source Attribute Name"]
     print "Source Attributes Join Row is:", len(df_mappings_s_missing)
     print "Source Attributes Join Missing count is:",len(df_mappings_s_missing_count)
-
-    df_mappings_s_missing.to_csv(output_csv_folder_path + "Mapping_Fields_Missing_S_E_A.csv", sep=",")
+    df_mappings_s_missing = df_mappings_s_missing[(df_mappings_s_missing["Entity Name"].isnull()) & (df_mappings_s_missing["Attribute Name"].isnull())]
+    df_mappings_s_missing.to_csv(output_csv_folder_path + "Mapping_Fields_Missing_S_E_A.csv", sep=",",columns=["Source System Name","Source Instance Name","Source Entity Name","Source Attribute Name"],index=None)
     '''
     for row in range(1,len(df_mappings)):
        #print df_mappings.loc[row, "Source Attribute Name"]
@@ -1148,22 +1168,66 @@ def checkAttributesByJoin(join_type):
     #df_mappings_t_missing = df_mappings[~df_mappings["Target Attribute Name"].isin(df_objects["Attribute Name"])]
     #print df_mappings_t_missing["Target Attribute Name"]
     df_mappings_t_missing = pd.merge(left=df_mappings, right=df_objects,left_on=["Target Entity Name", "Target Attribute Name"],right_on=["Entity Name", "Attribute Name"], how=join_type)
-    df_mappings_t_missing_count = df_mappings_t_missing[(df_mappings_t_missing["Entity Name"] == '') & (df_mappings_t_missing["Attribute Name"] == '')]
+    df_mappings_t_missing_count = df_mappings_t_missing[(df_mappings_t_missing["Entity Name"].isnull()) & (df_mappings_t_missing["Attribute Name"].isnull())]
     print "Target Attributes Join Row is:", len(df_mappings_t_missing)
-    print "Target Attributes Join count is:", len(df_mappings_t_missing_count)
-    df_mappings_t_missing.to_csv(output_csv_folder_path+"Mapping_Fields_Missing_T_E_A.csv",sep=",")
+    print "Target Attributes Join Missing count is:", len(df_mappings_t_missing_count)
+    df_mappings_t_missing = df_mappings_t_missing[(df_mappings_t_missing["Entity Name"].isnull()) & (df_mappings_t_missing["Attribute Name"].isnull())]
+    df_mappings_t_missing.to_csv(output_csv_folder_path+"Mapping_Fields_Missing_T_E_A.csv",sep=",",columns=["Target System Name","Target Instance Name","Target Entity Name","Target Attribute Name"],index=None)
     '''
     for row in range(1,len(df_mappings)):
      print df_mappings.loc[row, "Target Attribute Name"]
     '''
-def getPreviouslyLoadedObjects(list):
-    pass
+def getPreviouslyLoadedResources(resouce_type,list):
+    if(len(list)>0):
+
+        folder = "C:/MDR/Data/Repository/CSV_Sharepoint_Output/loading/Batch_"
+            #     "+resouce_type+"_Load_"
+
+        list_dfs = []
+        for i in list:
+            file_name = folder+str(i)+"/BTP_MDR_"+resouce_type+"_Load_"+str(i)+".csv"
+            #print file_name
+            if(os.path.exists(file_name)):
+                #print "Found file:",file_name
+                #df.append(pd.read_csv(file_name,sep=","))
+                #df = pd.read_csv(file_name, sep=",")
+                #list_dfs.append(df)
+                pass
+            else:
+                # print "ERROR: \n FILE_NAME: {} does not exist. Please check and run the program.".format(file_name)
+                # print "Exiting the program."
+                exit("Check file: "+file_name)
+
+            df = pd.read_csv(file_name, sep=",")
+            list_dfs.append(df)
+
+
+        df_container = pd.concat(list_dfs)
+
+        '''
+        if(resouce_type == "Objects"):
+            df_container["Entity Name"]     = df_container["Entity Name"].str.upper()
+            df_container["Attribute Name"]  = df_container["Attribute Name"].str.upper()
+
+        if (resouce_type == "Mappings"):
+            df_container["Source Entity Name"]    = df_container["Source Entity Name"].str.upper()
+            df_container["Source Attribute Name"] = df_container["Source Attribute Name"].str.upper()
+            df_container["Target Entity Name"]    = df_container["Target Entity Name"].str.upper()
+            df_container["Target Attribute Name"] = df_container["Target Attribute Name"].str.upper()
+        '''
+
+        #print "Total {} items from previous load: {} ".format(resouce_type,len(df_container))
+
+        return df_container
+    else:
+        df_container = pd.DataFrame()
+        return df_container
 
 def getPreviouslyLoadedMappings(list):
 
     for i in list:
-        print "Hello {}".format(i)
-    pass
+        print "BTP_MDR_Mappings_Load_"+str(i)+".csv"
+
 
 def getObjectsForLoad(load_batch_number):
     print "\n####################   getObjectsForLoad({})  ####################\n".format(load_batch_number)
@@ -1173,6 +1237,7 @@ def getObjectsForLoad(load_batch_number):
     # read the Mapping file
     #df = pd.read_csv(output_csv_folder_path + 'Objects.csv', sep=",")
     df = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
+    df_count_full_set = len(df)
 
     # do the filtering
         # get the list of items we want
@@ -1183,16 +1248,42 @@ def getObjectsForLoad(load_batch_number):
     entity_names_list = df_filter["System Name"]
 
     print df_filter
+    ## previous load batch numbers
+    print "Objects [Phase 2 Full set] = {} ".format(df_count_full_set)
+    ## Batch 1 - lower case, so reloaded in Batch 4. Batch 2 and 3 - does not exist.
+    #df_objects_prev = getPreviouslyLoadedResources("Objects", [])
+    df_objects_prev = getPreviouslyLoadedResources("Objects", getBatchDetails("Completed"))
 
-    #df_load = df[df["Entity Name"].isin(entity_names_list)]
-    df_load = df[df["System Name"].isin(entity_names_list)]
+    print "Objects [Phase 2 Previously Loaded] = {} ".format(len(df_objects_prev))
+    ## concat Full set(df) and Previous sets (df_objects_prev)
+    ## drop duplicates - All (keep=False)
+    object_duplicated_by_columns = ["System Name", "Entity Name", "Attribute Name", "Type"]
+    #object_duplicated_by_columns = ["Entity Name", "Attribute Name","Type"]
 
-    df_objects_prev = getPreviouslyLoadedObjects([1])
+        #contacted dataframe
+    df_delta = pd.concat([df,df_objects_prev])
+
+        #cache duplicates
+    df_delta_duplicates = df_delta[df_delta.duplicated(subset=object_duplicated_by_columns, keep=False)]
+    print "Duplicates [All Phase 2] - [Phase 2.1] = {} ".format(len(df_delta_duplicates))
+        #drop duplicates
+    #df_delta_dropped = df_delta.drop_duplicates(subset=object_duplicated_by_columns, keep=False,inplace=True)
+    df_delta.drop_duplicates(subset=object_duplicated_by_columns, keep=False, inplace=True)
+    #df_delta.reset_index()
+    print "Objects Delta [All in Phase 2] - [Phase 1] - [Phase 2.1] = {} ".format(len(df_delta))
+
+    #use the Full set - Previous Load = For Loading
+
+        #filer by the load control settings
+    #df_load = df[df["System Name"].isin(entity_names_list)]
+    df_load = df_delta[df_delta["System Name"].isin(entity_names_list)]
+    #df_load = df_delta_dropped[df_delta_dropped["System Name"].isin(entity_names_list)]
 
     # write to a csv file - that is ready for MDR loading
     load_file_name = output_csv_folder_path + "loading\\BTP_MDR_Objects_Load_"+str(load_batch_number)+".csv"
     df_load.to_csv(load_file_name, sep=",", header=True, index=None,columns=columns_objects_csv)
-    print "Load File Generated: {}".format(load_file_name)
+    print "Objects For New Load (Batch {}) [Controlled] = {} ".format(load_batch_number, len(df_load))
+    print "\n\nLoad File Generated: {}".format(load_file_name)
 
 def getMappingsForLoad(load_batch_number):
     print "\n####################   getMappingsForLoad({})  ####################\n".format(load_batch_number)
@@ -1204,6 +1295,8 @@ def getMappingsForLoad(load_batch_number):
     # read the Mapping file
     #df = pd.read_csv(output_csv_folder_path + 'Mappings.csv', sep=",")
     df = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Mappings.csv', sep=",")
+    df_count_full_set = len(df)
+
     df.dropna(subset=["Target Attribute Name"],inplace=True)
     # do the filtering
         # get the list of items we want
@@ -1215,14 +1308,39 @@ def getMappingsForLoad(load_batch_number):
 
     print df_filter
 
-    df_load = df[df["Source System Name"].isin(entity_names_list_source) & df["Target System Name"].isin(entity_names_list_target)]
+    print "Mappings [Phase 2 Full set] = {} ".format(df_count_full_set)
+        ## Batch 1 - lower case, so reloaded in Batch 4. Batch 2 and 3 - does not exist.
+    #df_mappings_prev = getPreviouslyLoadedResources("Mappings", [])
+    df_mappings_prev = getPreviouslyLoadedResources("Mappings", getBatchDetails("Completed"))
+    print "Mappings [Phase 2 Previously Loaded] = {} ".format(len(df_mappings_prev))
 
-    df_mappings_prev = getPreviouslyLoadedMappings([1])
+    ## concat Full set(df) and Previous sets (df_objects_prev)
+    ## drop duplicates - All (keep=False)
+    mapping_duplicated_by_columns = ["Source Entity Name", "Source Attribute Name", "Target Entity Name","Target Attribute Name"]
+
+        #contacted dataframe
+    df_delta = pd.concat([df,df_mappings_prev])
+
+        #cache duplicates
+    df_delta_duplicates = df_delta[df_delta.duplicated(subset=mapping_duplicated_by_columns, keep=False)]
+    print "Duplicates [All Phase 2] - [Phase 2.1] = {} ".format(len(df_delta_duplicates))
+        #drop duplicates
+    df_delta.drop_duplicates(subset=mapping_duplicated_by_columns, keep=False,inplace=True)
+    print "Mappings Delta [All in Phase 2] - [Phase 1] - [Phase 2.1] = {} ".format(len(df_delta))
+
+
+    #use the Full set - Previous Load = For Loading
+
+        #filer by the load control settings
+
+    #df_load = df[df["Source System Name"].isin(entity_names_list_source) & df["Target System Name"].isin(entity_names_list_target)]
+    df_load = df_delta[df_delta["Source System Name"].isin(entity_names_list_source) & df_delta["Target System Name"].isin(entity_names_list_target)]
+    print "Mappings For New Load (Batch {}) [Controlled] = {} ".format(load_batch_number, len(df_load))
 
     # write to a csv file - that is ready for MDR loading
     load_file_name = output_csv_folder_path + "loading\\BTP_MDR_Mappings_Load_"+str(load_batch_number)+".csv"
     df_load.to_csv(load_file_name, sep=",", header=True, index=None,columns=columns_mappings_csv)
-    print "Load File Generated: {}".format(load_file_name)
+    print "\n\n Load File Generated: {}".format(load_file_name)
 
 def getSharepointList_Totals_From_Sharepoint_AllPhases():
     totals_dict = {}
@@ -1408,23 +1526,32 @@ def MatchXSD():
 
     df_mapping_ifs_xsd_subset.to_csv(output_csv_folder_path + "Mapping_ifs_xsd_all_subset.csv", sep=",", header=True, index=None)
 
-#extract Objects
+#######################START LOADING################################
+print "Batch status [Completed] = {}".format(getBatchDetails("Completed"))
+print "Batch status [WIP] = {}".format(getBatchDetails("WIP")[0])
+
+    #extract Objects
 buidObjects(GP_PHASE_NO)
 
-#extract Mappings
+    #extract Mappings
 buildMapings(GP_PHASE_NO)
 
-
-#check and remove duplicates between Phase 1 and Phase 2 - Should be called before getObjectsfor loading()
+    #check and remove duplicates between Phase 1 and Phase 2 - Should be called before getObjectsForLoad() and getMappingsForLoad()
+    #Output: BTP_Phase2_Objects.csv / BTP_Phase2_Mappings.csv
 checkPhase1_2_Duplicates()
 
-#check if the attributes in the mapping sheet has been defined in the object sheet.
-#if the mapping attributes are not in objects - the MDR loading will fail.
+#check if the attributes in the mapping sheet has been defined in the object sheet, as
+# if the mapping attributes are not in objects - the MDR loading will fail.
+    ##Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
 checkAttributes()
+
+    ##So, Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
 checkAttributesByJoin('left')
-#extract Objects & Mappings for Dataloading
-getObjectsForLoad(4)
-getMappingsForLoad(4)
+
+#extract Objects & Mappings for Dataloading based on the load control settings
+getObjectsForLoad(getBatchDetails("WIP")[0])
+getMappingsForLoad(getBatchDetails("WIP")[0])
+####################### END LOADING################################
 
 ###Testing
 # getObjectsByPhase(list_name_bt_icc_xsd_fields,GP_PHASE_NO)
@@ -1442,7 +1569,12 @@ getMappingsForLoad(4)
     #Takes more time as it matches each of the XSD field from IFS with a possible value from Avaloq. So run this only when needed
 # MatchXSD()
 
+### Get the previouslyloaded resources in Phase 2 i.e. 2.1, 2.2 etc (Batch)
+# getPreviouslyLoadedResources("Objects",[1])
+# getPreviouslyLoadedResources("Mappings",[1])
 
+
+#getPreviouslyLoadedMappings([1])
 
 #sharepointTotal_list = getSharepointListTotals_From_CSV_File(2)
 #sendSharepointListTotals_To_CSV_File()
@@ -1463,3 +1595,7 @@ getMappingsForLoad(4)
 
 #print sharepointTotal_df.loc[sharepointTotal_df['Total'] == sharepointTotal_df['Entity Name'] == "XSD Master"]
 #print sharepointTotal_df.get_value(sharepointTotal_df['Entity Name'] == 'XSD Master','Total')
+#getBatchDetails("Open")
+# print getBatchDetails("Completed")
+# print getBatchDetails("WIP")[0]
+#getBatchDetails_WIP()
