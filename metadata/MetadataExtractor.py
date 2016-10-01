@@ -1,5 +1,5 @@
 #encoding=utf8
-import sys
+import sys,time
 import csv
 import numpy as np
 import pandas as pd
@@ -64,6 +64,11 @@ def getBatchDetails(status):
 
     df = pd.read_excel(folder + 'MDR_LOADING.xlsx', sheetname="Batch_Info")
     df = df[df["Status"].str.upper() == status.upper()]
+
+    if(df.empty):
+        print("\nERROR: No Records Found for Status '{}'").format(status)
+        exit("Exiting the program. Check the Load Control input excel spreadsheet.")
+
     list_batch_no = df["Batch No"]
     #print list_batch_no
     #print "Batch No [{}] = {}".format(status,list(list_batch_no))
@@ -361,7 +366,9 @@ def getObjects(list_name):
         row_object["Attribute Name"] = str(row.Attribute_Name).upper()
         row_object["Owner"] = str(row.Owner).encode("utf-8")
         row_object["Parent"] = str(row.Parent).encode("utf-8")
+
         row_object["Type"] = str(row.Entity_Type).encode("utf-8")
+
         #row_object["Description"] = str(row.Description).encode("utf-8")
         row_object["Description"] = cleanHTMLTags(row.Description)
         row_object["URL"] = str(row.URL).encode("utf-8")
@@ -701,11 +708,11 @@ def getMapping_XSD_LDM(list_name,mdr_phase_no):
 
 
 
-            row_object["Attribute Description"] = row.Attribute_Description
+            row_object["Attribute Description"] = cleanHTMLTags(row.Attribute_Description)
             row_object["Business Rule"] = cleanHTMLTags(row.Business_Rule)
             row_object["Transformation_Mapping rule"] = cleanHTMLTags(row.Transformation_Mapping_Rule)
-            row_object["Comments"] = row.Comments
-            row_object["Mapping Name"] = row.Mapping_Name
+            row_object["Comments"] = cleanHTMLTags(row.Comments)
+            row_object["Mapping Name"] = cleanHTMLTags(row.Mapping_Name)
             row_object["Action"] = row.Action
             row_object["Last_Update_Date"] = row.Last_Update_Date
             row_object["Modified_By"] = row.Modified_By
@@ -787,11 +794,11 @@ def getMappingsByPhase(list_name,mdr_phase_no,xsd_from_abs_report_flag):
                 row_object["Target Entity Name"] = row.Target_Entity_Name_D.upper()
                 row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D).upper()
 
-            row_object["Attribute Description"] = row.Attribute_Description
-            row_object["Comments"] = row.Comments
+            row_object["Attribute Description"] = cleanHTMLTags(row.Attribute_Description)
+            row_object["Comments"] = cleanHTMLTags(row.Comments)
             row_object["Business Rule"] = cleanHTMLTags(row.Business_Rule)
             row_object["Transformation_Mapping rule"] = cleanHTMLTags(row.Transformation_Mapping_Rule)
-            row_object["Mapping Name"] = row.Mapping_Name
+            row_object["Mapping Name"] = cleanHTMLTags(row.Mapping_Name)
 
             row_object["Action"] = row.Action
             row_object["Last_Update_Date"] = row.Last_Update_Date
@@ -1114,6 +1121,11 @@ def checkAttributes():
     '''
 
 def checkAttributesByJoin(join_type):
+    '''
+
+    :param join_type:
+    :return:
+    '''
     print "\n####################   checkAttributesByJoin({})  ####################\n".format(join_type)
 
     input_excel_folder_path_phase1 = "C:\MDR\Data\Repository\Input\Phase1"
@@ -1335,6 +1347,10 @@ def getMappingsForLoad(load_batch_number):
 
     #df_load = df[df["Source System Name"].isin(entity_names_list_source) & df["Target System Name"].isin(entity_names_list_target)]
     df_load = df_delta[df_delta["Source System Name"].isin(entity_names_list_source) & df_delta["Target System Name"].isin(entity_names_list_target)]
+
+    # remove the mappings with blank Target Entity Name
+    df_load = df_load[df_load["Target Entity Name"].notnull()]
+
     print "Mappings For New Load (Batch {}) [Controlled] = {} ".format(load_batch_number, len(df_load))
 
     # write to a csv file - that is ready for MDR loading
@@ -1526,34 +1542,43 @@ def MatchXSD():
 
     df_mapping_ifs_xsd_subset.to_csv(output_csv_folder_path + "Mapping_ifs_xsd_all_subset.csv", sep=",", header=True, index=None)
 
-#######################START LOADING################################
-print "Batch status [Completed] = {}".format(getBatchDetails("Completed"))
-print "Batch status [WIP] = {}".format(getBatchDetails("WIP")[0])
+if __name__ == "__main__":
 
-    #extract Objects
-buidObjects(GP_PHASE_NO)
+    start = time.time()
+    localtime_start = time.asctime(time.localtime(start))
+    localtime_end = time.asctime(time.localtime(start + 1200))
+    print "Start time: {}".format(localtime_start)
+    print "ETA: 20 mins i.e. {} ".format(localtime_end)
 
-    #extract Mappings
-buildMapings(GP_PHASE_NO)
+    #######################START LOADING################################
+    print "Batch status 'Completed' = {}".format(getBatchDetails("Completed"))
+    print "Batch status 'WIP' = {}".format(getBatchDetails("WIP")[0])
 
-    #check and remove duplicates between Phase 1 and Phase 2 - Should be called before getObjectsForLoad() and getMappingsForLoad()
-    #Output: BTP_Phase2_Objects.csv / BTP_Phase2_Mappings.csv
-checkPhase1_2_Duplicates()
+        #extract Objects & Mappings for a given MDR Phase (i.e. Phase 1, Phase 2)
+    buidObjects(GP_PHASE_NO)
+    buildMapings(GP_PHASE_NO)
 
-#check if the attributes in the mapping sheet has been defined in the object sheet, as
-# if the mapping attributes are not in objects - the MDR loading will fail.
-    ##Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
-checkAttributes()
+        #check and remove duplicates between Phase 1 and Phase 2 - Should be called before getObjectsForLoad() and getMappingsForLoad()
+        #Output: BTP_Phase2_Objects.csv / BTP_Phase2_Mappings.csv
+    checkPhase1_2_Duplicates()
 
-    ##So, Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
-checkAttributesByJoin('left')
+    #check if the attributes in the mapping sheet has been defined in the object sheet, as
+    # if the mapping attributes are not in objects - the MDR loading will fail.
+        ##Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
+    checkAttributes()
 
-#extract Objects & Mappings for Dataloading based on the load control settings
-getObjectsForLoad(getBatchDetails("WIP")[0])
-getMappingsForLoad(getBatchDetails("WIP")[0])
-####################### END LOADING################################
+        ##So, Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
+    checkAttributesByJoin('left')
 
-###Testing
+    #extract Objects & Mappings for Dataloading based on the load control settings
+    getObjectsForLoad(getBatchDetails("WIP")[0])
+    getMappingsForLoad(getBatchDetails("WIP")[0])
+    ####################### END LOADING################################
+
+    end = time.time()
+    print "Execution time: {} mins".format((end - start) / 60)
+
+    ###Testing
 # getObjectsByPhase(list_name_bt_icc_xsd_fields,GP_PHASE_NO)
 # getObjectsByPhase(list_name_gesb_ifs_fields,GP_PHASE_NO)
 # getObjects(list_name_xsd_fields_abs)

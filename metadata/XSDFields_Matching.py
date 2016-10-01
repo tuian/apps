@@ -21,7 +21,7 @@ C:\Python27\python pycallgraph -v --max-depth 1 graphviz --output-file=XSDFields
 
 
 '''
-
+from __future__ import division
 import pandas as pd
 import time
 from mdr_util import *
@@ -31,6 +31,12 @@ import cProfile
 import re
 from pycallgraph import PyCallGraph,Config,GlobbingFilter
 from pycallgraph.output import GraphvizOutput
+def addRow(key,value):
+    object = {}
+    object["Key"] = key
+    object["Value"] = value
+
+    return object
 
 def columnValues():
     #list = ["BTFG$UI_BP.BP","BTFG$UI_BP_LIST.ALL#CUSTR"]
@@ -414,22 +420,30 @@ def getSeries(input_filename,input_sheet_name,column_name,output_filename):
     return list(column_values)
 
 def getXSDFields_FromAvaloReport_Delta():
-    csv_folder_path_Avaloq_input = "C:\\MDR\\Data\\Avaloq_Report_Export\\Input\\"
+    csv_folder_path_Avaloq_input = "C:\\MDR\\Data\\Avaloq_Report_Export\\Input\\LDM_Flat_Report\\"
     csv_folder_path_Avaloq = "C:\\MDR\\Data\\Avaloq_Report_Export\\Output\\"
     input_filename_1 = "LDM_Flat_Report_1_10_09_2016.xlsx"
     input_filename_2 = "LDM_Flat_Report_2_15_09_2016.xlsx"
     input_filename_3 = "LDM_Flat_Report_3_19_09_2016.xlsx"
+    input_filename_4 = "LDM_Flat_Report_4_23_09_2016.xlsx"
+    input_filename_5 = "LDM_Flat_Report_5_27_09_2016.xlsx"
 
     required_columns = ["Interface Name","Source Name","Element Name"]
-    output_filename = "ABS_LDM_DELTA_19_09.xlsx"
-    output_filename_duplicates = "ABS_LDM_DELTA_19_09_Dup.xlsx"
+    output_filename = "ABS_LDM_DELTA_27_09_2016.xlsx"
+    output_filename_duplicates = "ABS_LDM_DELTA_27_09_2016_Dup.xlsx"
 
 
     df_1 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_1, sheetname="Flat_Report")
     df_2 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_2, sheetname="Flat_Report")
     df_3 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_3, sheetname="Flat_Report")
+    df_4 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_4, sheetname="Flat_Report")
+    df_5 = pd.read_excel(csv_folder_path_Avaloq_input + input_filename_5, sheetname="Flat_Report")
 
-    joined_df = pd.concat([df_1,df_2,df_3])
+    joined_df = pd.concat([df_1,df_2,df_3,df_4,df_5])
+
+    joined_df["Source Name"] =  joined_df["Source Name"].str.upper()
+    joined_df["Element Name"] = joined_df["Element Name"].str.upper()
+
     joined_df_duplicates = joined_df[joined_df.duplicated(subset=["Source Name","Element Name"],keep='first')]
 
     joined_df.drop_duplicates(subset=["Source Name","Element Name"],keep=False,inplace=True)
@@ -443,10 +457,10 @@ def getXSDFields_FromAvaloReport_Delta():
     df_1.info()
     df_2.info()
     df_3.info()
+    df_4.info()
+    df_5.info()
     joined_df.info()
     joined_df_duplicates.info()
-
-
 
 def getABS_XSD_FieldsFromSharepoint():
     reload(sys)
@@ -575,7 +589,8 @@ def processIFS_XSD_Fields():
     df.to_excel(output_csv_folder_path + "XSD_Fields.xlsx",header=True, index=None)
     return df
 
-def processMatching(join_how):
+def processMatching(join_how,include_fuzzy_columns):
+
     output_folder_path = "C:\\MDR\\Data\\Repository\\CSV_Sharepoint_Output\\"
     output_filename = "XSD_Matching.xlsx"
     required_columns_level_all = ["Target Entity Name","Target Entity Name With XSD", "Target Attribute Name","Target Attribute Name Last", "Target Entity Name ABS","Target Attribute Name ABS","MDR Phase"]
@@ -590,10 +605,13 @@ def processMatching(join_how):
 
     ifs_xsd_fields = processIFS_XSD_Fields()
     abs_xsd_fields = processABS_XSD_Fields()
+    ifs_xsd_fields_unique = ifs_xsd_fields
 
+    #Straight Join Entity Name Attribute - Both Match
     merged_df_level_1 = pd.merge(left=ifs_xsd_fields,right=abs_xsd_fields,left_on=merge_left_by_level_1,right_on=merge_right_by,how=join_how,sort=True)
     merged_df_level_1 = merged_df_level_1[merged_df_level_1["Target Attribute Name ABS"] == ""]
 
+    # Modified Attribute Name (Last part) Join - Both Match
     merged_df_level_2 = pd.merge(left=ifs_xsd_fields, right=abs_xsd_fields, left_on=merge_left_by_level_2,right_on=merge_right_by, how=join_how, sort=True)
     merged_df_level_2 = merged_df_level_2[merged_df_level_2["Target Attribute Name ABS"] == ""]
 
@@ -603,20 +621,52 @@ def processMatching(join_how):
 
 
     writer = pd.ExcelWriter(output_folder_path + output_filename)
-    #Sheet 1
-    merged_df_level_1.to_excel(writer, sheet_name="Entity Name With XSD", columns=required_columns_level_1, index=False)
-    # Sheet 2
-    merged.to_excel(writer, sheet_name="Attribute Name Last Element", columns=required_columns_level_2, index=False)
 
-    merged_no_match = pd.concat([ifs_xsd_fields,merged_df_level_1,merged_df_level_2])
-    merged_no_match.drop_duplicates(subset=["Target Entity Name", "Target Attribute Name"], keep=False, inplace=True)
+    df_ifs_xsd_unique = pd.DataFrame(ifs_xsd_fields_unique, columns=required_columns_level_1)
+    df_ifs_xsd_unique.drop_duplicates(subset=["Target Entity Name","Target Attribute Name"],inplace=True,keep='first')
+    print "Unique Entities"
+    df_ifs_xsd_unique.to_excel(writer, sheet_name="IFS Unique XSD Fields", columns=required_columns_level_1, index=False)
+
+    #Sheet 1
+    merged_df_level_1.to_excel(writer, sheet_name="Entity_Name.XSD", columns=required_columns_level_1, index=False)
+    # Sheet 2
+    merged_df_level_2.to_excel(writer, sheet_name="Attribute_Name_Last_Element", columns=required_columns_level_2, index=False)
+
+    ################### Entity Counts##############################
+    print "Processing Entity Counts"
+    stats_list = []
+    #merged_df_level_1,merged_df_level_2
+    merged_no_match = pd.concat([ifs_xsd_fields])
+    merged_no_match.drop_duplicates(subset=["Target Entity Name", "Target Attribute Name"], keep='first', inplace=True)
+    merged_no_match.to_excel(writer, sheet_name="XSD_Fields_All", columns=required_columns_level_all,index=False)
+    xsd_fields_all = len(merged_no_match)
+    stats_list.append(addRow('XSD Fields - All',xsd_fields_all))
+    print "XSD Fields - All: {}".format(xsd_fields_all)
+
+    merged_no_match_xsd_match = merged_no_match[((merged_no_match["Target Entity Name ABS"]) <> '') & ((merged_no_match["Target Attribute Name ABS"]) <> '')]
+    merged_no_match_xsd_match.to_excel(writer, sheet_name="XSD_Fields_Match", columns=required_columns_level_all, index=False)
+    xsd_fields_match = len(merged_no_match_xsd_match)
+    stats_list.append(addRow('XSD Fields - Match', xsd_fields_match))
+    print "XSD Fields - Match: {}".format(xsd_fields_match)
+
     merged_no_match = merged_no_match[((merged_no_match["Target Entity Name ABS"]) == '') | ((merged_no_match["Target Attribute Name ABS"]) == '')]
-    merged_no_match.to_excel(writer, sheet_name="No Match Yet XSD Fields", columns=required_columns_level_all, index=False)
+    merged_no_match.to_excel(writer, sheet_name="XSD_Fields_No_Match", columns=required_columns_level_all, index=False)
+    xsd_fields_no_match = len(merged_no_match)
+    xsd_fields_match_per = round(xsd_fields_match/xsd_fields_all,2)*100
+    print "XSD Fields - No Match: {}".format(xsd_fields_no_match)
+    print "Percentage Match {}%".format(xsd_fields_match_per)
+    stats_list.append(addRow('XSD Fields - No Match', xsd_fields_no_match))
+    stats_list.append(addRow('XSD Fields - Match Percentage', str(xsd_fields_match_per) + "%"))
+
+
+    stats = pd.DataFrame(stats_list)
+    stats.to_excel(writer, sheet_name="Stats",index=False)
+
 
     #ifs_xsd_fields.reset_index()
 
-    ################### Entity Level Matching##############################
-    print "Processing Entity Matching"
+    ################### Entity Level Fuzzy Matching##############################
+    #print "Processing Entity Fuzzy Matching"
     ifs_xsds = ifs_xsd_fields
     ifs_xsds.drop_duplicates(subset=["Target Entity Name With XSD"], keep='first', inplace=True)
 
@@ -635,10 +685,11 @@ def processMatching(join_how):
     xsd_merge.insert(3,"FuzzyWuzzy_"+str(P2), "")
     xsd_merge.insert(4,"FuzzyWuzzy_"+str(P3), "")
 
-    print "\t\t Doing XSD Entity Matching [IFS vs ABS] - Using Fuzzing Logic: {}%, {}%, {}% thresholds".format(P1,P2,P2)
-    xsd_merge["FuzzyWuzzy_"+str(P1)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent,axis=1,p=P1,input_column_name="Target Entity Name With XSD",lookup_field_type="E")
-    # xsd_merge["FuzzyWuzzy_"+str(P2)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P2,input_column_name="Target Entity Name With XSD",lookup_column_name="Entity Name")
-    # xsd_merge["FuzzyWuzzy_"+str(P3)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent, axis=1, p=P3,input_column_name="Target Entity Name With XSD",lookup_column_name="Entity Name")
+    if(include_fuzzy_columns):
+        print "\t\t Doing XSD Entity Matching [IFS vs ABS] - Using Fuzzing Logic: {}%, {}%, {}% thresholds".format(P1,P2,P2)
+        xsd_merge["FuzzyWuzzy_"+str(P1)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent,axis=1,p=P1,input_column_name="Target Entity Name With XSD",lookup_field_type="E")
+        xsd_merge["FuzzyWuzzy_"+str(P2)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P2,input_column_name="Target Entity Name With XSD",lookup_field_type="E")
+        xsd_merge["FuzzyWuzzy_"+str(P3)] = xsd_merge.apply(getMatchingXSD_By_MatchPercent, axis=1, p=P3,input_column_name="Target Entity Name With XSD",lookup_field_type="E")
 
     # #xsd_merge["FuzzyWuzzy_3"] = map(getMatchingXSD_By_MatchPercentage,xsd_merge["Target Entity Name With XSD"])
 
@@ -646,8 +697,8 @@ def processMatching(join_how):
     xsd_merge.rename(columns={"Target Entity Name With XSD": "IFS_XSD_NAME","Entity Name": "Avaloq_XSD_NAME"}, inplace=True)
     xsd_merge.to_excel(writer, sheet_name="XSD Match", columns=["IFS_XSD_NAME","Avaloq_XSD_NAME","FuzzyWuzzy_"+str(P1),"FuzzyWuzzy_"+str(P2),"FuzzyWuzzy_"+str(P3)], index=False)
 
-    #############Attribute Level Matching##########################
-    print "Processing Attributes Matching"
+    #############Attribute Level Fuzzy Matching##########################
+    #print "Processing Attributes Fuzzy Matching"
     ifs_xsd_attributes = processIFS_XSD_Fields()
     ifs_xsd_attributes.drop_duplicates(subset=["Target Entity Name With XSD","Target Attribute Name"], keep='first', inplace=True)
     # ifs_xsd_attributes.info()
@@ -665,10 +716,11 @@ def processMatching(join_how):
     xsd_merge_attributes.insert(3,"FuzzyWuzzy_"+str(P2), "")
     xsd_merge_attributes.insert(4,"FuzzyWuzzy_"+str(P3), "")
 
-    print "\t\t Doing XSD Attribute Matching [IFS vs ABS] - Using Fuzzing Logic: {}%, {}%, {}% thresholds".format(P1,P2,P2)
-    xsd_merge_attributes["FuzzyWuzzy_"+str(P1)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent,axis=1,p=P1,input_column_name="Target Attribute Name",lookup_field_type="A")
-    # xsd_merge_attributes["FuzzyWuzzy_"+str(P2)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P2,input_column_name="Target Attribute Name Last",lookup_column_name="Attribute Name")
-    # xsd_merge_attributes["FuzzyWuzzy_"+str(P3)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent, axis=1, p=P3,input_column_name="Target Attribute Name Last",lookup_column_name="Attribute Name")
+    if (include_fuzzy_columns):
+        print "\t\t Doing XSD Attribute Matching [IFS vs ABS] - Using Fuzzing Logic: {}%, {}%, {}% thresholds".format(P1,P2,P2)
+        xsd_merge_attributes["FuzzyWuzzy_"+str(P1)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P1,input_column_name="Target Attribute Name",lookup_field_type="A")
+        xsd_merge_attributes["FuzzyWuzzy_"+str(P2)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P2,input_column_name="Target Attribute Name Last",lookup_field_type="A")
+        xsd_merge_attributes["FuzzyWuzzy_"+str(P3)] = xsd_merge_attributes.apply(getMatchingXSD_By_MatchPercent, axis=1,p=P3,input_column_name="Target Attribute Name Last",lookup_field_type="A")
 
     xsd_merge_attributes.rename(columns={"Target Entity Name With XSD": "IFS_XSD_NAME", "Entity Name": "Avaloq_XSD_NAME"},inplace=True)
 
@@ -677,6 +729,90 @@ def processMatching(join_how):
                                 "FuzzyWuzzy_" + str(P3)], index=False)
 
     writer.save()
+
+def read_CSV(input_path,input_file,input_req_cols):
+
+
+    if (checkFileName(input_path + input_file)):
+        print "\n Excel File '{}' located".format(input_filename)
+        print "\n Reading CSV file {}, please wait.....\n".format(input_path+input_file,)
+
+        df = pd.read_csv(input_path + input_file, sep=",",usecols=input_req_cols)
+        df.sort_values(by=input_req_cols, inplace=True, na_position='first')
+        print df.head()
+
+
+        return df
+
+
+
+def getEntityNameByAttribute():
+    '''
+    Get the Entity Name for the given list of Attribute Name (where the Entities are incorrectly tagged).
+    Pre-Condition: T_E_A - file exist - generated by the MetadataExtractor process.
+    Left Side: List of Attributes (from T_E_A)
+    Right: List of ABS XSD Fields
+    :return:
+    '''
+    output_csv_folder_path = "C:\\MDR\\Data\\Repository\\CSV_Sharepoint_Output\\"
+    output_filename = "ABS_EntityName_T_E_A_Correct.xlsx"
+    output_filename_Join = "ABS_EntityName_T_E_A_Correct_Join.xlsx"
+    input_csv_folder_path = "C:\\MDR\\Data\\Repository\\CSV_Sharepoint_Output\\"
+    input_filename = "Mapping_Fields_Missing_T_E_A.csv"
+
+    input_filename_2 = "Objects_xsd_from_abs_phases_all.csv"
+
+    required_columns_left  = ["Target Entity Name", "Target Attribute Name"]
+    required_columns_right = ["Entity Name", "Attribute Name"]
+
+    writer = pd.ExcelWriter(output_csv_folder_path + output_filename)
+
+    #Left
+
+    # get the data from the latest report
+    if (checkFileName(input_csv_folder_path + input_filename)):
+        print "\n Excel File '{}' located".format(input_filename)
+        print "\n Generating CSV file, please wait.....\n"
+
+        createFolderPath(output_csv_folder_path)
+        createFolderPath(input_csv_folder_path)
+
+        df_left = pd.read_csv(input_csv_folder_path + input_filename, sep=",",usecols=required_columns_left)
+
+        # ignore the rows with blank Entity Name
+        #df_left = df_left[df_left["Target Entity Name"].notnull()]
+
+        # df = pd.read_excel('./data/input/raw/'+input_excel_filename,sheetname="export0",index_col=None)
+        df_left["Target Entity Name"]    = str(df_left["Target Entity Name"]).upper()
+        df_left["Target Attribute Name"] = df_left["Target Attribute Name"].str.upper()
+
+
+
+        #df_left.rename(columns={"LDM Object": "Entity Name", "LDM Field": "Attribute Name", "LDM Text": "Description"},inplace=True)
+
+        print "Target E A :", df_left.info()
+        print df_left.head()
+        df_left.sort_values(by=["Target Attribute Name"], inplace=True, na_position='first',ascending=[True])
+
+
+        df_left.to_excel(writer, sheet_name="Latest Report", index=False, columns=required_columns_left)
+
+    #Right
+    df_right = read_CSV(input_csv_folder_path,input_filename_2,required_columns_right)
+
+    #Merge
+
+    df_merge = pd.merge(left=df_left, right=df_right,left_on=["Target Attribute Name"],right_on=["Attribute Name"], how='left', sort=True)
+    df_merge.info()
+
+    df_merge.to_excel(writer, sheet_name="Join", index=False)
+
+    print "getEntityNameByAttribute()"
+
+
+
+
+
 
 
 # getABS_XSD_FieldsFromSharepoint()
@@ -709,7 +845,10 @@ print "ETA: 20 mins i.e. {} ".format(localtime_end)
 #pr.enable()
 #with PyCallGraph(output=graphviz,config=None):
 
-processMatching('inner')
+processMatching('inner',False)
+getEntityNameByAttribute()
+#processMatching('inner',False)
+#getXSDFields_FromAvaloReport_Delta()
 #pr.disable()
 
 end = time.time()
