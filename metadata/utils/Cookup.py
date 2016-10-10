@@ -1,5 +1,5 @@
 import pandas as pd
-import time
+import time,csv,json
 folder = "C:/MDR/Data"
 output_filename = ""
 
@@ -12,15 +12,16 @@ df = df[df["Status"].str.upper() == "Open".upper()]
 
 if(df.empty): print "Dataframe is empty"
 
+df_d = df[df.duplicated(subset=["Source Name", "Element Name"], keep='first')]
 
 time.strftime('%Y-%m-%d %H:%M:%S')
-
+df = df.drop('Modified_By', 1)
 object_duplicated_by_columns = ["System Name","Entity Name", "Attribute Name","Type"]
 object_sort_by_columns       = ["System Name", "Entity Name", "Attribute Name", "Type"]
 df.drop_duplicates(subset=object_duplicated_by_columns, keep=False, inplace=True)
+df["Target Attribute Name"].replace('', np.nan)
 
-
-df.rename(columns={"LDM INTL ID":"Transformation_Mapping_Rule","LDM Text":"Attribute_Description","LDM Object": "Target_Entity_Name_L","LDM Field":"Target_Attribute_Name_L","Source Name":"Source_Entity_Name","Element Name":"Source_Attribute_Name"}, inplace=True)
+df.rename(columns={"From":"To","LDM Text":"Attribute_Description"}, inplace=True)
 
 
 df.sort_values(by=object_sort_by_columns, inplace=True, na_position='first', ascending=[False, True, True, True])
@@ -28,6 +29,7 @@ df.sort_values(by=object_sort_by_columns, inplace=True, na_position='first', asc
 
 #ignore the rows with blank Entity Name
 df = df[df["LDM Object"].notnull()]
+df = df[df["Type"].isnull()]
 
 
 # Read CSV
@@ -39,3 +41,22 @@ output_filename = "ABS_EntityName_T_E_A_Correct.csv"
 required_columns = ["Entity Name", "Attribute Name"]
 
 df = pd.read_csv(input_csv_folder_path + input_filename, sep=",",usecols=required_columns)
+df1,df2 = pd.DataFrame()
+
+merged_df = pd.merge(left=df1,right=df2, on=["Entity Name","Attribute Name"],how='left')
+
+
+def csvToJson( inFile, outFile ):
+    out = None;
+
+    with open( inFile, 'r') as csvFile:
+        #Note this reads the first line as the keys we can add specific keys with:
+        #csv.DictReader( csvFile, fieldnames=<LIST HERE>, restkey=None, restval=None, )
+        csvDict = csv.DictReader( csvFile, restkey=None, restval=None, )
+        out = [obj for obj in csvDict]
+
+    if out:
+        with open( outFile, 'w' ) as jsonFile:
+            jsonFile.write( json.dumps( out ) );
+    else:
+       print "Error creating csv dict!"

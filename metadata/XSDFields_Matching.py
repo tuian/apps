@@ -639,6 +639,7 @@ def processMatching(join_how,include_fuzzy_columns):
     merged_no_match = pd.concat([ifs_xsd_fields])
     merged_no_match.drop_duplicates(subset=["Target Entity Name", "Target Attribute Name"], keep='first', inplace=True)
     merged_no_match.to_excel(writer, sheet_name="XSD_Fields_All", columns=required_columns_level_all,index=False)
+    merged_no_match = merged_no_match[((merged_no_match["MDR Phase"]) == 'Phase 1') | ((merged_no_match["MDR Phase"]) == 'Phase 2')]
     xsd_fields_all = len(merged_no_match)
     stats_list.append(addRow('XSD Fields - All',xsd_fields_all))
     print "XSD Fields - All: {}".format(xsd_fields_all)
@@ -650,6 +651,7 @@ def processMatching(join_how,include_fuzzy_columns):
     print "XSD Fields - Match: {}".format(xsd_fields_match)
 
     merged_no_match = merged_no_match[((merged_no_match["Target Entity Name ABS"]) == '') | ((merged_no_match["Target Attribute Name ABS"]) == '')]
+    merged_no_match = merged_no_match[((merged_no_match["MDR Phase"]) == 'Phase 1') | ((merged_no_match["MDR Phase"]) == 'Phase 2')]
     merged_no_match.to_excel(writer, sheet_name="XSD_Fields_No_Match", columns=required_columns_level_all, index=False)
     xsd_fields_no_match = len(merged_no_match)
     xsd_fields_match_per = round(xsd_fields_match/xsd_fields_all,2)*100

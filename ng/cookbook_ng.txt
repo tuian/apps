@@ -1,0 +1,59 @@
+cd ng
+npm init
+npm install --save angular@1.5.8
+./node_modules/angular/angular.js
+
+
+app = angular.module()
+app.config($routeProvider)
+app.controller()
+
+
+dependencies  / modules required:
+ngMessages,ngMessages, ngResource, ngRoute etc..
+
+services:
+$scope
+$log
+$location
+$filter
+$apply (tie the events to the angular context)
+$http (XMLHttprequest,onreadystatechange,open(get,url,true),send)
+
+common directives or custom attributes (html5)
+
+ng-app,ng-controller
+
+ng-model (two way binding, input field i.e. name, with the element in the $scope.name)
+ng-show,ng-hide
+ng-class (takes a js/json type object {'class':expression,} )
+ng-if
+ng-click
+ng-repeat (takes a list/array)
+ng-cloak - hides the {{ }} until the browser is loaded the complete DOM.
+ng-init (initializes)
+ng-view
+
+event loops / 
+watchers / digest loops - creates the angular context, single thread
+
+dependency injection
+event loops
+single threaded framework
+interpolation/ expressions {{ }}
+
+
+
+XMLHTTPRequest Object...
+
+
+php,jsp,ASP.NET MVC C#,
+
+
+var xhr = new XMLHttpRequest();
+XMLHttpRequest object is available native to the browers.
+This was intially created by microsoft, for Outlook webacces..
+what happens inside the XMLHttpRequest code is that it can make request to the webserver, without refreshing the page, button clicks etc.
+basically go out and get data behind the scene..
+
+xhr is a bit complex to use, thats why we have jquery has Ajax wrapper around it..

@@ -1,3 +1,58 @@
+pip install requests_ntlm
+pip install requests
+
+pip install --upgrade pip
+easy_install -U pip
+
+ntlm-1.1.0
+python setup.py install
+
+AUAUTD0001\L085792
+
+
+
+pip --proxy http://user:passwd@secure-proxy.btfin.com:8080 install openpyxl
+pip --proxy http://l083646:ABC#1234@secure-proxy.btfin.com:8080 install openpyxl
+
+pip --proxy http://l084756:Aug@2016!@secure-proxy.btfin.com:8080 install xlrd
+
+pip install openpyxl
+pip install xlrd
+
+pip --proxy http://l083646:TCS#2305@secure-proxy.btfin.com:8080 install xlrd
+
+gatehousek1.stgeorge.com.au 
+port: 8080 
+
+
+#screen_field_objects_bs = {"Attribute_Name":"Test Attribute 1"}
+
+screen_field_objects_bs = getScreenFieldObjects_bs({{screen_name}})
+
+$("#attributes_table").load("/mdr_screen_fields_bs_bottom/{{screen_name}}");
+
+
+
+
+
+
+Microsoft Visual C++ Compiler for Python 2.7
+
+http://aka.ms/vcpython27
+https://www.microsoft.com/en-us/download/details.aspx?id=44266
+
+
+
+C:\Python27\python-Levenshtein-0.12.0.tar\python-Levenshtein-0.12.0>
+
+python setup.py install
+
+-------------------------
+
+Excel:
+find and replace new line in a column
+Control+H, find: Control+J, replace with:
+
 IP Details
 http://10.35.84.129:5000/
 http://10.35.40.233:5000/

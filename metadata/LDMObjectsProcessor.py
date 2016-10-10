@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from mdr_util import *
 from MetadataExtractor import getObjects,getMapping_XSD_LDM,list_name_mapping_xsd_ldm,GP_PHASE_NO,list_name_xsd_fields_abs,list_name_ldm_fields
 
@@ -11,7 +12,8 @@ from MetadataExtractor import getObjects,getMapping_XSD_LDM,list_name_mapping_xs
 #
 # print df
 
-GV_Latest_LDM_Report_Filename = "LDM_Flat_Report_6_28_09_2016"
+GV_Latest_LDM_Report_Filename = "LDM_Flat_Report_8_06_10_2016"
+#pre-conditions
 #Old Name to Old Interface Name
 #Sheet Name to "Flat_Report"
 #File Name in the report.xlsx and in the python GV variable
@@ -288,14 +290,20 @@ def getXSD_LDM_Mapping_Delta(latest_ldm_report_filename):
     output_csv_filename = latest_ldm_report_filename + "_ABS_XSD_LDM_Mappings_Delta.xlsx"
 
     output_csv_folder_path = "C:\\MDR\\Data\\Avaloq_Report_Export\\Output\\"
-
+    file = output_csv_folder_path + output_csv_filename
     columns_mappings_csv = ["Source Entity Name", "Source Attribute Name",
                             "Target Entity Name", "Target Attribute Name",
                             "Attribute Description", "Business Rule", "Transformation_Mapping rule", "Comments",
                             "Mapping Name", "Action", "Last_Update_Date", "Modified_By"]
+
+    columns_mappings_csv_abs = ["Source Entity Name", "Source Attribute Name",
+                            "Target Entity Name", "Target Attribute Name",
+                            "Attribute Description", "Business Rule", "Transformation_Mapping rule", "Comments",
+                            "Mapping Name"]
+
     object_duplicated_by_columns = ["Source Entity Name", "Source Attribute Name","Target Entity Name","Target Attribute Name"]
     object_duplicated_by_columns_drop = ["Source Entity Name", "Source Attribute Name", "Target Entity Name"]
-
+    object_duplicated_by_columns_drop_4 = ["Source Entity Name", "Source Attribute Name", "Target Entity Name","Target Attribute Name"]
     writer = pd.ExcelWriter(output_csv_folder_path + output_csv_filename)
 
     # get the data from the latest report
@@ -319,8 +327,17 @@ def getXSD_LDM_Mapping_Delta(latest_ldm_report_filename):
         print "Latest Report Records:", df_latest_report.info()
         print df_latest_report.head()
         df_latest_report.sort_values(by=object_duplicated_by_columns, inplace=True, na_position='first',ascending=[True, True, True, True])
-        df_latest_report.to_excel(writer, sheet_name="Latest Report", index=False, columns=columns_mappings_csv)
 
+        df_latest_report["Target Attribute Name"].fillna("-", inplace=True)
+
+        df_latest_report.to_excel(writer, sheet_name="Latest Report", index=False, columns=columns_mappings_csv_abs)
+        df_latest_report = df_latest_report[(df_latest_report["Target Attribute Name"] <> "TO BE UPDATED")]
+        df_latest_report = df_latest_report[(df_latest_report["Target Entity Name"].notnull())]
+        #df_latest_report["Target Attribute Name"].fillna("-",inplace=True)
+        #df_latest_report.rename(columns={"Modified_By": "Modified_By ABS"}, inplace=True)
+        print "ABS:",df_latest_report.tail(5)
+        #df_latest_report.head()
+        #df_latest_report.drop(["Modified_By"], axis=1, inplace=True)
     # get the data from the sharepoint
 
 
@@ -331,8 +348,27 @@ def getXSD_LDM_Mapping_Delta(latest_ldm_report_filename):
     print df_sp.head()
     df_sp.sort_values(by=object_duplicated_by_columns, inplace=True, na_position='first',
                                  ascending=[True, True, True, True])
-    df_sp.to_excel(writer, sheet_name="Sharepoint", index=False, columns=columns_mappings_csv)
+    #df_sp["Target Attribute Name"].fillna("-", inplace=True)
+    #df_sp["Target Attribute Name"].replace(np.NaN, '-')
+    #df_sp["Target Attribute Name"] = df_sp["Target Attribute Name"].apply(lambda x: x if not pd.isnull(x) else '-')
 
+    df_sp.to_excel(writer, sheet_name="Sharepoint", index=False, columns=columns_mappings_csv)
+    df_sp.rename(columns={"Attribute Description":"Attribute Description SP","Attribute Description": "Attribute Description SP","Transformation_Mapping rule":"Transformation_Mapping rule SP"}, inplace=True)
+    #df_sp["Target Attribute Name"].fillna("-",inplace=True)
+    print "SP",df_sp.tail(5)
+
+    # get the delta by join the dfs
+    join_cols = ["Source Entity Name", "Source Attribute Name","Target Entity Name","Target Attribute Name"]
+    df_join = pd.merge(left=df_latest_report, right=df_sp, how='left', left_on=join_cols,right_on=join_cols)
+
+    df_join["Business Rule"] = 'Direct'
+    df_join["Comments"] = "Old Interface Name: " + df_join[
+        "Old Interface Name"] + "|" + "New Interface Name: " + df_join["Interface Name"]
+    #df_join.drop_duplicates(subset=object_duplicated_by_columns_drop_4, keep=False, inplace=True)
+    print "Join:",df_join.head(5)
+    df_join = df_join[df_join["Modified_By"].isnull()]
+    df_join.to_excel(writer, sheet_name="Delta by Join", index=False,
+                     columns=columns_mappings_csv)
 
     # get the difference between sharepoint and latest report
         #concat both the dfs
@@ -371,6 +407,7 @@ def getXSD_LDM_Mapping_Delta(latest_ldm_report_filename):
 
     df_all_mappings_updated.to_excel(writer, sheet_name="To Be Updated", index=False, columns=columns_mappings_csv)
     df_all_mappings_new_entries.to_excel(writer, sheet_name="New Entries", index=False, columns=columns_mappings_csv)
+    print "Process Completed. Check file {}.".format(file)
 
 def getXSD_Fields_Delta(latest_ldm_report_filename):
 
@@ -415,6 +452,7 @@ def getXSD_Fields_Delta(latest_ldm_report_filename):
         df_latest_report.drop_duplicates(subset=["Entity Name","Attribute Name"],keep='first',inplace=True)
         df_latest_report.to_excel(writer, sheet_name="Latest Report", index=False, columns=columns_mappings_csv)
 
+
     # get the data from the sharepoint
 
 
@@ -427,6 +465,12 @@ def getXSD_Fields_Delta(latest_ldm_report_filename):
                                  ascending=[True, True])
     df_sp.to_excel(writer, sheet_name="Sharepoint", index=False, columns=columns_mappings_csv)
 
+    # get the delta by join the dfs
+    df_join = pd.merge(left=df_latest_report, right=df_sp, how='left', left_on=["Entity Name", "Attribute Name"],
+                       right_on=["Entity Name", "Attribute Name"])
+    df_join = df_join[df_join["Type"].isnull()]
+    df_join.to_excel(writer, sheet_name="Delta by Join", index=False,
+                     columns=["Entity Name", "Attribute Name", "Type"])
 
     # get the difference between sharepoint and latest report
         #concat both the dfs
@@ -449,7 +493,7 @@ def getXSD_Fields_Delta(latest_ldm_report_filename):
     print "After dropping duplicates:",df_all_mappings.info()
     df_all_mappings.to_excel(writer, sheet_name="Delta - After dropping",index=False,columns=columns_mappings_csv)
 
-
+'''
 def getLDM_Fields_Delta(latest_ldm_report_filename):
 
     #First Column Name - Old Interface Name
@@ -461,7 +505,7 @@ def getLDM_Fields_Delta(latest_ldm_report_filename):
 
     output_csv_filename = latest_ldm_report_filename + "_ABS_LDM_Fields_Delta.xlsx"
     output_csv_folder_path = "C:\\MDR\\Data\\Avaloq_Report_Export\\Output\\"
-
+    file = output_csv_folder_path + output_csv_filename
     columns_mappings_csv = ["Entity Name","Attribute Name","Description","Type"]
     object_duplicated_by_columns = ["Entity Name", "Attribute Name"]
     object_duplicated_by_columns_drop = ["Entity Name", "Attribute Name"]
@@ -532,11 +576,116 @@ def getLDM_Fields_Delta(latest_ldm_report_filename):
 
     print "After dropping duplicates:",df_all_mappings.info()
     df_all_mappings.to_excel(writer, sheet_name="Delta",index=False,columns=columns_mappings_csv)
+    print "Process Completed. Check file {}.".format(file)
+'''
 
+def getLDM_Fields_Delta_ByJoin(latest_ldm_report_filename):
+
+    #First Column Name - Old Interface Name
+    #Sheetname = Flat_Report
+
+    input_excel_folder_path = "C:\\MDR\\Data\\Avaloq_Report_Export\\Input\\LDM_Flat_Report\\"
+    #input_excel_filename = "LDM_Flat_Report_4_23_09_2016.xlsx"
+    input_excel_filename = latest_ldm_report_filename + ".xlsx"
+
+    output_csv_filename = latest_ldm_report_filename + "_ABS_LDM_Fields_Delta.xlsx"
+    output_csv_folder_path = "C:\\MDR\\Data\\Avaloq_Report_Export\\Output\\"
+    file = output_csv_folder_path + output_csv_filename
+    columns_mappings_csv = ["Entity Name","Attribute Name","Description","Type"]
+    object_duplicated_by_columns = ["Entity Name", "Attribute Name"]
+    object_duplicated_by_columns_drop = ["Entity Name", "Attribute Name"]
+
+    writer = pd.ExcelWriter(output_csv_folder_path + output_csv_filename)
+
+    # get the data from the latest report
+    if (checkFileName(input_excel_folder_path + input_excel_filename)):
+        print "\n Excel File '{}' located".format(input_excel_filename)
+        print "\n Generating CSV file, please wait.....\n"
+
+        createFolderPath(input_excel_folder_path)
+        createFolderPath(output_csv_folder_path)
+
+        df_latest_report = pd.read_excel(input_excel_folder_path + input_excel_filename, sheetname="Flat_Report", index_col=None)
+        # df = pd.read_excel('./data/input/raw/'+input_excel_filename,sheetname="export0",index_col=None)
+        df_latest_report["LDM Field"] = df_latest_report["LDM Field"].str.upper()
+        df_latest_report["LDM Object"] = df_latest_report["LDM Object"].str.upper()
+
+        #ignore the rows with blank Entity Name
+        df_latest_report = df_latest_report[df_latest_report["LDM Object"].notnull()]
+
+        df_latest_report.rename(columns={"LDM Object": "Entity Name", "LDM Field": "Attribute Name","LDM Text":"Description"}, inplace=True)
+
+
+        print "Latest Report Records:", df_latest_report.info()
+        print df_latest_report.head()
+        df_latest_report.sort_values(by=["Entity Name","Attribute Name"], inplace=True, na_position='first',ascending=[True, True])
+        #dont assume there records are going to be unique within this report. There are duplicates at Entity and Attribute level
+        #So remove duplicates, keeping first row. so that in the next joins , we can remove all.
+
+        #fill the blanks with -. Needed for comparison.
+        df_latest_report["Attribute Name"].fillna("-", inplace=True)
+
+        df_latest_report_d   = df_latest_report[df_latest_report.duplicated(subset=["Entity Name", "Attribute Name"], keep='first')]
+        df_latest_report_d.to_excel(writer, sheet_name="Latest Report - Duplicate", index=False, columns=columns_mappings_csv)
+
+        df_latest_report.drop_duplicates(subset=["Entity Name","Attribute Name"],keep='first',inplace=True)
+        df_latest_report.to_excel(writer, sheet_name="Latest Report", index=False, columns=columns_mappings_csv)
+
+        df_latest_report.rename(columns={"Description": "Description ABS Report"}, inplace=True)
+
+    # get the data from the sharepoint
+
+
+    df_sp = pd.DataFrame(getObjects(list_name_ldm_fields),columns=columns_mappings_csv)
+
+
+    # take only the attributes
+    df_sp = df_sp[df_sp["Type"] == "Attribute"]
+
+    print "Sharepoint Records:",df_sp.info()
+
+    df_sp["Attribute Name"] = df_sp["Attribute Name"].apply(lambda x: x if (x <> '') else '-')
+
+    print df_sp.head()
+    df_sp.sort_values(by=["Entity Name","Attribute Name"], inplace=True, na_position='first',
+                                 ascending=[True, True])
+    df_sp.drop_duplicates(subset=["Entity Name", "Attribute Name"], keep='first', inplace=True)
+    df_sp.to_excel(writer, sheet_name="Sharepoint", index=False, columns=columns_mappings_csv)
+
+    #get the delta by join the dfs
+    df_join = pd.merge(left=df_latest_report,right=df_sp,how='left',left_on=["Entity Name","Attribute Name"],right_on=["Entity Name","Attribute Name"])
+    df_join = df_join[df_join["Type"].isnull()]
+    df_join.to_excel(writer, sheet_name="Delta by Join", index=False, columns=["Entity Name","Attribute Name","Description ABS Report","Type"])
+
+    # get the difference between sharepoint and latest report
+        #concat both the dfs
+    df_all_mappings = pd.concat([df_latest_report,df_sp])
+
+    print "Before dropping duplicates:",df_all_mappings.info()
+    print df_all_mappings.head()
+    df_all_mappings.to_excel(writer, sheet_name="Concated records", index=False, columns=columns_mappings_csv)
+
+        #drop duplicates
+    # drop rows if the LDM Object ("Target Entity Name") is blank
+    #df_all_mappings = df_all_mappings.dropna(subset=['Target Entity Name'])
+
+    #df_all_mappings.fillna
+
+    df_all_mappings.drop_duplicates(subset=["Entity Name","Attribute Name"], keep=False, inplace=True)
+    #df_all_mappings["Comments"] = "Old Interface Name: " + df_all_mappings["Old Interface Name"] + "|" + "New Interface Name: " + df_all_mappings["Interface Name"]
+
+
+    print "After dropping duplicates:",df_all_mappings.info()
+    df_all_mappings.to_excel(writer, sheet_name="Delta",index=False,columns=columns_mappings_csv)
+    print "Process Completed. Check file {}.".format(file)
 
 #generateLDMObjectReport()
 #generateLDMInterfaceReport()
 
-#getXSD_Fields_Delta(GV_Latest_LDM_Report_Filename)
-getLDM_Fields_Delta(GV_Latest_LDM_Report_Filename)
-#getXSD_LDM_Mapping_Delta(GV_Latest_LDM_Report_Filename)
+getXSD_Fields_Delta(GV_Latest_LDM_Report_Filename)
+getLDM_Fields_Delta_ByJoin(GV_Latest_LDM_Report_Filename)
+getXSD_LDM_Mapping_Delta(GV_Latest_LDM_Report_Filename)
+
+
+
+#getLDM_Fields_Delta(GV_Latest_LDM_Report_Filename)

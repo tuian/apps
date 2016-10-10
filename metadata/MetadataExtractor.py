@@ -363,7 +363,10 @@ def getObjects(list_name):
         row_object["Instance Name"] = str(row.Instance_Name).encode("utf-8")
         #row_object["Entity Name"] = str(row.Entity_Name_Duplicate).encode("utf-8")
         row_object["Entity Name"] = str(row.Entity_Name).encode("utf-8").upper()
+
+
         row_object["Attribute Name"] = str(row.Attribute_Name).upper()
+
         row_object["Owner"] = str(row.Owner).encode("utf-8")
         row_object["Parent"] = str(row.Parent).encode("utf-8")
 
@@ -374,6 +377,7 @@ def getObjects(list_name):
         row_object["URL"] = str(row.URL).encode("utf-8")
         row_object["Document Name"] = str(row.Document_Name).encode("utf-8")
         row_object["XPATH"] = cleanHTMLTags(row.XPATH)
+        row_object["MDR_Phase"] = row.MDR_Phase
 
         # row_object[""] = row.
         list_objects.append(row_object)
@@ -511,7 +515,12 @@ def getObject_LDMFields(list_name,mdr_phase_no):
             row_object["System Name"] = row.System_Name #"ABS Dev"
             row_object["Instance Name"] = row.Instance_Name #"Default"
             row_object["Entity Name"] = row.Entity_Name.upper()
-            row_object["Attribute Name"] = row.Attribute_Name.upper()
+
+            if(row.Attribute_Name == ''):
+                row_object["Attribute Name"] = '-'
+            else:
+                row_object["Attribute Name"] = row.Attribute_Name.upper()
+
             row_object["Owner"] = row.Owner
             row_object["Parent"] = row.Parent
             row_object["Type"] = row.Attribute_Type
@@ -704,8 +713,11 @@ def getMapping_XSD_LDM(list_name,mdr_phase_no):
             row_object["Target System Name"] = row.Target_System_Name
             row_object["Target Instance Name"] = row.Target_Instance_Name
             row_object["Target Entity Name"] = row.Target_Entity_Name_D.upper()
-            row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D).upper()
-
+            #print type(row.Target_Attribute_Name_D)
+            if(row.Target_Attribute_Name_D == ''):
+                row_object["Target Attribute Name"] = '-'
+            else:
+                row_object["Target Attribute Name"] = (row.Target_Attribute_Name_D).upper()
 
 
             row_object["Attribute Description"] = cleanHTMLTags(row.Attribute_Description)
@@ -856,7 +868,7 @@ def buidObjects(phase):
     row_objects_gesb_ifs = getObjectsByPhase(list_name_gesb_ifs_fields, GP_PHASE_NO)
 
     #columns required in the output csv file [Objects]
-    columns_objects_csv = ["System Name","Instance Name","Entity Name","Attribute Name","Owner","Parent","Type","Description","URL","Document Name","XPATH"]
+    columns_objects_csv = ["System Name","Instance Name","Entity Name","Attribute Name","Owner","Parent","Type","Description","URL","Document Name","XPATH","MDR_Phase"]
 
     #  UX Objects
     df_ux = pd.DataFrame(row_objects_ux,columns=columns_objects_csv)
@@ -878,8 +890,10 @@ def buidObjects(phase):
     df_xsd_all_phases = pd.DataFrame(row_objects_xsd_all_phases, columns=columns_objects_csv)
     df_xsd_all_phases.to_csv(output_csv_folder_path + "Objects_xsd_from_ifs_phases_all.csv", sep=",", header=True, index=None)
 
-    # XSD Objects [From Avaloq Report] = All phases
+    # XSD Objects [From Avaloq Report] = Phase 2
     df_xsd_from_abs_all_phases = pd.DataFrame(row_objects_xsd_fields_from_abs, columns=columns_objects_csv)
+    #get items from Phase 2 only
+    df_xsd_from_abs_all_phases = df_xsd_from_abs_all_phases[df_xsd_from_abs_all_phases["MDR_Phase"].str.upper() == 'Phase 2'.upper() ]
     df_xsd_from_abs_all_phases.to_csv(output_csv_folder_path + "Objects_xsd_from_abs_phases_all.csv", sep=",", header=True, index=None)
 
     #  LDM Objects
@@ -1069,6 +1083,8 @@ def checkAttributes():
     input_excel_filename_phase1 = "\Phase1_Objects_Mappings.xlsx"
 
     df_phase1_objects =  pd.read_excel(input_excel_folder_path_phase1 + input_excel_filename_phase1, sheetname="Objects",index_col=None)
+    df_phase1_mappings = pd.read_excel(input_excel_folder_path_phase1 + input_excel_filename_phase1, sheetname="Mappings", index_col=None)
+    df_phase1_mappings.dropna(subset=["Source Attribute Name"], inplace=True)
     df_phase2_objects  = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
 
     df_phase1_objects["Entity Name"] = df_phase1_objects["Entity Name"].str.upper()
@@ -1084,6 +1100,9 @@ def checkAttributes():
     #df_mappings = df_mappings[df_mappings["Source Attribute Name"] <> '' | df_mappings["Target Attribute Name"] <> '']
     df_mappings.dropna(subset=["Source Attribute Name"],inplace=True)
     df_mappings = df_mappings.reset_index();  # http://www.sirhamy.com/blog/2016/03/troubleshoot-pandas-label-not-in-index/
+
+    df_mappings_phase1_phase2 = pd.concat([df_phase1_mappings, df_mappings])
+    df_mappings_phase1_phase2.to_csv(output_csv_folder_path + "BTP_Phase1_2_Mappings.csv", sep=",")
 
     #df_mappings = df_mappings[np.isfinite(df_mappings['Source Attribute Name'])]
     #df = df[pd.notnull(df['EPS'])]
@@ -1132,6 +1151,9 @@ def checkAttributesByJoin(join_type):
     input_excel_filename_phase1 = "\Phase1_Objects_Mappings.xlsx"
 
     df_phase1_objects =  pd.read_excel(input_excel_folder_path_phase1 + input_excel_filename_phase1, sheetname="Objects",index_col=None)
+    df_phase1_mappings = pd.read_excel(input_excel_folder_path_phase1 + input_excel_filename_phase1, sheetname="Mappings",index_col=None)
+    df_phase1_mappings.dropna(subset=["Source Attribute Name"], inplace=True)
+
     df_phase2_objects  = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
 
     df_phase1_objects["Entity Name"] = df_phase1_objects["Entity Name"].str.upper()
@@ -1147,6 +1169,8 @@ def checkAttributesByJoin(join_type):
     df_mappings.dropna(subset=["Source Attribute Name"],inplace=True)
     df_mappings = df_mappings.reset_index();  # http://www.sirhamy.com/blog/2016/03/troubleshoot-pandas-label-not-in-index/
 
+    df_mappings_phase1_phase2 = pd.concat([df_phase1_mappings, df_mappings])
+    df_mappings_phase1_phase2.to_csv(output_csv_folder_path + "BTP_Phase1_2_Mappings_ByJoin.csv", sep=",")
     #df_mappings = df_mappings[np.isfinite(df_mappings['Source Attribute Name'])]
     #df = df[pd.notnull(df['EPS'])]
     #print df_objects.head()
@@ -1550,30 +1574,30 @@ if __name__ == "__main__":
     print "Start time: {}".format(localtime_start)
     print "ETA: 20 mins i.e. {} ".format(localtime_end)
 
-    #######################START LOADING################################
+#######################START LOADING################################
     print "Batch status 'Completed' = {}".format(getBatchDetails("Completed"))
     print "Batch status 'WIP' = {}".format(getBatchDetails("WIP")[0])
 
         #extract Objects & Mappings for a given MDR Phase (i.e. Phase 1, Phase 2)
-    buidObjects(GP_PHASE_NO)
-    buildMapings(GP_PHASE_NO)
+    # buidObjects(GP_PHASE_NO)
+    # buildMapings(GP_PHASE_NO)
 
         #check and remove duplicates between Phase 1 and Phase 2 - Should be called before getObjectsForLoad() and getMappingsForLoad()
         #Output: BTP_Phase2_Objects.csv / BTP_Phase2_Mappings.csv
-    checkPhase1_2_Duplicates()
+    # checkPhase1_2_Duplicates()
 
-    #check if the attributes in the mapping sheet has been defined in the object sheet, as
-    # if the mapping attributes are not in objects - the MDR loading will fail.
-        ##Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
+        #check if the attributes in the mapping sheet has been defined in the object sheet, as
+        # if the mapping attributes are not in objects - the MDR loading will fail.
+            ##Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
     checkAttributes()
 
         ##So, Check just the attributes. But this is dangerous, as the same attribute will be there in multiple entities.
     checkAttributesByJoin('left')
 
-    #extract Objects & Mappings for Dataloading based on the load control settings
-    getObjectsForLoad(getBatchDetails("WIP")[0])
-    getMappingsForLoad(getBatchDetails("WIP")[0])
-    ####################### END LOADING################################
+        #extract Objects & Mappings for Dataloading based on the load control settings
+    # getObjectsForLoad(getBatchDetails("WIP")[0])
+    # getMappingsForLoad(getBatchDetails("WIP")[0])
+####################### END LOADING################################
 
     end = time.time()
     print "Execution time: {} mins".format((end - start) / 60)
