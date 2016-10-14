@@ -1,0 +1,27 @@
+[
+
+{
+	"url": "/",
+	"label": "Home"
+},
+{
+	"url": "/screens",
+	"label": "Screens"
+}, {
+	"url": "/dashboard",
+	"label": "Dashboard"
+},
+
+    {
+	"url": "/templates/mdr_objects_bs_ng.html",
+	"label": "Objects"
+},
+    {
+	"url": "/templates/mdr_mappings_bs_ng.html",
+	"label": "Mappings"
+},
+    {
+	"url": "/templates/mdr_lineage_bs_ng.html",
+	"label": "Lineage"
+}
+]

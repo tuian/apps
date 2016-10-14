@@ -336,9 +336,17 @@ def insertRows_Objects(worksheet,row_position,rows):
 def getUsername():
     return "L083646"
 
-def getPassword():
+def encodePassword(str):
     import base64
-    return base64.b64decode("VENTIzIzMDU=")
+    print base64.b64encode(str)
+
+def getPassword():
+    '''
+    get the encode password
+    :return:
+    '''
+    import base64
+    return base64.b64decode("VENTIzE5ODE=")
 
 
 def insertRows_Mappings(worksheet,row_position,rows):
@@ -842,3 +850,4 @@ def LevenshteinMatch(orphaned_string,list_of_strings,control_limit):
 
 #getObjectsFromCSV("Visual Map","","","Visual Map")
 #getObjectsFromCSV("Visual Map","Account - Overview_MDR_VM","","UI Field")
+#encodePassword("TCS")

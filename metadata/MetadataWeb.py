@@ -1,5 +1,13 @@
 #http://courses.pgbovine.net/csc201/week13-code.txt
+'''
+How does this work:
+- on running this script, the webserver starts and keeps listening for request
+- Routing takes to the default page '/'
 
+When using angular and python jinja together:
+{{'{{screen_status_filtered_count}}'}}
+
+'''
 from flask import Flask, render_template,jsonify
 from mdr_util import *
 from MetadataExtractor import getSharepointListTotals_From_CSV_File
@@ -27,6 +35,17 @@ def screens():
     return render_template('mdr_screens_bs.html')
     #return 'Hello World, '+name+ '!'
 
+@app.route('/ldm')
+def ldm():
+    #status = getScreenStatus()
+    #return render_template('dashboard.html',status=status)
+    return render_template('mdr_ldm_bs.html')
+
+@app.route('/xsd')
+def xsd():
+    #status = getScreenStatus()
+    #return render_template('dashboard.html',status=status)
+    return render_template('mdr_xsd_bs.html')
 
 @app.route('/screenobjects_json')
 def screenobjects_json():

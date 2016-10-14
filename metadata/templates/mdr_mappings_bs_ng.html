@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BT Panorama - Metadata Lineage - Explorer</title>
+
+    <!-- Custom CSS -->
+    <link href="/static/css/logo-nav.css" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+
+    <!-- Pace plugin -->
+    <link href="/static/css/pace_barber_shop.css" rel="stylesheet">
+    <script src="/static/js/pace.min.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js"></script>
+    <script src="/static/js/nav_menu.js"></script>
+
+
+    <style>
+        
+    table {table-layout:fixed;}
+    table td {word-wrap:break-word;}
+    
+    </style>
+
+</head>
+
+<body ng-app="menuApp">
+    
+<!-- -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="" width="50" height="50" alt=""> -->
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="menuController">
+                <ul class="nav navbar-nav">
+                   <li ng-repeat="item in menu_items">
+                        <a href="{{item.url}} "> {{item.label}} </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10">
+                <h1>BT Panorama - Metatadata Explorer</h1>
+            </div>
+              <div class="col-lg-2">
+             <button type="button" class="btn btn-danger" onclick="javascript:history.back();">Back</button>
+            </div>
+        </div>
+    </div>
+<!-- ng-show={{screen_status_count_flag}} -->
+    <!-- ng-init="system_name='ABS';instance_name='LDM'" -->
+    <div class="container-fluid" ng-controller="metadataObjController">
+    <!--  --> 
+    
+   
+        <h2>Mappings</h2>
+        <p>Mapping between objects such Screens & Visual Map, Visual Map & IFS, IFS & XSDs, XSD & LDMs fields
+            <span style="font-style: italic " ng-show="count_display_flag">[Total:
+                <span style="text-decoration: underline;color: #000050"> {{rows_count}} </span>]
+            </span>
+        </p>
+         <!-- Approach be Table - START -->
+        <!-- 
+            <div class="table-responsive">
+                
+                    <table class="table">
+                        <thead>
+                             <tr>
+
+                                 <th class="col-md-3  col-lg-3">LDM Object Name</th>
+                                 <th class="col-md-3  col-lg-3">LDM Field Name</th>
+                                 <th class="col-md-6  col-lg-6">Description</th>
+
+                             </tr>
+                        </thead>
+                        <tbody>
+
+                                <tr>
+                                    <td class="col-md-3  col-lg-3"><input ng-model='f["Entity_Name"]' placeholder="Filter by LDM Object" /></td>
+                                    <td class="col-md-3  col-lg-3"><input ng-model='f["Attribute_Name"]'   placeholder="Filter by LDM Field"   /></td>
+                                    <td class="col-md-6  col-lg-6"><input ng-model='f["Description"]'   placeholder="Filter by Description"   /></td>
+                                 </tr>
+                                <tr>
+                                 
+                                <tr  ng-repeat="row in rows | filter:f  | orderBy:row['Entity_Name'] ">
+
+                                    <td class="col-md-3  col-lg-3"> {{row["Entity_Name"]     }}  </td>
+                                    <td class="col-md-3  col-lg-3"> {{row["Attribute_Name"]     }} </td>
+                                    <td class="col-md-6 col-lg-6"> {{row["Description"] }} </td>
+                                </tr>
+                                
+
+
+                        </tbody>
+                    </table>
+                
+            </div>
+        -->
+        <!-- Approach be Table - END -->
+        <div class="container-fluid">
+        
+        <div class="panel panel-info row">
+            <div class="panel-body col-md-3 col-lg-3">Object Type</div>
+            <div class="panel-body col-md-9 col-lg-6">
+                <form>
+                <label class="radio-inline"><input type="radio" ng-model="system_name">All</label>
+                <label class="radio-inline"><input type="radio" ng-model="system_name" value="UX Sitemap">Screen</label>
+                <label class="radio-inline"><input type="radio" ng-model="system_name" value="ABS Dev">XSD</label>
+                <label class="radio-inline"><input type="radio" ng-model="system_name" value="ABS">LDM</label>
+                </form>
+            </div>
+            <div class="col-md-9 col-lg-3"></div>
+        </div>
+        </div>
+        <!-- Approach with Div - Start -->
+        <div class="table-responsive">
+                
+                    <table class="table">
+                        <thead>
+                             <tr>
+
+                                 <th class="col-md-3  col-lg-3">Object Name</th>
+                                 <th class="col-md-3  col-lg-3">Attribute Name</th>
+                                 <th class="col-md-6  col-lg-6">Attribute Description</th>
+
+                             </tr>
+                        </thead>
+                        <tbody>
+
+                                <tr>
+                                    <td class="col-md-3  col-lg-3"><input ng-model='f["Entity_Name"]' placeholder="Filter by LDM Object" /></td>
+                                    <td class="col-md-3  col-lg-3"><input ng-model='f["Attribute_Name"]'   placeholder="Filter by LDM Field"   /></td>
+                                    <td class="col-md-6  col-lg-6"><input ng-model='f["Description"]'   placeholder="Filter by Description"   /></td>
+                                 </tr>
+                                <tr>
+                                 <!--
+                                <tr  ng-repeat="row in rows | filter:f  | orderBy:row['Entity_Name'] ">
+
+                                    <td class="col-md-3  col-lg-3"> {{row["Entity_Name"]     }}  </td>
+                                    <td class="col-md-3  col-lg-3"> {{row["Attribute_Name"]     }} </td>
+                                    <td class="col-md-6 col-lg-6"> {{row["Description"] }} </td>
+                                </tr>
+                                -->
+
+
+                        </tbody>
+                    </table>
+            
+        </div>
+        
+        <div class="panel-group" id="accordion">
+        <!--
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+                </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+        -->
+            
+           
+        <div class="panel panel-default" ng-repeat="(key, value) in rows | filter:f | groupBy:'Entity_Name'" ng-init="outerIndex = $index"> 
+            
+             <div class="panel panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#demo{{outerIndex}}">{{key}}</a>
+                </h4>
+              </div>
+            
+            
+            
+            <div id="demo{{outerIndex}}" class="panel-collapse collapse">
+                <div class="panel-body" ng-repeat="row in value | filter:f  | orderBy:row['Entity_Name'] ">
+
+                        <div class="col-md-3  col-lg-3"> {{row["Entity_Name"]     }}  </div>
+                        <div class="col-md-3  col-lg-3"> {{row["Attribute_Name"]     }} </div>
+                        <div class="col-md-6  col-lg-6"> {{row["Description"] }} </div>
+
+                </div>
+            </div>
+        </div>
+                
+        </div> 
+
+            <!-- Approach with Div - END -->
+    </div><!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

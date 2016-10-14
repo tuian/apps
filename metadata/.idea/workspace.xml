@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07afeedf-8870-41e6-b21e-6630aee68d06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv_json.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/FileOps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MDRLineageBuilder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LDMObjectsProcessor.py" afterPath="$PROJECT_DIR$/LDMObjectsProcessor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MetadataExtractor.py" afterPath="$PROJECT_DIR$/MetadataExtractor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XSDFields_Matching.py" afterPath="$PROJECT_DIR$/XSDFields_Matching.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookbook_py.txt" afterPath="$PROJECT_DIR$/cookbook_py.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MetadataWeb.py" afterPath="$PROJECT_DIR$/MetadataWeb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Phase1_2_Duplicates.py" afterPath="$PROJECT_DIR$/Phase1_2_Duplicates.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv_json.py" afterPath="$PROJECT_DIR$/csv_json.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mdr_util.py" afterPath="$PROJECT_DIR$/mdr_util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/logo-nav.css" afterPath="$PROJECT_DIR$/static/css/logo-nav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mdr_screens_bs.html" afterPath="$PROJECT_DIR$/templates/mdr_screens_bs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Cookup.py" afterPath="$PROJECT_DIR$/utils/Cookup.py" />
     </list>
     <ignored path="python.iws" />
@@ -62,25 +67,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MetadataExtractor.py" pinned="true" current-in-tab="false">
+      <file leaf-file-name="MetadataExtractor.py" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MetadataExtractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="1086" column="22" selection-start-line="1086" selection-start-column="4" selection-end-line="1086" selection-end-column="22" />
+            <state relative-caret-position="339">
+              <caret line="1603" column="8" selection-start-line="1603" selection-start-column="8" selection-end-line="1603" selection-end-column="8" />
               <folding>
-                <element signature="e#15#30#0" expanded="true" />
-                <element signature="e#1502#1648#0" expanded="false" />
-                <element signature="e#30332#31856#0" expanded="false" />
-                <element signature="e#31977#34060#0" expanded="false" />
-                <element signature="e#56735#58536#0" expanded="false" />
-                <element signature="e#58582#58649#0" expanded="false" />
-                <element signature="e#65144#66972#0" expanded="false" />
-                <element signature="e#67023#68032#0" expanded="false" />
-                <element signature="e#68088#69370#0" expanded="false" />
-                <element signature="e#69390#71908#0" expanded="false" />
-                <element signature="e#72035#72451#0" expanded="false" />
-                <element signature="e#72640#73191#0" expanded="false" />
-                <marker date="1475821923839" expanded="true" signature="35297:35424" ph="..." />
+                <element signature="e#15#55#0" expanded="true" />
+                <element signature="e#1527#1673#0" expanded="false" />
+                <element signature="e#30357#31881#0" expanded="false" />
+                <element signature="e#32002#34085#0" expanded="false" />
+                <element signature="e#58781#58848#0" expanded="false" />
+                <element signature="e#65343#67171#0" expanded="false" />
+                <element signature="e#67222#68231#0" expanded="false" />
+                <element signature="e#68287#69569#0" expanded="false" />
+                <element signature="e#69589#72107#0" expanded="false" />
+                <element signature="e#72234#72650#0" expanded="false" />
+                <element signature="e#72839#73390#0" expanded="false" />
+                <marker date="1476417397240" expanded="true" signature="35322:35449" ph="..." />
               </folding>
             </state>
           </provider>
@@ -89,20 +93,74 @@
       <file leaf-file-name="Phase1_2_Duplicates.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phase1_2_Duplicates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="69" column="69" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
+            <state relative-caret-position="1402">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="csv_json.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LDMObjectsProcessor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LDMObjectsProcessor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="304" column="4" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MDRLineageBuilder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MDRLineageBuilder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MetadataWeb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MetadataWeb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+              <folding>
+                <element signature="e#286#334#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav_menu.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/nav_menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1955">
+              <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="csv_json.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/csv_json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="29" column="160" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="160" />
+            <state relative-caret-position="104">
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mdr_util.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mdr_util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="841" column="0" selection-start-line="841" selection-start-column="0" selection-end-line="841" selection-end-column="0" />
+              <folding>
+                <element signature="e#17655#19130#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -111,8 +169,8 @@
       <file leaf-file-name="Cookup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/Cookup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="51" column="13" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="13" />
+            <state relative-caret-position="243">
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -120,11 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileOps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/FileOps.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="1003">
+              <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -152,9 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Sharepoint_IFS_Matching.py" />
-        <option value="$PROJECT_DIR$/Sharepoint_VM_Matching.py" />
-        <option value="$PROJECT_DIR$/GapReport.py" />
         <option value="$PROJECT_DIR$/myweb.py" />
         <option value="$PROJECT_DIR$/myweb2.py" />
         <option value="$PROJECT_DIR$/templates/mdrhome.html" />
@@ -175,7 +230,6 @@
         <option value="$PROJECT_DIR$/templates/mdr_screen_fields_bs_top.html" />
         <option value="$PROJECT_DIR$/templates/mdr_screens_bs.html" />
         <option value="$PROJECT_DIR$/templates/LDMObjectsProcessor.py" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/HelloPattern.py" />
         <option value="$PROJECT_DIR$/LDMReportQualityChecker.py" />
         <option value="$PROJECT_DIR$/HelloWebsites.py" />
@@ -185,24 +239,28 @@
         <option value="$PROJECT_DIR$/HelloFuzzy.py" />
         <option value="$PROJECT_DIR$/HelloXML.py" />
         <option value="$PROJECT_DIR$/HelloMacro.py" />
-        <option value="$PROJECT_DIR$/Phase1_2_Duplicates.py" />
         <option value="$PROJECT_DIR$/templates/mdr_lineage_bs_bottom.html" />
         <option value="$PROJECT_DIR$/templates/mdr_lineage_bs_top.html" />
         <option value="$PROJECT_DIR$/templates/mdr_lineage_bs_bottom_From_CSV.html" />
-        <option value="$PROJECT_DIR$/mdr_util.py" />
         <option value="$PROJECT_DIR$/HelloFields.py" />
-        <option value="$PROJECT_DIR$/MetadataWeb.py" />
         <option value="$PROJECT_DIR$/../tcsbt/projections.py" />
         <option value="C:/Python27/Scripts/pycallgraph.py" />
         <option value="$PROJECT_DIR$/HelloProfiler.py" />
         <option value="$PROJECT_DIR$/../py/HelloProfilerSimple.py" />
         <option value="$PROJECT_DIR$/XSDFields_Matching.py" />
-        <option value="$PROJECT_DIR$/LDMObjectsProcessor.py" />
         <option value="$PROJECT_DIR$/cookbook_py.txt" />
-        <option value="$PROJECT_DIR$/MetadataExtractor.py" />
-        <option value="$PROJECT_DIR$/utils/Cookup.py" />
         <option value="$PROJECT_DIR$/utils/FileOps.py" />
+        <option value="$PROJECT_DIR$/LDMObjectsProcessor.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/MetadataWeb.py" />
+        <option value="$PROJECT_DIR$/templates/mdr_xsd_bs.html" />
+        <option value="$PROJECT_DIR$/static/js/nav_menu.js" />
+        <option value="$PROJECT_DIR$/mdr_util.py" />
+        <option value="$PROJECT_DIR$/utils/Cookup.py" />
+        <option value="$PROJECT_DIR$/Phase1_2_Duplicates.py" />
+        <option value="$PROJECT_DIR$/MDRLineageBuilder.py" />
         <option value="$PROJECT_DIR$/csv_json.py" />
+        <option value="$PROJECT_DIR$/MetadataExtractor.py" />
       </list>
     </option>
   </component>
@@ -215,8 +273,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -265,6 +323,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -300,7 +359,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,7 +372,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="makedirs&#9;null&#9;null&#10;createF&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="lineage&#9;null&#9;null&#10;makedirs&#9;null&#9;null&#10;createF&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -324,63 +382,7 @@
       <recent name="C:\apps\labs\python" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FileOps">
-    <configuration default="false" name="MetadataExtractor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MetadataExtractor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="XSDFields_Matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="PATH" value="C:\Program Files (x86)\Graphviz2.38\bin" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XSDFields_Matching.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="LDMObjectsProcessor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="PATH" value="/usr/local/bin/dot" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDMObjectsProcessor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.csv_json">
     <configuration default="false" name="csv_json" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -400,7 +402,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="FileOps" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="MDRLineageBuilder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -408,13 +410,70 @@
         <env name="PATH" value="/usr/local/bin/dot" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/FileOps.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MDRLineageBuilder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MetadataExtractor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="/usr/local/bin/dot" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MetadataExtractor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="mdr_util" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="/usr/local/bin/dot" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mdr_util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Phase1_2_Duplicates" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="/usr/local/bin/dot" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Phase1_2_Duplicates.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -562,19 +621,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.MetadataExtractor" />
-      <item index="1" class="java.lang.String" itemvalue="Python.XSDFields_Matching" />
-      <item index="2" class="java.lang.String" itemvalue="Python.LDMObjectsProcessor" />
-      <item index="3" class="java.lang.String" itemvalue="Python.csv_json" />
-      <item index="4" class="java.lang.String" itemvalue="Python.FileOps" />
+      <item index="0" class="java.lang.String" itemvalue="Python.csv_json" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MDRLineageBuilder" />
+      <item index="2" class="java.lang.String" itemvalue="Python.MetadataExtractor" />
+      <item index="3" class="java.lang.String" itemvalue="Python.mdr_util" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Phase1_2_Duplicates" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.FileOps" />
-        <item index="1" class="java.lang.String" itemvalue="Python.csv_json" />
-        <item index="2" class="java.lang.String" itemvalue="Python.MetadataExtractor" />
-        <item index="3" class="java.lang.String" itemvalue="Python.LDMObjectsProcessor" />
-        <item index="4" class="java.lang.String" itemvalue="Python.XSDFields_Matching" />
+        <item index="0" class="java.lang.String" itemvalue="Python.csv_json" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MetadataExtractor" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Phase1_2_Duplicates" />
+        <item index="3" class="java.lang.String" itemvalue="Python.mdr_util" />
+        <item index="4" class="java.lang.String" itemvalue="Python.MDRLineageBuilder" />
       </list>
     </recent_temporary>
   </component>
@@ -620,16 +679,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19264892" sideWeight="0.6725572" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13224447" sideWeight="0.6725572" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.56182796" sideWeight="0.581749" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20430107" sideWeight="0.48795944" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3807054" sideWeight="0.59114856" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.49746513" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56182796" sideWeight="0.41825095" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3807054" sideWeight="0.40885141" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32392472" sideWeight="0.4898606" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -640,6 +698,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20430107" sideWeight="0.48795944" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -691,21 +750,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/mdr_lineage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mdr_lineage_bs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mdr_lineage_bs _bottom.html" />
     <entry file="file://$PROJECT_DIR$/templates/mdr_screen_fields_bs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
@@ -742,13 +786,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MedataExtractor.py" />
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="25" selection-start-line="51" selection-start-column="20" selection-end-line="53" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HelloUtil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -789,13 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -931,24 +961,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MetadataWeb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IFS-Mapping-Script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mdr_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -966,82 +982,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cookbook_py.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/FileOps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/XSDFields_Matching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="246" column="95" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="95" />
+        <state relative-caret-position="14654">
+          <caret line="871" column="40" selection-start-line="871" selection-start-column="40" selection-end-line="871" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mdr_xsd_bs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="101" column="97" selection-start-line="101" selection-start-column="78" selection-end-line="101" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/nav_menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdr_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="841" column="0" selection-start-line="841" selection-start-column="0" selection-end-line="841" selection-end-column="0" />
+          <folding>
+            <element signature="e#17655#19130#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LDMObjectsProcessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="684" column="0" selection-start-line="684" selection-start-column="0" selection-end-line="684" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="304" column="4" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MetadataWeb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+          <folding>
+            <element signature="e#286#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MDRLineageBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Phase1_2_Duplicates.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="69" column="69" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MetadataExtractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1086" column="22" selection-start-line="1086" selection-start-column="4" selection-end-line="1086" selection-end-column="22" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-            <element signature="e#1502#1648#0" expanded="false" />
-            <element signature="e#30332#31856#0" expanded="false" />
-            <element signature="e#31977#34060#0" expanded="false" />
-            <element signature="e#56735#58536#0" expanded="false" />
-            <element signature="e#58582#58649#0" expanded="false" />
-            <element signature="e#65144#66972#0" expanded="false" />
-            <element signature="e#67023#68032#0" expanded="false" />
-            <element signature="e#68088#69370#0" expanded="false" />
-            <element signature="e#69390#71908#0" expanded="false" />
-            <element signature="e#72035#72451#0" expanded="false" />
-            <element signature="e#72640#73191#0" expanded="false" />
-            <marker date="1475821923839" expanded="true" signature="35297:35424" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookbook_py.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        <state relative-caret-position="1402">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Cookup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="13" />
+        <state relative-caret-position="243">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/FileOps.py">
+    <entry file="file://$PROJECT_DIR$/csv_json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="104">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv_json.py">
+    <entry file="file://$PROJECT_DIR$/MetadataExtractor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="29" column="160" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="160" />
+        <state relative-caret-position="339">
+          <caret line="1603" column="8" selection-start-line="1603" selection-start-column="8" selection-end-line="1603" selection-end-column="8" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#15#55#0" expanded="true" />
+            <element signature="e#1527#1673#0" expanded="false" />
+            <element signature="e#30357#31881#0" expanded="false" />
+            <element signature="e#32002#34085#0" expanded="false" />
+            <element signature="e#58781#58848#0" expanded="false" />
+            <element signature="e#65343#67171#0" expanded="false" />
+            <element signature="e#67222#68231#0" expanded="false" />
+            <element signature="e#68287#69569#0" expanded="false" />
+            <element signature="e#69589#72107#0" expanded="false" />
+            <element signature="e#72234#72650#0" expanded="false" />
+            <element signature="e#72839#73390#0" expanded="false" />
+            <marker date="1476417397240" expanded="true" signature="35322:35449" ph="..." />
           </folding>
         </state>
       </provider>

@@ -31,103 +31,17 @@
 
     <!-- Angular js -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/static/js/nav_menu.js"></script>
 
 
     <script>
-        angular.module('TableFilterApp', [])
-            .controller('TableFilterController', function($scope,$http,$filter) {
-
-                $scope.names = ["PHP", "Python", "Ruby", "Scheme"];
-
-
-
-                $scope.screen_status_filtered_count_flag = false;
-                console.log("screen_status_filtered_count_flag= "+$scope.screen_status_filtered_count_flag);
-
-                $scope.screen_status_count_flag = false;
-                console.log("screen_status_count_flag="+$scope.screen_status_count_flag);
-
-
-                $http.get('./screenobjects_json').success(function(data){
-                    $scope.screen_objects_json = data;
-
-                    console.log("I'm called");
-                    console.log($scope.screen_objects_json);
-                    $scope.screen_status_count_flag = true;
-                    $scope.screen_status_count = ($scope.screen_objects_json).length;
-                    console.log($scope.screen_status_count);
-                    console.log("screen_status_count_flag="+$scope.screen_status_count_flag);
-
-                    $scope.screen_status_filtered_count_flag = true;
-                    console.log("screen_status_filtered_count_flag="+$scope.screen_status_filtered_count_flag);
-
-                });
-
-
-                $scope.$watch("f.Harvest_Status", function(query){
-
-                    $scope.screen_status_filtered_count = $filter("filter")($scope.screen_objects_json, query).length;
-                });
-                /*
-                $scope.$watch("f.MDR_x0020_Release", function(query){
-
-                    $scope.screen_status_filtered_count = $filter("filter")($scope.screen_objects_json, query).length;
-                });
-
-                $scope.$watch("f.Onboarding", function(query){
-
-                                    $scope.screen_status_filtered_count = $filter("filter")($scope.screen_objects_json, query).length;
-                                });
-
-                $scope.$watch("f.ASIM", function(query){
-
-                                    $scope.screen_status_filtered_count = $filter("filter")($scope.screen_objects_json, query).length;
-                                });
-
-                $scope.$watch("f.Direct", function(query){
-
-                                    $scope.screen_status_filtered_count = $filter("filter")($scope.screen_objects_json, query).length;
-                                });
-                */
-
-
-
-                $scope.screen_objects_static = [
-                    {
-                      Functionality : 'Mercury',
-                      Entity_x0020_Name : 0.4,
-                      MDR_x0020_Release : 0.055
-                    },
-                    {
-                      Functionality : 'Venus',
-                      Entity_x0020_Name : 0.7,
-                      MDR_x0020_Release : 0.815
-                    },
-                    {
-                      Functionality : 'Earth',
-                      Entity_x0020_Name: 1,
-                      MDR_x0020_Release : 1
-                    }
-                ];
-
-        }).directive('autoComplete', function($timeout) {
-        return function(scope, iElement, iAttrs) {
-            iElement.autocomplete({
-                source: scope[iAttrs.uiItems],
-                select: function() {
-                    $timeout(function() {
-                      iElement.trigger('input');
-                        }, 0);
-                    }
-                });
-            };
-        });
+        
 
     </script>
 
 </head>
 
-<body ng-app="TableFilterApp" ng-controller="TableFilterController">
+<body ng-app="menuApp">
 
 <!-- -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -145,8 +59,9 @@
                 </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="menuController">
                 <ul class="nav navbar-nav">
+                    <!-- 
                     <li>
                         <a href="/">Home</a>
                     </li>
@@ -156,7 +71,11 @@
                     <li>
                         <a href="/screens">Screens</a>
                     </li>
-
+                    -->
+                    <li ng-repeat="item in menu_items">
+                        <a href="{{' {{item.url}} '}}">{{' {{item.label}} '}}</a>
+                    </li>
+                    
                 </ul>
             </div>
 
@@ -176,7 +95,7 @@
         </div>
     </div>
 <!-- ng-show={{'{{screen_status_count_flag}}'}} -->
-    <div class="container-fluid">
+    <div class="container-fluid" ng-controller="TableFilterController">
         <h2>Screen Names</h2>
         <p>List of all BT Panorama application screens
             <span style="font-style: italic " ng-show="screen_status_count_flag">[Total screens:

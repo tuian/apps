@@ -22,7 +22,10 @@ df.drop_duplicates(subset=object_duplicated_by_columns, keep=False, inplace=True
 df["Target Attribute Name"].replace('', np.nan)
 
 df.rename(columns={"From":"To","LDM Text":"Attribute_Description"}, inplace=True)
+df.rename(columns=lambda x: x.strip().replace(" ", "_"), inplace=True)
 
+# strip or trim
+df["Source_System_Name"] = df["Source_System_Name"].str.strip()
 
 df.sort_values(by=object_sort_by_columns, inplace=True, na_position='first', ascending=[False, True, True, True])
 
@@ -41,6 +44,8 @@ output_filename = "ABS_EntityName_T_E_A_Correct.csv"
 required_columns = ["Entity Name", "Attribute Name"]
 
 df = pd.read_csv(input_csv_folder_path + input_filename, sep=",",usecols=required_columns)
+df.to_csv(output_csv_folder_path + "BTP_Phase1_2_Mappings.csv", sep=",")
+
 df1,df2 = pd.DataFrame()
 
 merged_df = pd.merge(left=df1,right=df2, on=["Entity Name","Attribute Name"],how='left')

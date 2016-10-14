@@ -384,6 +384,7 @@ def getXSD_LDM_Mapping_Delta(latest_ldm_report_filename):
 
     #df_all_mappings.fillna
 
+    #DROP DROP DROP DUPLICATES
     df_all_mappings.drop_duplicates(subset=object_duplicated_by_columns_drop, keep=False, inplace=True)
 
     df_all_mappings.insert(0, "Source System Name", "ABS Dev")

@@ -25,6 +25,8 @@ def checkPhase1_2_Duplicates():
                                       index_col=None)
     df_phase1_objects.insert(0,"Phase","Phase 1")
     df_phase1_mappings.insert(0, "Phase", "Phase 1")
+    df_phase1_objects["Entity Name"] = df_phase1_objects["Entity Name"].str.strip()
+    df_phase1_objects["Attribute Name"] = df_phase1_objects["Attribute Name"].str.strip()
 
     print df_phase1_objects.head()
     print df_phase1_mappings.head()
@@ -34,6 +36,7 @@ def checkPhase1_2_Duplicates():
     df_phase2_mappings = pd.read_csv(input_excel_folder_path_phase2 + input_excel_filename_phase2_mappings, sep=",")
     df_phase2_objects.insert(0, "Phase", "Phase 2")
     df_phase2_mappings.insert(0, "Phase", "Phase 2")
+
 
     print df_phase2_objects.head()
     print df_phase2_mappings.head()
@@ -47,7 +50,9 @@ def checkPhase1_2_Duplicates():
     # drop duplicates within phases before comparing Phase 1 and Phase 2
 
         ###drop the duplicate rows in each Phase , keep first and inplace=True
+    print "BEFORE: df_phase1_objects",len(df_phase1_objects)
     df_phase1_objects.drop_duplicates(subset=object_duplicated_by_columns, keep='first', inplace=True)
+    print "AFTER: df_phase1_objects", len(df_phase1_objects)
     df_phase2_objects.drop_duplicates(subset=object_duplicated_by_columns, keep='first', inplace=True)
 
     # add dfs
@@ -106,5 +111,6 @@ def checkPhase1_2_Duplicates():
     df_mappings = df_mappings[df_mappings["Phase"] == "Phase 2"]
     df_mappings.to_csv(input_excel_folder_path_phase2 + "\BTP_Phase2_Mappings.csv", sep=",",header=True, index=None, columns=columns_mappings_csv_loading)
 
+if __name__ == "__main__":
 
-#checkPhase1_2_Duplicates()
+    checkPhase1_2_Duplicates()

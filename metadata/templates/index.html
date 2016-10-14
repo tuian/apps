@@ -23,7 +23,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
+    <!-- Angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/static/js/nav_menu.js"></script>
 </head>
 
 <body>
@@ -44,8 +47,9 @@
                 </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-app="menuApp" ng-controller="menuController">
                 <ul class="nav navbar-nav">
+                    <!-- 
                     <li>
                         <a href="/">Home</a>
                     </li>
@@ -55,7 +59,12 @@
                     <li>
                         <a href="/screens">Screens</a>
                     </li>
-
+                    -->
+                    <li ng-repeat="item in menu_items">
+                        <a href="{{' {{item.url}} '}}">{{' {{item.label}} '}}</a>
+                    </li>
+                    
+                    
                 </ul>
             </div>
 
@@ -79,7 +88,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/js/bootstrap.min.js"></script>
-
+    <!-- custom JavaScript -->
+    
 </body>
 
 </html>

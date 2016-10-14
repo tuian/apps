@@ -1,5 +1,5 @@
 #encoding=utf8
-import sys,time
+import sys,time,csv_json.processCSV_JSON
 import csv
 import numpy as np
 import pandas as pd
@@ -1088,7 +1088,9 @@ def checkAttributes():
     df_phase2_objects  = pd.read_csv(output_csv_folder_path + 'BTP_Phase2_Objects.csv', sep=",")
 
     df_phase1_objects["Entity Name"] = df_phase1_objects["Entity Name"].str.upper()
+    df_phase1_objects["Entity Name"] = df_phase1_objects["Entity Name"].str.strip()
     df_phase1_objects["Attribute Name"] = df_phase1_objects["Attribute Name"].str.upper()
+    df_phase1_objects["Attribute Name"] = df_phase1_objects["Attribute Name"].str.strip()
 
     df_objects = pd.concat([df_phase1_objects,df_phase2_objects])
     df_objects.to_csv(output_csv_folder_path + "BTP_Phase1_2_Objects.csv", sep=",")
@@ -1579,12 +1581,12 @@ if __name__ == "__main__":
     print "Batch status 'WIP' = {}".format(getBatchDetails("WIP")[0])
 
         #extract Objects & Mappings for a given MDR Phase (i.e. Phase 1, Phase 2)
-    # buidObjects(GP_PHASE_NO)
-    # buildMapings(GP_PHASE_NO)
+    buidObjects(GP_PHASE_NO)
+    buildMapings(GP_PHASE_NO)
 
         #check and remove duplicates between Phase 1 and Phase 2 - Should be called before getObjectsForLoad() and getMappingsForLoad()
         #Output: BTP_Phase2_Objects.csv / BTP_Phase2_Mappings.csv
-    # checkPhase1_2_Duplicates()
+    checkPhase1_2_Duplicates()
 
         #check if the attributes in the mapping sheet has been defined in the object sheet, as
         # if the mapping attributes are not in objects - the MDR loading will fail.
@@ -1595,8 +1597,11 @@ if __name__ == "__main__":
     checkAttributesByJoin('left')
 
         #extract Objects & Mappings for Dataloading based on the load control settings
-    # getObjectsForLoad(getBatchDetails("WIP")[0])
-    # getMappingsForLoad(getBatchDetails("WIP")[0])
+    getObjectsForLoad(getBatchDetails("WIP")[0])
+    getMappingsForLoad(getBatchDetails("WIP")[0])
+
+        #covert to JSON for web tool
+    csv_json.processCSV_JSON()
 ####################### END LOADING################################
 
     end = time.time()
