@@ -11,10 +11,11 @@
 
     <title>BT Panorama - Metadata Lineage - Explorer</title>
 
-    
+    <!-- Custom CSS -->
+    <link href="/static/css/logo-nav.css" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
     
 
     <!-- Pace plugin -->
@@ -34,8 +35,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js"></script>
     <script src="/static/js/nav_menu.js"></script>
 
-    <!-- Custom CSS -->
-    <link href="/static/css/logo-nav.css" rel="stylesheet">
 
     <style>
         
@@ -46,90 +45,60 @@
 
 </head>
 
-<body ng-app="menuApp" ng-cloak>
+<body ng-app="menuApp">
     
 <!-- -->
-<!---->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        
-         <div class="navbar-header navbar-brand"><div class="btbrand"> BT Panorama - Metadata Explorer</div>
-         </div>
-        
         <div class="container">
-             
+
             <div class="navbar-header">
-                
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="" width="50" height="50" alt=""> -->
+                </a>
             </div>
-            
-           
-            
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            
-                <ul class="nav navbar-nav" ng-controller="menuController">
-                    
-                    <li ng-repeat="item in menu_items">
-                        <a class="btn" id="{{item.id}}" href="{{item.url}}"> {{item.label}} </a>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="menuController">
+                <ul class="nav navbar-nav">
+                   <li ng-repeat="item in menu_items">
+                        <a href="{{item.url}} "> {{item.label}} </a>
                     </li>
                     
                 </ul>
-             </div> 
+            </div>
 
         </div>
-</nav>
-        <!-- 
-        <nav class="navbar navbar-inverse navbar-fixed-top">    
-        <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">WebSiteName</a>
-            </div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Page 1</a></li>
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
-            </ul>
-          </div>
+
     </nav>
--->
+
     <!-- Page Content -->
-    <!-- 
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-10">
                 <h1>BT Panorama - Metatadata Explorer</h1>
             </div>
-            <div class="col-lg-2">
-             <button type="button" class="btn btn-danger right" onclick="javascript:history.back();">Back</button>
+              <div class="col-lg-2">
+             <button type="button" class="btn btn-danger" onclick="javascript:history.back();">Back</button>
             </div>
         </div>
     </div>
-    -->
 <!-- ng-show={{screen_status_count_flag}} -->
     <!-- ng-init="system_name='ABS';instance_name='LDM'" -->
     <div class="container-fluid" ng-controller="metadataObjController">
     <!--  --> 
-    <div class="container-fluid">
-   <div class="row">
-       <div class="col-lg-10"> 
-       <h2>Objects & Fields</h2>
-        <p>List of all Screens, XSDs, LDMs and respective fields
+    
+   
+        <h2>Mappings</h2>
+        <p>Mapping between objects such Screens & Visual Map, Visual Map & IFS, IFS & XSDs, XSD & LDMs fields
             <span style="font-style: italic " ng-show="count_display_flag">[Total:
                 <span style="text-decoration: underline;color: #000050"> {{rows_count}} </span>]
             </span>
         </p>
-        </div>
-       <div class="col-lg-2">
-                 <!-- <button type="button" class="btn btn-danger" onclick="javascript:history.back();">Back</button> -->
-       </div>
-           
-    </div>
-    </div>
          <!-- Approach be Table - START -->
         <!-- 
             <div class="table-responsive">
@@ -191,17 +160,17 @@
                              <tr>
 
                                  <th class="col-md-3  col-lg-3">Object Name</th>
-                                 <th class="col-md-3  col-lg-3">Field Name</th>
-                                 <th class="col-md-6  col-lg-6">Field Description</th>
+                                 <th class="col-md-3  col-lg-3">Attribute Name</th>
+                                 <th class="col-md-6  col-lg-6">Attribute Description</th>
 
                              </tr>
                         </thead>
                         <tbody>
 
                                 <tr>
-                                    <td class="col-md-3  col-lg-3"><input size=30 ng-model='f["Entity_Name"]' placeholder="Filter by Object Name" /></td>
-                                    <td class="col-md-3  col-lg-3"><input size=30 ng-model='f["Attribute_Name"]'   placeholder="Filter by Field Name"   /></td>
-                                    <td class="col-md-6  col-lg-6"><input size=50 ng-model='f["Description"]'   placeholder="Filter by Field Description"   /></td>
+                                    <td class="col-md-3  col-lg-3"><input ng-model='f["Entity_Name"]' placeholder="Filter by LDM Object" /></td>
+                                    <td class="col-md-3  col-lg-3"><input ng-model='f["Attribute_Name"]'   placeholder="Filter by LDM Field"   /></td>
+                                    <td class="col-md-6  col-lg-6"><input ng-model='f["Description"]'   placeholder="Filter by Description"   /></td>
                                  </tr>
                                 <tr>
                                  <!--
@@ -240,23 +209,7 @@
             
              <div class="panel panel-heading">
                 <h4 class="panel-title">
-                    <a  ng-click="ck = !ck" data-toggle="collapse" href="#demo{{outerIndex}}">{{key}}
-                    
-                    
-                    <i ng-class="{'fa fa-compress opengicon':ck,'fa fa-expand closedgicon':!ck}" aria-hidden="true"></i>
-                        
-                    <!--
-                    <span ng-class="{'glyphicon glyphicon-list opengicon':ck,'glyphicon glyphicon-list closedgicon':!ck}" aria-hidden="false"></span>            
-                    <i class="fa fa-expand" aria-hidden="true"></i>
-                    <i class="fa fa-compress" aria-hidden="true"></i>
-
-                    <span class="glyphicon glyphicon-arrow-up gisize" aria-hidden="false"></span>
-                    <span class="glyphicon glyphicon-resize-vertical gisize" aria-hidden="false"></span>
-
-                    -->
-
-                        
-                    </a>
+                    <a data-toggle="collapse" href="#demo{{outerIndex}}">{{key}}</a>
                 </h4>
               </div>
             
