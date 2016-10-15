@@ -2,17 +2,17 @@
     {
 	"url": "/templates/mdr_objects_bs_ng.html",
 	"label": "Objects",
-        "id":"Objects"
+        "id":"1"
 },
     {
 	"url": "/templates/mdr_mappings_bs_ng.html",
 	"label": "Mappings",
-        "id":"Mappings"
+        "id":"2"
 },
     {
 	"url": "/templates/mdr_lineage_bs_ng.html",
 	"label": "Lineage",
-        "id":"Lineage"
+        "id":"3"
         
 }
 ]

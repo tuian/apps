@@ -40,30 +40,69 @@ body {
     font-size: 35px;
     padding-top: 20px;
 }
-.navbar-inverse .navbar-nav li a {
+
+
+/**/
+.mycss {
+    text-align: center;
+    background-color: red; 
+}
+
+.bt_enabled {
     color: white;
+    text-align: center;
     background-color: #005d80;
     border-radius: 20px;
     margin-right: 10px;
      font-size: 20px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    font-family: cursive;
     
 }
 
+.bt_disabled {
+    color: white;
+    text-align: center;
+    background-color: gray;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration:none;
+    font-family: cursive;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .99;
+    
+}
+
+
+.navbar-inverse .navbar-nav li a {
+    color: white;
+    
+    /*
+    margin-right: 12px;
+    font-size: 22px;
+    font-family: cursive;
+    border-radius: 20px;
+    background-color: #005d80;
+    text-decoration: underline;
+    
+    */
+}
+
 .navbar-inverse .navbar-nav li a:hover { 
+    /*
     background-color: whitesmoke;
     border-radius: 45px;
+    color: #005d80;
+    */
     text-decoration: underline;
     font-size: 21px;
-    color: #005d80;
+    
 }
 
 
 
-.navbar-inverse .navbar-nav li a:link { 
-    background-color: #005d80;
-    border-radius: 20px;
-}
 
 @media(min-width:768px) {
     body {

@@ -73,8 +73,8 @@
             
                 <ul class="nav navbar-nav" ng-controller="menuController">
                     
-                    <li ng-repeat="item in menu_items">
-                        <a class="btn" id="{{item.id}}" href="{{item.url}}"> {{item.label}} </a>
+                    <li ng-repeat="item in menu_items" ng-class="{'bt_disabled':item.id=='2','bt_enabled':item.id!='2'}">
+                    <a id="{{item.id}}" href="{{item.url}}"> {{item.label}} </a>
                     </li>
                     
                 </ul>
@@ -112,12 +112,12 @@
     -->
 <!-- ng-show={{screen_status_count_flag}} -->
     <!-- ng-init="system_name='ABS';instance_name='LDM'" -->
-    <div class="container-fluid" ng-controller="metadataObjController">
+    <div class="container-fluid" ng-controller="metadataMappingController">
     <!--  --> 
     <div class="container-fluid">
    <div class="row">
        <div class="col-lg-10"> 
-       <h2>Source and Target Mappings</h2>
+       <h2>Source and Target mappings</h2>
         <p>List of all mappings between source and target elements
             <span style="font-style: italic " ng-show="count_display_flag">[Total:
                 <span style="text-decoration: underline;color: #000050"> {{rows_count}} </span>]
@@ -171,13 +171,15 @@
         <div class="container-fluid">
         
         <div class="panel panel-info row">
-            <div class="panel-body col-md-3 col-lg-3">Mapping Type</div>
+            <div class="panel-body col-md-3 col-lg-3">Source</div>
             <div class="panel-body col-md-9 col-lg-6">
                 <form>
-                <label class="radio-inline"><input type="radio" ng-model="system_name">All</label>
-                <label class="radio-inline"><input type="radio" ng-model="system_name" value="UX Sitemap">Screen</label>
-                <label class="radio-inline"><input type="radio" ng-model="system_name" value="ABS Dev">XSD</label>
-                <label class="radio-inline"><input type="radio" ng-model="system_name" value="ABS">LDM</label>
+                
+                <label class="radio-inline"><input type="radio" ng-model="source_system_name" value="UX Sitemap">Screen</label>
+                <label class="radio-inline"><input type="radio" ng-model="source_system_name" value="Visual Map">Visual Map</label>
+                <label class="radio-inline"><input type="radio" ng-model="source_system_name" value="IFS">IFS</label>
+                <label class="radio-inline"><input type="radio" ng-model="source_system_name" value="ABS Dev">XSD</label>
+                <label class="radio-inline"><input type="radio" ng-model="source_system_name">All</label>
                 </form>
             </div>
             <div class="col-md-9 col-lg-3"></div>
@@ -190,20 +192,24 @@
                         <thead>
                              <tr>
 
-                                 <th class="col-md-3  col-lg-3">Object Name</th>
-                                 <th class="col-md-3  col-lg-3">Field Name</th>
-                                 <th class="col-md-6  col-lg-6">Field Description</th>
+                                 <th class="col-md-3  col-lg-3">Source Entity Name</th>
+                                 <th class="col-md-2  col-lg-2">Source Atrribute Name</th>
+                                 <th class="col-md-3  col-lg-3">Target Entity Name</th>
+                                 <th class="col-md-2  col-lg-2">Target Atrribute Name</th>
+                                 <th class="col-md-2  col-lg-2">Mapping Description</th>
 
                              </tr>
                         </thead>
                         <tbody>
 
-                                <tr>
-                                    <td class="col-md-3  col-lg-3"><input size=30 ng-model='f["Entity_Name"]' placeholder="Filter by Object Name" /></td>
-                                    <td class="col-md-3  col-lg-3"><input size=30 ng-model='f["Attribute_Name"]'   placeholder="Filter by Field Name"   /></td>
-                                    <td class="col-md-6  col-lg-6"><input size=50 ng-model='f["Description"]'   placeholder="Filter by Field Description"   /></td>
-                                 </tr>
-                                <tr>
+                    <tr>
+                        <td class="col-md-2  col-lg-3"><input size=30 ng-model='f["Source_Entity_Name"]' placeholder="Filter by Source Entity Name" /></td>
+                        <td class="col-md-2  col-lg-2"><input size=30 ng-model='f["Source_Attribute_Name"]'   placeholder="Filter by Source Attribute Name"   /></td>
+                        <td class="col-md-2  col-lg-3"><input size=30 ng-model='f["Target_Entity_Name"]' placeholder="Filter by Target Entity Name" /></td>
+                        <td class="col-md-2  col-lg-2"><input size=30 ng-model='f["Target_Attribute_Name"]'   placeholder="Filter by Target Attribute Name"/></td>
+                        <td class="col-md-4  col-lg-2"><input size=30 ng-model='f["Transformation_Mapping_rule"]'   placeholder="Filter by Mapping Description"   /></td>
+                     </tr>
+
                                  <!--
                                 <tr  ng-repeat="row in rows | filter:f  | orderBy:row['Entity_Name'] ">
 
@@ -236,16 +242,17 @@
         -->
             
            
-        <div class="panel panel-default" ng-repeat="(key, value) in rows | filter:f | groupBy:'Entity_Name'" ng-init="outerIndex = $index"> 
+        <div class="panel panel-default" ng-repeat="(key, value) in rows | filter:f | groupBy:'Source_Entity_Name'" ng-init="outerIndex = $index"> 
             
              <div class="panel panel-heading">
                 <h4 class="panel-title">
-                    <a  ng-click="ck = !ck" data-toggle="collapse" href="#demo{{outerIndex}}">{{key}}
+                    <a  ng-click="ck = !ck" data-toggle="collapse" href="#demo{{outerIndex}}">{{value[0]["Source_System_Name"]}} | {{key}}
                     
-                    
+                    <i class="fa fa-expand closedgicon" aria-hidden="true"></i>
+                    <!--
                     <i ng-class="{'fa fa-compress opengicon':ck,'fa fa-expand closedgicon':!ck}" aria-hidden="true"></i>
                         
-                    <!--
+                    
                     <span ng-class="{'glyphicon glyphicon-list opengicon':ck,'glyphicon glyphicon-list closedgicon':!ck}" aria-hidden="false"></span>            
                     <i class="fa fa-expand" aria-hidden="true"></i>
                     <i class="fa fa-compress" aria-hidden="true"></i>
@@ -263,11 +270,17 @@
             
             
             <div id="demo{{outerIndex}}" class="panel-collapse collapse">
-                <div class="panel-body" ng-repeat="row in value | filter:f  | orderBy:row['Entity_Name'] ">
+                <div class="panel-body" ng-repeat="row in value | filter:f  | orderBy:row['Source_Entity_Name'] ">
 
-                        <div class="col-md-3  col-lg-3"> {{row["Entity_Name"]     }}  </div>
-                        <div class="col-md-3  col-lg-3"> {{row["Attribute_Name"]     }} </div>
-                        <div class="col-md-6  col-lg-6"> {{row["Description"] }} </div>
+                    <div class="col-md-2  col-lg-1"> {{row["Source_System_Name"]     }}  </div>    
+                    <div class="col-md-2  col-lg-2"> {{row["Source_Entity_Name"]     }}  </div>
+                    <div class="col-md-2  col-lg-2"> {{row["Source_Attribute_Name"]     }} </div>
+                    
+                    <div class="col-md-2  col-lg-1"> {{row["Target_System_Name"]     }}  </div>    
+                    <div class="col-md-2  col-lg-2"> {{row["Target_Entity_Name"]     }}  </div>
+                    <div class="col-md-2  col-lg-2"> {{row["Target_Attribute_Name"]     }} </div>
+                    
+                    <div class="col-md-4  col-lg-2"> {{row["Transformation_Mapping_rule"] }} </div>
 
                 </div>
             </div>
