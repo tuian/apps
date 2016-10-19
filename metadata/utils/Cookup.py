@@ -1,7 +1,13 @@
 import pandas as pd
-import time,csv,json
+import time,csv,json,sys
 folder = "C:/MDR/Data"
 output_filename = ""
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+myList = ['a','b','c','d']
+myString = ",".join(myList )
 
 df = pd.read_excel(folder + 'MDR_LOADING.xlsx',sheetname="Mappings")
 
@@ -18,7 +24,10 @@ time.strftime('%Y-%m-%d %H:%M:%S')
 df = df.drop('Modified_By', 1)
 object_duplicated_by_columns = ["System Name","Entity Name", "Attribute Name","Type"]
 object_sort_by_columns       = ["System Name", "Entity Name", "Attribute Name", "Type"]
+
 df.drop_duplicates(subset=object_duplicated_by_columns, keep=False, inplace=True)
+df.drop_duplicates(subset=object_duplicated_by_columns, keep='first', inplace=True)
+
 df["Target Attribute Name"].replace('', np.nan)
 
 df.rename(columns={"From":"To","LDM Text":"Attribute_Description"}, inplace=True)
@@ -28,6 +37,11 @@ df.rename(columns=lambda x: x.strip().replace(" ", "_"), inplace=True)
 df["Source_System_Name"] = df["Source_System_Name"].str.strip()
 
 df.sort_values(by=object_sort_by_columns, inplace=True, na_position='first', ascending=[False, True, True, True])
+
+#regex in dataframe cell
+passRegex = r"^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,50}$"
+nameRegex = r"^[a-zA-Z0-9\s\-]{2,80}$"
+df[(df['password'].str.contains(passRegex, regex=True)) & (df['first'].str.contains(nameRegex, regex=True)) & (df['last'].str.contains(nameRegex, regex=True))]
 
 
 #ignore the rows with blank Entity Name
