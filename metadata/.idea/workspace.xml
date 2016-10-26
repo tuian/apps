@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07afeedf-8870-41e6-b21e-6630aee68d06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HelloHtml.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HelloPanoramaUI.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mdr_code.zip" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Screen_Attributes.xlsx" afterPath="$PROJECT_DIR$/Screen_Attributes.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/.idea/se.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/HelloGmail.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/HelloGoogle.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/HelloSe.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se/OpenAnAccount.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloPattern.py" afterPath="$PROJECT_DIR$/HelloPattern.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProcessHtml.py" afterPath="$PROJECT_DIR$/ProcessHtml.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Cookup.py" afterPath="$PROJECT_DIR$/utils/Cookup.py" />
     </list>
     <ignored path="python.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +66,8 @@
       <file leaf-file-name="MetadataExtractor.py" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MetadataExtractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="924" column="12" selection-start-line="924" selection-start-column="7" selection-end-line="924" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#15#55#0" expanded="true" />
                 <element signature="e#1527#1673#0" expanded="false" />
@@ -79,8 +80,18 @@
                 <element signature="e#69589#72107#0" expanded="false" />
                 <element signature="e#72234#72650#0" expanded="false" />
                 <element signature="e#72839#73390#0" expanded="false" />
-                <marker date="1476417397240" expanded="true" signature="35322:35449" ph="..." />
+                <marker date="1476931977404" expanded="true" signature="35322:35449" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IFS-Mapping-Script.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IFS-Mapping-Script.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,8 +143,8 @@
       <file leaf-file-name="HelloHtml.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HelloHtml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+            <state relative-caret-position="131">
+              <caret line="117" column="27" selection-start-line="117" selection-start-column="27" selection-end-line="117" selection-end-column="27" />
               <folding>
                 <element signature="e#1#17#0" expanded="true" />
                 <element signature="e#125#659#0" expanded="false" />
@@ -143,7 +154,6 @@
                 <element signature="e#1955#2183#0" expanded="false" />
                 <element signature="e#2549#2819#0" expanded="false" />
                 <element signature="e#2855#3132#0" expanded="false" />
-                <element signature="e#3494#4012#0" expanded="false" />
                 <element signature="e#4545#5143#0" expanded="false" />
                 <element signature="e#5187#6702#0" expanded="false" />
               </folding>
@@ -154,7 +164,7 @@
       <file leaf-file-name="HelloPattern.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HelloPattern.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="918">
               <caret line="54" column="36" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="36" />
               <folding />
             </state>
@@ -176,7 +186,7 @@
       <file leaf-file-name="Cookup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/Cookup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="442">
               <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -252,12 +262,12 @@
         <option value="$PROJECT_DIR$/Phase1_2_Duplicates.py" />
         <option value="$PROJECT_DIR$/MDRLineageBuilder.py" />
         <option value="$PROJECT_DIR$/csv_json.py" />
-        <option value="$PROJECT_DIR$/MetadataExtractor.py" />
         <option value="$PROJECT_DIR$/HelloPanoramaUI.py" />
         <option value="$PROJECT_DIR$/ProcessHtml.py" />
         <option value="$PROJECT_DIR$/utils/Cookup.py" />
         <option value="$PROJECT_DIR$/HelloPattern.py" />
         <option value="$PROJECT_DIR$/HelloHtml.py" />
+        <option value="$PROJECT_DIR$/MetadataExtractor.py" />
       </list>
     </option>
   </component>
@@ -320,7 +330,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -356,6 +365,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,7 +373,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="C:/Python27/Scripts/pycallgraph.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -677,27 +687,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2148289" sideWeight="0.6725572" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6645408" sideWeight="0.35804817" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15943877" sideWeight="0.35804817" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.4949303" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6645408" sideWeight="0.64195186" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32270408" sideWeight="0.48732573" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39718616" sideWeight="0.71443623" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6645408" sideWeight="0.64195186" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20430107" sideWeight="0.48795944" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39718616" sideWeight="0.71443623" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -923,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IFS-Mapping-Script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GESB_IFS_Processor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-864">
@@ -1069,7 +1072,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/Cookup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="442">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -1077,10 +1080,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HelloPattern.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IFS-Mapping-Script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MetadataExtractor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="924" column="12" selection-start-line="924" selection-start-column="7" selection-end-line="924" selection-end-column="12" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#15#55#0" expanded="true" />
             <element signature="e#1527#1673#0" expanded="false" />
@@ -1093,23 +1112,15 @@
             <element signature="e#69589#72107#0" expanded="false" />
             <element signature="e#72234#72650#0" expanded="false" />
             <element signature="e#72839#73390#0" expanded="false" />
-            <marker date="1476417397240" expanded="true" signature="35322:35449" ph="..." />
+            <marker date="1476931977404" expanded="true" signature="35322:35449" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HelloPattern.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="54" column="36" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HelloHtml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+        <state relative-caret-position="131">
+          <caret line="117" column="27" selection-start-line="117" selection-start-column="27" selection-end-line="117" selection-end-column="27" />
           <folding>
             <element signature="e#1#17#0" expanded="true" />
             <element signature="e#125#659#0" expanded="false" />
@@ -1119,7 +1130,6 @@
             <element signature="e#1955#2183#0" expanded="false" />
             <element signature="e#2549#2819#0" expanded="false" />
             <element signature="e#2855#3132#0" expanded="false" />
-            <element signature="e#3494#4012#0" expanded="false" />
             <element signature="e#4545#5143#0" expanded="false" />
             <element signature="e#5187#6702#0" expanded="false" />
           </folding>

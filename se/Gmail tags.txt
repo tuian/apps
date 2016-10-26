@@ -1,0 +1,34 @@
+C:\Python27\python.exe C:/apps/apps/se/HelloGmail.py
+Page Details:
+Current URL:  https://accounts.google.com/SignUp
+Page Title Create your Google Account
+Web Elements - Input :
+1 | Tag_Name: input | Type: hidden | Attribute_Name: timeStmp | Attribute_ID: timeStmp | Attribute_Value: 1476949051681 
+2 | Tag_Name: input | Type: hidden | Attribute_Name: secTok | Attribute_ID: secTok | Attribute_Value: .AG5fkS_Izew2YZgGjqP5r1f047W0LqvtPg== 
+3 | Tag_Name: input | Type: hidden | Attribute_Name: dsh | Attribute_ID: dsh | Attribute_Value: -6280698210489884036 
+4 | Tag_Name: input | Type: hidden | Attribute_Name: ktl | Attribute_ID: ktl | Attribute_Value:  
+5 | Tag_Name: input | Type: hidden | Attribute_Name: ktf | Attribute_ID: ktf | Attribute_Value:  
+6 | Tag_Name: input | Type: hidden | Attribute_Name: _utf8 | Attribute_ID: _utf8 | Attribute_Value: ? 
+7 | Tag_Name: input | Type: hidden | Attribute_Name: bgresponse | Attribute_ID: bgresponse | Attribute_Value: js_disabled 
+8 | Tag_Name: input | Type: text | Attribute_Name: FirstName | Attribute_ID: FirstName | Attribute_Value:  
+9 | Tag_Name: input | Type: text | Attribute_Name: LastName | Attribute_ID: LastName | Attribute_Value:  
+10 | Tag_Name: input | Type: text | Attribute_Name: GmailAddress | Attribute_ID: GmailAddress | Attribute_Value:  
+11 | Tag_Name: input | Type: password | Attribute_Name: Passwd | Attribute_ID: Passwd | Attribute_Value:  
+12 | Tag_Name: input | Type: password | Attribute_Name: PasswdAgain | Attribute_ID: PasswdAgain | Attribute_Value:  
+13 | Tag_Name: input | Type: hidden | Attribute_Name: BirthMonth | Attribute_ID: HiddenBirthMonth | Attribute_Value:  
+14 | Tag_Name: input | Type: text | Attribute_Name: BirthDay | Attribute_ID: BirthDay | Attribute_Value:  
+15 | Tag_Name: input | Type: text | Attribute_Name: BirthYear | Attribute_ID: BirthYear | Attribute_Value:  
+16 | Tag_Name: input | Type: hidden | Attribute_Name: Gender | Attribute_ID: HiddenGender | Attribute_Value:  
+17 | Tag_Name: input | Type: hidden | Attribute_Name: RecoveryPhoneCountry | Attribute_ID: RecoveryPhoneCountry | Attribute_Value: AU 
+18 | Tag_Name: input | Type: text | Attribute_Name: RecoveryEmailAddress | Attribute_ID: RecoveryEmailAddress | Attribute_Value:  
+19 | Tag_Name: input | Type: hidden | Attribute_Name: CountryCode | Attribute_ID: HiddenCountryCode | Attribute_Value: AU 
+20 | Tag_Name: input | Type: checkbox | Attribute_Name: TermsOfService | Attribute_ID: TermsOfService | Attribute_Value: yes 
+21 | Tag_Name: input | Type: hidden | Attribute_Name: extTosRk | Attribute_ID:  | Attribute_Value: AHkK1WTo2HZ4WtqiwNsFDPdhfBRoepm6NSXu+gP3LNemGij1uL7nLTb9IuoiNqLHLdL6Zo2ZBRfysNwCkeWIhhg4PcvmLBTy4TLMVmQ9llxNda3eHKOxnghyR+Afq37jbhcwkMB/yyGcm0qD3zXqgC8NxhjEORitBdL9srUKnemK3VwXzCMhGLsm8t7rb0BBVRVQxWcLm0JjVbOCsV8SZP9GINZ1D6HhVzMP5axA7QilgBHce6tePdJ7D9JVK9cO2UMusLVE2r8ZLeGKIKkI8qfui6JnOK0rLBByRJ5Evf74KCRsUsiARQ23OFJ53cuF44a9o7GPP8p4t72G1KfFsE2hGIl9M2A51iayr8ScWsy/SEu2bLECGXuy5JFFNmrPZWhUfa0nJZCZ;AHkK1WRFsxZuj57knBBmHfMhWO2IC830kTqe/iE/7Zg4qw94s5nnq9WcLAbwRJpOM0hQRAVvX+okBRc+0/aQF/S4DnPyydlQhTea2XLsIn5mrqzhwKaJYn6/IPFHJNUP2Uh30wu/TfdhCiwnKHPGs53J/9T+YEJSa3+Jau2fhKiehpgreipUZCYwimf8w5Gjt8kL1ULRQMSNECS1Jr6Nc/lDpICLMci32BeIsf5PoVRf7Iq/RTcL5x78g8zAeyzUAfa9m//H5h2xV+JAFp4px3CsGq0ML/ZTNlq57PpwB+OE8KdS9/GlcRnRvcy5W/fb8e/DyBt56uksG8fzP+QCN9UTJVcsgrrU7/htfT8wYCB/5Og8Id2mnvpa5nNd2WU8Wm4AhiOy4dB/Kk5dx07/nSaXuf4RP9OxlHxUTP5BPj8crto3AFNOolqsgu4h5b7bRgz8UdrnLUGffG5vhxE7P+dEI9cgTSr70mCwpsFrn8/854G6rxuP881Cu/ZFLEfJ/Hj8JaLpf7pyzjype9VWJfFuMHyiOzqkAIo52LMqw5j9vAVeuiCtbfVT6QypZsHjwOzt45MIJo1FyvJuTIOCZlMm3Qc6cu8rEShzSUStlf5nAmTXoDwmFt2EbG64ujfP9gOozgynYkZpNrInKg7GUS9yEoDomcxBGrMrTT5bMkHKuNtlQe97C6w1xBKVsODk+PeEV20B1xRpepmPnkuTo34d6AIhB4oRitIFZP0N7ijZ0yv/ovBxjDG6mHC1RZOJ02X0EtMlM9LBtM07gC7Sh9sFt6q/YWe+LaanuJ8ZwotUd9e+nuW+sleUD1jzupSVzAqfB97NrSoeRvncJE9VG1+2ISwf+c52DvIPMShhQrs1KgynrvNPht0=;AHkK1WSHhQRYFlANEmYc8331EiQqIIHL3wyQUfYaBSeYOqYrNhLlxBrBu5KT4JWv8U7g5v5l7JTwj4eUdOaKJXpoi0retT/hQUlMFkiDok7YKi4vB9pxP3chzudvfpNp4T3Gxdc04N/hwfnBFqM4ATLaMlpBFkH9caPohR195Qp8cKzorm7Me+ybx22rVwNWKDDsy7vlFVFDlh5oOHTxJZGB6yy/Y8kczAec0lZpZlONZ/CJIXG1JXdHg9HzYS/LuJozEnX82nHAcKSKfQ5DZ8IoNvCnXveu5jqwBy08rx7iIfUJa043i7eYLGeMH6bVfEipA0RA2JyL;AHkK1WRs6AEy97IarC8tOcz+j1PoSRHeF+TGPkP5/Db4kvsmKvyKQtiKrlrunskEFs1Fo1Qn07FYbuM/AQ6qTxiTM0VqCx8yFQgCnvjENpACHX3Aesq3b+c+XGRP5Cel6NV5uDZvxrRbkLa0YuiQRa+DCbmgTpULzLQk7yLrc8tWf2yyzFf3vhONLwz/L8/6IzbLzpIBBO7BN2GPrXLwm+0CCCOqccP5jlMgyVrH11+XGI9tG8JJZ+ba/1oUybkOG4nbAuthHQDa9a6zGujUpUO4jTkmwHtZeSdj+gVMZllWPu4jo1WE/CtviLXb1h3F4rUO1RidIwD3CzjCasqM4iafxv3hK9SgHkjOldRZesj4qviZKr/tGFhnAtthjkkA2L7AxsmlNACJQLapjCrpDgcnf1/vVJztSDX0x+HYjLE7Iz4cbcLmkRU=;AHkK1WTmfEcYTMlwnC3/bE0BkU7L6W+R7cxPqVXTxfjgmKCspGyrDk413jwQn+R1HOrwLOZM1nJ5NrIfDd87limkddldq/6BZKhKXAChvpJh6Cn4lXP/q7BPo7z2sIf9gOq8ti8PytVA;AHkK1WT2+m9v0c+jMI8Z76uQpBUg82tPMlQnBOFG5cCenCvP7nfnegm4K269rxgeItNbVJJ/LutWk0E4eIL8l1+zg/PB00p1aOWR0pL+MGCfOXfna4shF63+7nyjAPDsuizttwVUlKRd;AHkK1WT8Ozand1W4sizhCC86USeojAjjBN/0e/zdGAPqy1tja7Frox4eY4bZaIK4hbf5aryM6KU09s2PaIUQRCsComZcul6tyIEN+lN2iltjaIq8ZKKSVq4fXsEeOm1qFvp60ev0fv08; 
+22 | Tag_Name: input | Type: hidden | Attribute_Name: extTosPue | Attribute_ID:  | Attribute_Value: AHkK1WRaJOoGjmHleGwNMcNJeAHvvL4izAov2uIRmFIwaRQ8imxdHZI/HkpOKXkjHPfmoF9RlPcmnZvvt1Cb6T/4YeHnZUuk0do/4iGmkVQAUUTK0kENOHBPqmoXJTEDDOSqJYjfkX3/VydQZ+zJh/VNqgT1+PGUIJ8b90mUqlGLgk07sB7OP24= 
+23 | Tag_Name: input | Type: hidden | Attribute_Name: extTos2 | Attribute_ID:  | Attribute_Value: true 
+24 | Tag_Name: input | Type: hidden | Attribute_Name: timeStmp2 | Attribute_ID: timeStmp2 | Attribute_Value: 1476949051681 
+25 | Tag_Name: input | Type: hidden | Attribute_Name: secTok2 | Attribute_ID: secTok2 | Attribute_Value: .AG5fkS-jSvX9jrlOKp6WLytismCAL6D7nQ== 
+26 | Tag_Name: input | Type: submit | Attribute_Name: submitbutton | Attribute_ID: submitbutton | Attribute_Value: Next step 
+27 | Tag_Name: select | Type: select-one | Attribute_Name:  | Attribute_ID: lang-chooser | Attribute_Value: en 
+28 | Tag_Name: input | Type: button | Attribute_Name: cancelbutton | Attribute_ID: cancelbutton | Attribute_Value: Cancel 
+29 | Tag_Name: input | Type: button | Attribute_Name: iagreebutton | Attribute_ID: iagreebutton | Attribute_Value: I agree 
