@@ -1,4 +1,5 @@
-# Data lineage from ‘what is shown to user’ to the ‘source of truth’
+# Metadata Miner - An automated data mining framework to mine metadata from source code (Html files), design documents (interface specification word / excel documents) and database table schema definitions.
+Data lineage and tracability from ‘what is shown on the user screens’ to the actual ‘source of truth’
 
 ## Data Sourcing & Extraction
 * Ability to connect to SharePoint, Github repository, Source Databases
